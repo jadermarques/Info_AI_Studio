@@ -1,0 +1,13 @@
+2025-09-16 20:57:16,282 - INFO - app.youtube.run.20250916_205716 - Iniciando extração em lote de 1 canais
+2025-09-16 20:57:16,282 - INFO - app.youtube.run.20250916_205716 - Iniciando extração em lote de 1 canais
+2025-09-16 20:57:16,326 - INFO - app.youtube.run.20250916_205716 - Processando canal 1/1: @canalsandeco
+2025-09-16 20:57:16,326 - INFO - app.youtube.run.20250916_205716 - Processando canal 1/1: @canalsandeco
+2025-09-16 20:57:17,081 - INFO - youtube_extractor - Extraindo vídeos do canal @canalsandeco (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-16 20:57:17,325 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-16 20:57:17,325 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-16 20:57:17,325 - INFO - app.youtube.run.20250916_205716 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-16 20:57:17,325 - INFO - app.youtube.run.20250916_205716 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-16 20:57:18,879 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para KA7hp2uyPOQ
+2025-09-16 20:57:18,980 - INFO - youtube_extractor - Transcrição encontrada (7641 chars, pt) para KA7hp2uyPOQ
+2025-09-16 20:57:21,104 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-16 20:57:21,108 - WARNING - app.domain.llm_client - [LLM] Erro durante chamada ao modelo: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
