@@ -55,7 +55,8 @@ pip install -e .
 1. Copie o arquivo `.env.example` para `.env` e ajuste as variáveis conforme necessário:
    - `DB_PATH` (caminho do SQLite, padrão `./data.db`)
    - `MAX_PALAVRAS_RESUMO`
-   - `LLM_PROVIDER`, `LLM_MODEL`, `LLM_API_KEY`, `TOKEN_LIMIT`
+   - `LLM_PROVIDER`, `LLM_MODEL`, `TOKEN_LIMIT` e a chave via `LLM_API_KEY`
+     ou `PROVEDOR_API_KEY` (ex.: `OPENAI_API_KEY`)
    - Diretórios opcionais: `RESULTADOS_DIR`, `BACKUP_DIR`, `LOG_DIR`, `COOKIES_PATH`
 2. Inicialize o banco (CLI ou GUI).
 3. Cadastre modelos LLM e fontes pela GUI ou CLI.
@@ -65,7 +66,7 @@ pip install -e .
 ```bash
 make gui
 # ou
-streamlit run src/app/interfaces/web/app.py
+streamlit run src/app/interfaces/web/main.py
 ```
 
 A página inicial exibe o status do banco/LLM. Navegue pelas páginas **Dashboard**, **Cadastros**, **Configurações**, **Execução** e **Logs**.

@@ -21,7 +21,10 @@ MAX_PALAVRAS_RESUMO=150
 # Configurações padrão do modelo LLM
 LLM_PROVIDER=OPENAI
 LLM_MODEL=gpt-5-nano
+# Variável genérica (legado)
 LLM_API_KEY=
+# Variável específica do provedor (ex.: OPENAI_API_KEY, ANTHROPIC_API_KEY)
+OPENAI_API_KEY=
 TOKEN_LIMIT=4096
 EOF_1
 
@@ -31,7 +34,7 @@ cat <<'EOF_2' > "${TARGET_DIR}/Makefile"
 ENV?=.env
 
 gui:
-streamlit run src/app/interfaces/web/app.py
+streamlit run src/app/interfaces/web/main.py
 
 cli:
 python -m app.interfaces.cli.main --help
@@ -101,7 +104,8 @@ pip install -e .
 1. Copie o arquivo `.env.example` para `.env` e ajuste as variáveis conforme necessário:
    - `DB_PATH` (caminho do SQLite, padrão `./data.db`)
    - `MAX_PALAVRAS_RESUMO`
-   - `LLM_PROVIDER`, `LLM_MODEL`, `LLM_API_KEY`, `TOKEN_LIMIT`
+   - `LLM_PROVIDER`, `LLM_MODEL`, `TOKEN_LIMIT` e a chave via `LLM_API_KEY`
+     ou `PROVEDOR_API_KEY` (ex.: `OPENAI_API_KEY`)
    - Diretórios opcionais: `RESULTADOS_DIR`, `BACKUP_DIR`, `LOG_DIR`, `COOKIES_PATH`
 2. Inicialize o banco (CLI ou GUI).
 3. Cadastre modelos LLM e fontes pela GUI ou CLI.
@@ -111,7 +115,7 @@ pip install -e .
 ```bash
 make gui
 # ou
-streamlit run src/app/interfaces/web/app.py
+streamlit run src/app/interfaces/web/main.py
 ```
 
 A página inicial exibe o status do banco/LLM. Navegue pelas páginas **Dashboard**, **Cadastros**, **Configurações**, **Execução** e **Logs**.
@@ -311,6 +315,7 @@ cat <<'EOF_11' > "${TARGET_DIR}/src/app/config.py"
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
@@ -345,6 +350,13 @@ def _load_env() -> None:
     load_dotenv(override=False)
 
 
+def _provider_env_var(provider: str) -> str:
+    """Compute the provider-specific API key environment variable."""
+
+    normalized = re.sub(r"[^A-Z0-9]+", "_", provider.strip().upper()).strip("_")
+    return f"{normalized or 'LLM'}_API_KEY"
+
+
 @lru_cache(maxsize=1)
 def get_settings() -> Settings:
     """Return cached application settings."""
@@ -354,7 +366,8 @@ def get_settings() -> Settings:
     max_palavras = int(os.getenv("MAX_PALAVRAS_RESUMO", "150") or 150)
     llm_provider = os.getenv("LLM_PROVIDER", "OPENAI").strip()
     llm_model = os.getenv("LLM_MODEL", "gpt-5-nano").strip()
-    llm_api_key = os.getenv("LLM_API_KEY", "").strip()
+    provider_env_var = _provider_env_var(llm_provider)
+    llm_api_key = os.getenv(provider_env_var, os.getenv("LLM_API_KEY", "")).strip()
     token_limit = int(os.getenv("TOKEN_LIMIT", "4096") or 4096)
     resultados_dir = Path(os.getenv("RESULTADOS_DIR", "resultados_extracao"))
     backup_dir = Path(os.getenv("BACKUP_DIR", "backup"))
@@ -405,6 +418,7 @@ class LLMModel:
     modelo: str
     api_key: str
     status: bool = True
+    model_id: int | None = None
 
 
 @dataclass(slots=True)
@@ -691,27 +705,169 @@ cat <<'EOF_16' > "${TARGET_DIR}/src/app/domain/llm_service.py"
 
 from __future__ import annotations
 
+import re
+from dataclasses import dataclass
 from typing import Any
 
 from app.domain.entities import LLMModel
-from app.infrastructure import repositories
+from app.infrastructure import env_manager, repositories
+
+try:  # pragma: no cover - optional dependency at runtime
+    from openai import OpenAI
+except Exception:  # pragma: no cover - optional dependency
+    OpenAI = None  # type: ignore[assignment]
+
+
+@dataclass(slots=True)
+class LLMConnectionResult:
+    """Resultado de validação de credenciais do modelo LLM."""
+
+    sucesso: bool
+    mensagem: str
+    variavel_ambiente: str
+
+
+class LLMConnectionError(RuntimeError):
+    """Erro ao validar conexão com LLM."""
+
+    def __init__(self, message: str, env_var: str) -> None:
+        super().__init__(message)
+        self.message = message
+        self.env_var = env_var
+
+
+def _normalizar_provedor(provedor: str) -> str:
+    return re.sub(r"[^A-Z0-9]+", "_", provedor.strip().upper()).strip("_")
+
+
+def compute_api_key_env_name(provedor: str) -> str:
+    """Retorna o nome padrão da variável de API para o provedor informado."""
+
+    normalizado = _normalizar_provedor(provedor)
+    return f"{normalizado or 'LLM'}_API_KEY"
 
 
 def register_llm_model(model: LLMModel) -> None:
     """Persist a new LLM model or update an existing one."""
 
-    repositories.save_llm_model(
-        provedor=model.provedor,
-        modelo=model.modelo,
-        api_key=model.api_key,
-        status=1 if model.status else 0,
+    provedor_normalizado = _normalizar_provedor(model.provedor)
+    if model.model_id is not None:
+        repositories.update_llm_model(
+            model_id=model.model_id,
+            provedor=provedor_normalizado,
+            modelo=model.modelo,
+            api_key=model.api_key,
+            status=1 if model.status else 0,
+        )
+    else:
+        repositories.save_llm_model(
+            provedor=provedor_normalizado,
+            modelo=model.modelo,
+            api_key=model.api_key,
+            status=1 if model.status else 0,
+        )
+
+    env_var = compute_api_key_env_name(provedor_normalizado)
+    env_manager.update_env_values(
+        {
+            "LLM_PROVIDER": provedor_normalizado,
+            "LLM_MODEL": model.modelo,
+            "LLM_API_KEY": model.api_key,
+            env_var: model.api_key,
+        }
     )
 
 
 def list_llm_models() -> list[dict[str, Any]]:
-    """Return stored LLM models."""
+    """Return stored LLM models using normalized field names."""
 
-    return repositories.list_llm_models()
+    registros = repositories.list_llm_models()
+    resultado: list[dict[str, Any]] = []
+    for row in registros:
+        resultado.append(
+            {
+                "id": row["modl_id"],
+                "provedor": row["modl_provedor"],
+                "modelo": row["modl_modelo_llm"],
+                "api_key": row["modl_api_key"],
+                "status": bool(row["modl_status"]),
+                "created_at": row["modl_created_at"],
+                "env_var": compute_api_key_env_name(row["modl_provedor"]),
+            }
+        )
+    return resultado
+
+
+def get_llm_model(model_id: int) -> LLMModel | None:
+    """Fetch an LLM model and adapt it to the domain entity."""
+
+    dados = repositories.get_llm_model(model_id)
+    if not dados:
+        return None
+    return LLMModel(
+        provedor=dados["modl_provedor"],
+        modelo=dados["modl_modelo_llm"],
+        api_key=dados["modl_api_key"],
+        status=bool(dados["modl_status"]),
+        model_id=dados["modl_id"],
+    )
+
+
+def delete_llm_model(model_id: int) -> None:
+    """Remove o modelo informado."""
+
+    repositories.delete_llm_model(model_id)
+
+
+def _traduzir_erro(mensagem: str) -> str:
+    """Mapeia mensagens de erro comuns para Português."""
+
+    texto = mensagem.strip()
+    if not texto:
+        return "Erro desconhecido ao validar o modelo."
+    texto_lower = texto.lower()
+    if "api key" in texto_lower and ("invalid" in texto_lower or "incorrect" in texto_lower):
+        return "Chave de API inválida ou não autorizada."
+    if "not found" in texto_lower or "does not exist" in texto_lower:
+        return "Modelo informado não existe ou não está disponível."
+    if "rate limit" in texto_lower:
+        return "Limite de requisições atingido para o provedor."
+    if "timeout" in texto_lower or "connection" in texto_lower:
+        return "Não foi possível conectar ao provedor. Verifique sua rede."
+    return texto
+
+
+def test_llm_connection(model: LLMModel) -> LLMConnectionResult:
+    """Verifica se as credenciais informadas permitem acessar o provedor."""
+
+    provedor_normalizado = _normalizar_provedor(model.provedor)
+    env_var = compute_api_key_env_name(provedor_normalizado)
+    if not provedor_normalizado:
+        raise LLMConnectionError("Informe o provedor do modelo.", env_var)
+    if not model.api_key.strip():
+        raise LLMConnectionError("Informe a chave de API para testar a conexão.", env_var)
+    if provedor_normalizado == "OPENAI":
+        if OpenAI is None:
+            raise LLMConnectionError(
+                "Biblioteca OpenAI não instalada no ambiente.", env_var
+            )
+        try:
+            cliente = OpenAI(api_key=model.api_key)
+            cliente.models.retrieve(model.modelo)
+            return LLMConnectionResult(
+                sucesso=True,
+                mensagem=(
+                    f"Conexão com {provedor_normalizado} bem-sucedida."
+                    f" Variável {env_var} válida."
+                ),
+                variavel_ambiente=env_var,
+            )
+        except Exception as exc:  # pragma: no cover - depende da API externa
+            mensagem = _traduzir_erro(str(exc))
+            raise LLMConnectionError(mensagem, env_var) from exc
+    raise LLMConnectionError(
+        f"Provedor {provedor_normalizado} ainda não suportado para validação.", env_var
+    )
 EOF_16
 
 mkdir -p "${TARGET_DIR}/src/app/domain"
@@ -2578,7 +2734,7 @@ cat <<'EOF_33' > "${TARGET_DIR}/src/app/interfaces/web/__init__.py"
 EOF_33
 
 mkdir -p "${TARGET_DIR}/src/app/interfaces/web"
-cat <<'EOF_34' > "${TARGET_DIR}/src/app/interfaces/web/app.py"
+cat <<'EOF_34' > "${TARGET_DIR}/src/app/interfaces/web/main.py"
 """Streamlit entrypoint for Info_AI_Studio."""
 
 from __future__ import annotations
@@ -2637,24 +2793,6 @@ if __name__ == "__main__":
     main()
 EOF_34
 
-cat <<'EOF_34A' > "${TARGET_DIR}/src/app/interfaces/web/main.py"
-"""Compat entrypoint delegating to the Streamlit navigation app."""
-
-from __future__ import annotations
-
-from app.interfaces.web.app import main as _run_app
-
-
-def main() -> None:
-    """Execute the Streamlit multipage application."""
-
-    _run_app()
-
-
-if __name__ == "__main__":
-    main()
-EOF_34A
-
 mkdir -p "${TARGET_DIR}/src/app/interfaces/web/pages"
 cat <<'EOF_35' > "${TARGET_DIR}/src/app/interfaces/web/pages/1_Dashboard.py"
 """Dashboard da aplicação com indicadores básicos."""
@@ -2697,6 +2835,8 @@ cat <<'EOF_36' > "${TARGET_DIR}/src/app/interfaces/web/pages/2_Cadastros.py"
 
 from __future__ import annotations
 
+from typing import Any
+
 import streamlit as st
 
 from app.domain.entities import LLMModel, WebSource, YouTubeChannel
@@ -2706,31 +2846,236 @@ from app.domain.fonte_service import (
     register_web_source,
     register_youtube_channel,
 )
-from app.domain.llm_service import list_llm_models, register_llm_model
+from app.domain.llm_service import (
+    LLMConnectionError,
+    compute_api_key_env_name,
+    delete_llm_model,
+    list_llm_models,
+    register_llm_model,
+    test_llm_connection,
+)
+
+
+def _ensure_llm_state() -> None:
+    defaults = {
+        "llm_form_provedor": "",
+        "llm_form_modelo": "",
+        "llm_form_api_key": "",
+        "llm_form_status": True,
+        "llm_form_model_id": None,
+        "llm_test_feedback": None,
+        "llm_flash": None,
+        "llm_delete_pending": None,
+    }
+    for key, value in defaults.items():
+        if key not in st.session_state:
+            st.session_state[key] = value
+
+
+def _reset_llm_form() -> None:
+    st.session_state.llm_form_model_id = None
+    st.session_state.llm_form_provedor = ""
+    st.session_state.llm_form_modelo = ""
+    st.session_state.llm_form_api_key = ""
+    st.session_state.llm_form_status = True
+
+
+def _populate_llm_form(row: dict[str, Any]) -> None:
+    st.session_state.llm_form_model_id = row["id"]
+    st.session_state.llm_form_provedor = row["provedor"]
+    st.session_state.llm_form_modelo = row["modelo"]
+    st.session_state.llm_form_api_key = row["api_key"]
+    st.session_state.llm_form_status = row["status"]
+
+
+def _status_badge(is_active: bool) -> str:
+    cor = "green" if is_active else "red"
+    texto = "Ativo" if is_active else "Inativo"
+    return f"<span style='color:{cor}; font-weight:bold;'>●</span> {texto}"
+
+
+def _record_test_feedback(success: bool, message: str, env_var: str) -> None:
+    st.session_state.llm_test_feedback = {
+        "type": "success" if success else "error",
+        "message": message,
+        "env_var": env_var,
+    }
 
 st.title("Cadastros")
 
+_ensure_llm_state()
+
 st.subheader("Modelos LLM")
+
+flash_message = st.session_state.llm_flash
+if flash_message:
+    level, message = flash_message
+    if level == "success":
+        st.success(message)
+    else:
+        st.error(message)
+    st.session_state.llm_flash = None
+
+pending_delete = st.session_state.llm_delete_pending
+if pending_delete is not None:
+    with st.container():
+        st.warning(
+            "Confirma excluir o modelo "
+            f"{pending_delete['provedor']} / {pending_delete['modelo']}?"
+        )
+        confirm_col, cancel_col = st.columns(2)
+        if confirm_col.button("Excluir", type="primary", key="confirm_delete_llm"):
+            delete_llm_model(pending_delete["id"])
+            st.session_state.llm_flash = (
+                "success",
+                f"Modelo {pending_delete['provedor']} / {pending_delete['modelo']} removido.",
+            )
+            if st.session_state.llm_form_model_id == pending_delete["id"]:
+                _reset_llm_form()
+            st.session_state.llm_delete_pending = None
+            st.rerun()
+        if cancel_col.button("Cancelar", key="cancel_delete_llm"):
+            st.session_state.llm_delete_pending = None
+            st.rerun()
+
 with st.form("llm_form"):
     col1, col2 = st.columns(2)
     with col1:
-        provedor = st.text_input("Provedor", placeholder="OPENAI")
-        modelo = st.text_input("Modelo", placeholder="gpt-5-nano")
+        provedor = st.text_input("Provedor", key="llm_form_provedor", placeholder="OPENAI")
+        modelo = st.text_input("Modelo", key="llm_form_modelo", placeholder="gpt-5-nano")
     with col2:
-        api_key = st.text_input("API Key", type="password")
-        ativo = st.checkbox("Ativo", value=True)
-    submitted = st.form_submit_button("Salvar modelo")
-    if submitted:
-        if not provedor or not modelo or not api_key:
-            st.error("Informe provedor, modelo e API key.")
-        else:
-            register_llm_model(
-                LLMModel(provedor=provedor, modelo=modelo, api_key=api_key, status=ativo)
-            )
-            st.success("Modelo salvo com sucesso.")
-            st.rerun()
+        api_key = st.text_input("API Key", key="llm_form_api_key", type="password")
+        ativo = st.checkbox("Ativo", key="llm_form_status")
+    if provedor:
+        st.caption(
+            f"Variável de ambiente: {compute_api_key_env_name(provedor)}"
+        )
+    col_save, col_test = st.columns(2)
+    with col_save:
+        salvar = st.form_submit_button("Salvar modelo", type="primary")
+    with col_test:
+        testar = st.form_submit_button("Testar conexão", type="secondary")
 
-st.table(list_llm_models())
+    model_id = st.session_state.llm_form_model_id
+    if salvar:
+        if not provedor or not modelo or not api_key:
+            st.session_state.llm_flash = (
+                "error",
+                "Informe provedor, modelo e API key para salvar.",
+            )
+        else:
+            try:
+                register_llm_model(
+                    LLMModel(
+                        provedor=provedor,
+                        modelo=modelo,
+                        api_key=api_key,
+                        status=ativo,
+                        model_id=model_id,
+                    )
+                )
+            except Exception as exc:  # pragma: no cover - depende do provedor
+                st.session_state.llm_flash = ("error", str(exc))
+            else:
+                st.session_state.llm_flash = (
+                    "success",
+                    f"Modelo {provedor}/{modelo} salvo com sucesso.",
+                )
+                _reset_llm_form()
+        st.rerun()
+    if testar:
+        if not provedor or not modelo or not api_key:
+            _record_test_feedback(
+                False,
+                "Informe provedor, modelo e API key para testar a conexão.",
+                compute_api_key_env_name(provedor),
+            )
+        else:
+            try:
+                resultado = test_llm_connection(
+                    LLMModel(
+                        provedor=provedor,
+                        modelo=modelo,
+                        api_key=api_key,
+                        status=ativo,
+                        model_id=model_id,
+                    )
+                )
+            except LLMConnectionError as err:
+                _record_test_feedback(False, err.message, err.env_var)
+            except Exception as exc:  # pragma: no cover - depende do provedor
+                _record_test_feedback(
+                    False,
+                    str(exc),
+                    compute_api_key_env_name(provedor),
+                )
+            else:
+                _record_test_feedback(True, resultado.mensagem, resultado.variavel_ambiente)
+        st.rerun()
+
+if st.session_state.llm_form_model_id is not None:
+    st.info(
+        "Editando modelo ID "
+        f"{st.session_state.llm_form_model_id}."
+    )
+    if st.button("Cancelar edição", key="cancel_llm_edit"):
+        _reset_llm_form()
+        st.rerun()
+
+feedback = st.session_state.llm_test_feedback
+if feedback:
+    texto = feedback["message"]
+    if feedback.get("env_var"):
+        texto = f"{texto} (variável {feedback['env_var']})"
+    if feedback["type"] == "success":
+        st.success(texto)
+    else:
+        st.error(texto)
+
+llm_models = list_llm_models()
+if not llm_models:
+    st.info("Nenhum modelo cadastrado ainda.")
+else:
+    header_cols = st.columns([2, 2, 3, 1, 2, 2])
+    header_cols[0].markdown("**Provedor**")
+    header_cols[1].markdown("**Modelo**")
+    header_cols[2].markdown("**API Key**")
+    header_cols[3].markdown("**Status**")
+    header_cols[4].markdown("**Data de criação**")
+    header_cols[5].markdown("**Ações**")
+    for row in llm_models:
+        row_cols = st.columns([2, 2, 3, 1, 2, 2])
+        row_cols[0].markdown(row["provedor"])
+        row_cols[1].markdown(row["modelo"])
+        row_cols[2].markdown(f"`{row['api_key']}`")
+        row_cols[3].markdown(_status_badge(row["status"]), unsafe_allow_html=True)
+        row_cols[4].markdown(row["created_at"])
+        action_cols = row_cols[5].columns(3)
+        if action_cols[0].button("✏️", key=f"llm_edit_{row['id']}", help="Editar modelo"):
+            _populate_llm_form(row)
+            st.session_state.llm_delete_pending = None
+            st.rerun()
+        if action_cols[1].button("🧪", key=f"llm_test_{row['id']}", help="Testar modelo"):
+            try:
+                resultado = test_llm_connection(
+                    LLMModel(
+                        provedor=row["provedor"],
+                        modelo=row["modelo"],
+                        api_key=row["api_key"],
+                        status=row["status"],
+                        model_id=row["id"],
+                    )
+                )
+            except LLMConnectionError as err:
+                _record_test_feedback(False, err.message, err.env_var)
+            except Exception as exc:  # pragma: no cover - depende do provedor
+                _record_test_feedback(False, str(exc), row.get("env_var", ""))
+            else:
+                _record_test_feedback(True, resultado.mensagem, resultado.variavel_ambiente)
+            st.rerun()
+        if action_cols[2].button("🗑️", key=f"llm_delete_{row['id']}", help="Excluir modelo"):
+            st.session_state.llm_delete_pending = row
+            st.rerun()
 
 st.divider()
 
@@ -2787,6 +3132,7 @@ with st.form("web_form"):
                 st.rerun()
 
 st.table(list_web_sources(active_only=False))
+
 EOF_36
 
 mkdir -p "${TARGET_DIR}/src/app/interfaces/web/pages"

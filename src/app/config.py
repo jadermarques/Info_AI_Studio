@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
@@ -37,6 +38,13 @@ def _load_env() -> None:
     load_dotenv(override=False)
 
 
+def _provider_env_var(provider: str) -> str:
+    """Compute the provider-specific API key environment variable."""
+
+    normalized = re.sub(r"[^A-Z0-9]+", "_", provider.strip().upper()).strip("_")
+    return f"{normalized or 'LLM'}_API_KEY"
+
+
 @lru_cache(maxsize=1)
 def get_settings() -> Settings:
     """Return cached application settings."""
@@ -46,7 +54,8 @@ def get_settings() -> Settings:
     max_palavras = int(os.getenv("MAX_PALAVRAS_RESUMO", "150") or 150)
     llm_provider = os.getenv("LLM_PROVIDER", "OPENAI").strip()
     llm_model = os.getenv("LLM_MODEL", "gpt-5-nano").strip()
-    llm_api_key = os.getenv("LLM_API_KEY", "").strip()
+    provider_env_var = _provider_env_var(llm_provider)
+    llm_api_key = os.getenv(provider_env_var, os.getenv("LLM_API_KEY", "")).strip()
     token_limit = int(os.getenv("TOKEN_LIMIT", "4096") or 4096)
     resultados_dir = Path(os.getenv("RESULTADOS_DIR", "resultados_extracao"))
     backup_dir = Path(os.getenv("BACKUP_DIR", "backup"))
