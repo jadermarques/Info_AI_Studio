@@ -65,7 +65,7 @@ pip install -e .
 ```bash
 make gui
 # ou
-streamlit run src/app/interfaces/web/main.py
+streamlit run src/app/interfaces/web/app.py
 ```
 
 A página inicial exibe o status do banco/LLM. Navegue pelas páginas **Dashboard**, **Cadastros**, **Configurações**, **Execução** e **Logs**.
@@ -178,6 +178,7 @@ src/app/
     │   └── main.py
     └── web/
         ├── app.py
+        ├── main.py
         └── pages/
             ├── 1_Dashboard.py
             ├── 2_Cadastros.py

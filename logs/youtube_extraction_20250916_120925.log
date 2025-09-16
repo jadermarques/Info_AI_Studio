@@ -1,0 +1,15 @@
+2025-09-16 12:09:25,811 - INFO - app.youtube.run.20250916_120925 - Iniciando extração em lote de 1 canais
+2025-09-16 12:09:25,811 - INFO - app.youtube.run.20250916_120925 - Iniciando extração em lote de 1 canais
+2025-09-16 12:09:25,811 - INFO - app.youtube.run.20250916_120925 - Processando canal 1/1: @canalsandeco
+2025-09-16 12:09:25,811 - INFO - app.youtube.run.20250916_120925 - Processando canal 1/1: @canalsandeco
+2025-09-16 12:09:27,654 - INFO - youtube_extractor - Extraindo vídeos do canal @canalsandeco (max_age_days=3, videos_tab_only=True, max_videos=None)
+2025-09-16 12:09:29,351 - INFO - youtube_extractor - Aba /videos: analisados=3, válidos=2, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-16 12:09:29,352 - INFO - youtube_extractor - Aba /videos: 2 vídeos válidos (≤ 3 dias)
+2025-09-16 12:09:29,352 - INFO - app.youtube.run.20250916_120925 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-16 12:09:29,352 - INFO - app.youtube.run.20250916_120925 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-16 12:09:32,373 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para KA7hp2uyPOQ
+2025-09-16 12:09:32,481 - INFO - youtube_extractor - Transcrição: falha ao obter pt(auto) para KA7hp2uyPOQ: 'FetchedTranscriptSnippet' object has no attribute 'get'
+2025-09-16 12:09:32,482 - INFO - youtube_extractor - Transcrição: tradução pt indisponível para pt em KA7hp2uyPOQ
+2025-09-16 12:09:32,586 - INFO - youtube_extractor - Transcrição: falha ao obter pt(auto) para KA7hp2uyPOQ: 'FetchedTranscriptSnippet' object has no attribute 'get'
+2025-09-16 12:09:32,586 - INFO - youtube_extractor - Transcrição: não encontrada para KA7hp2uyPOQ
+2025-09-16 12:09:40,654 - INFO - app.domain.llm_client - [LLM] Cliente LLM ausente — usando resumo heurístico.

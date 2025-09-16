@@ -200,6 +200,7 @@ src/app/
     │   └── main.py
     └── web/
         ├── app.py
+        ├── main.py
         └── pages/
             ├── 1_Dashboard.py
             ├── 2_Cadastros.py
