@@ -9,7 +9,7 @@ import tempfile
 from datetime import datetime
 from http.cookiejar import MozillaCookieJar
 from pathlib import Path
-from typing import Optional
+from typing import Callable, Optional
 
 from fpdf import FPDF
 
@@ -38,12 +38,15 @@ class YouTubeExecutionService:
         self.resultados_dir = config.outdir.resolve()
         self.resultados_dir.mkdir(parents=True, exist_ok=True)
 
-    def run(self) -> YouTubeExtractionResult:
+    def run(
+        self, progress_callback: Optional[Callable[[str], None]] = None
+    ) -> YouTubeExtractionResult:
         """Execute the extraction and return metadata about generated files."""
 
         channels = self._resolve_channels()
         if not channels:
             raise ValueError("Nenhum canal informado ou cadastrado.")
+        self._notify(progress_callback, f"{len(channels)} canais selecionados para análise.")
         timestamp = datetime.now()
         run_id = timestamp.strftime("%Y%m%d_%H%M%S")
         log_path = get_log_file_path(f"youtube_extraction_{run_id}.log")
@@ -59,14 +62,26 @@ class YouTubeExecutionService:
         logger.addHandler(file_handler)
 
         logger.info("Iniciando extração em lote de %s canais", len(channels))
+        self._notify(
+            progress_callback,
+            "Iniciando processamento dos canais selecionados...",
+        )
         extractor = self._build_extractor()
         llm_client = self._build_llm_client()
         total_videos = 0
         channel_payload: list[dict] = []
+        channel_tokens: list[dict[str, int | str]] = []
+        token_details: list[dict[str, int | str]] = []
+        total_prompt_tokens = 0
+        total_completion_tokens = 0
 
         try:
             for index, channel in enumerate(channels, start=1):
                 logger.info("Processando canal %s/%s: %s", index, len(channels), channel)
+                self._notify(
+                    progress_callback,
+                    f"Processando canal {index}/{len(channels)}: {channel}",
+                )
                 info = extractor.extract_channel_info(channel)
                 if info.get("status") != "success":
                     logger.warning("Falha ao extrair informações do canal %s", channel)
@@ -88,7 +103,13 @@ class YouTubeExecutionService:
                     channel,
                     len(videos),
                 )
+                self._notify(
+                    progress_callback,
+                    f"Canal {channel} com {len(videos)} vídeo(s) dentro do critério.",
+                )
                 enriched_videos = []
+                prompt_tokens_channel = 0
+                completion_tokens_channel = 0
                 for video in videos:
                     video_id = video.get("id")
                     if not video_id:
@@ -109,6 +130,19 @@ class YouTubeExecutionService:
                             logger.info(
                                 "[LLM] Execução com --no-llm habilitado; resumos serão pulados."
                             )
+                    prompt_tokens = summary.prompt_tokens if summary else 0
+                    completion_tokens = summary.completion_tokens if summary else 0
+                    prompt_tokens_channel += prompt_tokens
+                    completion_tokens_channel += completion_tokens
+                    token_details.append(
+                        {
+                            "canal": info.get("name") or channel,
+                            "video": video.get("title", ""),
+                            "tokens_entrada": prompt_tokens,
+                            "tokens_saida": completion_tokens,
+                            "tokens_totais": prompt_tokens + completion_tokens,
+                        }
+                    )
                     enriched_videos.append(
                         {
                             "id": video_id,
@@ -135,12 +169,27 @@ class YouTubeExecutionService:
                         "status": "success",
                     }
                 )
+                channel_tokens.append(
+                    {
+                        "canal": info.get("name") or channel,
+                        "tokens_entrada": prompt_tokens_channel,
+                        "tokens_saida": completion_tokens_channel,
+                        "tokens_totais": prompt_tokens_channel
+                        + completion_tokens_channel,
+                    }
+                )
+                total_prompt_tokens += prompt_tokens_channel
+                total_completion_tokens += completion_tokens_channel
         finally:
             logger.removeHandler(file_handler)
             file_handler.close()
 
         json_path, report_path = self._persist_outputs(
             run_id, channel_payload, total_videos, timestamp
+        )
+        self._notify(
+            progress_callback,
+            "Extração finalizada. Resultados disponíveis para consulta.",
         )
         repositories.record_youtube_extraction(
             channel_label=", ".join(channels[:3]) + ("..." if len(channels) > 3 else ""),
@@ -161,6 +210,10 @@ class YouTubeExecutionService:
             total_videos=total_videos,
             total_channels=len(channel_payload),
             message=message,
+            token_details=token_details,
+            channel_tokens=channel_tokens,
+            total_prompt_tokens=total_prompt_tokens,
+            total_completion_tokens=total_completion_tokens,
         )
 
     def _resolve_channels(self) -> list[str]:
@@ -216,8 +269,15 @@ class YouTubeExecutionService:
             return LLMClient("none", self.settings.llm_model, None, self.settings.token_limit)
         api_key = self.config.llm_key or self.settings.llm_api_key
         model = self.config.llm_model or self.settings.llm_model
-        provider = self.settings.llm_provider
+        provider = (self.config.llm_provider or self.settings.llm_provider or "").strip()
         return LLMClient(provider, model, api_key, self.settings.token_limit)
+
+    @staticmethod
+    def _notify(
+        callback: Optional[Callable[[str], None]], message: str
+    ) -> None:
+        if callback:
+            callback(message)
 
     def _obter_transcricao(
         self,

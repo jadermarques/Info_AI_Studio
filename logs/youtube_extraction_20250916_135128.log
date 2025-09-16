@@ -1,0 +1,29 @@
+2025-09-16 13:51:28,107 - INFO - app.youtube.run.20250916_135128 - Iniciando extração em lote de 1 canais
+2025-09-16 13:51:28,107 - INFO - app.youtube.run.20250916_135128 - Iniciando extração em lote de 1 canais
+2025-09-16 13:51:28,138 - INFO - app.youtube.run.20250916_135128 - Processando canal 1/1: @canalsandeco
+2025-09-16 13:51:28,138 - INFO - app.youtube.run.20250916_135128 - Processando canal 1/1: @canalsandeco
+2025-09-16 13:51:38,497 - INFO - youtube_extractor - Extraindo vídeos do canal @canalsandeco (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-16 13:51:39,437 - INFO - youtube_extractor - Aba /videos: analisados=3, válidos=2, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-16 13:51:39,438 - INFO - youtube_extractor - Aba /videos: 2 vídeos válidos (≤ 3 dias)
+2025-09-16 13:51:39,439 - INFO - app.youtube.run.20250916_135128 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-16 13:51:39,439 - INFO - app.youtube.run.20250916_135128 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-16 13:51:45,180 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para KA7hp2uyPOQ
+2025-09-16 13:51:45,280 - INFO - youtube_extractor - Transcrição: falha ao obter pt(auto) para KA7hp2uyPOQ: 'FetchedTranscriptSnippet' object has no attribute 'get'
+2025-09-16 13:51:45,281 - INFO - youtube_extractor - Transcrição: tradução pt indisponível para pt em KA7hp2uyPOQ
+2025-09-16 13:51:45,375 - INFO - youtube_extractor - Transcrição: falha ao obter pt(auto) para KA7hp2uyPOQ: 'FetchedTranscriptSnippet' object has no attribute 'get'
+2025-09-16 13:51:45,376 - INFO - youtube_extractor - Transcrição: não encontrada para KA7hp2uyPOQ
+2025-09-16 13:51:49,521 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-16 13:51:49,525 - WARNING - app.domain.llm_client - [LLM] Erro durante chamada ao modelo: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-16 13:52:58,606 - INFO - app.youtube.run.20250916_135258 - Iniciando extração em lote de 1 canais
+2025-09-16 13:52:58,616 - INFO - app.youtube.run.20250916_135258 - Processando canal 1/1: @canalsandeco
+2025-09-16 13:53:10,503 - INFO - youtube_extractor - Extraindo vídeos do canal @canalsandeco (max_age_days=3, videos_tab_only=True, max_videos=None)
+2025-09-16 13:53:27,249 - INFO - youtube_extractor - Aba /videos: analisados=3, válidos=2, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-16 13:53:27,250 - INFO - youtube_extractor - Aba /videos: 2 vídeos válidos (≤ 3 dias)
+2025-09-16 13:53:27,251 - INFO - app.youtube.run.20250916_135258 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-16 13:53:39,083 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para KA7hp2uyPOQ
+2025-09-16 13:53:39,543 - INFO - youtube_extractor - Transcrição: falha ao obter pt(auto) para KA7hp2uyPOQ: 'FetchedTranscriptSnippet' object has no attribute 'get'
+2025-09-16 13:53:39,544 - INFO - youtube_extractor - Transcrição: tradução pt indisponível para pt em KA7hp2uyPOQ
+2025-09-16 13:53:39,703 - INFO - youtube_extractor - Transcrição: falha ao obter pt(auto) para KA7hp2uyPOQ: 'FetchedTranscriptSnippet' object has no attribute 'get'
+2025-09-16 13:53:39,704 - INFO - youtube_extractor - Transcrição: não encontrada para KA7hp2uyPOQ
+2025-09-16 13:53:56,427 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-16 13:53:56,429 - WARNING - app.domain.llm_client - [LLM] Erro durante chamada ao modelo: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}

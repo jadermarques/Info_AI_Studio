@@ -122,6 +122,7 @@ def youtube_exec(
         no_llm=no_llm,
         asr_enabled=not no_asr,
         asr_provider=provider_normalized,
+        llm_provider=settings.llm_provider,
         llm_model=model or settings.llm_model,
         llm_key=openai_key,
         resumo_max_palavras=resumo_max_palavras or settings.max_palavras_resumo,
@@ -143,6 +144,12 @@ def youtube_exec(
     typer.echo(
         f"Totais — canais: {result.total_channels}, vídeos: {result.total_videos}."
     )
+    total_tokens = result.total_prompt_tokens + result.total_completion_tokens
+    if total_tokens:
+        typer.echo(
+            "Tokens — entrada: "
+            f"{result.total_prompt_tokens}, saída: {result.total_completion_tokens}, total: {total_tokens}."
+        )
 
 
 if __name__ == "__main__":
