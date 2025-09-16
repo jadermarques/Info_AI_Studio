@@ -1,0 +1,187 @@
+# Info_AI_Studio
+
+Aplicação para coletar dados de múltiplas fontes (web e YouTube), organizar cadastros e gerar relatórios resumidos com apoio de modelos LLM. A interface está disponível via Streamlit e a automação via CLI (Typer).
+
+## Sumário
+- [Arquitetura](#arquitetura)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+- [Configuração](#configuração)
+- [Executando a GUI](#executando-a-gui)
+- [Executando a CLI](#executando-a-cli)
+- [Pesquisa no YouTube](#pesquisa-no-youtube)
+- [Testes](#testes)
+- [Critérios de aceitação](#critérios-de-aceitação)
+- [Estrutura de pastas](#estrutura-de-pastas)
+
+## Arquitetura
+
+```
+.
+├── .env.example
+├── Makefile
+├── pyproject.toml
+├── src/
+│   └── app/
+│       ├── config.py
+│       ├── domain/
+│       ├── infrastructure/
+│       └── interfaces/
+│           ├── cli/
+│           └── web/
+└── tests/
+```
+
+- **domain**: regras de negócio, entidades e serviços.
+- **infrastructure**: acesso ao SQLite, backup, schema.sql e utilitários de logging/ambiente.
+- **interfaces**: CLI (Typer) e GUI (Streamlit multipage com `st.Page` + `st.navigation`).
+- **tests**: testes de fumaça com pytest.
+
+## Pré-requisitos
+
+- Python 3.11+
+- pip
+
+## Instalação
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -e .
+```
+
+## Configuração
+
+1. Copie o arquivo `.env.example` para `.env` e ajuste as variáveis conforme necessário:
+   - `DB_PATH` (caminho do SQLite, padrão `./data.db`)
+   - `MAX_PALAVRAS_RESUMO`
+   - `LLM_PROVIDER`, `LLM_MODEL`, `LLM_API_KEY`, `TOKEN_LIMIT`
+   - Diretórios opcionais: `RESULTADOS_DIR`, `BACKUP_DIR`, `LOG_DIR`, `COOKIES_PATH`
+2. Inicialize o banco (CLI ou GUI).
+3. Cadastre modelos LLM e fontes pela GUI ou CLI.
+
+## Executando a GUI
+
+```bash
+make gui
+# ou
+streamlit run src/app/interfaces/web/app.py
+```
+
+A página inicial exibe o status do banco/LLM. Navegue pelas páginas **Dashboard**, **Cadastros**, **Configurações**, **Execução** e **Logs**.
+
+## Executando a CLI
+
+Verifique os comandos disponíveis:
+
+```bash
+make cli
+# ou
+python -m app.interfaces.cli.main --help
+```
+
+Comandos principais:
+
+- `app db-init` — inicializa o banco.
+- `app db-backup` — gera backup em `./backup`.
+- `app modelo-ia --provedor OPENAI --modelo gpt-5-nano --api-key <CHAVE>` — cadastra modelo LLM.
+- `app youtube-exec [opções]` — executa a extração do YouTube.
+
+## Pesquisa no YouTube
+
+A extração utiliza o módulo `YouTubeExecutionService`, adaptado do projeto legado fornecido.
+
+### CLI
+
+Exemplos:
+
+```bash
+python -m app.interfaces.cli.main youtube-exec --channels-file examples/canal.txt -d 1 --mode simple
+python -m app.interfaces.cli.main youtube-exec --channels-file examples/canal.txt -d 1 --mode full --no-llm
+```
+
+Opções relevantes:
+
+- `--outdir`: diretório de saída (padrão `RESULTADOS_DIR` do `.env`).
+- `--prefix`: prefixo dos arquivos gerados.
+- `--days`: filtra vídeos pelos últimos N dias.
+- `--channels-file`: arquivo com lista de canais (um por linha). Exemplo em `examples/canal.txt`.
+- `-c/--channel`: adicionar canais diretamente na CLI (pode repetir).
+- `--mode`: `full` (extração completa com transcrição/resumo) ou `simple` (somente listagem).
+- `--no-llm`: desativa sumarização via LLM.
+- `--no-asr`: desativa fallback ASR (yt-dlp + faster-whisper/OpenAI Whisper).
+- `--asr-provider`: `faster-whisper` (padrão) ou `openai`.
+- `--model`, `--openai-key`: sobrescrevem modelo/chave LLM da configuração.
+- `--resumo-max-palavras`: limite de palavras no resumo.
+- `--cookies`: arquivo Netscape com cookies (exemplo em `examples/cookies.txt`).
+- `--format`: formato do relatório (`txt`, `json`, `pdf`, `html`).
+- `--max-videos`: limita vídeos por canal.
+
+Resultados:
+
+- JSON sempre gerado no diretório de saída.
+- Relatório no formato escolhido (TXT/HTML/PDF/JSON).
+- Log individual por execução em `logs/`.
+- Metadados registrados na tabela `youtube_extraction`.
+
+### GUI
+
+Na página **Execução**:
+
+1. Selecione canais cadastrados, acrescente canais manualmente ou envie arquivo `.txt`.
+2. Configure parâmetros (dias, formato, ASR, LLM, limite de vídeos etc.).
+3. Clique em **Executar modo simple** ou **Executar modo full**. Os caminhos gerados e totais são exibidos após a execução.
+
+## Testes
+
+```bash
+make test
+```
+
+O teste de fumaça inicializa o schema em um banco temporário e verifica inserção básica.
+
+## Critérios de aceitação
+
+- [ ] (A definir pelo time)
+
+## Estrutura de pastas
+
+```
+examples/
+├── canal.txt           # exemplo de lista de canais
+├── cookies.txt         # modelo de cookies (substitua pelos seus)
+logs/
+resultados_extracao/
+src/app/
+├── config.py
+├── domain/
+│   ├── entities.py
+│   ├── fonte_service.py
+│   ├── llm_client.py
+│   ├── llm_service.py
+│   ├── parameters_service.py
+│   ├── validators.py
+│   └── youtube/
+│       ├── __init__.py
+│       ├── extractor_plus.py
+│       └── service.py
+├── infrastructure/
+│   ├── backup.py
+│   ├── db.py
+│   ├── env_manager.py
+│   ├── logging_setup.py
+│   ├── repositories.py
+│   └── schema.sql
+└── interfaces/
+    ├── cli/
+    │   ├── __init__.py
+    │   └── main.py
+    └── web/
+        ├── app.py
+        └── pages/
+            ├── 1_Dashboard.py
+            ├── 2_Cadastros.py
+            ├── 3_Configurações.py
+            ├── 4_Execução.py
+            └── 5_Logs.py
+```

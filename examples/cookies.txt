@@ -1,0 +1,4 @@
+# Netscape HTTP Cookie File
+# Substitua este arquivo pelos cookies exportados do YouTube (yt-dlp)
+# Linhas abaixo são apenas ilustrativas e não funcionais.
+.youtube.com    TRUE    /   FALSE   0   CONSENT    PENDING
