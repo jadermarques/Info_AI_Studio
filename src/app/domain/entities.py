@@ -52,6 +52,7 @@ class YouTubeExtractionConfig:
     no_llm: bool
     asr_enabled: bool
     asr_provider: str
+    llm_provider: Optional[str]
     llm_model: str
     llm_key: Optional[str]
     resumo_max_palavras: int
@@ -71,3 +72,7 @@ class YouTubeExtractionResult:
     total_videos: int
     total_channels: int
     message: str
+    token_details: list[dict[str, int | str]]
+    channel_tokens: list[dict[str, int | str]]
+    total_prompt_tokens: int
+    total_completion_tokens: int
