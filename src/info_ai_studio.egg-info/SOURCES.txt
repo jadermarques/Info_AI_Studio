@@ -9,6 +9,7 @@ src/app/domain/llm_client.py
 src/app/domain/llm_service.py
 src/app/domain/parameters_service.py
 src/app/domain/validators.py
+src/app/domain/youtube/__init__.py
 src/app/domain/youtube/extractor_plus.py
 src/app/domain/youtube/service.py
 src/app/infrastructure/__init__.py
@@ -17,14 +18,19 @@ src/app/infrastructure/db.py
 src/app/infrastructure/env_manager.py
 src/app/infrastructure/logging_setup.py
 src/app/infrastructure/repositories.py
+src/app/interfaces/__init__.py
 src/app/interfaces/cli/__init__.py
 src/app/interfaces/cli/main.py
+src/app/interfaces/cli/commands/__init__.py
+src/app/interfaces/web/__init__.py
 src/app/interfaces/web/app.py
+src/app/interfaces/web/main.py
 src/app/interfaces/web/pages/1_Dashboard.py
 src/app/interfaces/web/pages/2_Cadastros.py
 src/app/interfaces/web/pages/3_Configurações.py
 src/app/interfaces/web/pages/4_Execução.py
 src/app/interfaces/web/pages/5_Logs.py
+src/app/interfaces/web/pages/__init__.py
 src/info_ai_studio.egg-info/PKG-INFO
 src/info_ai_studio.egg-info/SOURCES.txt
 src/info_ai_studio.egg-info/dependency_links.txt
