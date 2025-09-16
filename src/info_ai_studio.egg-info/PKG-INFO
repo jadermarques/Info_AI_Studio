@@ -1,3 +1,25 @@
+Metadata-Version: 2.4
+Name: info-ai-studio
+Version: 0.1.0
+Summary: Info_AI_Studio: coleta de informações web e YouTube com interface CLI e Streamlit
+Author: Info_AI_Studio Team
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: streamlit>=1.32
+Requires-Dist: typer[all]>=0.9
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: requests>=2.31
+Requires-Dist: beautifulsoup4>=4.12
+Requires-Dist: lxml>=4.9
+Requires-Dist: python-dateutil>=2.8
+Requires-Dist: youtube-transcript-api>=0.6.2
+Requires-Dist: openai>=1.12
+Requires-Dist: yt-dlp>=2024.3.10
+Requires-Dist: faster-whisper>=1.0.0
+Requires-Dist: fpdf2>=2.7.8
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+
 # Info_AI_Studio
 
 Aplicação para coletar dados de múltiplas fontes (web e YouTube), organizar cadastros e gerar relatórios resumidos com apoio de modelos LLM. A interface está disponível via Streamlit e a automação via CLI (Typer).
@@ -65,7 +87,7 @@ pip install -e .
 ```bash
 make gui
 # ou
-streamlit run src/app/interfaces/web/main.py
+streamlit run src/app/interfaces/web/app.py
 ```
 
 A página inicial exibe o status do banco/LLM. Navegue pelas páginas **Dashboard**, **Cadastros**, **Configurações**, **Execução** e **Logs**.

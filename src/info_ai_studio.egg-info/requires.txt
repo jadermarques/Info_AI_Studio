@@ -1,0 +1,15 @@
+streamlit>=1.32
+typer[all]>=0.9
+python-dotenv>=1.0
+requests>=2.31
+beautifulsoup4>=4.12
+lxml>=4.9
+python-dateutil>=2.8
+youtube-transcript-api>=0.6.2
+openai>=1.12
+yt-dlp>=2024.3.10
+faster-whisper>=1.0.0
+fpdf2>=2.7.8
+
+[dev]
+pytest>=7.4
