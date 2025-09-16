@@ -631,7 +631,18 @@ class YouTubeExtractor:
             return msg.splitlines()[0].strip()
 
         def _join(tr_list):
-            return " ".join([t.get("text", "") for t in tr_list if t.get("text")])
+            parts: list[str] = []
+            for item in tr_list or []:
+                text = getattr(item, "text", None)
+                if text is None and isinstance(item, dict):
+                    text = item.get("text")
+                elif text is None:
+                    getter = getattr(item, "get", None)
+                    if callable(getter):
+                        text = getter("text", None)
+                if text:
+                    parts.append(str(text))
+            return " ".join(parts)
 
         # 1) listar transcript objects (compatibilidade com versões novas/antigas)
         try:

@@ -23,7 +23,6 @@ src/app/interfaces/cli/__init__.py
 src/app/interfaces/cli/main.py
 src/app/interfaces/cli/commands/__init__.py
 src/app/interfaces/web/__init__.py
-src/app/interfaces/web/app.py
 src/app/interfaces/web/main.py
 src/app/interfaces/web/pages/1_Dashboard.py
 src/app/interfaces/web/pages/2_Cadastros.py
