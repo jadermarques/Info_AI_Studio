@@ -1,0 +1,2 @@
+[console_scripts]
+app = app.interfaces.cli.main:app
