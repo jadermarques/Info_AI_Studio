@@ -15,6 +15,7 @@ class LLMModel:
     modelo: str
     api_key: str
     status: bool = True
+    model_id: int | None = None
 
 
 @dataclass(slots=True)

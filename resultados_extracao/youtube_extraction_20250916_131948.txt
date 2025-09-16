@@ -1,0 +1,40 @@
+=======================================================================
+📊 RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 26
+Modo: simple
+Parâmetros: dias=30, max_videos=None, formato=txt
+
+✅ @canalsandeco (@canalsandeco)
+    Vídeos extraídos: 26
+    - Essa Biblioteca da Microsoft vai MUDAR seu jeito de usar IA — 09:15 — https://www.youtube.com/watch?v=KA7hp2uyPOQ
+    - Pare de Copiar Prompts O SEGREDO para dominar a IA está na INTERAÇÃO — 17:24 — https://www.youtube.com/watch?v=WUbvG94TvcY
+    - Pare de Estudar IA do Jeito Errado (É Por Isso que Você Está Paralisado) — 10:05 — https://www.youtube.com/watch?v=UpWaqME8jkQ
+    - Acelerando sua Carreira em IA: O Caminho para o Nível Sênior — 11:04 — https://www.youtube.com/watch?v=dGNxSWWzVBU
+    - Markdown vs JSON: Descubra a Opção Superior para Prompts! — 07:25 — https://www.youtube.com/watch?v=tFG_bg72i9c
+    - As MAIORES Limitações da IA que Ninguém te Conta. — 12:28 — https://www.youtube.com/watch?v=aUSiCnW1qbg
+    - 5 razões se tornar um criador de IA (e não só um usuário de IA) — 08:47 — https://www.youtube.com/watch?v=D8kCkhMsQp8
+    - A Palavra-chave para você entender TODA a IA — 10:29 — https://www.youtube.com/watch?v=WtZdT8qgUIc
+    - O Problema da IA Perfeita (e por que ninguém fala disso) — 07:14 — https://www.youtube.com/watch?v=qCy9U2x_s-w
+    - LLM, Machine Learning & Deep Learning: Qual a REAL Diferença? — 07:44 — https://www.youtube.com/watch?v=JIKj_UikT0c
+    - O Futuro da Programação: Vibe Coding vs No-Code — 05:40 — https://www.youtube.com/watch?v=s1ZK9M0ydEc
+    - RAG vs Fine Tuning: Qual você DEVE usar? — 04:54 — https://www.youtube.com/watch?v=RRlk-dWxWxw
+    - Por que 95% dos Projetos de IA Generativa estão FALHANDO agora? — 10:47 — https://www.youtube.com/watch?v=bQV-HeJKyzw
+    - Existe um VÍRUS no seu Cursor (e você não sabia). Vibe Coding em Risco? — 06:57 — https://www.youtube.com/watch?v=A4g26MHUVhE
+    - O Futuro da IA É AGENTIC, Robôs, Carros Voadores e Realidade Aumentada — 14:14 — https://www.youtube.com/watch?v=H4vjvLXnKMM
+    - O Segredo dos Prompts que 99% das Pessoas Erram — 10:21 — https://www.youtube.com/watch?v=mFJFQf3Tvx0
+    - O Alerta Crucial sobre IA que NINGUÉM Te Contou! — 06:57 — https://www.youtube.com/watch?v=JmJVsQpSnGo
+    - Um erro MUITO CARO com Agentes de IA e MCP — 08:59 — https://www.youtube.com/watch?v=Kmrbu5G1o80
+    - Descubra o Poder do Claude Desktop com WhatsApp em Apenas 10 Minutos! — 12:42 — https://www.youtube.com/watch?v=jcjTOUzVFt4
+    - GPT-5 Revelado: O Maior Engano Sobre a AGI? — 09:23 — https://www.youtube.com/watch?v=wqHww0lMFZQ
+    - Como Saber se a IA Está Errada? Descubra Quando Intervir! — 05:05 — https://www.youtube.com/watch?v=qd240pN4jhM
+    - Como criar agentes de IA melhor que 99% das pessoas — 06:58 — https://www.youtube.com/watch?v=9tlZVuI5Ibo
+    - Como os jornalistas podem DOMINAR a Inteligência Artificial — 00:42 — https://www.youtube.com/watch?v=KPx3vg1CxTs
+    - O que NINGUÉM te Conta sobre VIBE CODING (Minha Visão Real) — 07:55 — https://www.youtube.com/watch?v=LzSEHCaQqwA
+    - Aprenda INTELIGÊNCIA ARTIFICIAL no Jornalismo em Apenas 3 Dias! — 04:17 — https://www.youtube.com/watch?v=5NAelJbuylQ
+    - Curso Grátis: Domine a IA no Jornalismo em 3 Dias! — 02:53 — https://www.youtube.com/watch?v=msf6O4Nl9sg
+
+=======================================================================
+✨ Extração concluída!

@@ -3,7 +3,7 @@
 ENV?=.env
 
 gui:
-streamlit run src/app/interfaces/web/app.py
+streamlit run src/app/interfaces/web/main.py
 
 cli:
 python -m app.interfaces.cli.main --help
