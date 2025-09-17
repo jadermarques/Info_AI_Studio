@@ -243,6 +243,19 @@ class LLMClient:
             if not content:
                 LOGGER.warning("[LLM] Resposta vazia do modelo para %s", title)
                 return self._heuristic_summary(title, transcript_clean, max_palavras)
+            try:
+                finish_reason = None
+                if hasattr(response, "choices") and response.choices:
+                    first_choice = response.choices[0]
+                    finish_reason = getattr(first_choice, "finish_reason", None)
+                if finish_reason == "length":
+                    LOGGER.warning(
+                        "[LLM] Resposta interrompida por limite de tokens para %s; usando heurística.",
+                        title,
+                    )
+                    return self._heuristic_summary(title, transcript_clean, max_palavras)
+            except Exception:  # pragma: no cover - defensive, sem efeitos colaterais
+                pass
             sanitized = _normalize_json_payload(content)
             if not sanitized:
                 raise ValueError("Resposta vazia do modelo.")

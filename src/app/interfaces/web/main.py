@@ -66,6 +66,7 @@ def main() -> None:
                 st.Page("pages/2_Cadastros.py", title="Cadastros", icon="🗂️"),
                 st.Page("pages/3_Configurações.py", title="Configurações", icon="⚙️"),
                 st.Page("pages/4_Execução.py", title="Execução", icon="🚀"),
+                st.Page("pages/6_Resultados.py", title="Resultados", icon="📁"),
                 st.Page("pages/5_Logs.py", title="Logs", icon="📝"),
             ],
         }

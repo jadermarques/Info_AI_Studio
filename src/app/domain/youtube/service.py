@@ -29,6 +29,34 @@ FASTER_WHISPER_MODEL = "small"
 FASTER_WHISPER_COMPUTE = "auto"
 OPENAI_WHISPER_MODEL = "whisper-1"
 
+_PDF_SAFE_TRANSLATIONS = str.maketrans(
+    {
+        "—": "-",
+        "–": "-",
+        "―": "-",
+        "•": "*",
+        "·": "*",
+        "“": '"',
+        "”": '"',
+        "„": '"',
+        "’": "'",
+        "‘": "'",
+        "´": "'",
+        "¡": "!",
+        "¿": "?",
+    }
+)
+
+
+def _sanitize_pdf_text(text: str) -> str:
+    """Replace characters unsupported by the PDF font with ASCII equivalents."""
+
+    if not text:
+        return ""
+    sanitized = text.translate(_PDF_SAFE_TRANSLATIONS)
+    # FPDF bundled fonts support latin-1; fallback removing remaining non-latin chars
+    return sanitized.encode("latin-1", errors="replace").decode("latin-1")
+
 
 class YouTubeExecutionService:
     """Orchestrates the extraction workflow."""
@@ -433,7 +461,7 @@ class YouTubeExecutionService:
     def _report_text(self, metadata: dict) -> str:
         lines = []
         lines.append("=======================================================================")
-        lines.append("📊 RESUMO DA EXTRAÇÃO")
+        lines.append("RESUMO DA EXTRAÇÃO")
         lines.append("=======================================================================\n")
         lines.append(f"Canais processados: {metadata['total_channels']}")
         lines.append(f"Total de vídeos extraídos: {metadata['total_videos']}")
@@ -444,7 +472,7 @@ class YouTubeExecutionService:
         )
         lines.append("")
         for channel in metadata.get("channels", []):
-            lines.append(f"✅ {channel.get('name')} ({channel.get('channel_id')})")
+            lines.append(f"* {channel.get('name')} ({channel.get('channel_id')})")
             videos = channel.get("videos", [])
             lines.append(f"    Vídeos extraídos: {len(videos)}")
             for video in videos:
@@ -455,7 +483,7 @@ class YouTubeExecutionService:
                 if summary:
                     lines.append(f"      Resumo: {summary.get('resumo_uma_frase', '')}")
         lines.append("\n=======================================================================")
-        lines.append("✨ Extração concluída!")
+        lines.append("EXTRAÇÃO CONCLUÍDA")
         return "\n".join(lines)
 
     def _save_pdf(self, texto: str, path: Path) -> None:
@@ -466,7 +494,8 @@ class YouTubeExecutionService:
         except Exception:  # pragma: no cover - fallback for environments without Helvetica
             pdf.set_font("Arial", size=12)
         max_width = pdf.w - pdf.l_margin - pdf.r_margin
-        for line in texto.splitlines():
+        sanitized_text = _sanitize_pdf_text(texto)
+        for line in sanitized_text.splitlines():
             if not line.strip():
                 pdf.ln(8)
                 continue
