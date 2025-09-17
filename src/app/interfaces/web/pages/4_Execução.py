@@ -53,7 +53,7 @@ else:
             selected = st.multiselect("Canais cadastrados", options=list(options.keys()))
             manual_entries = st.text_area("Canais adicionais (um por linha)")
             days = st.number_input("Dias para filtrar", min_value=0, max_value=30, value=3)
-            max_videos = st.number_input("Limite de vídeos por canal", min_value=0, max_value=200, value=0)
+            max_videos = st.number_input("Limite de vídeos por canal", min_value=0, max_value=200, value=30)
         with col2:
             prefix = st.text_input("Prefixo dos arquivos", value="youtube_extraction")
             report_format = st.selectbox("Formato do relatório", options=["txt", "json", "pdf", "html"], index=0)
