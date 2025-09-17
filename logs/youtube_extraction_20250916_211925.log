@@ -1,0 +1,31 @@
+2025-09-16 21:19:25,362 - INFO - app.youtube.run.20250916_211925 - Iniciando extração em lote de 1 canais
+2025-09-16 21:19:25,362 - INFO - app.youtube.run.20250916_211925 - Iniciando extração em lote de 1 canais
+2025-09-16 21:19:25,399 - INFO - app.youtube.run.20250916_211925 - Processando canal 1/1: @canalsandeco
+2025-09-16 21:19:25,399 - INFO - app.youtube.run.20250916_211925 - Processando canal 1/1: @canalsandeco
+2025-09-16 21:19:25,942 - INFO - youtube_extractor - Extraindo vídeos do canal @canalsandeco (max_age_days=3, videos_tab_only=True, max_videos=None)
+2025-09-16 21:19:26,177 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-16 21:19:26,178 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-16 21:19:26,178 - INFO - app.youtube.run.20250916_211925 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-16 21:19:26,178 - INFO - app.youtube.run.20250916_211925 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-16 21:19:31,099 - INFO - app.youtube.run.20250916_211931 - Iniciando extração em lote de 1 canais
+2025-09-16 21:19:31,106 - INFO - app.youtube.run.20250916_211931 - Processando canal 1/1: @canalsandeco
+2025-09-16 21:19:31,494 - INFO - youtube_extractor - Extraindo vídeos do canal @canalsandeco (max_age_days=3, videos_tab_only=True, max_videos=None)
+2025-09-16 21:19:31,742 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-16 21:19:31,743 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-16 21:19:31,744 - INFO - app.youtube.run.20250916_211931 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-16 21:19:40,316 - INFO - app.youtube.run.20250916_211940 - Iniciando extração em lote de 1 canais
+2025-09-16 21:19:40,328 - INFO - app.youtube.run.20250916_211940 - Processando canal 1/1: @canalsandeco
+2025-09-16 21:19:40,885 - INFO - youtube_extractor - Extraindo vídeos do canal @canalsandeco (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-16 21:19:41,190 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-16 21:19:41,190 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-16 21:19:41,191 - INFO - app.youtube.run.20250916_211940 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-16 21:19:46,937 - INFO - app.youtube.run.20250916_211946 - Iniciando extração em lote de 1 canais
+2025-09-16 21:19:46,948 - INFO - app.youtube.run.20250916_211946 - Processando canal 1/1: @canalsandeco
+2025-09-16 21:19:47,398 - INFO - youtube_extractor - Extraindo vídeos do canal @canalsandeco (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-16 21:19:47,636 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-16 21:19:47,637 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-16 21:19:47,638 - INFO - app.youtube.run.20250916_211946 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-16 21:19:49,429 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para KA7hp2uyPOQ
+2025-09-16 21:19:49,525 - INFO - youtube_extractor - Transcrição encontrada (7644 chars, pt) para KA7hp2uyPOQ
+2025-09-16 21:19:57,468 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 21:19:57,481 - WARNING - app.domain.llm_client - [LLM] Erro durante chamada ao modelo: Expecting value: line 1 column 1 (char 0)

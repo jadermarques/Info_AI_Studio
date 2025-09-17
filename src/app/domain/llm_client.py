@@ -5,10 +5,14 @@ from __future__ import annotations
 import json
 import logging
 import math
+import re
 from dataclasses import dataclass
 from typing import Any, Optional
 
 LOGGER = logging.getLogger(__name__)
+
+_JSON_BLOCK_RE = re.compile(r"^```(?:json)?\s*(.*?)\s*```$", re.IGNORECASE | re.DOTALL)
+
 
 def _safe_int(value: Any) -> int:
     """Convert values that might be None/str/float into integers safely."""
@@ -86,6 +90,37 @@ def _extract_usage_numbers(usage: Any) -> tuple[int, int]:
     return prompt_tokens, completion_tokens
 
 
+def _normalize_json_payload(payload: str) -> str:
+    """Strip markdown fences and unrelated prefixes from JSON blobs."""
+
+    text = payload.strip()
+    if not text:
+        return ""
+    match = _JSON_BLOCK_RE.match(text)
+    if match:
+        text = match.group(1).strip()
+    if text.startswith("{") or text.startswith("["):
+        return text
+    first_brace = text.find("{")
+    first_bracket = text.find("[")
+    indices = [idx for idx in (first_brace, first_bracket) if idx >= 0]
+    if indices:
+        idx = min(indices)
+        candidate = text[idx:].strip()
+        if candidate:
+            text = candidate
+    return text
+
+
+def _preview(text: str, limit: int = 180) -> str:
+    """Return a compact single-line preview for logging."""
+
+    normalized = text.replace("\n", " ")
+    if len(normalized) <= limit:
+        return normalized
+    return normalized[:limit].rstrip() + "…"
+
+
 try:
     from openai import OpenAI
 except Exception:  # pragma: no cover - optional dependency for tests
@@ -129,7 +164,9 @@ class LLMClient:
                 LOGGER.warning("Falha ao inicializar cliente OpenAI: %s", exc)
                 self._client = None
         elif self.api_key:
-            LOGGER.warning("Provedor LLM '%s' não suportado; análises serão desativadas.", provider)
+            LOGGER.warning(
+                "Provedor LLM '%s' não suportado; análises serão desativadas.", provider
+            )
 
     @property
     def active(self) -> bool:
@@ -164,36 +201,52 @@ class LLMClient:
         )
         try:
             response = None
+            content = ""
             client = self._client
             if client is None:
                 raise RuntimeError("LLM client not available")
             if hasattr(client, "chat") and hasattr(client.chat, "completions"):
-                response = client.chat.completions.create(
+                request_args = dict(
                     model=self.model,
                     messages=[
                         {"role": "system", "content": "Responda somente em JSON."},
                         {"role": "user", "content": prompt},
                     ],
-                    max_tokens=self._max_output_tokens(),
+                    max_completion_tokens=self._max_output_tokens(),
+                    response_format={"type": "json_object"},
                 )
+                try:
+                    response = client.chat.completions.create(**request_args)
+                except TypeError:
+                    request_args.pop("response_format", None)
+                    response = client.chat.completions.create(**request_args)
                 content, prompt_tokens, completion_tokens = self._extract_response_payload(response)
             else:  # pragma: no cover - legacy clients
                 create = getattr(getattr(client, "ChatCompletion", None), "create", None)
                 if not create:
                     raise RuntimeError("OpenAI client incompatível")
-                response = create(
+                request_args = dict(
                     model=self.model,
                     messages=[
                         {"role": "system", "content": "Responda somente em JSON."},
                         {"role": "user", "content": prompt},
                     ],
                     max_tokens=self._max_output_tokens(),
+                    response_format={"type": "json_object"},
                 )
+                try:
+                    response = create(**request_args)
+                except TypeError:
+                    request_args.pop("response_format", None)
+                    response = create(**request_args)
                 content, prompt_tokens, completion_tokens = self._extract_response_payload(response)
             if not content:
                 LOGGER.warning("[LLM] Resposta vazia do modelo para %s", title)
                 return self._heuristic_summary(title, transcript_clean, max_palavras)
-            data = json.loads(content)
+            sanitized = _normalize_json_payload(content)
+            if not sanitized:
+                raise ValueError("Resposta vazia do modelo.")
+            data = json.loads(sanitized)
             return LLMResult(
                 resumo_uma_frase=str(data.get("resumo_do_video_uma_frase", "")),
                 resumo=str(data.get("resumo_do_video", "")),
@@ -205,8 +258,19 @@ class LLMClient:
                 model=self.model,
                 cost=0.0,
             )
+        except json.JSONDecodeError as exc:  # pragma: no cover - depends on API
+            LOGGER.warning(
+                "[LLM] Resposta não pôde ser convertida para JSON (%s): %s",
+                exc,
+                _preview(content),
+            )
+            return self._heuristic_summary(title, transcript_clean, max_palavras)
         except Exception as exc:  # pragma: no cover - depends on API
-            LOGGER.warning("[LLM] Erro durante chamada ao modelo: %s", exc)
+            LOGGER.warning(
+                "[LLM] Erro durante chamada ao modelo: %s — conteúdo: %s",
+                exc,
+                _preview(content),
+            )
             return self._heuristic_summary(title, transcript_clean, max_palavras)
 
     def _heuristic_summary(
@@ -237,7 +301,7 @@ class LLMClient:
 
         # heurística simples: 4 tokens por palavra + margem
         return max(256, math.ceil(self.token_limit * 0.25))
-        
+
     def _extract_response_payload(self, response: Any) -> tuple[str, int, int]:
         """Normalize OpenAI SDK responses into text plus token usage."""
 

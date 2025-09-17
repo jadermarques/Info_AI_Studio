@@ -6,6 +6,7 @@ import html
 import json
 import logging
 import tempfile
+from dataclasses import asdict
 from datetime import datetime
 from http.cookiejar import MozillaCookieJar
 from pathlib import Path
@@ -143,6 +144,7 @@ class YouTubeExecutionService:
                             "tokens_totais": prompt_tokens + completion_tokens,
                         }
                     )
+                    summary_payload = asdict(summary) if summary else None
                     enriched_videos.append(
                         {
                             "id": video_id,
@@ -154,7 +156,7 @@ class YouTubeExecutionService:
                             "date_published": details.get("date_published"),
                             "transcript_available": bool(transcript),
                             "transcript": transcript if self.config.mode.lower() == "full" else "",
-                            "summary": summary.__dict__ if summary else None,
+                            "summary": summary_payload,
                         }
                     )
                 total_videos += len(enriched_videos)
