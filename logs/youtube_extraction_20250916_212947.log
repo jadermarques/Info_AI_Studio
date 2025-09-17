@@ -1,0 +1,35 @@
+2025-09-16 21:29:47,646 - INFO - app.youtube.run.20250916_212947 - Iniciando extração em lote de 1 canais
+2025-09-16 21:29:47,646 - INFO - app.youtube.run.20250916_212947 - Iniciando extração em lote de 1 canais
+2025-09-16 21:29:47,681 - INFO - app.youtube.run.20250916_212947 - Processando canal 1/1: @canalsandeco
+2025-09-16 21:29:47,681 - INFO - app.youtube.run.20250916_212947 - Processando canal 1/1: @canalsandeco
+2025-09-16 21:29:48,417 - INFO - youtube_extractor - Extraindo vídeos do canal @canalsandeco (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-16 21:29:48,701 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-16 21:29:48,701 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-16 21:29:48,702 - INFO - app.youtube.run.20250916_212947 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-16 21:29:48,702 - INFO - app.youtube.run.20250916_212947 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-16 21:29:50,309 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para KA7hp2uyPOQ
+2025-09-16 21:29:50,407 - INFO - youtube_extractor - Transcrição encontrada (7644 chars, pt) para KA7hp2uyPOQ
+2025-09-16 21:29:57,107 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 21:29:57,119 - WARNING - app.domain.llm_client - [LLM] Resposta não pôde ser convertida para JSON (Extra data: line 1 column 3 (char 2)): Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, too…
+2025-09-16 21:30:19,411 - INFO - app.youtube.run.20250916_213019 - Iniciando extração em lote de 1 canais
+2025-09-16 21:30:19,423 - INFO - app.youtube.run.20250916_213019 - Processando canal 1/1: @canalsandeco
+2025-09-16 21:30:20,043 - INFO - youtube_extractor - Extraindo vídeos do canal @canalsandeco (max_age_days=10, videos_tab_only=True, max_videos=30)
+2025-09-16 21:30:20,316 - INFO - youtube_extractor - Aba /videos: analisados=5, válidos=4, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-16 21:30:20,316 - INFO - youtube_extractor - Aba /videos: 4 vídeos válidos (≤ 10 dias)
+2025-09-16 21:30:20,317 - INFO - app.youtube.run.20250916_213019 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 4
+2025-09-16 21:30:22,085 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para KA7hp2uyPOQ
+2025-09-16 21:30:22,172 - INFO - youtube_extractor - Transcrição encontrada (7641 chars, pt) para KA7hp2uyPOQ
+2025-09-16 21:30:29,218 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 21:30:29,220 - WARNING - app.domain.llm_client - [LLM] Resposta não pôde ser convertida para JSON (Extra data: line 1 column 3 (char 2)): Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, too…
+2025-09-16 21:30:31,072 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para WUbvG94TvcY
+2025-09-16 21:30:31,180 - INFO - youtube_extractor - Transcrição encontrada (16005 chars, pt) para WUbvG94TvcY
+2025-09-16 21:30:37,349 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 21:30:37,352 - WARNING - app.domain.llm_client - [LLM] Resposta não pôde ser convertida para JSON (Extra data: line 1 column 3 (char 2)): Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, too…
+2025-09-16 21:30:39,192 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para UpWaqME8jkQ
+2025-09-16 21:30:39,355 - INFO - youtube_extractor - Transcrição encontrada (9083 chars, pt) para UpWaqME8jkQ
+2025-09-16 21:30:46,664 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 21:30:46,667 - WARNING - app.domain.llm_client - [LLM] Resposta não pôde ser convertida para JSON (Extra data: line 1 column 3 (char 2)): Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, too…
+2025-09-16 21:30:48,680 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para dGNxSWWzVBU
+2025-09-16 21:30:48,833 - INFO - youtube_extractor - Transcrição encontrada (10245 chars, pt) para dGNxSWWzVBU
+2025-09-16 21:30:58,030 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 21:30:58,032 - WARNING - app.domain.llm_client - [LLM] Resposta não pôde ser convertida para JSON (Extra data: line 1 column 3 (char 2)): Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, too…

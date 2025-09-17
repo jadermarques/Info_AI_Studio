@@ -1,0 +1,38 @@
+{
+  "executed_at": "2025-09-16T21:19:25.359410",
+  "mode": "simple",
+  "total_channels": 1,
+  "total_videos": 1,
+  "params": {
+    "days": 3,
+    "max_videos": null,
+    "mode": "simple",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "txt"
+  },
+  "channels": [
+    {
+      "channel_id": "@canalsandeco",
+      "name": "@canalsandeco",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "KA7hp2uyPOQ",
+          "title": "Essa Biblioteca da Microsoft vai MUDAR seu jeito de usar IA",
+          "url": "https://www.youtube.com/watch?v=KA7hp2uyPOQ",
+          "published": "2025-09-16T00:19:26.177429",
+          "published_relative": "há 1 dia",
+          "duration": "09:15",
+          "date_published": "2025-09-15T12:58:28-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "summary": null
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

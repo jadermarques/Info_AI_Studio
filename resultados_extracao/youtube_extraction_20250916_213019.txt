@@ -1,0 +1,22 @@
+=======================================================================
+📊 RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 4
+Modo: full
+Parâmetros: dias=10, max_videos=30, formato=txt
+
+✅ @canalsandeco (@canalsandeco)
+    Vídeos extraídos: 4
+    - Essa Biblioteca da Microsoft vai MUDAR seu jeito de usar IA — 09:15 — https://www.youtube.com/watch?v=KA7hp2uyPOQ
+      Resumo: [Música] Saca só essa situação
+    - Pare de Copiar Prompts O SEGREDO para dominar a IA está na INTERAÇÃO — 17:24 — https://www.youtube.com/watch?v=WUbvG94TvcY
+      Resumo: Mas eu particularmente eu sou um pouco contra assim, ah, olha só um prompt que eu fiz, sabe? Assim, algo tão fixo assim, como se fosse algo que você copia e cola, né? Porque eu acho que ali um resultado bom com LM, claro, tem que ter a noção básica do prompt, né? Bem feito, as té
+    - Pare de Estudar IA do Jeito Errado (É Por Isso que Você Está Paralisado) — 10:05 — https://www.youtube.com/watch?v=UpWaqME8jkQ
+      Resumo: Por que que você está perdido? Cada vez que eu pesquiso, eu sou bombardeado por milhões de informações sobre IA
+    - Acelerando sua Carreira em IA: O Caminho para o Nível Sênior — 11:04 — https://www.youtube.com/watch?v=dGNxSWWzVBU
+      Resumo: Nessa, por exemplo, o João Cabral, ele perguntou qual seria a trilha para me tornar um senior IA
+
+=======================================================================
+✨ Extração concluída!
