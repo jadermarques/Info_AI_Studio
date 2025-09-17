@@ -1,0 +1,17 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: full
+Parâmetros: dias=3, max_videos=30, formato=txt
+
+* @SuperHumansLife (@SuperHumansLife)
+    Vídeos extraídos: 1
+    - Encontrei uma oportunidade de um bilhão de dólares — N/A — https://www.youtube.com/watch?v=1_0OZvSjabM
+      Resumo curto: Everybody's building the same AI businesses, chat bots, content factories, image generators, but hiding in plain sight is a huge opportunity
+      Detalhes: Everybody's building the same AI businesses, chat bots, content factories, image generators, but hiding in plain sight is a huge opportunity. We quantified it at $92 billion. And 99% of people are completely missing it. So here's what I believe is going to be the future of marketing because I don't care how good your product is. If AI doesn't recommend you, you don't exist. I mean, watch this. This is an exercise we did just a few minutes before I started filming. If you go into chat GPT and type dentists in Chicago, only this shows up. Everything else is invisible. And that invisibility that is in my opinion the death of 99% of businesses over the next 5 years, not more. But every business that does not show up is an opportunity for you because someone has to make them visible in AI search. And that someone could
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

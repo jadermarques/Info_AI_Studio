@@ -1,0 +1,17 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: full
+Parâmetros: dias=3, max_videos=1, formato=txt
+
+* @SuperHumansLife (@SuperHumansLife)
+    Vídeos extraídos: 1
+    - Encontrei uma oportunidade de um bilhão de dólares — 15:50 — https://www.youtube.com/watch?v=1_0OZvSjabM
+      Resumo curto: Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))
+      Detalhes: Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, tool_calls=None))
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

@@ -136,7 +136,7 @@ edited_df = st.data_editor(
     table_df,
     key="resultados_editor",
     hide_index=True,
-    use_container_width=True,
+    width="stretch",
     num_rows="fixed",
     column_config={
         "Formato": st.column_config.TextColumn("Formato", width="small"),

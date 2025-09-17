@@ -130,6 +130,7 @@ def youtube_exec(
         user_agent=user_agent,
         report_format=report_format_normalized,
         max_videos=max_videos,
+        translate_results=settings.translate_results,
     )
     if not is_database_initialized():
         typer.echo("Banco de dados não inicializado. Execute 'app db-init' antes de prosseguir.")

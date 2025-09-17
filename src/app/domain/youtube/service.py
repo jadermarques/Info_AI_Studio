@@ -154,6 +154,7 @@ class YouTubeExecutionService:
                                 transcript=transcript,
                                 channel=info.get("name") or channel,
                                 max_palavras=self.config.resumo_max_palavras,
+                                translate_mode=self.config.translate_results,
                             )
                         elif self.config.no_llm:
                             logger.info(
@@ -427,6 +428,7 @@ class YouTubeExecutionService:
                 "no_llm": self.config.no_llm,
                 "asr_provider": self.config.asr_provider,
                 "format": self.config.report_format,
+                "translate_results": self.config.translate_results,
             },
             "channels": channels,
         }
@@ -481,7 +483,12 @@ class YouTubeExecutionService:
                 )
                 summary = video.get("summary")
                 if summary:
-                    lines.append(f"      Resumo: {summary.get('resumo_uma_frase', '')}")
+                    resumo_curto = summary.get("resumo_uma_frase", "") or summary.get("resumo", "")
+                    if resumo_curto:
+                        lines.append(f"      Resumo curto: {resumo_curto}")
+                    resumo_completo = summary.get("resumo")
+                    if resumo_completo:
+                        lines.append(f"      Detalhes: {resumo_completo}")
         lines.append("\n=======================================================================")
         lines.append("EXTRAÇÃO CONCLUÍDA")
         return "\n".join(lines)
