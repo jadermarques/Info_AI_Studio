@@ -1,0 +1,32 @@
+=======================================================================
+📊 RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 2
+Total de vídeos extraídos: 8
+Modo: full
+Parâmetros: dias=5, max_videos=30, formato=txt
+
+✅ @Mark_Kashef (@Mark_Kashef)
+    Vídeos extraídos: 6
+    - ESTE truque de código do Claude constrói servidores MCP INSTANTANEAMENTE — 12:51 — https://www.youtube.com/watch?v=mCXuXmnIvk0
+      Resumo: If you've always wanted to build your own MCP server, but were intimidated at the idea of doing it, this video is for you
+    - 3 maneiras de usar servidores MCP agora mesmo (MODO FÁCIL) — 12:27 — https://www.youtube.com/watch?v=uHU-khKos80
+      Resumo: Everyone knows about MCPs by now, but here's what nobody is talking about
+    - Por que você provavelmente não deveria ajustar seu modelo de IA — 14:22 — https://www.youtube.com/watch?v=gUgwG0XPdkc
+      Resumo: To fine-tune or not to fine-tune, that is the question
+    - I Tested 4 AI Browsers So You Don't Have To — 20:17 — https://www.youtube.com/watch?v=VuULRih34PU
+      Resumo: AI browsers are having their iPhone moment right now, and each one of them is claiming to revolutionize the way we browse
+    - O Agente Replit 3 é MUITO mais inteligente do que você pensa — 10:06 — https://www.youtube.com/watch?v=jt9ecYyCTi4
+      Resumo: Replet Agent 3 is here, and some of the updates are genuinely helpful
+    - Como dominar QUALQUER novo modelo de IA em 10 minutos (ILEGAL) — 09:17 — https://www.youtube.com/watch?v=h0rmHYIRXjM
+      Resumo: Every couple weeks, we get a brand new AI model
+✅ @canalsandeco (@canalsandeco)
+    Vídeos extraídos: 2
+    - Essa Biblioteca da Microsoft vai MUDAR seu jeito de usar IA — 09:15 — https://www.youtube.com/watch?v=KA7hp2uyPOQ
+      Resumo: [Música] Saca só essa situação
+    - Pare de Copiar Prompts O SEGREDO para dominar a IA está na INTERAÇÃO — 17:24 — https://www.youtube.com/watch?v=WUbvG94TvcY
+      Resumo: Mas eu particularmente eu sou um pouco contra assim, ah, olha só um prompt que eu fiz, sabe? Assim, algo tão fixo assim, como se fosse algo que você copia e cola, né? Porque eu acho que ali um resultado bom com LM, claro, tem que ter a noção básica do prompt, né? Bem feito, as té
+
+=======================================================================
+✨ Extração concluída!

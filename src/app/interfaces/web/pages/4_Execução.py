@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import streamlit as st
 
 from app.config import get_settings
@@ -135,6 +137,27 @@ else:
                 st.write(f"JSON: {result.json_path}")
                 if result.report_path:
                     st.write(f"Relatório: {result.report_path}")
+                if (
+                    mode == "full"
+                    and result.report_path
+                    and Path(result.report_path).suffix.lower() == ".txt"
+                ):
+                    report_path = Path(result.report_path)
+                    if report_path.exists():
+                        try:
+                            report_text = report_path.read_text(encoding="utf-8")
+                        except Exception as exc:
+                            st.warning(f"Não foi possível carregar o relatório TXT: {exc}")
+                        else:
+                            st.subheader("Conteúdo do relatório (TXT)")
+                            line_count = len(report_text.splitlines()) or 1
+                            dynamic_height = min(900, max(200, line_count * 24))
+                            st.text_area(
+                                "Relatório TXT",
+                                report_text,
+                                height=dynamic_height,
+                                disabled=True,
+                            )
                 st.write(f"Log: {result.log_path}")
                 if result.token_details:
                     st.subheader("Tokens por vídeo")
