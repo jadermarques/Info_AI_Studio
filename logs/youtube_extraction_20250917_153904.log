@@ -1,0 +1,116 @@
+2025-09-17 15:39:04,799 - INFO - app.youtube.run.20250917_153904 - Iniciando extração em lote de 1 canais
+2025-09-17 15:39:04,799 - INFO - app.youtube.run.20250917_153904 - Iniciando extração em lote de 1 canais
+2025-09-17 15:39:04,849 - INFO - app.youtube.run.20250917_153904 - Processando canal 1/1: @Mark_Kashef
+2025-09-17 15:39:04,849 - INFO - app.youtube.run.20250917_153904 - Processando canal 1/1: @Mark_Kashef
+2025-09-17 15:39:15,236 - INFO - youtube_extractor - Extraindo vídeos do canal @Mark_Kashef (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-17 15:39:17,241 - INFO - youtube_extractor - Aba /videos: analisados=5, válidos=4, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-17 15:39:17,241 - INFO - youtube_extractor - Aba /videos: 4 vídeos válidos (≤ 3 dias)
+2025-09-17 15:39:17,242 - INFO - app.youtube.run.20250917_153904 - Canal @Mark_Kashef extraído com sucesso. Vídeos dentro do critério: 4
+2025-09-17 15:39:17,242 - INFO - app.youtube.run.20250917_153904 - Canal @Mark_Kashef extraído com sucesso. Vídeos dentro do critério: 4
+2025-09-17 15:39:38,478 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para e2zIr_2JMbE
+2025-09-17 15:39:38,784 - INFO - youtube_extractor - Transcrição encontrada (72295 chars, en) para e2zIr_2JMbE
+2025-09-17 15:39:51,871 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:39:51,883 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Master ALL 20 Agentic AI Design Patterns [Complete Course]; reduzindo transcrição para 6000 chars.
+2025-09-17 15:40:05,712 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:40:05,714 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Master ALL 20 Agentic AI Design Patterns [Complete Course]; reduzindo transcrição para 4000 chars.
+2025-09-17 15:40:19,001 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:40:19,004 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Master ALL 20 Agentic AI Design Patterns [Complete Course]; reduzindo transcrição para 2500 chars.
+2025-09-17 15:40:32,099 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:40:32,103 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Master ALL 20 Agentic AI Design Patterns [Complete Course]; reduzindo transcrição para 1500 chars.
+2025-09-17 15:40:44,012 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:40:44,015 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Master ALL 20 Agentic AI Design Patterns [Complete Course]; reduzindo transcrição para 900 chars.
+2025-09-17 15:40:59,425 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:40:59,427 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Master ALL 20 Agentic AI Design Patterns [Complete Course]; reduzindo transcrição para 600 chars.
+2025-09-17 15:41:11,706 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:11,712 - WARNING - app.domain.llm_client - [LLM] Resposta com estrutura list ignorada para Master ALL 20 Agentic AI Design Patterns [Complete Course]
+2025-09-17 15:41:16,406 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:16,410 - WARNING - app.domain.llm_client - [LLM] Tradução retornou estrutura não suportada: list
+2025-09-17 15:41:19,690 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:23,411 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:26,876 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:31,621 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:35,596 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:38,926 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:42,193 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:45,733 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:48,806 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:51,593 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:41:57,757 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para mCXuXmnIvk0
+2025-09-17 15:41:58,230 - INFO - youtube_extractor - Transcrição encontrada (13718 chars, en) para mCXuXmnIvk0
+2025-09-17 15:42:09,184 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:42:09,187 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para ESTE truque de código do Claude constrói servidores MCP INSTANTANEAMENTE; reduzindo transcrição para 6000 chars.
+2025-09-17 15:42:23,313 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:42:23,316 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para ESTE truque de código do Claude constrói servidores MCP INSTANTANEAMENTE; reduzindo transcrição para 4000 chars.
+2025-09-17 15:42:34,986 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:42:34,989 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para ESTE truque de código do Claude constrói servidores MCP INSTANTANEAMENTE; reduzindo transcrição para 2500 chars.
+2025-09-17 15:42:48,401 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:42:48,405 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para ESTE truque de código do Claude constrói servidores MCP INSTANTANEAMENTE; reduzindo transcrição para 1500 chars.
+2025-09-17 15:43:03,556 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:43:03,560 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para ESTE truque de código do Claude constrói servidores MCP INSTANTANEAMENTE; reduzindo transcrição para 900 chars.
+2025-09-17 15:43:17,892 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:43:23,295 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:43:23,299 - WARNING - app.domain.llm_client - [LLM] Tradução retornou estrutura não suportada: list
+2025-09-17 15:43:27,006 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:43:31,639 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:43:34,993 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:43:39,191 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:43:42,931 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:43:46,871 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:43:52,298 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:43:56,599 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:44:00,482 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:44:35,415 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:44:44,542 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para uHU-khKos80
+2025-09-17 15:44:45,037 - INFO - youtube_extractor - Transcrição encontrada (13547 chars, en) para uHU-khKos80
+2025-09-17 15:44:58,209 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:44:58,211 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para 3 maneiras de usar servidores MCP agora mesmo (MODO FÁCIL); reduzindo transcrição para 6000 chars.
+2025-09-17 15:45:12,561 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:45:12,565 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para 3 maneiras de usar servidores MCP agora mesmo (MODO FÁCIL); reduzindo transcrição para 4000 chars.
+2025-09-17 15:45:24,290 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:45:24,293 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para 3 maneiras de usar servidores MCP agora mesmo (MODO FÁCIL); reduzindo transcrição para 2500 chars.
+2025-09-17 15:45:36,201 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:45:36,203 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para 3 maneiras de usar servidores MCP agora mesmo (MODO FÁCIL); reduzindo transcrição para 1500 chars.
+2025-09-17 15:45:48,565 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:45:48,569 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para 3 maneiras de usar servidores MCP agora mesmo (MODO FÁCIL); reduzindo transcrição para 900 chars.
+2025-09-17 15:46:00,777 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:00,780 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para 3 maneiras de usar servidores MCP agora mesmo (MODO FÁCIL); reduzindo transcrição para 600 chars.
+2025-09-17 15:46:12,248 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:12,250 - WARNING - app.domain.llm_client - [LLM] Resposta com estrutura list ignorada para 3 maneiras de usar servidores MCP agora mesmo (MODO FÁCIL)
+2025-09-17 15:46:17,366 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:17,369 - WARNING - app.domain.llm_client - [LLM] Tradução retornou estrutura não suportada: list
+2025-09-17 15:46:20,644 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:24,329 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:28,271 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:31,804 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:35,334 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:38,972 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:43,240 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:46,896 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:49,196 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:46:57,085 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para gUgwG0XPdkc
+2025-09-17 15:47:04,408 - INFO - youtube_extractor - Transcrição encontrada (15637 chars, en) para gUgwG0XPdkc
+2025-09-17 15:47:17,782 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:47:17,785 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Por que você provavelmente não deveria ajustar seu modelo de IA; reduzindo transcrição para 6000 chars.
+2025-09-17 15:47:30,995 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:47:30,997 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Por que você provavelmente não deveria ajustar seu modelo de IA; reduzindo transcrição para 4000 chars.
+2025-09-17 15:47:42,565 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:47:42,569 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Por que você provavelmente não deveria ajustar seu modelo de IA; reduzindo transcrição para 2500 chars.
+2025-09-17 15:47:54,419 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:47:54,422 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Por que você provavelmente não deveria ajustar seu modelo de IA; reduzindo transcrição para 1500 chars.
+2025-09-17 15:48:05,408 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:48:05,410 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Por que você provavelmente não deveria ajustar seu modelo de IA; reduzindo transcrição para 900 chars.
+2025-09-17 15:48:16,561 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:48:16,564 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Por que você provavelmente não deveria ajustar seu modelo de IA; reduzindo transcrição para 600 chars.
+2025-09-17 15:48:28,372 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:48:28,375 - WARNING - app.domain.llm_client - [LLM] Resposta com estrutura list ignorada para Por que você provavelmente não deveria ajustar seu modelo de IA
+2025-09-17 15:48:34,030 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:48:34,034 - WARNING - app.domain.llm_client - [LLM] Tradução retornou estrutura não suportada: list
+2025-09-17 15:48:37,451 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:48:42,292 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:48:46,358 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:48:49,738 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:48:53,424 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:48:56,651 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:49:00,182 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:49:04,178 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:49:09,130 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

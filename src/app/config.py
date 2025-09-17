@@ -30,6 +30,7 @@ class Settings:
     backup_dir: Path
     log_dir: Path
     cookies_path: Optional[Path]
+    translate_results: str
 
 
 def _load_env() -> None:
@@ -57,6 +58,8 @@ def get_settings() -> Settings:
     provider_env_var = _provider_env_var(llm_provider)
     llm_api_key = os.getenv(provider_env_var, os.getenv("LLM_API_KEY", "")).strip()
     token_limit = int(os.getenv("TOKEN_LIMIT", "4096") or 4096)
+    translate_raw = os.getenv("TRANSLATE_RESULTS", "original").strip().lower()
+    translate_results = "pt-br" if translate_raw in {"pt", "pt-br", "pt_br", "portugues", "português", "br"} else "original"
     resultados_dir = Path(os.getenv("RESULTADOS_DIR", "resultados_extracao"))
     backup_dir = Path(os.getenv("BACKUP_DIR", "backup"))
     log_dir = Path(os.getenv("LOG_DIR", "logs"))
@@ -73,6 +76,7 @@ def get_settings() -> Settings:
         backup_dir=backup_dir,
         log_dir=log_dir,
         cookies_path=cookies_path,
+        translate_results=translate_results,
     )
 
 

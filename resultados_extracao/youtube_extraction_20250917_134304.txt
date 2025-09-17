@@ -1,0 +1,16 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: full
+Parâmetros: dias=3, max_videos=30, formato=txt
+
+* @canalsandeco (@canalsandeco)
+    Vídeos extraídos: 1
+    - Essa Biblioteca da Microsoft vai MUDAR seu jeito de usar IA — 09:15 — https://www.youtube.com/watch?v=KA7hp2uyPOQ
+      Resumo: [Música] Saca só essa situação
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

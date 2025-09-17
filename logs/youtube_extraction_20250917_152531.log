@@ -1,0 +1,32 @@
+2025-09-17 15:25:31,054 - INFO - app.youtube.run.20250917_152531 - Iniciando extração em lote de 1 canais
+2025-09-17 15:25:31,054 - INFO - app.youtube.run.20250917_152531 - Iniciando extração em lote de 1 canais
+2025-09-17 15:25:31,083 - INFO - app.youtube.run.20250917_152531 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 15:25:31,083 - INFO - app.youtube.run.20250917_152531 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 15:25:32,267 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-17 15:25:33,010 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-17 15:25:33,010 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-17 15:25:33,011 - INFO - app.youtube.run.20250917_152531 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-17 15:25:33,011 - INFO - app.youtube.run.20250917_152531 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-17 15:25:36,336 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para 1_0OZvSjabM
+2025-09-17 15:25:36,529 - INFO - youtube_extractor - Transcrição encontrada (18667 chars, en) para 1_0OZvSjabM
+2025-09-17 15:25:47,723 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:25:47,732 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 6000 chars.
+2025-09-17 15:26:00,830 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:26:00,833 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 4000 chars.
+2025-09-17 15:26:13,228 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:26:13,231 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 2500 chars.
+2025-09-17 15:26:25,200 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:26:25,204 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 1500 chars.
+2025-09-17 15:26:38,307 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:26:38,311 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 900 chars.
+2025-09-17 15:26:50,687 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:26:50,690 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 600 chars.
+2025-09-17 15:27:02,955 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:27:02,957 - WARNING - app.domain.llm_client - [LLM] Resposta com estrutura list ignorada para Encontrei uma oportunidade de um bilhão de dólares
+2025-09-17 15:27:07,698 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:27:07,701 - WARNING - app.domain.llm_client - [LLM] Tradução retornou estrutura não suportada: list
+2025-09-17 15:27:10,960 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:27:15,893 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:27:19,402 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:27:23,466 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 15:27:27,051 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

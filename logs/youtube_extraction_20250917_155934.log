@@ -1,0 +1,50 @@
+2025-09-17 15:59:34,253 - INFO - app.youtube.run.20250917_155934 - Iniciando extração em lote de 1 canais
+2025-09-17 15:59:34,253 - INFO - app.youtube.run.20250917_155934 - Iniciando extração em lote de 1 canais
+2025-09-17 15:59:34,295 - INFO - app.youtube.run.20250917_155934 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 15:59:34,295 - INFO - app.youtube.run.20250917_155934 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 15:59:35,234 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-17 15:59:35,772 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-17 15:59:35,773 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-17 15:59:35,773 - INFO - app.youtube.run.20250917_155934 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-17 15:59:35,773 - INFO - app.youtube.run.20250917_155934 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-17 15:59:52,890 - INFO - app.youtube.run.20250917_155952 - Iniciando extração em lote de 1 canais
+2025-09-17 15:59:52,900 - INFO - app.youtube.run.20250917_155952 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 16:00:01,791 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=2, videos_tab_only=True, max_videos=1)
+2025-09-17 16:00:07,086 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-17 16:00:07,087 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 2 dias)
+2025-09-17 16:00:07,088 - INFO - app.youtube.run.20250917_155952 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-17 16:00:19,216 - INFO - app.youtube.run.20250917_160019 - Iniciando extração em lote de 1 canais
+2025-09-17 16:00:19,227 - INFO - app.youtube.run.20250917_160019 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 16:00:20,377 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=3, videos_tab_only=True, max_videos=1)
+2025-09-17 16:00:21,366 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-17 16:00:21,366 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-17 16:00:21,367 - INFO - app.youtube.run.20250917_160019 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-17 16:00:24,232 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para 1_0OZvSjabM
+2025-09-17 16:00:24,369 - INFO - youtube_extractor - Transcrição encontrada (18667 chars, en) para 1_0OZvSjabM
+2025-09-17 16:00:46,651 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:00:46,667 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 6000 chars.
+2025-09-17 16:01:02,200 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:01:02,203 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 4000 chars.
+2025-09-17 16:01:16,529 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:01:16,532 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 2500 chars.
+2025-09-17 16:01:30,200 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:01:30,204 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 1500 chars.
+2025-09-17 16:01:42,446 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:01:42,449 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 900 chars.
+2025-09-17 16:01:56,854 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:01:56,861 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 600 chars.
+2025-09-17 16:02:12,179 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:02:12,181 - WARNING - app.domain.llm_client - [LLM] Resposta com estrutura list ignorada para Encontrei uma oportunidade de um bilhão de dólares
+2025-09-17 16:02:17,820 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:02:17,824 - WARNING - app.domain.llm_client - [LLM] Tradução retornou estrutura não suportada: list
+2025-09-17 16:02:23,644 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:02:28,012 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:02:32,016 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:02:35,816 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:02:39,081 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-17 16:02:39,082 - WARNING - app.domain.llm_client - [LLM] Falha ao traduzir campo assunto: Error code: 400 - {'error': {'message': 'Could not finish the message because max_tokens or model output limit was reached. Please try again with higher max_tokens.', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2025-09-17 16:02:41,606 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:02:45,226 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:02:50,551 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:02:54,544 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 16:02:57,002 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

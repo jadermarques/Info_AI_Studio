@@ -1,0 +1,25 @@
+2025-09-17 14:35:14,646 - INFO - app.youtube.run.20250917_143514 - Iniciando extração em lote de 1 canais
+2025-09-17 14:35:14,646 - INFO - app.youtube.run.20250917_143514 - Iniciando extração em lote de 1 canais
+2025-09-17 14:35:14,687 - INFO - app.youtube.run.20250917_143514 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 14:35:14,687 - INFO - app.youtube.run.20250917_143514 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 14:35:16,649 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-17 14:35:19,822 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-17 14:35:19,823 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-17 14:35:19,823 - INFO - app.youtube.run.20250917_143514 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-17 14:35:19,823 - INFO - app.youtube.run.20250917_143514 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-17 14:35:22,431 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para 1_0OZvSjabM
+2025-09-17 14:35:22,562 - INFO - youtube_extractor - Transcrição encontrada (18667 chars, en) para 1_0OZvSjabM
+2025-09-17 14:35:34,267 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 14:35:34,279 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 6000 chars.
+2025-09-17 14:35:45,226 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 14:35:45,230 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 4000 chars.
+2025-09-17 14:36:00,470 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 14:36:00,473 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 2500 chars.
+2025-09-17 14:36:12,892 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 14:36:12,895 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 1500 chars.
+2025-09-17 14:36:24,989 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 14:36:24,992 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 900 chars.
+2025-09-17 14:36:45,150 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 14:36:45,154 - WARNING - app.domain.llm_client - [LLM] Resumo truncado (finish_reason=length) para Encontrei uma oportunidade de um bilhão de dólares; reduzindo transcrição para 600 chars.
+2025-09-17 14:36:58,439 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 14:36:58,443 - WARNING - app.domain.llm_client - [LLM] Resposta não pôde ser convertida para JSON (Extra data: line 1 column 3 (char 2)) com trecho 600: Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=[], audio=None, function_call=None, too…

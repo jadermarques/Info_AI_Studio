@@ -1,0 +1,17 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: full
+Parâmetros: dias=3, max_videos=30, formato=txt
+
+* @canalsandeco (@canalsandeco)
+    Vídeos extraídos: 1
+    - Essa Biblioteca da Microsoft vai MUDAR seu jeito de usar IA — 09:15 — https://www.youtube.com/watch?v=KA7hp2uyPOQ
+      Resumo curto: Saca só essa situação
+      Detalhes: Saca só essa situação. Você tem um projeto incrível de A, mas os seus dados estão espalhados para todo lado. Tem relatório em PDF, uma apresentação em PowerPoint, uma planilha em Excel, um áudio de reunião e até link de YouTube. Como é que você pode juntar tudo isso de tal forma essa salada de informações, né, para passar para o seu agente ou para a sua LLM? Então, hoje em quatro linhas de Python, só quatro linhas de Python, eu vou mostrar como você pode transformar qualquer tipo de dados em markdown para que você possa passar para seu agente ou a sua LLM. Saca só. Oi, tudo bem? Eu sou Sandeco, sou professor e pesquisador pela Universidade Federal de Goiás e Instituto Federal de Goiás. Além disso, eu sou embaixador da Campus Par Brasil e meu objetivo aqui é fazer com que você use cada vez mais inteligência
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

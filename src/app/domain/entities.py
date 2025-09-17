@@ -60,6 +60,7 @@ class YouTubeExtractionConfig:
     user_agent: str
     report_format: str
     max_videos: Optional[int]
+    translate_results: str
 
 
 @dataclass(slots=True)

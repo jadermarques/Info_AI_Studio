@@ -124,6 +124,7 @@ else:
                 user_agent=user_agent,
                 report_format=report_format,
                 max_videos=int(max_videos) if max_videos else None,
+                translate_results=settings.translate_results,
             )
             service = YouTubeExecutionService(config)
             result = service.run(progress_callback=update_progress)

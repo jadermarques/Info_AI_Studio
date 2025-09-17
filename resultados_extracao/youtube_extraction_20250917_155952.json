@@ -1,0 +1,26 @@
+{
+  "executed_at": "2025-09-17T15:59:52.890458",
+  "mode": "full",
+  "total_channels": 1,
+  "total_videos": 0,
+  "params": {
+    "days": 2,
+    "max_videos": 1,
+    "mode": "full",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "txt",
+    "translate_results": "pt-br"
+  },
+  "channels": [
+    {
+      "channel_id": "@SuperHumansLife",
+      "name": "@SuperHumansLife",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    }
+  ]
+}

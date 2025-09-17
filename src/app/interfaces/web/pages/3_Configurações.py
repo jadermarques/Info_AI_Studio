@@ -45,13 +45,31 @@ if _domain_update_parameters is None:
     st.warning(message)
 
 st.subheader("Parâmetros da aplicação")
+TRANSLATE_OPTIONS = {
+    "Linguagem original": "original",
+    "Português (Brasil)": "pt-br",
+}
 with st.form("params_form"):
     max_palavras = st.number_input(
         "Máximo de palavras para resumos", min_value=50, max_value=1000, value=settings.max_palavras_resumo
     )
+    translate_default_label = next(
+        (label for label, value in TRANSLATE_OPTIONS.items() if value == settings.translate_results),
+        "Linguagem original",
+    )
+    translate_label = st.selectbox(
+        "Traduzir resultados",
+        options=list(TRANSLATE_OPTIONS.keys()),
+        index=list(TRANSLATE_OPTIONS.keys()).index(translate_default_label),
+    )
     submitted = st.form_submit_button("Salvar parâmetros")
     if submitted:
-        _persist_parameters({"MAX_PALAVRAS_RESUMO": str(int(max_palavras))})
+        _persist_parameters(
+            {
+                "MAX_PALAVRAS_RESUMO": str(int(max_palavras)),
+                "TRANSLATE_RESULTS": TRANSLATE_OPTIONS[translate_label],
+            }
+        )
         st.success("Parâmetros atualizados.")
         st.rerun()
 
