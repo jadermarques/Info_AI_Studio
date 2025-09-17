@@ -1,0 +1,61 @@
+{
+  "executed_at": "2025-09-16T21:32:59.270447",
+  "mode": "full",
+  "total_channels": 1,
+  "total_videos": 1,
+  "params": {
+    "days": 3,
+    "max_videos": 5,
+    "mode": "full",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "txt"
+  },
+  "channels": [
+    {
+      "channel_id": "@canalsandeco",
+      "name": "@canalsandeco",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "KA7hp2uyPOQ",
+          "title": "Essa Biblioteca da Microsoft vai MUDAR seu jeito de usar IA",
+          "url": "https://www.youtube.com/watch?v=KA7hp2uyPOQ",
+          "published": "2025-09-16T00:32:59.977315",
+          "published_relative": "há 1 dia",
+          "duration": "09:15",
+          "date_published": "2025-09-15T12:58:28-07:00",
+          "transcript_available": true,
+          "transcript": "[Música] Saca só essa situação. Você tem um projeto incrível de A, mas os seus dados estão espalhados para todo lado. Tem relatório em PDF, uma apresentação em PowerPoint, uma planilha em Excel, um áudio de reunião e até link de YouTube. Como é que você pode juntar tudo isso de tal forma essa salada de informações, né, para passar para o seu agente ou para a sua LLM? Então, hoje em quatro linhas de Python, só quatro linhas de Python, eu vou mostrar como você pode transformar qualquer tipo de dados em markdown para que você possa passar para seu agente ou a sua LLM. Saca só. Oi, tudo bem? Eu sou Sandeco, sou professor e pesquisador pela Universidade Federal de Goiás e Instituto Federal de Goiás. Além disso, eu sou embaixador da Campus Par Brasil e meu objetivo aqui é fazer com que você use cada vez mais inteligência artificial no seu dia a dia. Muito bem, já estamos aqui nessa ferramenta, na no GitHub da ferramenta que é o Mark It Down. Uma coisa importante que você precisa saber é que essa ferramenta foi construída pela Microsoft. Então a gente tem aí uma grande empresa, né, uma Bigtech que atrás a ferramenta, o que nos dá muita segurança no uso. Então Microsoft tá aqui e ele é uma ferramenta, né, em Python que converte arquivos e arquivos do Office para Markdown, como é a própria ferramenta da Microsoft. ser legal porque fica a ferramenta do Office, né, para ser usado, transformado em Markdow. Por Markdow é importante isso aqui que é legal. O Markdow é extremamente próximo do texto simples com marcação ou formatação mínima, mas ainda oferece uma maneira de representar a estrutura importante do documento, né? LMs tradicionais como GPT4O ou GPT5, Gemni e tudo mais da Openai falam Markdow nativamente e frequentemente incorporam Markdown em suas respostas. Isso sem precisar de uma solicitação. E pessoal, isso sugere que eles foram treinados com a grande quantidade de dados, né, de textos formatados em Markow. E eles compreendem muito bem, as LLMs compreendem muito bem Markdow. E como benefício adicional, as conversões do Macdow também são altamente eficientes em termos de token. E ó, o legal é que agora ele diz que ele aceita, né, a conversão de PDF, PowerPoint, Word, Excel, imagens, áudio, HTML, né, CSV, Jason, XML, eh, Zip Files, YouTube, URLs e também o EPUB. Tá muito bem, já estou dentro do Winds surf e eu criei aqui uma pasta chamada Mark It Down Test, tá? Então o que eu vou fazer agora é adicionar, né? Uv init, tá? Criar o projeto UV init menos Python = 3.12, porque o 3.12 é o que tá mais ativo, né? Tá mais instável, tá mais estável nesses dias. Eu vou dar seta para cima aqui, ó. Eu vou alterar aqui simplesmente para Venv. E aí continuando com 3.12. E agora ele vai fazer o seguinte, vai instalar a máquina, a máquina aqui, né? É o ambiente virtual. Próximo passo vai ser o seguinte, eu vou vou adicionar o o Mark It down. Vamos ver aqui. Vai serve add mark it down. Só que você tem que colocar aqui, ó, abre coochetes, tá? E coloca all, tá? OK. Coloca um all aqui. Ele é importante para poder você adicionar todas as suas todos os plugins de PDF, Excel, PowerPoint e tudo mais. Então é assim que você deve instalar, né? ADM mark down. Esse abre coochetes all instalou aqui. Você vai ver que bem rapidão, né? O UV estava instala muito, muito rápido mesmo. Tá bom? Mesmo mesmo mesmo. OK. Depois que ele instalou, agora a gente vai fazer o seguinte, vamos criar aqui um, vamos abrir a main do projeto. Eu vou apagar isso aqui que não precisa de jeito nenhum. E nós vamos fazer aqui, ó, a importação do Mark It down, tá bom? De acordo com GitHub, aqui é muito simples, porque você simplesmente vai usar esse código aqui, ó. Aqui embaixo tem um código bacana que explica como fazer. Então, primeira coisa, você vai fazer o mark it down, certo? Mark it down. E depois vai fazer MD, Mark, enable plugins. Eu vou colocar esse enable para true, tá bom? Porque eu quero que ele carregue o meu PDF com o plugin de PDF. Então veja, somente quatro linhas de código, né? Eu vou aqui, ó, copiar isso tudo aqui e vou lá para o meu main, no meu wind surf, tá? Só que eu não quero usar um XLS aqui. Eu quero usar o meu livro, o meu livro de MCP e eu quero que ele converta o livro de MCP inteiro para Mark. Então como é que eu vou fazer? Vou fazer o seguinte, eu vou pegar aqui meu livro e vou colocar no projeto, ó. Eu vou simplesmente arrastar, né, o livro aqui para dentro, ó. O PDF dele aqui é esse MCP PDF. Esse aqui é o livro de MCP. Se você tiver interesse em adquirir esse livro, basta você acessar o link que está embaixo aí na descrição, tudo sobre MCP. Além disso, tem aulas gravadas lá explicando todo o conteúdo de MCP e um grupo de WhatsApp específico para você poder conversar com a turma que comprou o livro, tá bom? Vamos voltar pro código. Ó, aqui o que eu vou fazer é o seguinte, eu vou colocar aqui, ó, mcp mcp. DF. Muito bem, então serão agora só quatro linhas de programação. Já está pronto a nossa aqui vou aqui eu vou alterar para true, tá bom? Porque eu quero que ele chame, né, o plugin do PDF. Muito bem. Vamos agora então executar no modo depuração. Veja que é muito simples mesmo, né? Muito simples. Ele vai adicionar aí a biblioteca, vai abrir a biblioteca e depois eu vou instanciar o objeto Mark It, tá? Mark It down. Muito bem, agora ele começou a executar. Olha, vamos criar aqui o objeto do Markdown. E agora eu vou pedir para converter. Como meu livro tem mais de 180, quase 200 páginas, ele vai demorar um bocadinho, tá? Então eu vou dar uma cortada no vídeo aqui para que você possa acompanhar com a gente rapidamente. Então, muito bem, já converteu, demorou mais ou menos uns 30 segundos para converter e agora eu vou imprimir, né, esse resultado na nossa tela aqui. Então, está aí, ó, é todo o livro impresso, né? Todo o livro já foi transformado em Markdown. Muito bem. Agora o próximo passo é o seguinte. Eu quero que ele salve todo o resultado da transformação do PDF Markdown em um arquivo MD. Esse MD vem de Markdown, tá? Então vou colocar aqui, ó. Salve o resultado em um arquivo MD MD MCP, né? Vou colocar aqui, ó. MCP. MD em UTF8, tá? Isso aqui é importante essa conversão. Então aqui, ó, ele já me deu o código e agora o que eu vou fazer? Vou salvar aqui a aplicação e mais uma vez vou converter o livro inteiro em Mark, tá? Essa conversão ela é muito importante, por exemplo, para fazer um hag, né? Nosso próximo livro será sobre Hag e provavelmente usaremos bastante essa biblioteca, né, para a transformação dos textos em chunks do da dos PDFs, das informações. Então vamos lá. Mais uma vez instanciamos e vamos converter o PDF inteiro e em markdown. Então, quando a gente vai usar hag, a gente precisa de um texto, né, que seja puro. E aí, ó, o que eu vou fazer é exatamente isso. Vou converter o meu PDF markdown e vou salvar aqui num MD. Veja aqui agora, ó, quando eu vou imprimir aqui o resultado, se eu vier aqui do lado aqui, eu já venho, já tenho aqui na Explorer, eu vou ten esse mcp.md. E se eu abrir aqui, é exatamente o conteúdo do livro. Então, tá aqui, ó, o prefáciil, tá vendo, ó? e muita informação do livro aqui, né? Isso é muito legal. Então, uma ferramenta muito boa para que você possa usar a transformação aí em Mark, tá? É isso. Então, o Markdown é uma estrutura de informação para as LLMs e seus agentes muito importantes. Eu fiz agora o PDF para Mark. Podemos fazer Excel para Mark ou imagem para Markow. Se você quer que eu faça isso aqui no canal, deixa um comentário dizendo: \"Sandeco, vamos nessa, vamos fazer essa transformação.\" Beleza? Eu espero que você tenha gostado desse vídeo. Um grande abraço para você e até a próxima.",
+          "summary": {
+            "resumo_uma_frase": "[Música] Saca só essa situação",
+            "resumo": "[Música] Saca só essa situação. Você tem um projeto incrível de A, mas os seus dados estão espalhados para todo lado. Tem relatório em PDF, uma apresentação em PowerPoint, uma planilha em Excel, um áudio de reunião e até link de YouTube. Como é que você pode juntar tudo isso de tal forma essa salada de informações, né, para passar para o seu agente ou para a sua LLM? Então, hoje em quatro linhas de Python, só quatro linhas de Python, eu vou mostrar como você pode transformar qualquer tipo de dados em markdown para que você possa passar para seu agente ou a sua LLM. Saca só. Oi, tudo bem? Eu sou Sandeco, sou professor e pesquisador pela Universidade Federal de Goiás e Instituto Federal de Goiás. Além disso, eu sou embaixador da Campus Par Brasil e meu objetivo aqui é fazer com que você use cada vez mais",
+            "assunto_principal": "Essa Biblioteca da Microsoft vai MUDAR seu jeito de usar IA",
+            "palavras_chave": [
+              "[música]",
+              "agente",
+              "apresentação",
+              "artificial",
+              "brasil",
+              "campus",
+              "coisa",
+              "construída",
+              "dados",
+              "disso",
+              "down",
+              "embaixador"
+            ],
+            "resumo_em_topicos": "- [música]\n- agente\n- apresentação\n- artificial\n- brasil\n- campus\n- coisa\n- construída",
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "model": "gpt-5-nano",
+            "cost": 0.0
+          }
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}
