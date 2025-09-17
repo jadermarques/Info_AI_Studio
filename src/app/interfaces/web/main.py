@@ -8,6 +8,25 @@ from app.config import get_settings
 from app.infrastructure.db import is_database_initialized
 
 
+def _status_indicator(label: str, connected: bool, connected_text: str, disconnected_text: str) -> None:
+    """Render a traffic-light style indicator for connection status."""
+
+    color = "#22c55e" if connected else "#ef4444"
+    status_text = connected_text if connected else disconnected_text
+    st.markdown(
+        f"""
+        <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;">
+            <span style="width:0.9rem;height:0.9rem;border-radius:50%;background:{color};display:inline-block;"></span>
+            <div style="display:flex;flex-direction:column;">
+                <span style="font-weight:600;font-size:0.95rem;color:#1f2937;">{label}</span>
+                <span style="font-weight:700;color:{color};letter-spacing:0.02em;">{status_text}</span>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def render_home() -> None:
     """Renderiza a página inicial com status gerais."""
 
@@ -15,15 +34,17 @@ def render_home() -> None:
     st.title("Info_AI_Studio")
     st.caption("Coleta e análise de informações em múltiplas fontes")
 
-    db_status = "Conectado" if is_database_initialized() else "Não inicializado"
-    llm_status = "Configurada" if settings.llm_api_key else "Não configurada"
+    db_connected = is_database_initialized()
+    llm_connected = bool(settings.llm_api_key)
 
     col1, col2 = st.columns(2)
     with col1:
-        st.metric("Status do banco de dados", db_status)
+        st.subheader("Banco de dados")
+        _status_indicator("Status do banco", db_connected, "CONECTADO", "NÃO CONECTADO")
         st.page_link("pages/3_Configurações.py", label="Ir para Configurações", icon="⚙️")
     with col2:
-        st.metric("Status da LLM", llm_status)
+        st.subheader("Modelo LLM")
+        _status_indicator("Status da LLM", llm_connected, "CONECTADO", "NÃO CONFIGURADO")
         st.page_link("pages/2_Cadastros.py", label="Ir para Cadastros", icon="🗂️")
 
     st.divider()
