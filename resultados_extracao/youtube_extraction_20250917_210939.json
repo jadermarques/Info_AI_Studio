@@ -1,0 +1,23 @@
+{
+  "executed_at": "2025-09-17T21:09:39.277714",
+  "mode": "full",
+  "total_channels": 1,
+  "total_videos": 0,
+  "params": {
+    "days": 1,
+    "max_videos": 1,
+    "mode": "full",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "txt",
+    "translate_results": "pt-br"
+  },
+  "channels": [
+    {
+      "channel_id": "@SuperHumansLife",
+      "status": "error",
+      "message": "Falha ao acessar https://www.youtube.com/@SuperHumansLife/about",
+      "videos": []
+    }
+  ]
+}

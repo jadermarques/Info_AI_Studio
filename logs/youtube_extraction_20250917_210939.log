@@ -1,0 +1,7 @@
+2025-09-17 21:09:39,278 - INFO - app.youtube.run.20250917_210939 - Iniciando extração em lote de 1 canais
+2025-09-17 21:09:39,278 - INFO - app.youtube.run.20250917_210939 - Iniciando extração em lote de 1 canais
+2025-09-17 21:09:39,278 - INFO - app.youtube.run.20250917_210939 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 21:09:39,278 - INFO - app.youtube.run.20250917_210939 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 21:09:39,287 - WARNING - youtube_extractor - Falha ao requisitar https://www.youtube.com/@SuperHumansLife/about: HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /@SuperHumansLife/about (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10a497230>: Failed to resolve 'www.youtube.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-09-17 21:09:39,287 - WARNING - app.youtube.run.20250917_210939 - Falha ao extrair informações do canal @SuperHumansLife
+2025-09-17 21:09:39,287 - WARNING - app.youtube.run.20250917_210939 - Falha ao extrair informações do canal @SuperHumansLife

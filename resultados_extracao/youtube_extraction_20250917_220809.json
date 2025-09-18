@@ -1,0 +1,25 @@
+{
+  "executed_at": "2025-09-17T22:08:09.966698",
+  "mode": "full",
+  "total_channels": 1,
+  "total_videos": 0,
+  "params": {
+    "days": 1,
+    "max_videos": null,
+    "mode": "full",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "txt",
+    "translate_results": "pt-br",
+    "resumo_max_palavras": 150,
+    "llm_model": "gpt-5-nano"
+  },
+  "channels": [
+    {
+      "channel_id": "@examples/canal.txt",
+      "status": "error",
+      "message": "Falha ao acessar https://www.youtube.com/@examples/canal.txt/about",
+      "videos": []
+    }
+  ]
+}

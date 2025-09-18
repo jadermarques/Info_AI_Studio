@@ -1,0 +1,30 @@
+2025-09-17 21:56:03,331 - INFO - app.youtube.run.20250917_215603 - Iniciando extração em lote de 1 canais
+2025-09-17 21:56:03,331 - INFO - app.youtube.run.20250917_215603 - Iniciando extração em lote de 1 canais
+2025-09-17 21:56:03,375 - INFO - app.youtube.run.20250917_215603 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 21:56:03,375 - INFO - app.youtube.run.20250917_215603 - Processando canal 1/1: @SuperHumansLife
+2025-09-17 21:56:04,067 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=3, videos_tab_only=True, max_videos=1)
+2025-09-17 21:56:04,359 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-17 21:56:04,360 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-17 21:56:04,361 - INFO - app.youtube.run.20250917_215603 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-17 21:56:04,361 - INFO - app.youtube.run.20250917_215603 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-17 21:56:06,603 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para 1_0OZvSjabM
+2025-09-17 21:56:06,728 - INFO - youtube_extractor - Transcrição encontrada (18667 chars, en) para 1_0OZvSjabM
+2025-09-17 21:56:18,383 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 21:56:18,396 - WARNING - app.domain.llm_client - [LLM] Resposta vazia do modelo para Encontrei uma oportunidade de um bilhão de dólares (trecho 8000 chars)
+2025-09-17 21:56:29,282 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 21:56:29,285 - WARNING - app.domain.llm_client - [LLM] Resposta vazia do modelo para Encontrei uma oportunidade de um bilhão de dólares (trecho 6000 chars)
+2025-09-17 21:56:41,162 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 21:56:41,164 - WARNING - app.domain.llm_client - [LLM] Resposta vazia do modelo para Encontrei uma oportunidade de um bilhão de dólares (trecho 4000 chars)
+2025-09-17 21:56:52,629 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 21:56:52,632 - WARNING - app.domain.llm_client - [LLM] Resposta vazia do modelo para Encontrei uma oportunidade de um bilhão de dólares (trecho 2500 chars)
+2025-09-17 21:57:08,095 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 21:57:08,098 - WARNING - app.domain.llm_client - [LLM] Resposta vazia do modelo para Encontrei uma oportunidade de um bilhão de dólares (trecho 1500 chars)
+2025-09-17 21:57:18,434 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 21:57:18,437 - WARNING - app.domain.llm_client - [LLM] Resposta vazia do modelo para Encontrei uma oportunidade de um bilhão de dólares (trecho 900 chars)
+2025-09-17 21:57:30,106 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 21:57:30,107 - WARNING - app.domain.llm_client - [LLM] Resposta vazia do modelo para Encontrei uma oportunidade de um bilhão de dólares (trecho 600 chars)
+2025-09-17 21:57:34,307 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 21:57:37,482 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 21:57:41,063 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 21:57:44,750 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-17 21:57:46,798 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
