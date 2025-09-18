@@ -96,6 +96,15 @@ class YouTubeExecutionService:
             "Iniciando processamento dos canais selecionados...",
         )
         extractor = self._build_extractor()
+        request_counter = {"count": 0}
+        original_make_request = getattr(extractor, "_make_request", None)
+        if callable(original_make_request):
+
+            def _counted_make_request(url: str, *args, **kwargs):
+                request_counter["count"] += 1
+                return original_make_request(url, *args, **kwargs)
+
+            extractor._make_request = _counted_make_request  # type: ignore[attr-defined]
         llm_client = self._build_llm_client()
         total_videos = 0
         channel_payload: list[dict] = []
@@ -168,9 +177,12 @@ class YouTubeExecutionService:
                         {
                             "canal": info.get("name") or channel,
                             "video": video.get("title", ""),
+                            "video_id": video_id,
+                            "modelo": summary.model if summary else self.config.llm_model,
                             "tokens_entrada": prompt_tokens,
                             "tokens_saida": completion_tokens,
                             "tokens_totais": prompt_tokens + completion_tokens,
+                            "custo_estimado": (summary.cost if summary else 0.0),
                         }
                     )
                     summary_payload = asdict(summary) if summary else None
@@ -215,9 +227,9 @@ class YouTubeExecutionService:
             logger.removeHandler(file_handler)
             file_handler.close()
 
-        json_path, report_path = self._persist_outputs(
-            run_id, channel_payload, total_videos, timestamp
-        )
+        params = self._build_params()
+        metadata = self._build_metadata(channel_payload, total_videos, timestamp, params)
+        json_path, report_path = self._persist_outputs(run_id, metadata)
         self._notify(
             progress_callback,
             "Extração finalizada. Resultados disponíveis para consulta.",
@@ -234,6 +246,8 @@ class YouTubeExecutionService:
         message = (
             "Extração concluída com sucesso" if channel_payload else "Nenhum resultado gerado"
         )
+        success_channels = sum(1 for item in channel_payload if item.get("status") == "success")
+        failed_channels = len(channel_payload) - success_channels
         return YouTubeExtractionResult(
             json_path=json_path,
             report_path=report_path,
@@ -245,6 +259,13 @@ class YouTubeExecutionService:
             channel_tokens=channel_tokens,
             total_prompt_tokens=total_prompt_tokens,
             total_completion_tokens=total_completion_tokens,
+            run_id=run_id,
+            started_at=timestamp,
+            channels_data=channel_payload,
+            params=params,
+            success_channels=success_channels,
+            failed_channels=failed_channels,
+            total_requests=request_counter["count"],
         )
 
     def _resolve_channels(self) -> list[str]:
@@ -412,30 +433,41 @@ class YouTubeExecutionService:
     def _persist_outputs(
         self,
         run_id: str,
-        channels: list[dict],
-        total_videos: int,
-        timestamp: datetime,
+        metadata: dict,
     ) -> tuple[Optional[Path], Optional[Path]]:
-        metadata = {
-            "executed_at": timestamp.isoformat(),
-            "mode": self.config.mode,
-            "total_channels": len(channels),
-            "total_videos": total_videos,
-            "params": {
-                "days": self.config.days,
-                "max_videos": self.config.max_videos,
-                "mode": self.config.mode,
-                "no_llm": self.config.no_llm,
-                "asr_provider": self.config.asr_provider,
-                "format": self.config.report_format,
-                "translate_results": self.config.translate_results,
-            },
-            "channels": channels,
-        }
         json_path = self.resultados_dir / f"{self.config.prefix}_{run_id}.json"
         json_path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8")
         report_path = self._build_report(run_id, metadata)
         return json_path, report_path
+
+    def _build_params(self) -> dict:
+        return {
+            "days": self.config.days,
+            "max_videos": self.config.max_videos,
+            "mode": self.config.mode,
+            "no_llm": self.config.no_llm,
+            "asr_provider": self.config.asr_provider,
+            "format": self.config.report_format,
+            "translate_results": self.config.translate_results,
+            "resumo_max_palavras": self.config.resumo_max_palavras,
+            "llm_model": self.config.llm_model,
+        }
+
+    def _build_metadata(
+        self,
+        channels: list[dict],
+        total_videos: int,
+        timestamp: datetime,
+        params: dict,
+    ) -> dict:
+        return {
+            "executed_at": timestamp.isoformat(),
+            "mode": self.config.mode,
+            "total_channels": len(channels),
+            "total_videos": total_videos,
+            "params": params,
+            "channels": channels,
+        }
 
     def _build_report(self, run_id: str, metadata: dict) -> Optional[Path]:
         formato = self.config.report_format.lower()
@@ -474,21 +506,42 @@ class YouTubeExecutionService:
         )
         lines.append("")
         for channel in metadata.get("channels", []):
-            lines.append(f"* {channel.get('name')} ({channel.get('channel_id')})")
+            channel_handle = channel.get("channel_id") or channel.get("name", "Canal")
+            lines.append(f"• {channel_handle}")
             videos = channel.get("videos", [])
-            lines.append(f"    Vídeos extraídos: {len(videos)}")
+            if not videos:
+                lines.append("   - Nenhum vídeo dentro do critério.")
+                continue
             for video in videos:
+                summary = video.get("summary") or {}
+                keywords = summary.get("palavras_chave") or []
+                if isinstance(keywords, str):
+                    keywords = [item.strip() for item in keywords.split(",") if item.strip()]
+                cost = summary.get("cost", 0.0) or 0.0
+                lines.append(f"   - URL: {video.get('url', '')}")
+                lines.append(f"   - Título: {video.get('title', '')}")
+                lines.append(f"   - Duração: {video.get('duration') or 'N/A'}")
                 lines.append(
-                    f"    - {video.get('title')} — {video.get('duration') or 'N/A'} — {video.get('url')}"
+                    f"   - Data de postagem: {video.get('date_published') or video.get('published') or video.get('published_relative') or ''}"
                 )
-                summary = video.get("summary")
-                if summary:
-                    resumo_curto = summary.get("resumo_uma_frase", "") or summary.get("resumo", "")
-                    if resumo_curto:
-                        lines.append(f"      Resumo curto: {resumo_curto}")
-                    resumo_completo = summary.get("resumo")
-                    if resumo_completo:
-                        lines.append(f"      Detalhes: {resumo_completo}")
+                lines.append(f"   - Assunto principal: {summary.get('assunto_principal', '')}")
+                lines.append(f"   - Resumo (1 frase): {summary.get('resumo_uma_frase', '')}")
+                lines.append(
+                    f"   - Resumo (<= {self.config.resumo_max_palavras} palavras): {summary.get('resumo', '')}"
+                )
+                lines.append(
+                    "   - Palavras-chave: " + (", ".join(keywords) if keywords else "")
+                )
+                topics = summary.get("resumo_em_topicos", "").strip()
+                if topics:
+                    lines.append("   - Resumo em tópicos:")
+                    for topic_line in topics.splitlines():
+                        lines.append(f"     {topic_line}")
+                lines.append(f"   - Modelo LLM: {summary.get('model', self.settings.llm_model)}")
+                lines.append(f"   - Tokens enviados: {summary.get('prompt_tokens', 0)}")
+                lines.append(f"   - Tokens recebidos: {summary.get('completion_tokens', 0)}")
+                lines.append(f"   - Custo estimado: R$ {cost:.4f}")
+            lines.append("")
         lines.append("\n=======================================================================")
         lines.append("EXTRAÇÃO CONCLUÍDA")
         return "\n".join(lines)

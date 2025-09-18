@@ -1,0 +1,6 @@
+2025-09-17 22:08:09,966 - INFO - app.youtube.run.20250917_220809 - Iniciando extração em lote de 1 canais
+2025-09-17 22:08:09,966 - INFO - app.youtube.run.20250917_220809 - Iniciando extração em lote de 1 canais
+2025-09-17 22:08:09,986 - INFO - app.youtube.run.20250917_220809 - Processando canal 1/1: @examples/canal.txt
+2025-09-17 22:08:09,986 - INFO - app.youtube.run.20250917_220809 - Processando canal 1/1: @examples/canal.txt
+2025-09-17 22:08:10,223 - WARNING - app.youtube.run.20250917_220809 - Falha ao extrair informações do canal @examples/canal.txt
+2025-09-17 22:08:10,223 - WARNING - app.youtube.run.20250917_220809 - Falha ao extrair informações do canal @examples/canal.txt

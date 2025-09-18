@@ -3,8 +3,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 
 
 @dataclass(slots=True)
@@ -77,3 +78,10 @@ class YouTubeExtractionResult:
     channel_tokens: list[dict[str, int | str]]
     total_prompt_tokens: int
     total_completion_tokens: int
+    run_id: str
+    started_at: datetime
+    channels_data: list[dict[str, Any]]
+    params: dict[str, Any]
+    success_channels: int
+    failed_channels: int
+    total_requests: int

@@ -1,0 +1,9 @@
+2025-09-17 22:08:25,553 - INFO - app.youtube.run.20250917_220825 - Iniciando extração em lote de 1 canais
+2025-09-17 22:08:25,553 - INFO - app.youtube.run.20250917_220825 - Iniciando extração em lote de 1 canais
+2025-09-17 22:08:25,572 - INFO - app.youtube.run.20250917_220825 - Processando canal 1/1: @canalsandeco
+2025-09-17 22:08:25,572 - INFO - app.youtube.run.20250917_220825 - Processando canal 1/1: @canalsandeco
+2025-09-17 22:08:26,036 - INFO - youtube_extractor - Extraindo vídeos do canal @canalsandeco (max_age_days=1, videos_tab_only=True, max_videos=None)
+2025-09-17 22:08:26,318 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-17 22:08:26,319 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-17 22:08:26,319 - INFO - app.youtube.run.20250917_220825 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-17 22:08:26,319 - INFO - app.youtube.run.20250917_220825 - Canal @canalsandeco extraído com sucesso. Vídeos dentro do critério: 0

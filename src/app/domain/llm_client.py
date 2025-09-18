@@ -11,6 +11,11 @@ from typing import Any, Optional
 
 LOGGER = logging.getLogger(__name__)
 
+_MODEL_PRICES = {
+    "gpt-5-nano": {"input": 0.0005, "output": 0.0015},
+    "gpt-4o-mini": {"input": 0.00075, "output": 0.003},
+}
+
 _JSON_BLOCK_RE = re.compile(r"^```(?:json)?\s*(.*?)\s*```$", re.IGNORECASE | re.DOTALL)
 
 
@@ -241,7 +246,12 @@ class LLMClient:
                 )
                 continue
             if not content:
-                LOGGER.warning("[LLM] Resposta vazia do modelo para %s (trecho %s chars)", title, excerpt_limit)
+                LOGGER.warning(
+                    "[LLM] Resposta vazia do modelo para %s (trecho %s chars, finish_reason=%s)",
+                    title,
+                    excerpt_limit,
+                    finish_reason,
+                )
                 continue
             truncated = finish_reason == "length"
             if truncated and index < len(excerpt_limits) - 1:
@@ -292,7 +302,7 @@ class LLMClient:
                 prompt_tokens=int(prompt_tokens or 0),
                 completion_tokens=int(completion_tokens or 0),
                 model=self.model,
-                cost=0.0,
+                cost=self._estimate_cost(prompt_tokens, completion_tokens),
             )
             if translate_normalized == "pt-br":
                 result = self._translate_result_fields(result)
@@ -321,7 +331,10 @@ class LLMClient:
     ) -> str:
         snippet = transcript[: min(len(transcript), excerpt_limit)]
         if language_mode == "pt-br":
-            language_instruction = "Traduza todos os campos do JSON para Português (Brasil)."
+            language_instruction = (
+                "Produza todas as respostas em Português (Brasil), usando vocabulário natural do país"
+                " e mantendo as mesmas chaves solicitadas."
+            )
         else:
             language_instruction = "Mantenha os campos na mesma língua da transcrição, sem traduzir."
         return (
@@ -365,123 +378,55 @@ class LLMClient:
                     " Utilize Português (Brasil) sempre que possível."
                 )
         output_limit = max_output_tokens or self._max_output_tokens()
-        if hasattr(client, "chat") and hasattr(client.chat, "completions"):
-            request_args = dict(
-                model=self.model,
-                messages=[
-                    {"role": "system", "content": instruction},
-                    {"role": "user", "content": prompt},
-                ],
-                max_completion_tokens=output_limit,
-            )
-            if expect_json:
-                request_args["response_format"] = {"type": "json_object"}
+        messages = [
+            {"role": "system", "content": instruction},
+            {"role": "user", "content": prompt},
+        ]
+        responses_input = [
+            {
+                "role": "system",
+                "content": [{"type": "text", "text": instruction}],
+            },
+            {
+                "role": "user",
+                "content": [{"type": "text", "text": prompt}],
+            },
+        ]
+        response = None
+        if hasattr(client, "responses"):
             try:
-                response = client.chat.completions.create(**request_args)
-            except TypeError:
-                request_args.pop("response_format", None)
-                response = client.chat.completions.create(**request_args)
-            content, prompt_tokens, completion_tokens, finish_reason = self._extract_response_payload(response)
-        else:  # pragma: no cover - legacy clients
+                response = client.responses.create(
+                    model=self.model,
+                    input=responses_input,
+                    max_output_tokens=output_limit,
+                )
+            except Exception as exc:
+                LOGGER.debug("[LLM] responses.create falhou: %s — tentando chat.completions", exc)
+        if response is None and hasattr(client, "chat") and hasattr(client.chat, "completions"):
+            response = client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+            )
+        if response is None:
             create = getattr(getattr(client, "ChatCompletion", None), "create", None)
             if not create:
                 raise RuntimeError("OpenAI client incompatível")
-            request_args = dict(
+            response = create(
                 model=self.model,
-                messages=[
-                    {"role": "system", "content": instruction},
-                    {"role": "user", "content": prompt},
-                ],
-                max_tokens=output_limit,
+                messages=messages,
             )
-            if expect_json:
-                request_args["response_format"] = {"type": "json_object"}
-            try:
-                response = create(**request_args)
-            except TypeError:
-                request_args.pop("response_format", None)
-                response = create(**request_args)
-            content, prompt_tokens, completion_tokens, finish_reason = self._extract_response_payload(response)
+        content, prompt_tokens, completion_tokens, finish_reason = self._extract_response_payload(response)
         return content, prompt_tokens, completion_tokens, finish_reason
 
     def _translate_result_fields(self, result: LLMResult) -> LLMResult:
-        client = self._client
-        if client is None:
-            return result
-        payload = {
-            "resumo_do_video_uma_frase": result.resumo_uma_frase,
-            "resumo_do_video": result.resumo,
-            "assunto_principal": result.assunto_principal,
-            "palavras_chave": result.palavras_chave,
-            "resumo_em_topicos": result.resumo_em_topicos,
-        }
-        data = self._bulk_translate_payload(payload)
-        if data is None:
-            LOGGER.debug("[LLM] Tradução coletiva falhou; iniciando fallback campo a campo")
-            return self._translate_fields_individually(result)
-        palavras_raw = data.get("palavras_chave", result.palavras_chave)
-        if isinstance(palavras_raw, list):
-            palavras = [str(item) for item in palavras_raw if item not in (None, "")]
-        elif isinstance(palavras_raw, str):
-            palavras = [item.strip() for item in palavras_raw.split(",") if item.strip()]
-        else:
-            palavras = result.palavras_chave
-        return LLMResult(
-            resumo_uma_frase=str(data.get("resumo_do_video_uma_frase", result.resumo_uma_frase)),
-            resumo=str(data.get("resumo_do_video", result.resumo)),
-            assunto_principal=str(data.get("assunto_principal", result.assunto_principal)),
-            palavras_chave=palavras,
-            resumo_em_topicos=str(data.get("resumo_em_topicos", result.resumo_em_topicos)),
-            prompt_tokens=result.prompt_tokens,
-            completion_tokens=result.completion_tokens,
-            model=result.model,
-            cost=result.cost,
-        )
-
-    def _bulk_translate_payload(self, payload: dict[str, Any]) -> Optional[dict[str, Any]]:
-        prompt = (
-            "Traduza o JSON a seguir para Português (Brasil), mantendo as mesmas chaves e retornando JSON válido.\n"
-            f"JSON: {json.dumps(payload, ensure_ascii=False)}"
-        )
-        try:
-            LOGGER.debug(
-                "[LLM] Solicitando tradução adicional para pt-br (tamanho resumo=%s)",
-                len(str(payload.get("resumo_do_video", ""))),
-            )
-            content, _, _, _ = self._request_completion(
-                prompt,
-                language_mode="pt-br",
-                system_instruction=(
-                    "Você é um tradutor profissional. Retorne apenas JSON válido com as mesmas chaves,"
-                    " traduzindo todo o conteúdo textual para Português (Brasil)."
-                ),
-                max_output_tokens=768,
-                expect_json=True,
-            )
-            sanitized = _normalize_json_payload(content)
-            if not sanitized:
-                return None
-            data = _parse_json_fragment(sanitized)
-            if isinstance(data, dict):
-                return data
-            if isinstance(data, list) and data:
-                first = data[0]
-                if isinstance(first, dict):
-                    return first
-            LOGGER.warning(
-                "[LLM] Tradução retornou estrutura não suportada: %s",
-                type(data).__name__ if data is not None else "None",
-            )
-        except Exception as exc:  # pragma: no cover - depende da API
-            LOGGER.warning("[LLM] Falha ao traduzir resultado para pt-br: %s", exc)
-        return None
+        return self._translate_fields_individually(result)
 
     def _translate_fields_individually(self, result: LLMResult) -> LLMResult:
-        resumo_uma_frase = self._translate_text_field("resumo_uma_frase", result.resumo_uma_frase)
-        resumo = self._translate_text_field("resumo", result.resumo)
-        assunto = self._translate_text_field("assunto", result.assunto_principal)
-        topicos = self._translate_text_field("topicos", result.resumo_em_topicos)
-        palavras = self._translate_keywords(result.palavras_chave)
+        resumo_uma_frase = self._simple_translate_text(result.resumo_uma_frase)
+        resumo = self._simple_translate_text(result.resumo)
+        assunto = self._simple_translate_text(result.assunto_principal)
+        topicos = self._simple_translate_text(result.resumo_em_topicos)
+        palavras = self._simple_translate_keywords(result.palavras_chave)
         return LLMResult(
             resumo_uma_frase=resumo_uma_frase,
             resumo=resumo,
@@ -494,66 +439,10 @@ class LLMClient:
             cost=result.cost,
         )
 
-    def _translate_text_field(self, label: str, text: str) -> str:
-        if not text.strip():
-            return text
-        truncated = text[:4000]
-        prompt = (
-            f"Traduza o texto a seguir para Português (Brasil) e responda em JSON válido no formato"
-            f" {{\"{label}\": \"...\"}}.\nTexto: {truncated}"
-        )
-        try:
-            content, _, _, _ = self._request_completion(
-                prompt,
-                language_mode="pt-br",
-                max_output_tokens=512,
-                expect_json=True,
-            )
-            sanitized = _normalize_json_payload(content)
-            if not sanitized:
-                return self._simple_translate_text(truncated)
-            data = _parse_json_fragment(sanitized)
-            if isinstance(data, list) and data:
-                data = data[0]
-            if not isinstance(data, dict):
-                return self._simple_translate_text(truncated)
-            value = data.get(label)
-            if value not in (None, ""):
-                return str(value)
-            return self._simple_translate_text(truncated)
-        except Exception as exc:  # pragma: no cover - depende da API
-            LOGGER.warning("[LLM] Falha ao traduzir campo %s: %s", label, exc)
-            return self._simple_translate_text(truncated)
+    def _translate_text_field(self, label: str, text: str) -> str:  # deprecated helper kept for compatibility
+        return self._simple_translate_text(text)
 
-    def _translate_keywords(self, keywords: list[str]) -> list[str]:
-        if not keywords:
-            return keywords
-        prompt = (
-            "Traduza cada termo da lista para Português (Brasil) mantendo uma lista de strings."
-            f" Retorne JSON válido no formato {{\"palavras\": [...]}}. Lista: {json.dumps(keywords, ensure_ascii=False)}"
-        )
-        try:
-            content, _, _, _ = self._request_completion(
-                prompt,
-                language_mode="pt-br",
-                max_output_tokens=512,
-                expect_json=True,
-            )
-            sanitized = _normalize_json_payload(content)
-            if not sanitized:
-                return self._simple_translate_keywords(keywords)
-            data = _parse_json_fragment(sanitized)
-            if isinstance(data, list) and data:
-                data = data[0]
-            if not isinstance(data, dict):
-                return self._simple_translate_keywords(keywords)
-            palavras = data.get("palavras")
-            if isinstance(palavras, list):
-                return [str(item) for item in palavras if item not in (None, "")]
-            if isinstance(palavras, str):
-                return [item.strip() for item in palavras.split(",") if item.strip()]
-        except Exception as exc:  # pragma: no cover - depende da API
-            LOGGER.warning("[LLM] Falha ao traduzir palavras-chave: %s", exc)
+    def _translate_keywords(self, keywords: list[str]) -> list[str]:  # deprecated helper kept for compatibility
         return self._simple_translate_keywords(keywords)
 
     def _simple_translate_text(self, text: str) -> str:
@@ -603,6 +492,16 @@ class LLMClient:
         except Exception as exc:  # pragma: no cover - depende da API
             LOGGER.warning("[LLM] Falha na tradução simples de palavras-chave: %s", exc)
         return keywords
+
+    def _estimate_cost(self, prompt_tokens: int | None, completion_tokens: int | None) -> float:
+        prompt_tokens = int(prompt_tokens or 0)
+        completion_tokens = int(completion_tokens or 0)
+        pricing = _MODEL_PRICES.get(self.model.lower())
+        if not pricing:
+            return 0.0
+        cost = (prompt_tokens / 1000.0) * pricing.get("input", 0.0)
+        cost += (completion_tokens / 1000.0) * pricing.get("output", 0.0)
+        return round(cost, 4)
 
     def _heuristic_summary(
         self, title: str, transcript: str, max_palavras: int
@@ -666,29 +565,66 @@ class LLMClient:
                     message = first.get("message")
                 else:
                     message = getattr(first, "message", None)
+                parsed_payload: Any | None = None
                 if message is not None:
                     if isinstance(message, dict):
-                        content_text = _coerce_to_text(message.get("content"))
-                        if not content_text:
-                            content_text = _coerce_to_text(message.get("text"))
+                        parsed_payload = message.get("parsed")
                     else:
-                        message_content = getattr(message, "content", None)
-                        content_text = _coerce_to_text(message_content)
-                        if not content_text:
-                            content_text = _coerce_to_text(getattr(message, "text", None))
+                        parsed_payload = getattr(message, "parsed", None)
+                    if parsed_payload:
+                        if isinstance(parsed_payload, str):
+                            content_text = parsed_payload
+                        else:
+                            try:
+                                content_text = json.dumps(parsed_payload, ensure_ascii=False)
+                            except TypeError:
+                                content_text = _coerce_to_text(parsed_payload)
+                    if not content_text:
+                        if isinstance(message, dict):
+                            content_text = _coerce_to_text(message.get("content"))
+                            if not content_text:
+                                content_text = _coerce_to_text(message.get("text"))
+                        else:
+                            message_content = getattr(message, "content", None)
+                            content_text = _coerce_to_text(message_content)
+                            if not content_text:
+                                content_text = _coerce_to_text(getattr(message, "text", None))
                 if not content_text:
                     if isinstance(first, dict):
                         content_text = _coerce_to_text(first.get("text"))
                         if not content_text:
                             content_text = _coerce_to_text(first.get("content"))
-                    else:
-                        content_text = _coerce_to_text(first)
         if not content_text and isinstance(response, dict):
             for key in ("output_text", "output", "choices", "content"):
                 if key in response:
                     content_text = _coerce_to_text(response[key])
                     if content_text:
                         break
+        if not content_text:
+            raw_payload = None
+            if hasattr(response, "model_dump_json"):
+                try:
+                    raw_payload = response.model_dump_json()
+                except Exception:  # pragma: no cover - depends on SDK
+                    raw_payload = None
+            if raw_payload is None and hasattr(response, "model_dump"):
+                try:
+                    raw_payload = json.dumps(response.model_dump(), ensure_ascii=False)
+                except Exception:
+                    raw_payload = None
+            if raw_payload is None:
+                if isinstance(response, dict):
+                    try:
+                        raw_payload = json.dumps(response, ensure_ascii=False)
+                    except Exception:
+                        raw_payload = str(response)
+                else:
+                    raw_payload = str(response)
+            if raw_payload:
+                LOGGER.warning(
+                    "[LLM] Payload sem texto extraído (preview): %s",
+                    _preview(raw_payload, 400),
+                )
 
         content_text = content_text.strip()
         usage = getattr(response, "usage", None)

@@ -1,0 +1,6 @@
+2025-09-17 22:09:30,251 - INFO - app.youtube.run.20250917_220930 - Iniciando extração em lote de 1 canais
+2025-09-17 22:09:30,251 - INFO - app.youtube.run.20250917_220930 - Iniciando extração em lote de 1 canais
+2025-09-17 22:09:30,270 - INFO - app.youtube.run.20250917_220930 - Processando canal 1/1: @@SuperHumansLife
+2025-09-17 22:09:30,270 - INFO - app.youtube.run.20250917_220930 - Processando canal 1/1: @@SuperHumansLife
+2025-09-17 22:09:30,510 - WARNING - app.youtube.run.20250917_220930 - Falha ao extrair informações do canal @@SuperHumansLife
+2025-09-17 22:09:30,510 - WARNING - app.youtube.run.20250917_220930 - Falha ao extrair informações do canal @@SuperHumansLife

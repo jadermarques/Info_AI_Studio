@@ -1,0 +1,25 @@
+{
+  "executed_at": "2025-09-17T22:09:30.251404",
+  "mode": "full",
+  "total_channels": 1,
+  "total_videos": 0,
+  "params": {
+    "days": 1,
+    "max_videos": null,
+    "mode": "full",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "txt",
+    "translate_results": "pt-br",
+    "resumo_max_palavras": 150,
+    "llm_model": "gpt-5-nano"
+  },
+  "channels": [
+    {
+      "channel_id": "@@SuperHumansLife",
+      "status": "error",
+      "message": "Falha ao acessar https://www.youtube.com/@@SuperHumansLife/about",
+      "videos": []
+    }
+  ]
+}

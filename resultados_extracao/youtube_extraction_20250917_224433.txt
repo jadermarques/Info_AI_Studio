@@ -1,0 +1,34 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: full
+Parâmetros: dias=3, max_videos=1, formato=txt
+
+• @SuperHumansLife
+   - URL: https://www.youtube.com/watch?v=1_0OZvSjabM
+   - Título: Encontrei uma oportunidade de um bilhão de dólares
+   - Duração: 15:50
+   - Data de postagem: 2025-09-14T09:21:57-07:00
+   - Assunto principal: Oportunidade de negócio baseada em visibilidade com IA (AI SEO) para empresas, especialmente para empreendedores solo.
+   - Resumo (1 frase): Defendo que a maior oportunidade de negócios está em tornar empresas visíveis na busca guiada por IA, criando um novo mercado de AI SEO na era da curadoria de IA.
+   - Resumo (<= 150 palavras): Este vídeo apresenta a ideia de que, apesar da proliferação de negócios de IA, existe uma grande oportunidade não explorada: tornar empresas visíveis na busca guiada por IA. O autor afirma que o mercado pode chegar a 92 bilhões de dólares, e que 99% das empresas ficam invisíveis para IA como o ChatGPT, o que as coloca em risco. A visão é de que o verdadeiro sucesso não é apenas criar conteúdo, mas curar informações para que sejam vistas pela IA — ou seja, construir SEO de IA. Dados citados incluem 700 milhões de usuários semanais do ChatGPT, 400 milhões de consultas de IA por mês e a queda da dominância do Google abaixo de 10%. O vídeo sustenta que empreendedores solo podem lucrar ajudando negócios a aparecerem na IA, e menciona Hera, IA de animação, como exemplo de criar conteúdo rapidamente. Um relatório é prometido para embasar a oportunidade.
+   - Palavras-chave: SEO com IA, visibilidade em IA, invisibilidade de negócios, oportunidade de mercado de IA, oceano azul, empreendedores solo, curadoria de IA, queda da dominância do Google, dados de uso de IA, Hera
+   - Resumo em tópicos:
+     - Contexto: muitos criam negócios de IA, mas a invisibilidade de muitas empresas é a grande oportunidade.
+     - Conceito central: SEO de IA é a estratégia para fazer com que as empresas sejam vistas pela IA, não apenas criadas.
+     - Dados de mercado: 700 milhões de usuários semanais do ChatGPT, 400 milhões de consultas de IA por mês e a dominância do Google caiu para abaixo de 10%.
+     - Estratégia prática: empreendedores solo ajudam negócios a aparecer na IA com baixo capital, evitando mercados saturados.
+     - Exemplo ilustrativo: empresas de nicho não aparecem em buscas guiadas por IA; a solução é tornar o negócio legível para IA.
+     - Ferramenta mencionada: Hera, para criar animações rápidas com controle criativo.
+     - Chamado à ação: relatório disponível na comunidade; visão de um novo ecossistema de busca com IA.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 1873
+   - Tokens recebidos: 7676
+   - Custo estimado: R$ 0.0125
+
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

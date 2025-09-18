@@ -1,0 +1,14 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 0
+Modo: full
+Parâmetros: dias=1, max_videos=1, formato=txt
+
+• @SuperHumansLife
+   - Nenhum vídeo dentro do critério.
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA
