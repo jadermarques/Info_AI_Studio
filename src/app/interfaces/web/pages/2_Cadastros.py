@@ -1,6 +1,39 @@
-"""Página de cadastros (LLM, canais e fontes)."""
-
 from __future__ import annotations
+import streamlit as st
+from app.domain.youtube.groups import split_channel_groups
+
+def _populate_youtube_form(row):
+    st.session_state["youtube_form_nome"] = row.get("foyt_nome_canal", "")
+    st.session_state["youtube_form_descricao"] = row.get("foyt_descricao", "")
+    grupos_raw = row.get("foyt_grupo_canal", "")
+    st.session_state["youtube_form_grupos"] = split_channel_groups(grupos_raw)
+    st.session_state["youtube_form_canal_id"] = row.get("foyt_id_canal", "")
+    st.session_state["youtube_form_status"] = row.get("foyt_status", False)
+    st.session_state["youtube_form_registro_id"] = row.get("foyt_id", None)
+import streamlit as st
+
+# Reset do formulário só se a flag estiver setada antes dos widgets
+
+# Reset do formulário só se a flag estiver setada antes dos widgets
+if st.session_state.get("youtube_form_reset_pending"):
+    st.session_state["youtube_form_nome"] = ""
+    st.session_state["youtube_form_descricao"] = ""
+    st.session_state["youtube_form_grupos"] = []
+    st.session_state["youtube_form_canal_id"] = ""
+    st.session_state["youtube_form_status"] = False
+    st.session_state["youtube_form_registro_id"] = None
+    st.session_state["youtube_form_reset_pending"] = False
+
+def _reset_youtube_form():
+    pass  # Reset é feito no início do script, nunca após widgets
+
+def format_channel_groups(grupos):
+    if isinstance(grupos, list):
+        return ", ".join(grupos)
+    if isinstance(grupos, str):
+        return grupos
+    return ""
+"""Página de cadastros (LLM, canais e fontes)."""
 
 from typing import Any
 
@@ -12,6 +45,7 @@ from app.domain.fonte_service import (
     list_youtube_channels,
     register_web_source,
     register_youtube_channel,
+    delete_youtube_channel,
 )
 from app.domain.llm_service import (
     LLMConnectionError,
@@ -262,44 +296,148 @@ else:
 st.divider()
 
 st.subheader("Canais do YouTube")
-if st.session_state.youtube_form_reset_pending:
-    st.session_state["youtube_form_nome"] = ""
-    st.session_state["youtube_form_descricao"] = ""
-    st.session_state["youtube_form_grupo"] = ""
-    st.session_state["youtube_form_canal_id"] = ""
-    st.session_state["youtube_form_status"] = True
-    st.session_state.youtube_form_reset_pending = False
+if "youtube_form_flash" not in st.session_state:
+    st.session_state["youtube_form_flash"] = None
+youtube_flash = st.session_state.youtube_form_flash
+if youtube_flash:
+    level, message = youtube_flash
+    if level == "success":
+        st.success(message)
+    else:
+        st.error(message)
+    st.session_state.youtube_form_flash = None
+
+if "youtube_delete_pending" not in st.session_state:
+    st.session_state["youtube_delete_pending"] = None
+delete_candidate = st.session_state.youtube_delete_pending
+if delete_candidate is not None:
+    with st.container():
+        st.warning(
+            "Confirma excluir o canal "
+            f"{delete_candidate['foyt_nome_canal']} ({delete_candidate['foyt_id_canal']})?"
+        )
+        confirm_col, cancel_col = st.columns(2)
+        if confirm_col.button("Excluir", type="primary", key="confirm_delete_youtube"):
+            delete_youtube_channel(delete_candidate["foyt_id"])
+            st.session_state.youtube_form_flash = (
+                "success",
+                f"Canal {delete_candidate['foyt_nome_canal']} removido.",
+            )
+            if (
+                st.session_state.youtube_form_registro_id
+                == delete_candidate.get("foyt_id")
+            ):
+                _reset_youtube_form()
+            st.session_state.youtube_delete_pending = None
+            st.rerun()
+        if cancel_col.button("Cancelar", key="cancel_delete_youtube"):
+            st.session_state.youtube_delete_pending = None
+            st.rerun()
+
+
+from app.domain.youtube.groups import YOUTUBE_CHANNEL_GROUP_OPTIONS
 
 with st.form("youtube_form"):
     st.text_input("Nome do canal", key="youtube_form_nome")
     st.text_area("Descrição", key="youtube_form_descricao")
-    st.text_input("Grupo do canal", key="youtube_form_grupo")
+    st.multiselect(
+        "Grupo(s) do canal",
+        options=YOUTUBE_CHANNEL_GROUP_OPTIONS,
+        key="youtube_form_grupos",
+        help="Selecione um ou mais grupos predefinidos.",
+    )
     st.text_input("ID do canal", key="youtube_form_canal_id", placeholder="@exemplo")
     st.checkbox("Ativo", key="youtube_form_status")
-    submit_channel = st.form_submit_button("Salvar canal")
+    submit_channel = st.form_submit_button("Salvar canal", type="primary")
     if submit_channel:
-        nome = st.session_state["youtube_form_nome"]
-        descricao = st.session_state["youtube_form_descricao"]
-        grupo = st.session_state["youtube_form_grupo"]
-        canal_id = st.session_state["youtube_form_canal_id"]
+        nome = st.session_state["youtube_form_nome"].strip()
+        descricao = st.session_state["youtube_form_descricao"].strip()
+        grupos = st.session_state["youtube_form_grupos"]
+        canal_id = st.session_state["youtube_form_canal_id"].strip()
         ativo_canal = st.session_state["youtube_form_status"]
-        if not nome or not descricao or not grupo or not canal_id:
-            st.error("Todos os campos são obrigatórios.")
+        registro_id = st.session_state.youtube_form_registro_id
+        if not nome:
+            st.error("Informe o nome do canal.")
+        elif not grupos:
+            st.error("Selecione ao menos um grupo para o canal.")
+        elif not canal_id:
+            st.error("Informe o ID do canal.")
         else:
-            register_youtube_channel(
-                YouTubeChannel(
-                    nome=nome,
-                    descricao=descricao,
-                    grupo=grupo,
-                    canal_id=canal_id,
-                    status=ativo_canal,
+            try:
+                register_youtube_channel(
+                    YouTubeChannel(
+                        nome=nome,
+                        descricao=descricao,
+                        grupos=grupos,
+                        canal_id=canal_id,
+                        status=ativo_canal,
+                        registro_id=registro_id,
+                    )
                 )
-            )
-            st.success("Canal salvo com sucesso.")
-            st.session_state.youtube_form_reset_pending = True
-            st.rerun()
+            except ValueError as exc:
+                st.error(str(exc))
+            except Exception as exc:  # pragma: no cover - depende da camada de dados
+                st.error(f"Não foi possível salvar o canal: {exc}")
+            else:
+                mensagem = (
+                    "Canal atualizado com sucesso."
+                    if registro_id is not None
+                    else "Canal salvo com sucesso."
+                )
+                st.session_state.youtube_form_flash = ("success", mensagem)
+                st.session_state.youtube_form_reset_pending = True
+                st.rerun()
 
-st.table(list_youtube_channels(active_only=False))
+if "youtube_form_registro_id" not in st.session_state:
+    st.session_state["youtube_form_registro_id"] = None
+if st.session_state.youtube_form_registro_id is not None:
+    st.info(
+        "Editando canal ID "
+        f"{st.session_state.youtube_form_registro_id}."
+    )
+    if st.button("Cancelar edição", key="cancel_youtube_edit"):
+        _reset_youtube_form()
+        st.rerun()
+
+youtube_channels = list_youtube_channels(active_only=False)
+if not youtube_channels:
+    st.info("Nenhum canal cadastrado ainda.")
+else:
+    header_cols = st.columns([2, 3, 3, 2, 1, 2, 0.8, 0.8])
+    header_cols[0].markdown("**Nome do canal**")
+    header_cols[1].markdown("**Descrição**")
+    header_cols[2].markdown("**Grupo(s) do canal**")
+    header_cols[3].markdown("**ID do canal**")
+    header_cols[4].markdown("**Status**")
+    header_cols[5].markdown("**Data criação**")
+    header_cols[6].markdown("**Editar**")
+    header_cols[7].markdown("**Excluir**")
+    for row in youtube_channels:
+        grupos_texto = format_channel_groups(row.get("foyt_grupo_canal", ""))
+        ativo = bool(row.get("foyt_status", 0))
+        row_cols = st.columns([2, 3, 3, 2, 1, 2, 0.8, 0.8])
+        row_cols[0].markdown(row.get("foyt_nome_canal", "—"))
+        row_cols[1].markdown(row.get("foyt_descricao") or "—")
+        row_cols[2].markdown(grupos_texto or "—")
+        row_cols[3].markdown(row.get("foyt_id_canal", "—"))
+        row_cols[4].markdown(_status_badge(ativo), unsafe_allow_html=True)
+        row_cols[5].markdown(row.get("foyt_created_at", "—"))
+        if row_cols[6].button(
+            "✏️",
+            key=f"youtube_edit_{row['foyt_id']}",
+            help="Editar canal",
+        ):
+            st.session_state.youtube_edit_pending = row
+            st.session_state.youtube_form_flash = None
+            st.session_state.youtube_delete_pending = None
+            st.rerun()
+        if row_cols[7].button(
+            "🗑️",
+            key=f"youtube_delete_{row['foyt_id']}",
+            help="Excluir canal",
+        ):
+            st.session_state.youtube_delete_pending = row
+            st.rerun()
 
 st.divider()
 
@@ -328,4 +466,3 @@ with st.form("web_form"):
                 st.rerun()
 
 st.table(list_web_sources(active_only=False))
-

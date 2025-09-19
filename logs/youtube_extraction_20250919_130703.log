@@ -1,0 +1,16 @@
+2025-09-19 13:07:03,693 - INFO - app.youtube.run.20250919_130703 - Iniciando extração em lote de 11 canais
+2025-09-19 13:07:03,693 - INFO - app.youtube.run.20250919_130703 - Iniciando extração em lote de 11 canais
+2025-09-19 13:07:03,721 - INFO - app.youtube.run.20250919_130703 - Processando canal 1/11: @ColeMedin
+2025-09-19 13:07:03,721 - INFO - app.youtube.run.20250919_130703 - Processando canal 1/11: @ColeMedin
+2025-09-19 13:07:05,049 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 13:07:07,997 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 13:07:07,997 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 13:07:07,998 - INFO - app.youtube.run.20250919_130703 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 13:07:07,998 - INFO - app.youtube.run.20250919_130703 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 13:07:11,107 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para BcvjGTxzK40
+2025-09-19 13:07:11,225 - INFO - youtube_extractor - Transcrição encontrada (22519 chars, en) para BcvjGTxzK40
+2025-09-19 13:07:11,228 - INFO - app.youtube.run.20250919_130703 - Transcrição nativa encontrada para BcvjGTxzK40
+2025-09-19 13:07:11,228 - INFO - app.youtube.run.20250919_130703 - Transcrição nativa encontrada para BcvjGTxzK40
+2025-09-19 13:07:11,891 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 13:07:28,709 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 13:07:28,921 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"

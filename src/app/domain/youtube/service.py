@@ -113,6 +113,7 @@ class YouTubeExecutionService:
         total_prompt_tokens = 0
         total_completion_tokens = 0
 
+        import time
         try:
             for index, channel in enumerate(channels, start=1):
                 logger.info("Processando canal %s/%s: %s", index, len(channels), channel)
@@ -154,9 +155,13 @@ class YouTubeExecutionService:
                         continue
                     details = extractor.fetch_video_details(video_id)
                     transcript = ""
+                    analysis_source = "modo_simples"
                     summary: Optional[LLMResult] = None
+                    start_time = time.time()
                     if self.config.mode.lower() == "full":
-                        transcript = self._obter_transcricao(video_id, extractor, logger)
+                        transcript, analysis_source = self._obter_transcricao(
+                            video_id, extractor, logger
+                        )
                         if transcript and not self.config.no_llm:
                             summary = llm_client.summarise(
                                 title=video.get("title", ""),
@@ -169,6 +174,9 @@ class YouTubeExecutionService:
                             logger.info(
                                 "[LLM] Execução com --no-llm habilitado; resumos serão pulados."
                             )
+                    self._log_analysis_origin(logger, video_id, analysis_source)
+                    end_time = time.time()
+                    analysis_time = end_time - start_time
                     prompt_tokens = summary.prompt_tokens if summary else 0
                     completion_tokens = summary.completion_tokens if summary else 0
                     prompt_tokens_channel += prompt_tokens
@@ -197,7 +205,9 @@ class YouTubeExecutionService:
                             "date_published": details.get("date_published"),
                             "transcript_available": bool(transcript),
                             "transcript": transcript if self.config.mode.lower() == "full" else "",
+                            "analysis_source": analysis_source,
                             "summary": summary_payload,
+                            "analysis_time": analysis_time,
                         }
                     )
                 total_videos += len(enriched_videos)
@@ -331,26 +341,64 @@ class YouTubeExecutionService:
         if callback:
             callback(message)
 
+    @staticmethod
+    def _log_analysis_origin(logger: logging.Logger, video_id: str, source: str) -> None:
+        if source == "transcricao_youtube":
+            logger.info(
+                "Vídeo %s analisado com a transcrição disponibilizada pelo YouTube.",
+                video_id,
+            )
+        elif source == "sem_transcricao":
+            logger.info(
+                "Vídeo %s sem transcrição disponível; resumo não será gerado.",
+                video_id,
+            )
+        elif source == "modo_simples":
+            logger.info(
+                "Vídeo %s executado no modo simple (transcrição não aplicada).",
+                video_id,
+            )
+        elif source.startswith("asr_"):
+            logger.info(
+                "Vídeo %s analisado via ASR (áudio baixado) [%s].",
+                video_id,
+                source,
+            )
+        else:
+            logger.info("Vídeo %s analisado pelo método %s.", video_id, source)
+
     def _obter_transcricao(
         self,
         video_id: str,
         extractor: YouTubeExtractor,
         logger: logging.Logger,
-    ) -> str:
+    ) -> tuple[str, str]:
         text = extractor.fetch_transcript_text(video_id)
         if text:
-            return text
+            logger.info("Transcrição nativa encontrada para %s", video_id)
+            return text, "transcricao_youtube"
         if not self.config.asr_enabled:
             logger.info("[ASR desativado] Sem transcrição YouTube para %s", video_id)
-            return ""
+            return "", "sem_transcricao"
         logger.info("[ASR ativado] Transcrição não encontrada; iniciando fallback para %s", video_id)
         with tempfile.TemporaryDirectory() as tmp_dir:
             audio_path = self._download_audio(video_id, Path(tmp_dir), logger)
             if not audio_path:
-                return ""
+                logger.info("Não foi possível baixar áudio para %s; transcrição indisponível.", video_id)
+                return "", "sem_transcricao"
             if self.config.asr_provider == "openai":
-                return self._asr_openai(audio_path, logger)
-            return self._asr_faster_whisper(audio_path, logger)
+                texto_asr = self._asr_openai(audio_path, logger)
+                if texto_asr:
+                    logger.info("Transcrição obtida via ASR OpenAI para %s", video_id)
+                    return texto_asr, "asr_openai"
+                logger.info("ASR OpenAI não retornou conteúdo para %s", video_id)
+                return "", "sem_transcricao"
+            texto_asr = self._asr_faster_whisper(audio_path, logger)
+            if texto_asr:
+                logger.info("Transcrição obtida via ASR faster-whisper para %s", video_id)
+                return texto_asr, "asr_faster_whisper"
+            logger.info("ASR faster-whisper não retornou conteúdo para %s", video_id)
+            return "", "sem_transcricao"
 
     def _download_audio(
         self, video_id: str, outdir: Path, logger: logging.Logger
@@ -505,6 +553,8 @@ class YouTubeExecutionService:
             f" formato={metadata['params']['format']}"
         )
         lines.append("")
+        tempo_total_exec = None
+        tempos_videos = []
         for channel in metadata.get("channels", []):
             channel_handle = channel.get("channel_id") or channel.get("name", "Canal")
             lines.append(f"• {channel_handle}")
@@ -518,9 +568,15 @@ class YouTubeExecutionService:
                 if isinstance(keywords, str):
                     keywords = [item.strip() for item in keywords.split(",") if item.strip()]
                 cost = summary.get("cost", 0.0) or 0.0
+                origem_conteudo = "transcrição" if video.get("analysis_source") == "transcricao_youtube" else ("áudio" if str(video.get("analysis_source", "")).startswith("asr_") else "-")
+                tempo_analise = video.get("analysis_time")
+                if tempo_analise:
+                    tempos_videos.append((video.get("title", ""), tempo_analise))
                 lines.append(f"   - URL: {video.get('url', '')}")
                 lines.append(f"   - Título: {video.get('title', '')}")
                 lines.append(f"   - Duração: {video.get('duration') or 'N/A'}")
+                lines.append(f"   - Origem do conteúdo: {origem_conteudo}")
+                lines.append(f"   - Tempo de análise: {tempo_analise:.2f} segundos" if tempo_analise else "   - Tempo de análise: N/A")
                 lines.append(
                     f"   - Data de postagem: {video.get('date_published') or video.get('published') or video.get('published_relative') or ''}"
                 )
@@ -542,6 +598,24 @@ class YouTubeExecutionService:
                 lines.append(f"   - Tokens recebidos: {summary.get('completion_tokens', 0)}")
                 lines.append(f"   - Custo estimado: R$ {cost:.4f}")
             lines.append("")
+        # Tempo total de execução
+        if "executed_at" in metadata and "channels" in metadata:
+            from datetime import datetime
+            import os
+            try:
+                log_path = metadata.get("log_path")
+                if log_path and os.path.exists(log_path):
+                    tempo_final = os.path.getmtime(log_path)
+                    tempo_inicio = datetime.fromisoformat(metadata["executed_at"]).timestamp()
+                    tempo_total_exec = tempo_final - tempo_inicio
+            except Exception:
+                tempo_total_exec = None
+        if tempos_videos:
+            lines.append("Tempo de análise por vídeo:")
+            for titulo, tempo in tempos_videos:
+                lines.append(f"- {titulo}: {tempo:.2f} segundos")
+        if tempo_total_exec:
+            lines.append(f"Tempo total de execução: {tempo_total_exec:.2f} segundos")
         lines.append("\n=======================================================================")
         lines.append("EXTRAÇÃO CONCLUÍDA")
         return "\n".join(lines)

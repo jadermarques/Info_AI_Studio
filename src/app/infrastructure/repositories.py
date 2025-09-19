@@ -33,7 +33,7 @@ def list_llm_models() -> list[dict[str, Any]]:
 def save_youtube_channel(
     nome_canal: str,
     descricao: str,
-    grupo: str,
+    grupos: str,
     canal_id: str,
     status: int = 1,
 ) -> None:
@@ -48,7 +48,10 @@ def save_youtube_channel(
         " foyt_grupo_canal = excluded.foyt_grupo_canal,"
         " foyt_status = excluded.foyt_status"
     )
-    db.execute(query, (nome_canal.strip(), descricao.strip(), grupo.strip(), canal_id.strip(), status))
+    db.execute(
+        query,
+        (nome_canal.strip(), descricao.strip(), grupos.strip(), canal_id.strip(), status),
+    )
 
 
 def list_youtube_channels(active_only: bool = True) -> list[dict[str, Any]]:
@@ -76,6 +79,12 @@ def get_youtube_channel_by_id(channel_id: str) -> dict[str, Any] | None:
         (channel_id,),
     )
     return dict(row) if row else None
+
+
+def delete_youtube_channel(entry_id: int) -> None:
+    """Delete a YouTube channel from storage."""
+
+    db.execute("DELETE FROM fonte_youtube WHERE foyt_id = ?", (entry_id,))
 
 
 def save_web_source(

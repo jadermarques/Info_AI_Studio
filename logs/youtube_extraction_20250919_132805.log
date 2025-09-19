@@ -1,0 +1,33 @@
+2025-09-19 13:28:05,917 - INFO - app.youtube.run.20250919_132805 - Iniciando extração em lote de 1 canais
+2025-09-19 13:28:05,917 - INFO - app.youtube.run.20250919_132805 - Iniciando extração em lote de 1 canais
+2025-09-19 13:28:05,949 - INFO - app.youtube.run.20250919_132805 - Processando canal 1/1: @MattVidPro
+2025-09-19 13:28:05,949 - INFO - app.youtube.run.20250919_132805 - Processando canal 1/1: @MattVidPro
+2025-09-19 13:28:06,927 - INFO - youtube_extractor - Extraindo vídeos do canal @MattVidPro (max_age_days=3, videos_tab_only=True, max_videos=1)
+2025-09-19 13:28:07,646 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-19 13:28:07,646 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-19 13:28:07,646 - INFO - app.youtube.run.20250919_132805 - Canal @MattVidPro extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 13:28:07,646 - INFO - app.youtube.run.20250919_132805 - Canal @MattVidPro extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 13:28:08,544 - INFO - app.youtube.run.20250919_132805 - Vídeo Hk7QDEtAREw executado no modo simple (transcrição não aplicada).
+2025-09-19 13:28:08,544 - INFO - app.youtube.run.20250919_132805 - Vídeo Hk7QDEtAREw executado no modo simple (transcrição não aplicada).
+2025-09-19 13:28:21,325 - INFO - app.youtube.run.20250919_132821 - Iniciando extração em lote de 1 canais
+2025-09-19 13:28:21,336 - INFO - app.youtube.run.20250919_132821 - Processando canal 1/1: @MattVidPro
+2025-09-19 13:28:22,062 - INFO - youtube_extractor - Extraindo vídeos do canal @MattVidPro (max_age_days=3, videos_tab_only=True, max_videos=1)
+2025-09-19 13:28:22,396 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-19 13:28:22,396 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-19 13:28:22,396 - INFO - app.youtube.run.20250919_132821 - Canal @MattVidPro extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 13:28:25,002 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para Hk7QDEtAREw
+2025-09-19 13:28:25,164 - INFO - youtube_extractor - Transcrição encontrada (23100 chars, en) para Hk7QDEtAREw
+2025-09-19 13:28:25,166 - INFO - app.youtube.run.20250919_132821 - Transcrição nativa encontrada para Hk7QDEtAREw
+2025-09-19 13:28:27,262 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 13:28:45,327 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 13:28:45,537 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 13:28:53,089 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 13:28:53,319 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 13:29:04,519 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 13:29:04,926 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 13:29:09,208 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 13:29:09,402 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 13:29:22,026 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 13:29:22,333 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 13:29:32,025 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 13:29:32,029 - INFO - app.youtube.run.20250919_132821 - Vídeo Hk7QDEtAREw analisado com a transcrição disponibilizada pelo YouTube.

@@ -7,6 +7,7 @@ from typing import Any
 from app.domain.entities import WebSource, YouTubeChannel
 from app.domain import validators
 from app.infrastructure import repositories
+from app.domain.youtube.groups import serialize_channel_groups
 
 
 def register_youtube_channel(channel: YouTubeChannel) -> None:
@@ -16,7 +17,7 @@ def register_youtube_channel(channel: YouTubeChannel) -> None:
     repositories.save_youtube_channel(
         nome_canal=channel.nome,
         descricao=channel.descricao,
-        grupo=channel.grupo,
+        grupos=serialize_channel_groups(channel.grupos),
         canal_id=channel_id,
         status=1 if channel.status else 0,
     )
@@ -26,6 +27,12 @@ def list_youtube_channels(active_only: bool = True) -> list[dict[str, Any]]:
     """Return stored channels."""
 
     return repositories.list_youtube_channels(active_only=active_only)
+
+
+def delete_youtube_channel(entry_id: int) -> None:
+    """Remove a stored YouTube channel."""
+
+    repositories.delete_youtube_channel(entry_id)
 
 
 def register_web_source(source: WebSource) -> None:

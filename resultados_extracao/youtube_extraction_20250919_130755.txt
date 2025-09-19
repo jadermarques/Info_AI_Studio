@@ -1,0 +1,168 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 11
+Total de vídeos extraídos: 6
+Modo: full
+Parâmetros: dias=1, max_videos=1, formato=txt
+
+• @ColeMedin
+   - URL: https://www.youtube.com/watch?v=BcvjGTxzK40
+   - Título: The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them)
+   - Duração: 20:47
+   - Data de postagem: 2025-09-17T17:00:12-07:00
+   - Assunto principal: Integração de agentes de IA em experiências de usuário (experiências agentic) e a padronização da comunicação entre frontend e IA com AGUI em plataformas SaaS.
+   - Resumo (1 frase): O vídeo apresenta a construção de experiências agentic, integrando agentes de IA em aplicações por AGUI, com Copilot Kit e Pyantic AI, para transformar SaaS em produtos com valor único, por meio de uma integração profunda entre frontend e IA.
+   - Resumo (<= 150 palavras): Este vídeo apresenta a visão de futuro para SaaS, destacando que o caminho não é criar apenas aplicações com agentes, mas incorporar agentes de IA diretamente no produto. Aborda o AGUI, protocolo de código aberto que padroniza a comunicação entre frontend e agentes, permitindo que o frontend permaneça inalterado mesmo ao trocar o backend. A pilha de tecnologia recomendada envolve Copilot Kit no frontend e Pyantic AI (Pantic AI) no backend, com demonstrações que exibem sincronização de estado bidirecional entre usuário e agente, como em um construtor de receitas. O agente pode atualizar a interface e colaborar com o usuário para criar soluções cada vez mais integradas, demonstrando o conceito de experiência agentic. O vídeo também orienta sobre início rápido para configurar projetos com as ferramentas.
+   - Palavras-chave: AGUI, Kit do Copiloto, Pyantic IA, Pantic IA, Pantic IA, agentes de IA, experiências agenciais, front-end, back-end, sincronização bidirecional, Software como Serviço, código aberto, demonstrações, construtor de receitas
+   - Resumo em tópicos:
+     ### Contexto
+     Visão de futuro para SaaS com experiências agentic.
+     
+     ### O que é AGUI
+     Protocolo de código aberto que padroniza a comunicação entre frontend e IA.
+     
+     ### Stack tecnológica
+     Copilot Kit (frontend) + Pyantic AI / Pantic AI (backend) com integração AGUI.
+     
+     ### Benefícios
+     Integração profunda, menos código, sincronização bidirecional entre frontend e backend, possibilidade de obter interface de usuário gerada por IA.
+     
+     ### Demonstrações
+     Casos como construtor de receitas com atualização simultânea de ingredientes e ajuste de receitas pelo agente.
+     
+     ### Como começar
+     Guia rápido para iniciar projetos com as ferramentas mencionadas.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 1867
+   - Tokens recebidos: 3284
+   - Custo estimado: R$ 0.0059
+
+• @DanGalletta
+   - Nenhum vídeo dentro do critério.
+• @DataCouncil
+   - Nenhum vídeo dentro do critério.
+• @Incomestreamsurfers
+   - URL: https://www.youtube.com/watch?v=EKk6yZiMMtc
+   - Título: Claude Code + Codex = O NOVO Construtor de Sites Definitivo
+   - Duração: 15:12
+   - Data de postagem: 2025-09-19T04:38:46-07:00
+   - Assunto principal: Construção automatizada de uma loja online a partir de CSV usando IA (Claude Code e Codex) com WordPress/WooCommerce, Docker e importação de produtos.
+   - Resumo (1 frase): Teste prático para construir uma loja virtual a partir de um arquivo CSV usando Claude Code, Codex, Docker e WordPress/WooCommerce para demonstrar a viabilidade de criar um negócio completo em minutos.
+   - Resumo (<= 150 palavras): Neste vídeo, o apresentador testa se é possível construir rapidamente um site de comércio eletrônico a partir de um CSV usando Claude Code, Codex e ferramentas como Docker e WordPress/WooCommerce. Ele explica a escolha do WooCommerce, demonstra a importação de produtos via CSV e a montagem de um contêiner WordPress com WooCommerce já instalado. O fluxo envolve usar VS Code, projetar a página inicial com Codex e gerenciar o ambiente com Claude Code para tarefas de shell, Docker e CLI. O experimento inclui converter 20 produtos do Shopify para o formato WooCommerce e importar pelo painel administrativo. Ao final, ele mostra o site com os produtos listados e discute a viabilidade de criar um negócio completo em poucos minutos, além de mencionar um patrocínio da SEO Growth.
+   - Palavras-chave: Inteligência Artificial para desenvolvimento, Claude Code, Codex, WordPress, WooCommerce, Docker, importação de CSV, comércio eletrônico, automação, desenvolvimento rápido, CSV para loja, Desenvolvimento e Operações, integração
+   - Resumo em tópicos:
+     - Contexto: testar se é possível criar uma loja a partir de um CSV com IA e automação.
+     - Ferramentas usadas: Claude Code, Codex, Docker, WordPress/WooCommerce.
+     - Fluxo de trabalho: design da homepage com Codex, configuração de ambiente com Claude Code, instalação de WordPress/WooCommerce e importação de produtos via CSV.
+     - Importação de produtos: conversão de 20 itens do Shopify para o formato WooCommerce e importação pelo painel administrativo.
+     - Resultado: site com produtos listados e checkout funcional.
+     - Conclusão: viabilidade de montar um negócio completo em minutos; menção ao patrocínio da SEO Growth.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 2022
+   - Tokens recebidos: 3196
+   - Custo estimado: R$ 0.0058
+
+• @LiamOttley
+   - URL: https://www.youtube.com/watch?v=3HHMuaGIC30
+   - Título: Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes)
+   - Duração: 43:15
+   - Data de postagem: 2025-09-19T01:00:38-07:00
+   - Assunto principal: Caminho prático para transformar zero em US$100 mil usando IA, com foco em automações de fluxo de trabalho e na construção de uma agência.
+   - Resumo (1 frase): Guia prático para chegar de zero a cem mil dólares em IA, com foco em automações de fluxo de trabalho e superação de cinco desafios comuns.
+   - Resumo (<= 150 palavras): Este vídeo descreve como sair de US$0 para US$100 mil com IA, apresentando cinco marcos e as principais dificuldades, com soluções práticas para iniciantes. Os apresentadores discutem como muitos iniciantes ficam sobrecarregados pelas diversas ferramentas de IA; o segredo é escolher uma área e dominá-la. O foco recomendado é automações de workflows (Make.com) dentro do campo de IA, que funciona como uma base transversal para outras soluções (agentes de voz, chatbots, integrações). O aprendizado básico envolve entender APIs e como as aplicações se comunicam, sem depender de cursos caros, aproveitando conteúdos gratuitos do YouTube. O vídeo ilustra estratégias de prospecção e exemplos de mensagens e posts para construir uma agência de IA. Ao longo do caminho, destacam os cinco passos/marcos para avançar rumo ao primeiro target financeiro, incluindo a melhoria contínua e a validação de oportunidades de clientes.
+   - Palavras-chave: Inteligência Artificial, automação de fluxo de trabalho, Make.com, agência de Inteligência Artificial, Interfaces de Programação de Aplicações, integrações, prospectação, YouTube, aprendizado gratuito, zero a 100 mil
+   - Resumo em tópicos:
+     - Objetivo do vídeo: ir de zero a US$100 mil com IA.
+     - Cinco marcos e principais desafios, com soluções práticas.
+     - Dificuldade comum: excesso de opções de ferramentas; solução é focar em uma área.
+     - Nicho recomendado: automações de workflow com Make.com, base para outras soluções.
+     - Fundamentos: APIs e comunicação entre aplicações; habilidades transferíveis.
+     - Aprendizado: valor do conteúdo gratuito (YouTube) em vez de cursos caros.
+     - Aplicação prática: exemplos de mensagens, posts e estratégias de prospecção.
+     - Caminho final: construir uma agência de IA, validar oportunidades com clientes.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 1872
+   - Tokens recebidos: 3133
+   - Custo estimado: R$ 0.0056
+
+• @SaraFinance
+   - Nenhum vídeo dentro do critério.
+• @SuperHumansLife
+   - Nenhum vídeo dentro do critério.
+• @eusoukelvincleto
+   - URL: https://www.youtube.com/watch?v=f4PveaUJLd8
+   - Título: O que eu estudaria em vez de automação em 2026
+   - Duração: 10:23
+   - Data de postagem: 2025-09-18T20:05:56-07:00
+   - Assunto principal: Evolução da automação com IA, saturação do mercado de automatizadores e necessidade de combinar conhecimento de negócios com habilidades técnicas para entregar resultados em 2026.
+   - Resumo (1 frase): Não foque apenas em ser automatizador em 2026; a IA permitirá criar automações por linguagem natural, e o valor está em entender negócios e entregar resultados.
+   - Resumo (<= 150 palavras): O palestrante, com ampla experiência em tecnologia, afirma que não convém focar 100% em automação. A IA está evoluindo rapidamente e, nos próximos meses, grandes empresas poderão criar diferentes automações apenas com prompts de linguagem natural. Por isso, quem dominar a escrita de prompts poderá construir qualquer automação. Ele alerta que o mercado de automatizadores de baixo código está se tornando saturado e com baixa barreira de entrada. O ponto central é que as empresas pagam pelo resultado, não pela automação em si; portanto, é essencial desenvolver habilidades de negócio (vendas, entrega, pós-venda, finanças, captação de leads, marketing) aliadas à lógica de software para ser mais valorizado. Como exemplo, ele cita a recuperação de carrinhos que dobrou o faturamento de um cliente ao aumentar a taxa de conversão de 5% para 10%. O vídeo enfatiza buscar competências que gerem mais dinheiro em 2026 e convida para um workshop em 4/10.
+   - Palavras-chave: inteligência artificial, automação, low-code, engenharia de prompts, mercado saturado, negócios, processos, recuperação de carrinho, vendas, empreendedorismo com IA
+   - Resumo em tópicos:
+     - Contexto do apresentador e credenciais
+     - Evolução da IA e automação via linguagem natural
+     - Desafios do mercado de automatizadores de baixo código
+     - Por que entregar resultados importa mais que automatização
+     - Importância de entender negócios e processos (vendas, entrega, pós-venda, finanças, marketing)
+     - Exemplo prático de recuperação de carrinhos que dobrou faturamento
+     - Selo de alerta sobre necessidades de novas competências em 2026
+     - Convite para workshop em 4/10
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 1976
+   - Tokens recebidos: 1919
+   - Custo estimado: R$ 0.0039
+
+• @krishnaik06
+   - Nenhum vídeo dentro do critério.
+• @matthew_berman
+   - URL: https://www.youtube.com/watch?v=UgNPfD-bZgU
+   - Título: AI News: Meta Raybans, Gemini 3, World Labs, Grok 5, and more!
+   - Duração: 14:47
+   - Data de postagem: 2025-09-18T12:13:12-07:00
+   - Assunto principal: Resumo de avanços e rumores em IA e tecnologia, incluindo AR com Ray‑Ban, desempenho de raciocínio de IA, Rag e refrag, investimentos em Grock, Gemini 3 Ultra, benchmarks ARC, automação com Zapier e o protocolo de pagamentos entre agentes (AP2).
+   - Resumo (1 frase): Panorama de avanços e rumores em IA e tecnologia, desde os óculos Ray‑Ban AR da Meta até o raciocínio de IA da OpenAI, melhorias em Rag, investimentos em Grock, rumores sobre Gemini 3 Ultra, benchmarks ARC, automação com Zapier e o protocolo AP2 entre agentes.
+   - Resumo (<= 150 palavras): Neste vídeo, o apresentador comenta novidades do ecossistema de IA. Primeiro, os óculos Ray‑Ban AR da Meta aparecem com uma demonstração vazada, sugerindo IA que vê, ouve e projeta conteúdo apenas para o usuário. Em seguida, discute o desempenho do modelo de raciocínio da OpenAI, que tirou 12/12 nas Finais Mundiais do ICPC, superando equipes humanas; executivos da OpenAI destacam a qualidade dessas capacidades. O vídeo também apresenta a pesquisa da Meta Super Intelligence Labs sobre Rag (geração aumentada por recuperação), incluindo a técnica refrag que acelera a recuperação e permite contextos maiores. O patrocinador Zapier é mostrado, com exemplos de automação para transformar notícias em posts usando várias ferramentas. Além disso, Grock (GRQ) levantou 750 milhões de dólares, com planos de expansão; rumores sobre Gemini 3 Ultra; benchmarks ARC; o 'método do programador dos sonhos'; comentários de Elon Musk; e o protocolo AP2 de pagamentos entre agentes.
+   - Palavras-chave: Ray‑Ban AR, realidade aumentada, inteligência artificial, RAG (recuperação aumentada por geração), refrag, Grock GRQ, financiamento de inteligência artificial, Gemini 3 Ultra, referência ARC Prize, Dream coder method, Zapier, automação de inteligência artificial, Protocolo de Pagamento de Agente (AP2), Elon Musk, OpenAI, ICPC
+   - Resumo em tópicos:
+     - Meta Ray‑Ban AR: demonstração vazada sugere IA integrada que enxerga, ouve e projeta conteúdo apenas para o usuário.
+     - Desempenho de raciocínio da OpenAI: modelo marca 12/12 no ICPC World Finals, superando equipes humanas, com comentários de executivos.
+     - Meta Super Intelligence Labs e Rag: melhoria com a técnica refrag, aumentando velocidade e contexto útil em geração com recuperação.
+     - Zapier: patrocinador apresentado com fluxos de automação para transformar notícias em posts com várias ferramentas.
+     - Grock (GRQ): financiamento de 750 milhões de dólares, planos de expansão de centros de dados e primeira localização APAC.
+     - Gemini 3 Ultra: rumores de lançamento, indícios encontrados no repositório do Gemini CLI.
+     - ARC Prize e Dream coder method: novas pontuações e estratégias de treinamento com generalização de aprendizados.
+     - Elon Musk: comentários sobre Grock e treinamentos futuros.
+     - AP2 (Agent Payment Protocol): protocolo aberto para transações seguras entre agentes.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 1916
+   - Tokens recebidos: 4506
+   - Custo estimado: R$ 0.0077
+
+• @nocodemba
+   - URL: https://www.youtube.com/watch?v=Dna__4QolLg
+   - Título: O que substituirá as landing pages em 2025 (+ modelo gratuito)
+   - Duração: 09:25
+   - Data de postagem: 2025-09-19T07:51:39-07:00
+   - Assunto principal: Substituição de páginas de destino por funis sem código com Perspective em 2025
+   - Resumo (1 frase): O vídeo mostra como criar um funil sem código com Perspective em poucos minutos, demonstrando recursos que vão além de páginas de destino, com modelos, automações e métricas.
+   - Resumo (<= 150 palavras): Neste vídeo, o criador mostra como montar um funil no-code em minutos usando Perspective, destacando que ele é mais poderoso que uma landing page tradicional. Ele percorre desde a criação de um funil em branco, adicionando blocos (incluindo formulários interativos), configurando campos, e conectando a página de resultados. O Perspective é apresentado não apenas como um construtor de formulários, mas como uma ferramenta de qualificação de leads com scoring e integração direta às automações, incluindo CRM interno, notificações de leads e integrações com Make ou Zapier. O vídeo também explora templates prontos, a possibilidade de visualizar em mobile, medir visitas, conversões e comportamento do usuário, além de demonstrar como compartilhar com a equipe e coletar feedback. No final, oferecem um template gratuito para o vídeo e mostram um funil voltado para coaching com itens de linha e vídeos.
+   - Palavras-chave: sem código, funil de marketing, perspectiva, página de destino, captura de leads, CRM, automações, modelos, Make, Zapier, pontuação de leads, configuração de formulários, conversões, GDPR, modelo gratuito, coaching
+   - Resumo em tópicos:
+     - Apresentação do Perspective como alternativa a páginas de destino, com foco em funis sem código.
+     - Demonstração prática: criar um funil branco, adicionar blocos, formulário, campos, e envio para a página de resultados.
+     - Recursos do Perspective: CRM embutido, métricas (visitas, conversões, distribuição por dispositivo), integrações (Make, Zapier), e roteamento entre etapas.
+     - Vantagens: templates prontos, visualização em dispositivos móveis, compartilhamento com a equipe e feedback.
+     - Oferta: link para template gratuito de 30 dias.
+     - Exemplo de template para treinadores: página com itens, vídeo e opções de aquisição de coaching.
+     - Observação sobre dispositivos móveis e design responsivo.
+     - Conclusão: perspectiva para 2025 e como usar automações para ampliar conversões.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 2090
+   - Tokens recebidos: 2603
+   - Custo estimado: R$ 0.0049
+
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
@@ -24,10 +24,11 @@ class YouTubeChannel:
     """Informações básicas de um canal do YouTube."""
 
     nome: str
-    descricao: str
-    grupo: str
     canal_id: str
+    grupos: list[str] = field(default_factory=list)
+    descricao: str = ""
     status: bool = True
+    registro_id: int | None = None
 
 
 @dataclass(slots=True)

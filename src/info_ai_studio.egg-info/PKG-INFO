@@ -17,6 +17,7 @@ Requires-Dist: openai>=1.12
 Requires-Dist: yt-dlp>=2024.3.10
 Requires-Dist: faster-whisper>=1.0.0
 Requires-Dist: fpdf2>=2.7.8
+Requires-Dist: pandas>=2.1
 Provides-Extra: dev
 Requires-Dist: pytest>=7.4; extra == "dev"
 
