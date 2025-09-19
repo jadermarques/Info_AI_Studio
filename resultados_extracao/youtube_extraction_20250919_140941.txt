@@ -1,0 +1,14 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 0
+Modo: full
+Parâmetros: dias=3, max_videos=30, formato=txt
+
+• @MattVidPro
+   - Nenhum vídeo dentro do critério.
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

@@ -1,0 +1,43 @@
+{
+  "executed_at": "2025-09-19T14:05:50.632890",
+  "mode": "simple",
+  "total_channels": 1,
+  "total_videos": 1,
+  "params": {
+    "days": 1,
+    "max_videos": 30,
+    "mode": "simple",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "txt",
+    "translate_results": "pt-br",
+    "resumo_max_palavras": 150,
+    "llm_model": "gpt-5-nano"
+  },
+  "channels": [
+    {
+      "channel_id": "@MattVidPro",
+      "name": "@MattVidPro",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "Hk7QDEtAREw",
+          "title": "Raio 3: O Primeiro Vídeo de Raciocínio IA (HDR, Física, Consistência)",
+          "url": "https://www.youtube.com/watch?v=Hk7QDEtAREw",
+          "published": "2025-09-18T21:05:58.236093",
+          "published_relative": "há 20 horas",
+          "duration": "20:56",
+          "date_published": "2025-09-18T14:03:30-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0008118152618408203
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

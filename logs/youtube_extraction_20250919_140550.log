@@ -1,0 +1,11 @@
+2025-09-19 14:05:50,634 - INFO - app.youtube.run.20250919_140550 - Iniciando extração em lote de 1 canais
+2025-09-19 14:05:50,634 - INFO - app.youtube.run.20250919_140550 - Iniciando extração em lote de 1 canais
+2025-09-19 14:05:50,670 - INFO - app.youtube.run.20250919_140550 - Processando canal 1/1: @MattVidPro
+2025-09-19 14:05:50,670 - INFO - app.youtube.run.20250919_140550 - Processando canal 1/1: @MattVidPro
+2025-09-19 14:05:56,862 - INFO - youtube_extractor - Extraindo vídeos do canal @MattVidPro (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 14:05:58,236 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 14:05:58,237 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 14:05:58,237 - INFO - app.youtube.run.20250919_140550 - Canal @MattVidPro extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 14:05:58,237 - INFO - app.youtube.run.20250919_140550 - Canal @MattVidPro extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 14:06:04,634 - INFO - app.youtube.run.20250919_140550 - Vídeo Hk7QDEtAREw executado no modo simple (transcrição não aplicada).
+2025-09-19 14:06:04,634 - INFO - app.youtube.run.20250919_140550 - Vídeo Hk7QDEtAREw executado no modo simple (transcrição não aplicada).

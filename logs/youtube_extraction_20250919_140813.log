@@ -1,0 +1,23 @@
+2025-09-19 14:08:13,768 - INFO - app.youtube.run.20250919_140813 - Iniciando extração em lote de 1 canais
+2025-09-19 14:08:13,768 - INFO - app.youtube.run.20250919_140813 - Iniciando extração em lote de 1 canais
+2025-09-19 14:08:13,802 - INFO - app.youtube.run.20250919_140813 - Processando canal 1/1: @MattVidPro
+2025-09-19 14:08:13,802 - INFO - app.youtube.run.20250919_140813 - Processando canal 1/1: @MattVidPro
+2025-09-19 14:08:20,195 - INFO - youtube_extractor - Extraindo vídeos do canal @MattVidPro (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 14:08:23,654 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 14:08:23,654 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 14:08:23,655 - INFO - app.youtube.run.20250919_140813 - Canal @MattVidPro extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 14:08:23,655 - INFO - app.youtube.run.20250919_140813 - Canal @MattVidPro extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 14:08:27,755 - INFO - app.youtube.run.20250919_140813 - Vídeo Hk7QDEtAREw executado no modo simple (transcrição não aplicada).
+2025-09-19 14:08:27,755 - INFO - app.youtube.run.20250919_140813 - Vídeo Hk7QDEtAREw executado no modo simple (transcrição não aplicada).
+2025-09-19 14:08:44,940 - INFO - app.youtube.run.20250919_140844 - Iniciando extração em lote de 1 canais
+2025-09-19 14:08:44,951 - INFO - app.youtube.run.20250919_140844 - Processando canal 1/1: @MattVidPro
+2025-09-19 14:09:00,097 - WARNING - youtube_extractor - Falha ao requisitar https://www.youtube.com/@MattVidPro/about: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-09-19 14:09:00,097 - WARNING - app.youtube.run.20250919_140844 - Falha ao extrair informações do canal @MattVidPro
+2025-09-19 14:09:41,308 - INFO - app.youtube.run.20250919_140941 - Iniciando extração em lote de 1 canais
+2025-09-19 14:09:41,318 - INFO - app.youtube.run.20250919_140941 - Processando canal 1/1: @MattVidPro
+2025-09-19 14:10:28,660 - WARNING - youtube_extractor - Falha ao requisitar https://www.youtube.com/@MattVidPro/about: HTTPSConnectionPool(host='www.youtube.com', port=443): Read timed out.
+2025-09-19 14:10:28,661 - WARNING - app.youtube.run.20250919_140941 - Falha ao extrair informações do canal @MattVidPro
+2025-09-19 14:10:53,366 - INFO - app.youtube.run.20250919_141053 - Iniciando extração em lote de 1 canais
+2025-09-19 14:10:53,377 - INFO - app.youtube.run.20250919_141053 - Processando canal 1/1: @MattVidPro
+2025-09-19 14:11:18,415 - WARNING - youtube_extractor - Falha ao requisitar https://www.youtube.com/@MattVidPro/about: HTTPSConnectionPool(host='www.youtube.com', port=443): Read timed out. (read timeout=25)
+2025-09-19 14:11:18,416 - WARNING - app.youtube.run.20250919_141053 - Falha ao extrair informações do canal @MattVidPro

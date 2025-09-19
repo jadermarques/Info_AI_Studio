@@ -1,0 +1,350 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 11
+Total de vídeos extraídos: 21
+Modo: simple
+Parâmetros: dias=3, max_videos=30, formato=txt
+
+• @ColeMedin
+   - URL: https://www.youtube.com/watch?v=BcvjGTxzK40
+   - Título: The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them)
+   - Duração: 20:47
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-17T17:00:12-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @DanGalletta
+   - Nenhum vídeo dentro do critério.
+• @DataCouncil
+   - Nenhum vídeo dentro do critério.
+• @Incomestreamsurfers
+   - URL: https://www.youtube.com/watch?v=EKk6yZiMMtc
+   - Título: Claude Code + Codex = O NOVO Construtor de Sites Definitivo
+   - Duração: 15:12
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-19T04:38:46-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=rw_CCEFe4ks
+   - Título: Replit concluído: GPT-5-Codex ONE SHOTS aplicativos inteiros
+   - Duração: 10:31
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-18T07:26:13-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=6_CO0ilERA4
+   - Título: Codex vs Claude Code… Quem REALMENTE vence?
+   - Duração: 06:18
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-17T12:59:47-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=vKcTIf9hJr0
+   - Título: RIP CLAUDE CODE: Novo modelo GPT-5-Codex acaba de ser lançado
+   - Duração: 12:52
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-17T05:51:26-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=iCnRbfWqDN8
+   - Título: Pare de usar essas ferramentas de IA (faça ISTO em vez disso)
+   - Duração: 09:52
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-16T07:00:45-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=pyc2SieEZXc
+   - Título: Por que troquei o Claude Code pelo Codex (A Verdade)
+   - Duração: 06:23
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-15T12:08:39-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @LiamOttley
+   - URL: https://www.youtube.com/watch?v=3HHMuaGIC30
+   - Título: Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes)
+   - Duração: 43:15
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-19T01:00:38-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=amvEyw_Qrrw
+   - Título: If I Wanted To Become a Millionaire in 2026, I'd Do This With AI
+   - Duração: 20:59
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-15T23:09:56-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @SaraFinance
+   - Nenhum vídeo dentro do critério.
+• @SuperHumansLife
+   - Nenhum vídeo dentro do critério.
+• @eusoukelvincleto
+   - URL: https://www.youtube.com/watch?v=f4PveaUJLd8
+   - Título: O que eu estudaria em vez de automação em 2026
+   - Duração: 10:23
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-18T20:05:56-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=V7UyaYpKyUg
+   - Título: Como construir e vender infraestruturas de IA (guia completo)
+   - Duração: 44:26
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-16T17:49:32-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @krishnaik06
+   - URL: https://www.youtube.com/watch?v=GdohqcPB33U
+   - Título: Abordagem moderna para aprender IA para qualquer função
+   - Duração: 12:22
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-16T08:06:56-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @matthew_berman
+   - URL: https://www.youtube.com/watch?v=UgNPfD-bZgU
+   - Título: AI News: Meta Raybans, Gemini 3, World Labs, Grok 5, and more!
+   - Duração: 14:47
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-18T12:13:12-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=biwwQw0248w
+   - Título: Is AI Killing the Economy? (Anthropic Report)
+   - Duração: 16:29
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-17T14:30:06-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=CZeEAgE5xGA
+   - Título: Ex-OpenAI CTO Reveals Plan to Fix LLMs Biggest Problem
+   - Duração: 08:47
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-16T15:34:02-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=t09WttAGaag
+   - Título: Genie 3 Team: Agents, Training Genie, Simulation Theory, Text vs Video, and more!
+   - Duração: 52:19
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-16T11:18:17-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=yqtujbev9zI
+   - Título: GPT-5 Codex is nuts...
+   - Duração: 07:04
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-15T15:31:47-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=dZF9wHqrTRw
+   - Título: AI News: Qwen3-Max, OpenAI for Profit, Claude Updates, New Models, and more!
+   - Duração: 18:05
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-15T11:33:24-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @nocodemba
+   - URL: https://www.youtube.com/watch?v=Dna__4QolLg
+   - Título: O que substituirá as landing pages em 2025 (+ modelo gratuito)
+   - Duração: 09:25
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-19T07:51:39-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=gYz_m6hcWys
+   - Título: As planilhas estão mortas! Criei um painel de IA incrivelmente poderoso com o Databutton
+   - Duração: N/A
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-18T16:59:21.521663
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=gqqzvGvqKr0
+   - Título: A nova IA do Bubble pode vencer Lovable e Base44?
+   - Duração: 08:21
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-17T08:10:01-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+Tempo de análise por vídeo:
+- The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them): 0.00 segundos
+- Claude Code + Codex = O NOVO Construtor de Sites Definitivo: 0.00 segundos
+- Replit concluído: GPT-5-Codex ONE SHOTS aplicativos inteiros: 0.00 segundos
+- Codex vs Claude Code… Quem REALMENTE vence?: 0.00 segundos
+- RIP CLAUDE CODE: Novo modelo GPT-5-Codex acaba de ser lançado: 0.00 segundos
+- Pare de usar essas ferramentas de IA (faça ISTO em vez disso): 0.00 segundos
+- Por que troquei o Claude Code pelo Codex (A Verdade): 0.00 segundos
+- Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes): 0.00 segundos
+- If I Wanted To Become a Millionaire in 2026, I'd Do This With AI: 0.00 segundos
+- O que eu estudaria em vez de automação em 2026: 0.00 segundos
+- Como construir e vender infraestruturas de IA (guia completo): 0.00 segundos
+- Abordagem moderna para aprender IA para qualquer função: 0.00 segundos
+- AI News: Meta Raybans, Gemini 3, World Labs, Grok 5, and more!: 0.00 segundos
+- Is AI Killing the Economy? (Anthropic Report): 0.00 segundos
+- Ex-OpenAI CTO Reveals Plan to Fix LLMs Biggest Problem: 0.00 segundos
+- Genie 3 Team: Agents, Training Genie, Simulation Theory, Text vs Video, and more!: 0.00 segundos
+- GPT-5 Codex is nuts...: 0.00 segundos
+- AI News: Qwen3-Max, OpenAI for Profit, Claude Updates, New Models, and more!: 0.00 segundos
+- O que substituirá as landing pages em 2025 (+ modelo gratuito): 0.00 segundos
+- As planilhas estão mortas! Criei um painel de IA incrivelmente poderoso com o Databutton: 0.00 segundos
+- A nova IA do Bubble pode vencer Lovable e Base44?: 0.00 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

@@ -1,0 +1,25 @@
+{
+  "executed_at": "2025-09-19T14:10:53.365711",
+  "mode": "full",
+  "total_channels": 1,
+  "total_videos": 0,
+  "params": {
+    "days": 3,
+    "max_videos": 30,
+    "mode": "full",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "pdf",
+    "translate_results": "pt-br",
+    "resumo_max_palavras": 150,
+    "llm_model": "gpt-5-nano"
+  },
+  "channels": [
+    {
+      "channel_id": "@MattVidPro",
+      "status": "error",
+      "message": "Falha ao acessar https://www.youtube.com/@MattVidPro/about",
+      "videos": []
+    }
+  ]
+}
