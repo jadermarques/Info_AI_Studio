@@ -1,0 +1,419 @@
+{
+  "executed_at": "2025-09-19T13:57:03.947430",
+  "mode": "simple",
+  "total_channels": 11,
+  "total_videos": 21,
+  "params": {
+    "days": 3,
+    "max_videos": 30,
+    "mode": "simple",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "txt",
+    "translate_results": "pt-br",
+    "resumo_max_palavras": 150,
+    "llm_model": "gpt-5-nano"
+  },
+  "channels": [
+    {
+      "channel_id": "@ColeMedin",
+      "name": "@ColeMedin",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "BcvjGTxzK40",
+          "title": "The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them)",
+          "url": "https://www.youtube.com/watch?v=BcvjGTxzK40",
+          "published": "2025-09-18T16:57:07.132838",
+          "published_relative": "há 1 dia",
+          "duration": "20:47",
+          "date_published": "2025-09-17T17:00:12-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0005481243133544922
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@DanGalletta",
+      "name": "@DanGalletta",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@DataCouncil",
+      "name": "@DataCouncil",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@Incomestreamsurfers",
+      "name": "@Incomestreamsurfers",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "EKk6yZiMMtc",
+          "title": "Claude Code + Codex = O NOVO Construtor de Sites Definitivo",
+          "url": "https://www.youtube.com/watch?v=EKk6yZiMMtc",
+          "published": "2025-09-19T11:57:22.019345",
+          "published_relative": "há 5 horas",
+          "duration": "15:12",
+          "date_published": "2025-09-19T04:38:46-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0004260540008544922
+        },
+        {
+          "id": "rw_CCEFe4ks",
+          "title": "Replit concluído: GPT-5-Codex ONE SHOTS aplicativos inteiros",
+          "url": "https://www.youtube.com/watch?v=rw_CCEFe4ks",
+          "published": "2025-09-18T16:57:22.019425",
+          "published_relative": "há 1 dia",
+          "duration": "10:31",
+          "date_published": "2025-09-18T07:26:13-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0004131793975830078
+        },
+        {
+          "id": "6_CO0ilERA4",
+          "title": "Codex vs Claude Code… Quem REALMENTE vence?",
+          "url": "https://www.youtube.com/watch?v=6_CO0ilERA4",
+          "published": "2025-09-18T16:57:22.019445",
+          "published_relative": "há 1 dia",
+          "duration": "06:18",
+          "date_published": "2025-09-17T12:59:47-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003790855407714844
+        },
+        {
+          "id": "vKcTIf9hJr0",
+          "title": "RIP CLAUDE CODE: Novo modelo GPT-5-Codex acaba de ser lançado",
+          "url": "https://www.youtube.com/watch?v=vKcTIf9hJr0",
+          "published": "2025-09-17T16:57:22.019460",
+          "published_relative": "há 2 dias",
+          "duration": "12:52",
+          "date_published": "2025-09-17T05:51:26-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0004830360412597656
+        },
+        {
+          "id": "iCnRbfWqDN8",
+          "title": "Pare de usar essas ferramentas de IA (faça ISTO em vez disso)",
+          "url": "https://www.youtube.com/watch?v=iCnRbfWqDN8",
+          "published": "2025-09-16T16:57:22.019474",
+          "published_relative": "há 3 dias",
+          "duration": "09:52",
+          "date_published": "2025-09-16T07:00:45-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003631114959716797
+        },
+        {
+          "id": "pyc2SieEZXc",
+          "title": "Por que troquei o Claude Code pelo Codex (A Verdade)",
+          "url": "https://www.youtube.com/watch?v=pyc2SieEZXc",
+          "published": "2025-09-16T16:57:22.019488",
+          "published_relative": "há 3 dias",
+          "duration": "06:23",
+          "date_published": "2025-09-15T12:08:39-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00047326087951660156
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@LiamOttley",
+      "name": "@LiamOttley",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "3HHMuaGIC30",
+          "title": "Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes)",
+          "url": "https://www.youtube.com/watch?v=3HHMuaGIC30",
+          "published": "2025-09-19T08:57:40.322162",
+          "published_relative": "há 8 horas",
+          "duration": "43:15",
+          "date_published": "2025-09-19T01:00:38-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0005350112915039062
+        },
+        {
+          "id": "amvEyw_Qrrw",
+          "title": "If I Wanted To Become a Millionaire in 2026, I'd Do This With AI",
+          "url": "https://www.youtube.com/watch?v=amvEyw_Qrrw",
+          "published": "2025-09-16T16:57:40.322232",
+          "published_relative": "há 3 dias",
+          "duration": "20:59",
+          "date_published": "2025-09-15T23:09:56-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0004029273986816406
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@SaraFinance",
+      "name": "@SaraFinance",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@SuperHumansLife",
+      "name": "@SuperHumansLife",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@eusoukelvincleto",
+      "name": "@eusoukelvincleto",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "f4PveaUJLd8",
+          "title": "O que eu estudaria em vez de automação em 2026",
+          "url": "https://www.youtube.com/watch?v=f4PveaUJLd8",
+          "published": "2025-09-19T03:58:07.290991",
+          "published_relative": "há 13 horas",
+          "duration": "10:23",
+          "date_published": "2025-09-18T20:05:56-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00047016143798828125
+        },
+        {
+          "id": "V7UyaYpKyUg",
+          "title": "Como construir e vender infraestruturas de IA (guia completo)",
+          "url": "https://www.youtube.com/watch?v=V7UyaYpKyUg",
+          "published": "2025-09-17T16:58:07.291063",
+          "published_relative": "há 2 dias",
+          "duration": "44:26",
+          "date_published": "2025-09-16T17:49:32-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00041794776916503906
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@krishnaik06",
+      "name": "@krishnaik06",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "GdohqcPB33U",
+          "title": "Abordagem moderna para aprender IA para qualquer função",
+          "url": "https://www.youtube.com/watch?v=GdohqcPB33U",
+          "published": "2025-09-16T16:58:22.665536",
+          "published_relative": "há 3 dias",
+          "duration": "12:22",
+          "date_published": "2025-09-16T08:06:56-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0004639625549316406
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@matthew_berman",
+      "name": "@matthew_berman",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "UgNPfD-bZgU",
+          "title": "AI News: Meta Raybans, Gemini 3, World Labs, Grok 5, and more!",
+          "url": "https://www.youtube.com/watch?v=UgNPfD-bZgU",
+          "published": "2025-09-18T19:58:48.387820",
+          "published_relative": "há 21 horas",
+          "duration": "14:47",
+          "date_published": "2025-09-18T12:13:12-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00041985511779785156
+        },
+        {
+          "id": "biwwQw0248w",
+          "title": "Is AI Killing the Economy? (Anthropic Report)",
+          "url": "https://www.youtube.com/watch?v=biwwQw0248w",
+          "published": "2025-09-18T16:58:48.387905",
+          "published_relative": "há 1 dia",
+          "duration": "16:29",
+          "date_published": "2025-09-17T14:30:06-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00040793418884277344
+        },
+        {
+          "id": "CZeEAgE5xGA",
+          "title": "Ex-OpenAI CTO Reveals Plan to Fix LLMs Biggest Problem",
+          "url": "https://www.youtube.com/watch?v=CZeEAgE5xGA",
+          "published": "2025-09-17T16:58:48.387927",
+          "published_relative": "há 2 dias",
+          "duration": "08:47",
+          "date_published": "2025-09-16T15:34:02-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00036215782165527344
+        },
+        {
+          "id": "t09WttAGaag",
+          "title": "Genie 3 Team: Agents, Training Genie, Simulation Theory, Text vs Video, and more!",
+          "url": "https://www.youtube.com/watch?v=t09WttAGaag",
+          "published": "2025-09-17T16:58:48.387946",
+          "published_relative": "há 2 dias",
+          "duration": "52:19",
+          "date_published": "2025-09-16T11:18:17-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00045299530029296875
+        },
+        {
+          "id": "yqtujbev9zI",
+          "title": "GPT-5 Codex is nuts...",
+          "url": "https://www.youtube.com/watch?v=yqtujbev9zI",
+          "published": "2025-09-16T16:58:48.387963",
+          "published_relative": "há 3 dias",
+          "duration": "07:04",
+          "date_published": "2025-09-15T15:31:47-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00040984153747558594
+        },
+        {
+          "id": "dZF9wHqrTRw",
+          "title": "AI News: Qwen3-Max, OpenAI for Profit, Claude Updates, New Models, and more!",
+          "url": "https://www.youtube.com/watch?v=dZF9wHqrTRw",
+          "published": "2025-09-16T16:58:48.387981",
+          "published_relative": "há 3 dias",
+          "duration": "18:05",
+          "date_published": "2025-09-15T11:33:24-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.000431060791015625
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@nocodemba",
+      "name": "@nocodemba",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "Dna__4QolLg",
+          "title": "O que substituirá as landing pages em 2025 (+ modelo gratuito)",
+          "url": "https://www.youtube.com/watch?v=Dna__4QolLg",
+          "published": "2025-09-19T14:59:21.521581",
+          "published_relative": "há 2 horas",
+          "duration": "09:25",
+          "date_published": "2025-09-19T07:51:39-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00033211708068847656
+        },
+        {
+          "id": "gYz_m6hcWys",
+          "title": "As planilhas estão mortas! Criei um painel de IA incrivelmente poderoso com o Databutton",
+          "url": "https://www.youtube.com/watch?v=gYz_m6hcWys",
+          "published": "2025-09-18T16:59:21.521663",
+          "published_relative": "há 1 dia",
+          "duration": "",
+          "date_published": "",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0002951622009277344
+        },
+        {
+          "id": "gqqzvGvqKr0",
+          "title": "A nova IA do Bubble pode vencer Lovable e Base44?",
+          "url": "https://www.youtube.com/watch?v=gqqzvGvqKr0",
+          "published": "2025-09-17T16:59:21.521685",
+          "published_relative": "há 2 dias",
+          "duration": "08:21",
+          "date_published": "2025-09-17T08:10:01-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003142356872558594
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

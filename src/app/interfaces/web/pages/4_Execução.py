@@ -275,17 +275,43 @@ else:
                                         st.markdown(f"- {video_title} — {method_label}")
                 if result.token_details:
                     st.subheader("Tokens por vídeo")
-                    # Adiciona coluna de origem do conteúdo (transcrição ou áudio)
+                    # Adiciona coluna de data do vídeo e origem do conteúdo
+                    from datetime import datetime, timezone, timedelta
                     token_details = []
                     for item in result.token_details:
-                        # Busca canal/vídeo na estrutura channels_data para pegar analysis_source
+                        # Busca canal/vídeo na estrutura channels_data para pegar analysis_source e data
                         analysis_source = ""
+                        data_video = ""
                         for channel in result.channels_data:
                             for video in channel.get("videos", []):
                                 if video.get("id") == item.get("video_id"):
                                     analysis_source = video.get("analysis_source", "")
+                                    data_raw = video.get("date_published") or video.get("published") or video.get("published_relative") or ""
+                                    # Tenta converter para datetime
+                                    dt_fmt = None
+                                    dt_obj = None
+                                    if data_raw:
+                                        # Tenta ISO
+                                        try:
+                                            dt_obj = datetime.fromisoformat(str(data_raw))
+                                        except Exception:
+                                            # Tenta formatos comuns
+                                            for fmt in ["%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d/%m/%Y %H:%M", "%d/%m/%Y"]:
+                                                try:
+                                                    dt_obj = datetime.strptime(str(data_raw), fmt)
+                                                    break
+                                                except Exception:
+                                                    continue
+                                    if dt_obj:
+                                        # Ajusta para horário de Brasília (UTC-3)
+                                        if dt_obj.tzinfo is None:
+                                            dt_obj = dt_obj.replace(tzinfo=timezone.utc)
+                                        dt_brasilia = dt_obj.astimezone(timezone(timedelta(hours=-3)))
+                                        data_video = dt_brasilia.strftime("%d/%m/%Y %H:%M")
+                                    else:
+                                        data_video = str(data_raw)
                                     break
-                            if analysis_source:
+                            if analysis_source or data_video:
                                 break
                         if analysis_source == "transcricao_youtube":
                             origem_conteudo = "transcrição"
@@ -294,6 +320,7 @@ else:
                         else:
                             origem_conteudo = "-"
                         item = dict(item)
+                        item = {"data_video": data_video, **item}  # insere data como primeira coluna
                         item["origem_conteudo"] = origem_conteudo
                         token_details.append(item)
                     ordered = sorted(token_details, key=lambda item: item["canal"])

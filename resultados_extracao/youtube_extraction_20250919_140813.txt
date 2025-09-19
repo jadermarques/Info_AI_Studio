@@ -1,0 +1,30 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: simple
+Parâmetros: dias=1, max_videos=30, formato=txt
+
+• @MattVidPro
+   - URL: https://www.youtube.com/watch?v=Hk7QDEtAREw
+   - Título: Raio 3: O Primeiro Vídeo de Raciocínio IA (HDR, Física, Consistência)
+   - Duração: 20:56
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-18T14:03:30-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+Tempo de análise por vídeo:
+- Raio 3: O Primeiro Vídeo de Raciocínio IA (HDR, Física, Consistência): 0.00 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA
