@@ -39,6 +39,20 @@ def _ensure_llm_state() -> None:
             st.session_state[key] = value
 
 
+def _ensure_youtube_form_state() -> None:
+    defaults = {
+        "youtube_form_nome": "",
+        "youtube_form_descricao": "",
+        "youtube_form_grupo": "",
+        "youtube_form_canal_id": "",
+        "youtube_form_status": True,
+        "youtube_form_reset_pending": False,
+    }
+    for key, value in defaults.items():
+        if key not in st.session_state:
+            st.session_state[key] = value
+
+
 def _reset_llm_form() -> None:
     st.session_state.llm_form_model_id = None
     st.session_state.llm_form_provedor = ""
@@ -71,6 +85,7 @@ def _record_test_feedback(success: bool, message: str, env_var: str) -> None:
 st.title("Cadastros")
 
 _ensure_llm_state()
+_ensure_youtube_form_state()
 
 st.subheader("Modelos LLM")
 
@@ -247,14 +262,27 @@ else:
 st.divider()
 
 st.subheader("Canais do YouTube")
+if st.session_state.youtube_form_reset_pending:
+    st.session_state["youtube_form_nome"] = ""
+    st.session_state["youtube_form_descricao"] = ""
+    st.session_state["youtube_form_grupo"] = ""
+    st.session_state["youtube_form_canal_id"] = ""
+    st.session_state["youtube_form_status"] = True
+    st.session_state.youtube_form_reset_pending = False
+
 with st.form("youtube_form"):
-    nome = st.text_input("Nome do canal")
-    descricao = st.text_area("Descrição")
-    grupo = st.text_input("Grupo do canal")
-    canal_id = st.text_input("ID do canal", placeholder="@exemplo")
-    ativo_canal = st.checkbox("Ativo", value=True)
+    st.text_input("Nome do canal", key="youtube_form_nome")
+    st.text_area("Descrição", key="youtube_form_descricao")
+    st.text_input("Grupo do canal", key="youtube_form_grupo")
+    st.text_input("ID do canal", key="youtube_form_canal_id", placeholder="@exemplo")
+    st.checkbox("Ativo", key="youtube_form_status")
     submit_channel = st.form_submit_button("Salvar canal")
     if submit_channel:
+        nome = st.session_state["youtube_form_nome"]
+        descricao = st.session_state["youtube_form_descricao"]
+        grupo = st.session_state["youtube_form_grupo"]
+        canal_id = st.session_state["youtube_form_canal_id"]
+        ativo_canal = st.session_state["youtube_form_status"]
         if not nome or not descricao or not grupo or not canal_id:
             st.error("Todos os campos são obrigatórios.")
         else:
@@ -268,6 +296,7 @@ with st.form("youtube_form"):
                 )
             )
             st.success("Canal salvo com sucesso.")
+            st.session_state.youtube_form_reset_pending = True
             st.rerun()
 
 st.table(list_youtube_channels(active_only=False))
