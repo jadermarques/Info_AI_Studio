@@ -1,0 +1,22 @@
+2025-09-19 13:05:42,797 - INFO - app.youtube.run.20250919_130542 - Iniciando extração em lote de 11 canais
+2025-09-19 13:05:42,797 - INFO - app.youtube.run.20250919_130542 - Iniciando extração em lote de 11 canais
+2025-09-19 13:05:42,836 - INFO - app.youtube.run.20250919_130542 - Processando canal 1/11: @ColeMedin
+2025-09-19 13:05:42,836 - INFO - app.youtube.run.20250919_130542 - Processando canal 1/11: @ColeMedin
+2025-09-19 13:05:44,176 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 13:05:44,941 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 13:05:44,942 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 13:05:44,942 - INFO - app.youtube.run.20250919_130542 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 13:05:44,942 - INFO - app.youtube.run.20250919_130542 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 13:05:47,735 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para BcvjGTxzK40
+2025-09-19 13:05:47,882 - INFO - youtube_extractor - Transcrição encontrada (22519 chars, en) para BcvjGTxzK40
+2025-09-19 13:05:47,884 - INFO - app.youtube.run.20250919_130542 - Transcrição nativa encontrada para BcvjGTxzK40
+2025-09-19 13:05:47,884 - INFO - app.youtube.run.20250919_130542 - Transcrição nativa encontrada para BcvjGTxzK40
+2025-09-19 13:05:48,720 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 13:06:04,650 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 13:06:04,870 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 13:06:13,753 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 13:06:14,367 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 13:06:22,900 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 13:06:23,096 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 13:06:30,719 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 13:06:31,078 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"

@@ -1,0 +1,38 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: full
+Parâmetros: dias=3, max_videos=1, formato=txt
+
+• @MattVidPro
+   - URL: https://www.youtube.com/watch?v=Hk7QDEtAREw
+   - Título: Raio 3: O Primeiro Vídeo de Raciocínio IA (HDR, Física, Consistência)
+   - Duração: 20:56
+   - Origem do conteúdo: transcrição
+   - Tempo de análise: 68.61 segundos
+   - Data de postagem: 2025-09-18T14:03:30-07:00
+   - Assunto principal: Avaliação do Ray 3 da Lumalabs: modelo de vídeo com raciocínio, HDR de qualidade de estúdio e avanços no fluxo de trabalho criativo.
+   - Resumo (1 frase): Análise do Ray 3 da Lumalabs, um modelo de vídeo com raciocínio, HDR studiograde, modo draft e melhorias de física/consistência, discutindo funcionamento, uso prático e limitações.
+   - Resumo (<= 150 palavras): Rapidamente, o vídeo apresenta o Ray 3 como o suposto primeiro modelo de vídeo com raciocínio, HDR de qualidade de estúdio e modo de rascunho para iteração criativa. O narrador detalha como o sistema observa a cena, gera tentativas, corrige automaticamente falhas e pode ser guiado por anotações visuais. Demonstra cenas com celulares vintage, piratas e Kraken, mostra a diferença entre rascunhos e saídas finais, e discute a exigência de assinatura para ativar o modo de raciocínio. HDR é explicado como calibração de brilho por área, exigindo uma tela compatível. O vídeo também comenta limites práticos, a possibilidade de seleção seletiva e a experiência de uso, sugerindo que a tecnologia é promissora, mas depende da usabilidade real.
+   - Palavras-chave: Ray 3, Lumalabs, inteligência artificial de vídeo, raciocínio visual, HDR de qualidade de estúdio, modo de rascunho, física avançada, consistência, anotações visuais, interface, calibração HDR, SDR, fluxo criativo, personagens consistentes
+   - Resumo em tópicos:
+     ### Pontos-chave
+     - Ray 3 é apresentado como o primeiro modelo de vídeo com raciocínio, HDR de nível estúdio e modo rascunho.
+     - O processo de raciocínio envolve análise da cena, geração de rascunhos, identificação de erros e reiteração automática ou com correções via anotações visuais.
+     - Demonstração prática: cena com celulares vintage, crítica de consistência (fotos, objetos) e variações de qualidade entre rascunhos e saídas, com a necessidade de assinatura para ativar o modo de raciocínio.
+     - HDR: explica que HDR realmente requer tela compatível e calibração, com impacto no visual e cuidado para não converter para SDR.
+     - Considerações de uso: seleção seletiva de exemplos, avaliação de usabilidade e promessa de melhoria, dependente da implementação prática.
+     - Conclusão: Ray 3 é promissor, mas a adoção depende de facilidade de uso e robustez.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 1922
+   - Tokens recebidos: 3796
+   - Custo estimado: R$ 0.0067
+
+Tempo de análise por vídeo:
+- Raio 3: O Primeiro Vídeo de Raciocínio IA (HDR, Física, Consistência): 68.61 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

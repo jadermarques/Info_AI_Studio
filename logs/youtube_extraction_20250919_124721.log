@@ -1,0 +1,261 @@
+2025-09-19 12:47:21,257 - INFO - app.youtube.run.20250919_124721 - Iniciando extração em lote de 11 canais
+2025-09-19 12:47:21,257 - INFO - app.youtube.run.20250919_124721 - Iniciando extração em lote de 11 canais
+2025-09-19 12:47:21,270 - INFO - app.youtube.run.20250919_124721 - Processando canal 1/11: @ColeMedin
+2025-09-19 12:47:21,270 - INFO - app.youtube.run.20250919_124721 - Processando canal 1/11: @ColeMedin
+2025-09-19 12:47:21,833 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=10)
+2025-09-19 12:47:22,466 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 12:47:22,466 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 12:47:22,466 - INFO - app.youtube.run.20250919_124721 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 12:47:22,466 - INFO - app.youtube.run.20250919_124721 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 12:47:24,006 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para BcvjGTxzK40
+2025-09-19 12:47:24,119 - INFO - youtube_extractor - Transcrição encontrada (22519 chars, en) para BcvjGTxzK40
+2025-09-19 12:47:24,122 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para BcvjGTxzK40
+2025-09-19 12:47:24,122 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para BcvjGTxzK40
+2025-09-19 12:47:25,287 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:47:45,395 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:47:45,907 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:47:54,305 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:47:54,921 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:48:05,977 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:48:06,590 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:48:13,203 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:48:13,396 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:48:23,384 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:48:23,919 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:48:50,827 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:48:50,832 - INFO - app.youtube.run.20250919_124721 - Vídeo BcvjGTxzK40 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:48:50,832 - INFO - app.youtube.run.20250919_124721 - Vídeo BcvjGTxzK40 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:48:50,832 - INFO - app.youtube.run.20250919_124721 - Processando canal 2/11: @DanGalletta
+2025-09-19 12:48:50,832 - INFO - app.youtube.run.20250919_124721 - Processando canal 2/11: @DanGalletta
+2025-09-19 12:48:51,258 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=10)
+2025-09-19 12:48:51,646 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 12:48:51,646 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 12:48:51,647 - INFO - app.youtube.run.20250919_124721 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 12:48:51,647 - INFO - app.youtube.run.20250919_124721 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 12:48:51,648 - INFO - app.youtube.run.20250919_124721 - Processando canal 3/11: @DataCouncil
+2025-09-19 12:48:51,648 - INFO - app.youtube.run.20250919_124721 - Processando canal 3/11: @DataCouncil
+2025-09-19 12:48:52,083 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=10)
+2025-09-19 12:48:52,727 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 12:48:52,727 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 12:48:52,728 - INFO - app.youtube.run.20250919_124721 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 12:48:52,728 - INFO - app.youtube.run.20250919_124721 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 12:48:52,729 - INFO - app.youtube.run.20250919_124721 - Processando canal 4/11: @Incomestreamsurfers
+2025-09-19 12:48:52,729 - INFO - app.youtube.run.20250919_124721 - Processando canal 4/11: @Incomestreamsurfers
+2025-09-19 12:48:53,073 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=10)
+2025-09-19 12:48:53,470 - INFO - youtube_extractor - Aba /videos: analisados=4, válidos=3, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 12:48:53,471 - INFO - youtube_extractor - Aba /videos: 3 vídeos válidos (≤ 1 dias)
+2025-09-19 12:48:53,472 - INFO - app.youtube.run.20250919_124721 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 3
+2025-09-19 12:48:53,472 - INFO - app.youtube.run.20250919_124721 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 3
+2025-09-19 12:48:56,520 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para EKk6yZiMMtc
+2025-09-19 12:48:56,636 - INFO - youtube_extractor - Transcrição encontrada (12577 chars, en) para EKk6yZiMMtc
+2025-09-19 12:48:56,638 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para EKk6yZiMMtc
+2025-09-19 12:48:56,638 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para EKk6yZiMMtc
+2025-09-19 12:48:56,954 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:49:13,497 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:49:13,962 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:49:16,324 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:49:16,733 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:49:21,997 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:49:23,324 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:49:28,299 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:49:28,919 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:49:37,521 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:49:37,742 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:49:50,757 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:49:50,761 - INFO - app.youtube.run.20250919_124721 - Vídeo EKk6yZiMMtc analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:49:50,761 - INFO - app.youtube.run.20250919_124721 - Vídeo EKk6yZiMMtc analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:49:53,259 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para rw_CCEFe4ks
+2025-09-19 12:49:53,400 - INFO - youtube_extractor - Transcrição encontrada (9971 chars, en) para rw_CCEFe4ks
+2025-09-19 12:49:53,403 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para rw_CCEFe4ks
+2025-09-19 12:49:53,403 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para rw_CCEFe4ks
+2025-09-19 12:49:54,215 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:50:07,933 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:50:08,174 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:50:11,313 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:50:11,621 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:50:17,560 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:50:17,757 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:50:20,821 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:50:21,033 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:50:27,124 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:50:27,370 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:50:40,645 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:50:40,648 - INFO - app.youtube.run.20250919_124721 - Vídeo rw_CCEFe4ks analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:50:40,648 - INFO - app.youtube.run.20250919_124721 - Vídeo rw_CCEFe4ks analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:50:43,830 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para 6_CO0ilERA4
+2025-09-19 12:50:43,926 - INFO - youtube_extractor - Transcrição encontrada (5720 chars, en) para 6_CO0ilERA4
+2025-09-19 12:50:43,928 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para 6_CO0ilERA4
+2025-09-19 12:50:43,928 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para 6_CO0ilERA4
+2025-09-19 12:50:44,123 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:50:56,118 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:50:56,357 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:51:00,465 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:51:00,668 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:51:06,026 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:51:06,210 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:51:10,755 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:51:10,965 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:51:23,913 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:51:24,425 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:51:35,353 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:51:35,357 - INFO - app.youtube.run.20250919_124721 - Vídeo 6_CO0ilERA4 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:51:35,357 - INFO - app.youtube.run.20250919_124721 - Vídeo 6_CO0ilERA4 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:51:35,358 - INFO - app.youtube.run.20250919_124721 - Processando canal 5/11: @LiamOttley
+2025-09-19 12:51:35,358 - INFO - app.youtube.run.20250919_124721 - Processando canal 5/11: @LiamOttley
+2025-09-19 12:51:36,526 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=10)
+2025-09-19 12:51:36,880 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 12:51:36,881 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 12:51:36,881 - INFO - app.youtube.run.20250919_124721 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 12:51:36,881 - INFO - app.youtube.run.20250919_124721 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 12:51:39,970 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para 3HHMuaGIC30
+2025-09-19 12:51:40,551 - INFO - youtube_extractor - Transcrição encontrada (58875 chars, en) para 3HHMuaGIC30
+2025-09-19 12:51:40,553 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para 3HHMuaGIC30
+2025-09-19 12:51:40,553 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para 3HHMuaGIC30
+2025-09-19 12:51:41,119 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:52:02,961 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:52:03,237 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:52:07,653 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:52:07,851 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:52:21,151 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:52:21,583 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:52:28,836 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:52:29,550 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:52:33,444 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:52:34,159 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:52:48,884 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:52:48,907 - INFO - app.youtube.run.20250919_124721 - Vídeo 3HHMuaGIC30 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:52:48,907 - INFO - app.youtube.run.20250919_124721 - Vídeo 3HHMuaGIC30 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:52:48,908 - INFO - app.youtube.run.20250919_124721 - Processando canal 6/11: @SaraFinance
+2025-09-19 12:52:48,908 - INFO - app.youtube.run.20250919_124721 - Processando canal 6/11: @SaraFinance
+2025-09-19 12:52:49,586 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=10)
+2025-09-19 12:52:50,391 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 12:52:50,391 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 12:52:50,392 - INFO - app.youtube.run.20250919_124721 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 12:52:50,392 - INFO - app.youtube.run.20250919_124721 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 12:52:50,393 - INFO - app.youtube.run.20250919_124721 - Processando canal 7/11: @SuperHumansLife
+2025-09-19 12:52:50,393 - INFO - app.youtube.run.20250919_124721 - Processando canal 7/11: @SuperHumansLife
+2025-09-19 12:52:52,964 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=10)
+2025-09-19 12:52:56,262 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 12:52:56,263 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 12:52:56,264 - INFO - app.youtube.run.20250919_124721 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 12:52:56,264 - INFO - app.youtube.run.20250919_124721 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 12:52:56,265 - INFO - app.youtube.run.20250919_124721 - Processando canal 8/11: @eusoukelvincleto
+2025-09-19 12:52:56,265 - INFO - app.youtube.run.20250919_124721 - Processando canal 8/11: @eusoukelvincleto
+2025-09-19 12:52:58,926 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=10)
+2025-09-19 12:53:00,979 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 12:53:00,981 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 12:53:00,982 - INFO - app.youtube.run.20250919_124721 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 12:53:00,982 - INFO - app.youtube.run.20250919_124721 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 12:53:06,673 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para f4PveaUJLd8
+2025-09-19 12:53:07,159 - INFO - youtube_extractor - Transcrição encontrada (9536 chars, pt) para f4PveaUJLd8
+2025-09-19 12:53:07,161 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para f4PveaUJLd8
+2025-09-19 12:53:07,161 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para f4PveaUJLd8
+2025-09-19 12:53:07,825 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:53:26,381 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:53:26,614 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:53:30,683 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:53:31,195 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:53:36,394 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:53:38,889 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:53:43,238 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:53:43,466 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:53:49,320 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:53:49,558 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:54:13,973 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:54:13,976 - INFO - app.youtube.run.20250919_124721 - Vídeo f4PveaUJLd8 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:54:13,976 - INFO - app.youtube.run.20250919_124721 - Vídeo f4PveaUJLd8 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:54:13,976 - INFO - app.youtube.run.20250919_124721 - Processando canal 9/11: @krishnaik06
+2025-09-19 12:54:13,976 - INFO - app.youtube.run.20250919_124721 - Processando canal 9/11: @krishnaik06
+2025-09-19 12:54:14,499 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=10)
+2025-09-19 12:54:14,762 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 12:54:14,762 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 12:54:14,763 - INFO - app.youtube.run.20250919_124721 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 12:54:14,763 - INFO - app.youtube.run.20250919_124721 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 12:54:14,763 - INFO - app.youtube.run.20250919_124721 - Processando canal 10/11: @matthew_berman
+2025-09-19 12:54:14,763 - INFO - app.youtube.run.20250919_124721 - Processando canal 10/11: @matthew_berman
+2025-09-19 12:54:15,170 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=10)
+2025-09-19 12:54:15,571 - INFO - youtube_extractor - Aba /videos: analisados=3, válidos=2, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 12:54:15,571 - INFO - youtube_extractor - Aba /videos: 2 vídeos válidos (≤ 1 dias)
+2025-09-19 12:54:15,573 - INFO - app.youtube.run.20250919_124721 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-19 12:54:15,573 - INFO - app.youtube.run.20250919_124721 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-19 12:54:17,609 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para UgNPfD-bZgU
+2025-09-19 12:54:17,711 - INFO - youtube_extractor - Transcrição encontrada (14649 chars, en) para UgNPfD-bZgU
+2025-09-19 12:54:17,713 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para UgNPfD-bZgU
+2025-09-19 12:54:17,713 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para UgNPfD-bZgU
+2025-09-19 12:54:17,952 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:54:39,180 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:54:39,701 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:54:49,429 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:54:49,735 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:54:56,702 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:54:56,919 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:55:03,767 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:55:04,015 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:55:15,130 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:55:15,744 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:55:38,375 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:55:38,379 - INFO - app.youtube.run.20250919_124721 - Vídeo UgNPfD-bZgU analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:55:38,379 - INFO - app.youtube.run.20250919_124721 - Vídeo UgNPfD-bZgU analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:55:40,476 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para biwwQw0248w
+2025-09-19 12:55:40,594 - INFO - youtube_extractor - Transcrição encontrada (16867 chars, en) para biwwQw0248w
+2025-09-19 12:55:40,596 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para biwwQw0248w
+2025-09-19 12:55:40,596 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para biwwQw0248w
+2025-09-19 12:55:40,946 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:56:03,814 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:56:04,014 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:56:09,001 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:56:09,525 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:56:19,233 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:56:19,438 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:56:27,629 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:56:27,939 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:56:45,346 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:56:45,651 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:56:58,273 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:56:58,295 - INFO - app.youtube.run.20250919_124721 - Vídeo biwwQw0248w analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:56:58,295 - INFO - app.youtube.run.20250919_124721 - Vídeo biwwQw0248w analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:56:58,296 - INFO - app.youtube.run.20250919_124721 - Processando canal 11/11: @nocodemba
+2025-09-19 12:56:58,296 - INFO - app.youtube.run.20250919_124721 - Processando canal 11/11: @nocodemba
+2025-09-19 12:56:59,202 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=10)
+2025-09-19 12:57:01,984 - INFO - youtube_extractor - Aba /videos: analisados=3, válidos=2, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 12:57:01,984 - INFO - youtube_extractor - Aba /videos: 2 vídeos válidos (≤ 1 dias)
+2025-09-19 12:57:01,986 - INFO - app.youtube.run.20250919_124721 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-19 12:57:01,986 - INFO - app.youtube.run.20250919_124721 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-19 12:57:14,824 - INFO - youtube_extractor - Transcrição: disponíveis ['en', 'en(auto)'] para Dna__4QolLg
+2025-09-19 12:57:14,958 - INFO - youtube_extractor - Transcrição encontrada (10572 chars, en) para Dna__4QolLg
+2025-09-19 12:57:14,961 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para Dna__4QolLg
+2025-09-19 12:57:14,961 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para Dna__4QolLg
+2025-09-19 12:57:15,359 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:57:35,213 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:57:35,657 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:57:42,872 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:57:43,416 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:57:59,829 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:58:00,090 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:58:06,600 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:58:06,793 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:58:13,890 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:58:14,137 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:58:28,621 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:58:28,643 - INFO - app.youtube.run.20250919_124721 - Vídeo Dna__4QolLg analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:58:28,643 - INFO - app.youtube.run.20250919_124721 - Vídeo Dna__4QolLg analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:58:31,195 - INFO - youtube_extractor - Transcrição: disponíveis ['en', 'en(auto)'] para gYz_m6hcWys
+2025-09-19 12:58:31,291 - INFO - youtube_extractor - Transcrição encontrada (7473 chars, en) para gYz_m6hcWys
+2025-09-19 12:58:31,294 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para gYz_m6hcWys
+2025-09-19 12:58:31,294 - INFO - app.youtube.run.20250919_124721 - Transcrição nativa encontrada para gYz_m6hcWys
+2025-09-19 12:58:31,913 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:58:49,728 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:58:50,248 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:58:54,185 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:58:54,789 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:59:09,976 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:59:10,598 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:59:15,696 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:59:16,294 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:59:21,599 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:59:22,141 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 503 Service Unavailable"
+2025-09-19 12:59:22,143 - INFO - openai._base_client - Retrying request to /responses in 0.391363 seconds
+2025-09-19 12:59:22,752 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 12:59:39,936 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:59:39,939 - INFO - app.youtube.run.20250919_124721 - Vídeo gYz_m6hcWys analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 12:59:39,939 - INFO - app.youtube.run.20250919_124721 - Vídeo gYz_m6hcWys analisado com a transcrição disponibilizada pelo YouTube.

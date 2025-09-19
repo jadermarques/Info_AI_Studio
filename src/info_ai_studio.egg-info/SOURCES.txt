@@ -29,6 +29,7 @@ src/app/interfaces/web/pages/2_Cadastros.py
 src/app/interfaces/web/pages/3_Configurações.py
 src/app/interfaces/web/pages/4_Execução.py
 src/app/interfaces/web/pages/5_Logs.py
+src/app/interfaces/web/pages/6_Resultados.py
 src/app/interfaces/web/pages/__init__.py
 src/info_ai_studio.egg-info/PKG-INFO
 src/info_ai_studio.egg-info/SOURCES.txt
