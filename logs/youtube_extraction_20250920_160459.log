@@ -1,0 +1,42 @@
+2025-09-20 16:04:59,901 - INFO - app.youtube.run.20250920_160459 - Iniciando extração em lote de 1 canais
+2025-09-20 16:04:59,901 - INFO - app.youtube.run.20250920_160459 - Iniciando extração em lote de 1 canais
+2025-09-20 16:04:59,909 - INFO - app.youtube.run.20250920_160459 - Processando canal 1/1: @SuperHumansLife
+2025-09-20 16:04:59,909 - INFO - app.youtube.run.20250920_160459 - Processando canal 1/1: @SuperHumansLife
+2025-09-20 16:05:00,373 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-20 16:05:00,635 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-20 16:05:00,635 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-20 16:05:00,636 - INFO - app.youtube.run.20250920_160459 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-20 16:05:00,636 - INFO - app.youtube.run.20250920_160459 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-20 16:05:02,280 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para NPcpJunt0YA
+2025-09-20 16:05:02,558 - INFO - youtube_extractor - Transcrição: acesso bloqueado ou indisponível para NPcpJunt0YA: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=NPcpJunt0YA! This is most likely caused by:
+2025-09-20 16:05:12,706 - INFO - app.youtube.run.20250920_160459 - [ASR ativado] Transcrição não encontrada; iniciando fallback para NPcpJunt0YA
+2025-09-20 16:05:12,706 - INFO - app.youtube.run.20250920_160459 - [ASR ativado] Transcrição não encontrada; iniciando fallback para NPcpJunt0YA
+2025-09-20 16:05:23,061 - INFO - app.youtube.run.20250920_160459 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpplxmof5h/NPcpJunt0YA.m4a
+2025-09-20 16:05:23,061 - INFO - app.youtube.run.20250920_160459 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpplxmof5h/NPcpJunt0YA.m4a
+2025-09-20 16:05:26,935 - INFO - faster_whisper - Processing audio with duration 31:22.186
+2025-09-20 16:05:32,536 - INFO - faster_whisper - VAD filter removed 00:00.016 of audio
+2025-09-20 16:12:38,249 - INFO - app.youtube.run.20250920_160459 - Transcrição obtida via ASR faster-whisper para NPcpJunt0YA
+2025-09-20 16:12:38,249 - INFO - app.youtube.run.20250920_160459 - Transcrição obtida via ASR faster-whisper para NPcpJunt0YA
+2025-09-20 16:12:39,263 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 16:13:00,562 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 16:13:01,484 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 16:13:05,032 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 16:13:05,238 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 16:13:10,720 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 16:13:10,928 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 16:13:13,727 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 16:13:13,937 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 16:13:24,728 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 16:13:24,920 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 16:13:30,973 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 16:13:30,975 - INFO - app.youtube.run.20250920_160459 - Vídeo NPcpJunt0YA analisado via ASR (áudio baixado) [asr_faster_whisper].
+2025-09-20 16:13:30,975 - INFO - app.youtube.run.20250920_160459 - Vídeo NPcpJunt0YA analisado via ASR (áudio baixado) [asr_faster_whisper].
+2025-09-20 16:19:34,593 - INFO - app.youtube.run.20250920_161934 - Iniciando extração em lote de 1 canais
+2025-09-20 16:19:34,604 - INFO - app.youtube.run.20250920_161934 - Processando canal 1/1: @SuperHumansLife
+2025-09-20 16:19:35,565 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-20 16:19:35,843 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-20 16:19:35,843 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-20 16:19:35,844 - INFO - app.youtube.run.20250920_161934 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-20 16:19:37,603 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para NPcpJunt0YA
+2025-09-20 16:19:38,183 - INFO - youtube_extractor - Transcrição: acesso bloqueado ou indisponível para NPcpJunt0YA: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=NPcpJunt0YA! This is most likely caused by:
+2025-09-20 16:19:46,688 - INFO - app.youtube.run.20250920_161934 - [ASR ativado] Transcrição não encontrada; iniciando fallback para NPcpJunt0YA

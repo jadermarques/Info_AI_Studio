@@ -1,0 +1,13 @@
+2025-09-20 16:19:34,593 - INFO - app.youtube.run.20250920_161934 - Iniciando extração em lote de 1 canais
+2025-09-20 16:19:34,593 - INFO - app.youtube.run.20250920_161934 - Iniciando extração em lote de 1 canais
+2025-09-20 16:19:34,604 - INFO - app.youtube.run.20250920_161934 - Processando canal 1/1: @SuperHumansLife
+2025-09-20 16:19:34,604 - INFO - app.youtube.run.20250920_161934 - Processando canal 1/1: @SuperHumansLife
+2025-09-20 16:19:35,565 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-20 16:19:35,843 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-20 16:19:35,843 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-20 16:19:35,844 - INFO - app.youtube.run.20250920_161934 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-20 16:19:35,844 - INFO - app.youtube.run.20250920_161934 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-20 16:19:37,603 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para NPcpJunt0YA
+2025-09-20 16:19:38,183 - INFO - youtube_extractor - Transcrição: acesso bloqueado ou indisponível para NPcpJunt0YA: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=NPcpJunt0YA! This is most likely caused by:
+2025-09-20 16:19:46,688 - INFO - app.youtube.run.20250920_161934 - [ASR ativado] Transcrição não encontrada; iniciando fallback para NPcpJunt0YA
+2025-09-20 16:19:46,688 - INFO - app.youtube.run.20250920_161934 - [ASR ativado] Transcrição não encontrada; iniciando fallback para NPcpJunt0YA

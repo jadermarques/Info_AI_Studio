@@ -87,11 +87,10 @@ else:
         sorted_auto = sorted(auto_labels)
         if st.session_state.youtube_auto_channels != sorted_auto:
             st.session_state.youtube_auto_channels = sorted_auto
-        combined = sorted(
-            set(st.session_state.youtube_auto_channels)
-            | set(st.session_state.youtube_manual_channels)
-        )
-        st.session_state.youtube_selected_channels = combined
+        # Não sobrescreve seleção manual do usuário durante reruns.
+        # Se ainda não houver seleção, preenche com os canais do grupo.
+        if not st.session_state.get("youtube_selected_channels"):
+            st.session_state.youtube_selected_channels = sorted_auto
 
     with st.container():
         filter_col, _ = st.columns(2)
@@ -104,23 +103,16 @@ else:
                 help="Selecione um ou mais grupos para carregar automaticamente os canais vinculados.",
             )
 
-    _apply_group_filter()
+    # Importante: não chamar aqui para evitar sobrescrever seleção ao submeter o formulário
 
     with st.form("youtube_exec_form"):
         col1, col2 = st.columns(2)
-        combined_selection = sorted(
-            set(st.session_state.youtube_auto_channels)
-            | set(st.session_state.youtube_manual_channels)
-        )
         with col1:
             selected_widget = st.multiselect(
                 "Canais cadastrados",
                 options=list(channel_options.keys()),
                 key="youtube_selected_channels",
             )
-            auto_set = set(st.session_state.youtube_auto_channels)
-            manual_selection = sorted(set(selected_widget) - auto_set)
-            current_selection = sorted(set(selected_widget) | auto_set)
             manual_entries = st.text_area("Canais adicionais (um por linha)")
             days = st.number_input("Dias para filtrar", min_value=0, max_value=30, value=3)
             max_videos = st.number_input(
@@ -157,10 +149,9 @@ else:
         )
     # Atualiza session_state apenas após submit
     if run_simple or run_full:
-        st.session_state.youtube_manual_channels = manual_selection
-        selected_labels = list(current_selection)
+        selected_labels = list(selected_widget)
     else:
-        selected_labels = list(current_selection)
+        selected_labels = list(selected_widget)
     progress_container = st.container()
     results_container = st.container()
     if run_simple or run_full:

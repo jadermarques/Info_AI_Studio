@@ -1,0 +1,38 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: full
+Parâmetros: dias=3, max_videos=30, formato=txt
+
+• @SuperHumansLife
+   - URL: https://www.youtube.com/watch?v=NPcpJunt0YA
+   - Título: Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...
+   - Duração: 31:22
+   - Origem do conteúdo: áudio
+   - Tempo de análise: 509.70 segundos
+   - Data de postagem: 2025-09-19T14:55:40-07:00
+   - Assunto principal: Estratégia de IA corporativa e o papel do estrategista visionário na adoção de IA
+   - Resumo (1 frase): O vídeo apresenta 7 habilidades de IA de alto valor para manter você irreplacável, com foco inicial em tornar-se um estrategista visionário que projeta a arquitetura de decisão e um roadmap de adoção de IA.
+   - Resumo (<= 150 palavras): O vídeo defende que, com IA, as pessoas devem mirar em habilidades de alto valor para se manterem irreplacáveis. Destaque inicial para o estrategista visionário: não apenas sugerir produtos, mas desenhar a arquitetura de decisão, definir o que automatizar, quais métodos usar e como gerenciar riscos, governança e financiamento dentro do negócio. Segundo o apresentador, 85% dos projetos de IA falham por falta de estratégia, e clientes pagam por confiança e por alguém que possa conduzir a implementação com ROI. Um case citado é IBM+BCG: transformação de IA que resultou em 3,5 bilhões de dólares em custo salvo e 50% de ganho de produtividade em dois anos. O plano de 30 dias para virar estrategista visionário é dividir em quatro semanas: leitura de indústria, modelagem de ROI e riscos, mock audits, e lançamento de oferta com roadmap; execução é essencial.
+   - Palavras-chave: inteligência artificial, inteligência artificial, estratégia de IA, consultoria de IA, arquitetura de decisão, retorno sobre investimento, gestão de risco, governança de IA, adoção de IA, planejamento estratégico, produtividade, carreira em IA
+   - Resumo em tópicos:
+     - Contexto: muitas pessoas perdem empregos com a IA; o vídeo ressalta habilidades de alto valor para se tornar irreplacável.
+     - Habilidade central: estrategista visionário, responsável por desenhar a arquitetura de decisão, definição do que automatizar e como gerenciar riscos e governança.
+     - Desafio atual: 85% dos projetos de IA falham por falta de estratégia clara; empresas buscam alguém que traduza IA em ROI e impactos reais.
+     - Exemplo inspirador: estudo de caso IBM + BCG, com investimentos estratégicos que resultaram em 3,5 bilhões de dólares economizados e 50% de aumento de produtividade em dois anos.
+     - O que clientes valorizam: confiança e capacidade de orientar decisões, não apenas recomendar produtos.
+     - Plano de 30 dias para virar estrategista visionário: Semana 1, leitura de notícias/estudos da indústria; Semana 2, modelagem de ROI e riscos; Semana 3, auditorias simuladas com colegas; Semana 4, lançamento da oferta com roadmap; foco em execução.
+     - Observação final: aprendizado acelerado, não apenas diplomas; concentre-se em uma habilidade de alto valor, aprofunde-se nela e monetize rapidamente.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 2161
+   - Tokens recebidos: 4493
+   - Custo estimado: R$ 0.0078
+
+Tempo de análise por vídeo:
+- Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...: 509.70 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

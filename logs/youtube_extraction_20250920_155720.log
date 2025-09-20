@@ -1,0 +1,9 @@
+2025-09-20 15:57:20,168 - INFO - app.youtube.run.20250920_155720 - Iniciando extração em lote de 11 canais
+2025-09-20 15:57:20,168 - INFO - app.youtube.run.20250920_155720 - Iniciando extração em lote de 11 canais
+2025-09-20 15:57:20,200 - INFO - app.youtube.run.20250920_155720 - Processando canal 1/11: @ColeMedin
+2025-09-20 15:57:20,200 - INFO - app.youtube.run.20250920_155720 - Processando canal 1/11: @ColeMedin
+2025-09-20 15:57:29,061 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-20 15:57:29,294 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-20 15:57:29,294 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-20 15:57:29,295 - INFO - app.youtube.run.20250920_155720 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-20 15:57:29,295 - INFO - app.youtube.run.20250920_155720 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1

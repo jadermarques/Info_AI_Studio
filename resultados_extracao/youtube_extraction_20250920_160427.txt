@@ -1,0 +1,30 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: simple
+Parâmetros: dias=3, max_videos=30, formato=txt
+
+• @SuperHumansLife
+   - URL: https://www.youtube.com/watch?v=NPcpJunt0YA
+   - Título: Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...
+   - Duração: 31:22
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-19T14:55:40-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+Tempo de análise por vídeo:
+- Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...: 0.00 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA
