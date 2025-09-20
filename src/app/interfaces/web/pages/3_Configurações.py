@@ -62,12 +62,18 @@ with st.form("params_form"):
         options=list(TRANSLATE_OPTIONS.keys()),
         index=list(TRANSLATE_OPTIONS.keys()).index(translate_default_label),
     )
+    user_agent = st.text_input(
+        "User-Agent padrão para YouTube",
+        value=settings.user_agent,
+        help="Cabeçalho User-Agent utilizado em requisições de scraping.",
+    )
     submitted = st.form_submit_button("Salvar parâmetros")
     if submitted:
         _persist_parameters(
             {
                 "MAX_PALAVRAS_RESUMO": str(int(max_palavras)),
                 "TRANSLATE_RESULTS": TRANSLATE_OPTIONS[translate_label],
+                "USER_AGENT": user_agent.strip(),
             }
         )
         st.success("Parâmetros atualizados.")
