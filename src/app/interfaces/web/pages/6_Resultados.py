@@ -8,8 +8,9 @@ import mimetypes
 from pathlib import Path
 from typing import Any
 
-import pandas as pd
 import streamlit as st
+import pandas as pd
+from app.interfaces.web.components.ui_helpers import paginate, render_pagination_controls
 
 from app.config import get_settings
 
@@ -130,7 +131,20 @@ if not filtered_records:
     st.info("Nenhum arquivo atende aos filtros informados.")
     st.stop()
 
-table_df, file_map = _render_table(filtered_records)
+# Paginação dos resultados
+paginated, page, start, end = paginate(filtered_records, "page_resultados")
+st.write(f"Exibindo {start+1} a {end} de {len(filtered_records)}")
+render_pagination_controls(
+    "page_resultados",
+    page,
+    end,
+    len(filtered_records),
+    "result_prev",
+    "result_next",
+    size_key="page_resultados_size",
+)
+
+table_df, file_map = _render_table(paginated)
 
 edited_df = st.data_editor(
     table_df,

@@ -1,0 +1,40 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: full
+Parâmetros: dias=3, max_videos=3, formato=txt
+
+• @MattVidPro
+   - URL: https://www.youtube.com/watch?v=Hk7QDEtAREw
+   - Título: Raio 3: O Primeiro Vídeo de Raciocínio IA (HDR, Física, Consistência)
+   - Duração: 20:56
+   - Origem do conteúdo: áudio
+   - Tempo de análise: 339.32 segundos
+   - Data de postagem: 2025-09-18T14:03:30-07:00
+   - Assunto principal: Avaliação do Ray3: o primeiro modelo de raciocínio para vídeos com HDR nativo, interatividade por prompts visuais e fluxo de melhoria iterativo de cenas.
+   - Resumo (1 frase): Análise do Ray3, novo modelo de raciocínio para vídeo da Luma Labs, que promete HDR de estúdio, controle por linguagem natural e correções iterativas para manter a consistência de personagens e o realismo físico.
+   - Resumo (<= 150 palavras): Neste vídeo, o apresentador analisa o Ray3 da Luma Labs, o suposto primeiro modelo de raciocínio para vídeos com HDR nativo. Ele discute fidelidade visual, detalhes, movimento e preservação de anatomia, além de recursos de grafite para interação rápida em fluxos de trabalho. Ray3 permite geração a partir de descrições em linguagem natural e controle visual para posicionar personagens e objetos, com refinamento por meio de iterações que corrigem erros, como identificar que uma câmera não mire dois telefones. O sistema gera novas versões até atingir o resultado desejado. O vídeo também aborda HDR, exigindo display compatível, e mostra uma demonstração prática com um personagem tocando areia, destacando a necessidade de ajustes finos. Planos de assinatura foram mencionados para acessar recursos adicionais.
+   - Palavras-chave: Ray3, Luma Labs, Inteligência Artificial para vídeos, raciocínio de vídeo, HDR nativo, grafite, interação por linguagem natural, edição iterativa, fidelidade visual, controle visual
+   - Resumo em tópicos:
+     Resumo por tópicos:
+     - Contexto e lançamento: Ray3, modelo de raciocínio para vídeo da Luma Labs, com HDR de estúdio.
+     - Qualidade e capacidades: maior fidelidade, detalhes, movimento fluido, anatomia preservada, física realista.
+     - Interação e controle: geração por prompts em linguagem natural, controle visual de objetos/personagens, grafite para inicialização de prompts.
+     - Processo de geração e correção: iteração de tentativas, identificação de erros (ex.: câmera não mirar), ajuste até obter o resultado desejado.
+     - HDR nativo: necessidade de display HDR calibrado e limitações de plataformas.
+     - Demonstração prática: cena com personagem tocando areia, mostrando progresso e necessidade de ajustes finos.
+     - Planos e custo: acesso a recurso Ray3 Reasoning via assinatura.
+     - Considerações finais: promessa de interação direta e aumento da eficiência prática.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 2194
+   - Tokens recebidos: 3639
+   - Custo estimado: R$ 0.0066
+
+Tempo de análise por vídeo:
+- Raio 3: O Primeiro Vídeo de Raciocínio IA (HDR, Física, Consistência): 339.32 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA
