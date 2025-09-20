@@ -1,0 +1,227 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 11
+Total de vídeos extraídos: 8
+Modo: full
+Parâmetros: dias=1, max_videos=30, formato=txt
+
+• @ColeMedin
+   - Nenhum vídeo dentro do critério.
+• @DanGalletta
+   - Nenhum vídeo dentro do critério.
+• @DataCouncil
+   - Nenhum vídeo dentro do critério.
+• @Incomestreamsurfers
+   - URL: https://www.youtube.com/watch?v=EKk6yZiMMtc
+   - Título: Claude Code + Codex = O NOVO Construtor de Sites Definitivo
+   - Duração: 15:12
+   - Origem do conteúdo: transcrição
+   - Tempo de análise: 1.22 segundos
+   - Data de postagem: 2025-09-19T04:38:46-07:00
+   - Assunto principal: Claude Code + Codex = O NOVO Construtor de Sites Definitivo
+   - Resumo (1 frase): Can you vive code an entire ecom store? Claude code with codeex design docker and player mcp
+   - Resumo (<= 150 palavras): Can you vive code an entire ecom store? Claude code with codeex design docker and player mcp. Can we make an entire ecom website from just a CSV? Let's find out together. So, I'm going to be using Woo Commerce. I actually didn't really like Woo Commerce until I had to add it to SEO growth. Now that I've actually used it a little bit, it's really interesting. Now, just before we continue, if you need any help with your SEO and you're on either Woo Commerce or Shopify, this video is sponsored by SEO Growth. SEO.ai. It's a SAS that will grow your store automatically. You can still join the wait list. There's still the special offer for our founding members, which is $99 for 3 months. Sorry, $99 a month for 3 months and then going up to $499. But yeah, basically I didn't actually realize this, but
+   - Palavras-chave: $499, actually, automatically, basically, before, claude, codeex, commerce, continue, design, didn't, docker
+   - Resumo em tópicos:
+     - $499
+     - actually
+     - automatically
+     - basically
+     - before
+     - claude
+     - codeex
+     - commerce
+   - Modelo LLM: TESTE2
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=rw_CCEFe4ks
+   - Título: Replit concluído: GPT-5-Codex ONE SHOTS aplicativos inteiros
+   - Duração: 10:31
+   - Origem do conteúdo: transcrição
+   - Tempo de análise: 1.28 segundos
+   - Data de postagem: 2025-09-18T07:26:13-07:00
+   - Assunto principal: Replit concluído: GPT-5-Codex ONE SHOTS aplicativos inteiros
+   - Resumo (1 frase): Hey guys, I wanted to talk about something today and I'm actually doing I'm currently running another benchmark as we speak, but I wanted to talk about how in my opinion like replet is probably done to be honest with you because I mean yeah it will always have a space and a place
+   - Resumo (<= 150 palavras): Hey guys, I wanted to talk about something today and I'm actually doing I'm currently running another benchmark as we speak, but I wanted to talk about how in my opinion like replet is probably done to be honest with you because I mean yeah it will always have a space and a place in people's hearts and things but just like the what's the point in this right if you can literally just say to codeex so I just ran this prompt how do you feel about making me an entire SAS I just want a homepage that looks incredibly modern, a dashboard, the five side options, the tool should be a basic AI powered CRM, blah blah blah. And it just went straight into it and it just started creating it. And now I'm just sitting and waiting to see what it actually produces. And what's the difference,
+   - Palavras-chave: about, actually, additional, always, another, anymore, basic, because, benchmark, blah, cheap, codeex
+   - Resumo em tópicos:
+     - about
+     - actually
+     - additional
+     - always
+     - another
+     - anymore
+     - basic
+     - because
+   - Modelo LLM: TESTE2
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @LiamOttley
+   - URL: https://www.youtube.com/watch?v=3HHMuaGIC30
+   - Título: Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes)
+   - Duração: 43:15
+   - Origem do conteúdo: transcrição
+   - Tempo de análise: 1.05 segundos
+   - Data de postagem: 2025-09-19T01:00:38-07:00
+   - Assunto principal: Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes)
+   - Resumo (1 frase): Ask any multi-millionaire and they would tell you the first million is easy, but it's the first 100,000 that is the hardest part
+   - Resumo (<= 150 palavras): Ask any multi-millionaire and they would tell you the first million is easy, but it's the first 100,000 that is the hardest part. And so in this video, I'm going to be breaking down the complete process for any beginner coming into AI to be able to go from zero to $100,000 and the five key challenges that you're going to face along the way and the solution to each of these different roadblocks. Sweet, man. Great to great to see you. I'm so excited to jump into this cuz that 0 to 100K is what everyone's after right now and you've just recently gone through that process. So, we're going to be breaking down um the five key steps that you've got in between here and there. And uh you've got a ton of source in there, guys. If you got don't know Kelly, he's been absolutely crushing it.
+   - Palavras-chave: $100,000, 100,000, absolutely, accelerator, actually, after, along, approached, beginner, between, breaking, challenges
+   - Resumo em tópicos:
+     - $100,000
+     - 100,000
+     - absolutely
+     - accelerator
+     - actually
+     - after
+     - along
+     - approached
+   - Modelo LLM: TESTE2
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @SaraFinance
+   - Nenhum vídeo dentro do critério.
+• @SuperHumansLife
+   - URL: https://www.youtube.com/watch?v=NPcpJunt0YA
+   - Título: Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...
+   - Duração: 31:22
+   - Origem do conteúdo: transcrição
+   - Tempo de análise: 1.12 segundos
+   - Data de postagem: 2025-09-19T14:55:40-07:00
+   - Assunto principal: Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...
+   - Resumo (1 frase): Ever worry you'll be the next one let go during company layoffs? AI is changing the rules if you pick the right skills
+   - Resumo (<= 150 palavras): Ever worry you'll be the next one let go during company layoffs? AI is changing the rules if you pick the right skills. So in this video I'm going to show you seven high-paying AI skills that employers desperately need and exactly how you can master them in just 30 days to make yourself irreplaceable. Almost no background required. Almost half a million tech workers lost their jobs since 2023. And many of them were highly skilled and still got replaced. Some of them were my friends. They still are. And watching them lose work despite their talent hit me hard. But a few they pivoted. They picked up AI leveraged skills and they're now making more than they did in big tech. So over the past year, I've been obsessing over one question. What are the skills that make you irreplaceable in an AI world? And I dug through
+   - Palavras-chave: 2023, about, almost, back, background, believe, changing, clients, coming, company, degrees, desperately
+   - Resumo em tópicos:
+     - 2023
+     - about
+     - almost
+     - back
+     - background
+     - believe
+     - changing
+     - clients
+   - Modelo LLM: TESTE2
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @eusoukelvincleto
+   - URL: https://www.youtube.com/watch?v=f4PveaUJLd8
+   - Título: O que eu estudaria em vez de automação em 2026
+   - Duração: 10:23
+   - Origem do conteúdo: transcrição
+   - Tempo de análise: 0.98 segundos
+   - Data de postagem: 2025-09-18T20:05:56-07:00
+   - Assunto principal: O que eu estudaria em vez de automação em 2026
+   - Resumo (1 frase): Nesse vídeo aqui, eu vou te falar o por que você não deveria focar em aprender automações, ou melhor, em aprender automações, não, em ser um automatizador em 2026
+   - Resumo (<= 150 palavras): Nesse vídeo aqui, eu vou te falar o por que você não deveria focar em aprender automações, ou melhor, em aprender automações, não, em ser um automatizador em 2026. Talvez eu te fale algumas verdades duras, mas é importante que você ouça isso com atenção, entenda e tome suas próprias decisões com relação aos fatos que eu vou trazer aqui para você. Ah, vamos lá. Primeira coisa que eu já quero pontuar, eu tenho total propriedade para falar isso que eu vou falar para vocês. Eu sou da área de tecnologia desde que eu me conheço por gente. Comecei a desenvolver aos meus 16 anos, montei uma empresa de tecnologia, uma das principais insurtechs do Brasil. Eu vendi essa empresa, eu tive uma carreira também como desenvolvedor, programador, fui evoluindo, virei arquiteto de software. Eh, eu adoro programar. Até hoje eu só deixei de programar porque eu decidi focar realmente
+   - Palavras-chave: 2026, acelera, adoro, ajudo, algumas, anos, aprender, aqui, arquiteto, artificial, assim, atenção
+   - Resumo em tópicos:
+     - 2026
+     - acelera
+     - adoro
+     - ajudo
+     - algumas
+     - anos
+     - aprender
+     - aqui
+   - Modelo LLM: TESTE2
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @krishnaik06
+   - Nenhum vídeo dentro do critério.
+• @matthew_berman
+   - URL: https://www.youtube.com/watch?v=UgNPfD-bZgU
+   - Título: AI News: Meta Raybans, Gemini 3, World Labs, Grok 5, and more!
+   - Duração: 14:47
+   - Origem do conteúdo: transcrição
+   - Tempo de análise: 1.20 segundos
+   - Data de postagem: 2025-09-18T12:13:12-07:00
+   - Assunto principal: AI News: Meta Raybans, Gemini 3, World Labs, Grok 5, and more!
+   - Resumo (1 frase): Yes, I'm in a hotel again
+   - Resumo (<= 150 palavras): Yes, I'm in a hotel again. I'm in Meta Connect, but I needed to bring you the news. The first story is the Meta Ray-B band glasses, which I've had for a long time. The demo video, which was leaked earlier this week, shows what the future of Meta Rayban glasses are going to look like. So, you'll be able to talk to your AI. Your AI will be able to see the world. It'll be able to hear the world, and it will be able to project things onto a clear screen that only you can see. It truly is incredible technology. Meta is definitely going allin on the glasses form factor, which makes a lot of sense given their history with ARVR and the Oculus. And if you've watched this channel at all, if you follow me on X, of course, Matthew Berman, you know that I'm more
+   - Palavras-chave: aai's, again, allin, basis, bearish, berman, bring, can't, channel, clear, connect, course
+   - Resumo em tópicos:
+     - aai's
+     - again
+     - allin
+     - basis
+     - bearish
+     - berman
+     - bring
+     - can't
+   - Modelo LLM: TESTE2
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @nocodemba
+   - URL: https://www.youtube.com/watch?v=Dna__4QolLg
+   - Título: O que substituirá as landing pages em 2025 (+ modelo gratuito)
+   - Duração: 09:25
+   - Origem do conteúdo: transcrição
+   - Tempo de análise: 1.25 segundos
+   - Data de postagem: 2025-09-19T07:51:39-07:00
+   - Assunto principal: O que substituirá as landing pages em 2025 (+ modelo gratuito)
+   - Resumo (1 frase): I just built a nocode funnel in minutes and it's faster and more powerful than a basic landing page
+   - Resumo (<= 150 palavras): I just built a nocode funnel in minutes and it's faster and more powerful than a basic landing page. In this video, you're going to see exactly how I built it, what the tool is, and what are the powerful features that give you the ability to get more customers than just a basic landing page. Thank you to Perspective for sponsoring this video. And if you stick around, I'm going to give you a link to get this free template on Perspective that you can use for your own business. So, I'm going to show you just how easy it is to build a really high quality and polished funnel with Perspective. And you can go to Perspective with the link in the description to do this alongside with me. What's cool here is Perspective isn't just another form builder. It's designed to qualify leads, score them, and plug
+   - Palavras-chave: ability, actually, ahead, alongside, another, anything, around, automations, basic, build, builder, built
+   - Resumo em tópicos:
+     - ability
+     - actually
+     - ahead
+     - alongside
+     - another
+     - anything
+     - around
+     - automations
+   - Modelo LLM: TESTE2
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=gYz_m6hcWys
+   - Título: As planilhas estão mortas! Criei um painel de IA incrivelmente poderoso com o Databutton
+   - Duração: 06:38
+   - Origem do conteúdo: transcrição
+   - Tempo de análise: 1.15 segundos
+   - Data de postagem: 2025-09-18T09:25:02-07:00
+   - Assunto principal: As planilhas estão mortas! Criei um painel de IA incrivelmente poderoso com o Databutton
+   - Resumo (1 frase): DataButton lets you build AI apps that help you work 10 times faster and perform way better in your day-to-day
+   - Resumo (<= 150 palavras): DataButton lets you build AI apps that help you work 10 times faster and perform way better in your day-to-day. It's one of the few AI builders out there that helps you create internal apps that actually helps you perform better in work. Whether that's as an owner or as a marketing lead at your company, Databutton can help you create custom tools that you can use inside your own workflows. In this video, we're going to build a marketing dashboard with an AI churn detector to show you what's possible in databutton. Thank you so much to DataButton for sponsoring this video. I'm so excited to show you what is possible when we build with databutton. So, here we are in the app builder. I've put our prompt in which describes that we want to build a marketing dashboard with the churn detector. So, we're going to hit continue
+   - Palavras-chave: about, actually, always, better, build, builder, builders, case, churn, company, continue, create
+   - Resumo em tópicos:
+     - about
+     - actually
+     - always
+     - better
+     - build
+     - builder
+     - builders
+     - case
+   - Modelo LLM: TESTE2
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+Tempo de análise por vídeo:
+- Claude Code + Codex = O NOVO Construtor de Sites Definitivo: 1.22 segundos
+- Replit concluído: GPT-5-Codex ONE SHOTS aplicativos inteiros: 1.28 segundos
+- Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes): 1.05 segundos
+- Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...: 1.12 segundos
+- O que eu estudaria em vez de automação em 2026: 0.98 segundos
+- AI News: Meta Raybans, Gemini 3, World Labs, Grok 5, and more!: 1.20 segundos
+- O que substituirá as landing pages em 2025 (+ modelo gratuito): 1.25 segundos
+- As planilhas estão mortas! Criei um painel de IA incrivelmente poderoso com o Databutton: 1.15 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

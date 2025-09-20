@@ -1,0 +1,257 @@
+2025-09-19 21:09:37,515 - INFO - app.youtube.run.20250919_210937 - Iniciando extração em lote de 11 canais
+2025-09-19 21:09:37,515 - INFO - app.youtube.run.20250919_210937 - Iniciando extração em lote de 11 canais
+2025-09-19 21:09:37,515 - WARNING - app.domain.llm_client - Provedor LLM 'TESTE2' não suportado; análises serão desativadas.
+2025-09-19 21:09:37,516 - INFO - app.youtube.run.20250919_210937 - Processando canal 1/11: @ColeMedin
+2025-09-19 21:09:37,516 - INFO - app.youtube.run.20250919_210937 - Processando canal 1/11: @ColeMedin
+2025-09-19 21:09:38,366 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:09:38,627 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:09:38,627 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 21:09:38,627 - INFO - app.youtube.run.20250919_210937 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:09:38,627 - INFO - app.youtube.run.20250919_210937 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:09:38,627 - INFO - app.youtube.run.20250919_210937 - Processando canal 2/11: @DanGalletta
+2025-09-19 21:09:38,627 - INFO - app.youtube.run.20250919_210937 - Processando canal 2/11: @DanGalletta
+2025-09-19 21:09:39,079 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:09:39,297 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:09:39,298 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 21:09:39,298 - INFO - app.youtube.run.20250919_210937 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:09:39,298 - INFO - app.youtube.run.20250919_210937 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:09:39,299 - INFO - app.youtube.run.20250919_210937 - Processando canal 3/11: @DataCouncil
+2025-09-19 21:09:39,299 - INFO - app.youtube.run.20250919_210937 - Processando canal 3/11: @DataCouncil
+2025-09-19 21:09:39,849 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:09:40,091 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:09:40,091 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 21:09:40,092 - INFO - app.youtube.run.20250919_210937 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:09:40,092 - INFO - app.youtube.run.20250919_210937 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:09:40,092 - INFO - app.youtube.run.20250919_210937 - Processando canal 4/11: @Incomestreamsurfers
+2025-09-19 21:09:40,092 - INFO - app.youtube.run.20250919_210937 - Processando canal 4/11: @Incomestreamsurfers
+2025-09-19 21:09:40,508 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:09:40,778 - INFO - youtube_extractor - Aba /videos: analisados=3, válidos=2, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:09:40,779 - INFO - youtube_extractor - Aba /videos: 2 vídeos válidos (≤ 1 dias)
+2025-09-19 21:09:40,779 - INFO - app.youtube.run.20250919_210937 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-19 21:09:40,779 - INFO - app.youtube.run.20250919_210937 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-19 21:09:42,666 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para EKk6yZiMMtc
+2025-09-19 21:09:42,760 - INFO - youtube_extractor - Transcrição encontrada (12577 chars, en) para EKk6yZiMMtc
+2025-09-19 21:09:42,762 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para EKk6yZiMMtc
+2025-09-19 21:09:42,762 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para EKk6yZiMMtc
+2025-09-19 21:09:42,762 - INFO - app.domain.llm_client - [LLM] Cliente LLM ausente — usando resumo heurístico.
+2025-09-19 21:09:42,763 - INFO - app.youtube.run.20250919_210937 - Vídeo EKk6yZiMMtc analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:42,763 - INFO - app.youtube.run.20250919_210937 - Vídeo EKk6yZiMMtc analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:45,015 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para rw_CCEFe4ks
+2025-09-19 21:09:45,113 - INFO - youtube_extractor - Transcrição encontrada (9971 chars, en) para rw_CCEFe4ks
+2025-09-19 21:09:45,116 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para rw_CCEFe4ks
+2025-09-19 21:09:45,116 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para rw_CCEFe4ks
+2025-09-19 21:09:45,116 - INFO - app.domain.llm_client - [LLM] Cliente LLM ausente — usando resumo heurístico.
+2025-09-19 21:09:45,116 - INFO - app.youtube.run.20250919_210937 - Vídeo rw_CCEFe4ks analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:45,116 - INFO - app.youtube.run.20250919_210937 - Vídeo rw_CCEFe4ks analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:45,117 - INFO - app.youtube.run.20250919_210937 - Processando canal 5/11: @LiamOttley
+2025-09-19 21:09:45,117 - INFO - app.youtube.run.20250919_210937 - Processando canal 5/11: @LiamOttley
+2025-09-19 21:09:45,594 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:09:45,896 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:09:45,896 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 21:09:45,897 - INFO - app.youtube.run.20250919_210937 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:09:45,897 - INFO - app.youtube.run.20250919_210937 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:09:47,898 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para 3HHMuaGIC30
+2025-09-19 21:09:48,078 - INFO - youtube_extractor - Transcrição encontrada (58875 chars, en) para 3HHMuaGIC30
+2025-09-19 21:09:48,080 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para 3HHMuaGIC30
+2025-09-19 21:09:48,080 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para 3HHMuaGIC30
+2025-09-19 21:09:48,080 - INFO - app.domain.llm_client - [LLM] Cliente LLM ausente — usando resumo heurístico.
+2025-09-19 21:09:48,083 - INFO - app.youtube.run.20250919_210937 - Vídeo 3HHMuaGIC30 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:48,083 - INFO - app.youtube.run.20250919_210937 - Vídeo 3HHMuaGIC30 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:48,083 - INFO - app.youtube.run.20250919_210937 - Processando canal 6/11: @SaraFinance
+2025-09-19 21:09:48,083 - INFO - app.youtube.run.20250919_210937 - Processando canal 6/11: @SaraFinance
+2025-09-19 21:09:48,493 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:09:48,733 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:09:48,734 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 21:09:48,734 - INFO - app.youtube.run.20250919_210937 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:09:48,734 - INFO - app.youtube.run.20250919_210937 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:09:48,735 - INFO - app.youtube.run.20250919_210937 - Processando canal 7/11: @SuperHumansLife
+2025-09-19 21:09:48,735 - INFO - app.youtube.run.20250919_210937 - Processando canal 7/11: @SuperHumansLife
+2025-09-19 21:09:49,150 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:09:49,468 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:09:49,468 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 21:09:49,469 - INFO - app.youtube.run.20250919_210937 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:09:49,469 - INFO - app.youtube.run.20250919_210937 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:09:51,464 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para NPcpJunt0YA
+2025-09-19 21:09:51,608 - INFO - youtube_extractor - Transcrição encontrada (34520 chars, en) para NPcpJunt0YA
+2025-09-19 21:09:51,610 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para NPcpJunt0YA
+2025-09-19 21:09:51,610 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para NPcpJunt0YA
+2025-09-19 21:09:51,611 - INFO - app.domain.llm_client - [LLM] Cliente LLM ausente — usando resumo heurístico.
+2025-09-19 21:09:51,612 - INFO - app.youtube.run.20250919_210937 - Vídeo NPcpJunt0YA analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:51,612 - INFO - app.youtube.run.20250919_210937 - Vídeo NPcpJunt0YA analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:51,612 - INFO - app.youtube.run.20250919_210937 - Processando canal 8/11: @eusoukelvincleto
+2025-09-19 21:09:51,612 - INFO - app.youtube.run.20250919_210937 - Processando canal 8/11: @eusoukelvincleto
+2025-09-19 21:09:51,879 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:09:52,102 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:09:52,103 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 21:09:52,103 - INFO - app.youtube.run.20250919_210937 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:09:52,103 - INFO - app.youtube.run.20250919_210937 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:09:53,604 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para f4PveaUJLd8
+2025-09-19 21:09:53,701 - INFO - youtube_extractor - Transcrição encontrada (9539 chars, pt) para f4PveaUJLd8
+2025-09-19 21:09:53,702 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para f4PveaUJLd8
+2025-09-19 21:09:53,702 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para f4PveaUJLd8
+2025-09-19 21:09:53,702 - INFO - app.domain.llm_client - [LLM] Cliente LLM ausente — usando resumo heurístico.
+2025-09-19 21:09:53,702 - INFO - app.youtube.run.20250919_210937 - Vídeo f4PveaUJLd8 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:53,702 - INFO - app.youtube.run.20250919_210937 - Vídeo f4PveaUJLd8 analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:53,702 - INFO - app.youtube.run.20250919_210937 - Processando canal 9/11: @krishnaik06
+2025-09-19 21:09:53,702 - INFO - app.youtube.run.20250919_210937 - Processando canal 9/11: @krishnaik06
+2025-09-19 21:09:54,181 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:09:54,467 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:09:54,468 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 21:09:54,468 - INFO - app.youtube.run.20250919_210937 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:09:54,468 - INFO - app.youtube.run.20250919_210937 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:09:54,469 - INFO - app.youtube.run.20250919_210937 - Processando canal 10/11: @matthew_berman
+2025-09-19 21:09:54,469 - INFO - app.youtube.run.20250919_210937 - Processando canal 10/11: @matthew_berman
+2025-09-19 21:09:54,811 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:09:55,078 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:09:55,078 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 21:09:55,079 - INFO - app.youtube.run.20250919_210937 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:09:55,079 - INFO - app.youtube.run.20250919_210937 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:09:56,999 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para UgNPfD-bZgU
+2025-09-19 21:09:57,104 - INFO - youtube_extractor - Transcrição encontrada (14649 chars, en) para UgNPfD-bZgU
+2025-09-19 21:09:57,106 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para UgNPfD-bZgU
+2025-09-19 21:09:57,106 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para UgNPfD-bZgU
+2025-09-19 21:09:57,107 - INFO - app.domain.llm_client - [LLM] Cliente LLM ausente — usando resumo heurístico.
+2025-09-19 21:09:57,107 - INFO - app.youtube.run.20250919_210937 - Vídeo UgNPfD-bZgU analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:57,107 - INFO - app.youtube.run.20250919_210937 - Vídeo UgNPfD-bZgU analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:57,108 - INFO - app.youtube.run.20250919_210937 - Processando canal 11/11: @nocodemba
+2025-09-19 21:09:57,108 - INFO - app.youtube.run.20250919_210937 - Processando canal 11/11: @nocodemba
+2025-09-19 21:09:57,387 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:09:57,639 - INFO - youtube_extractor - Aba /videos: analisados=3, válidos=2, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:09:57,639 - INFO - youtube_extractor - Aba /videos: 2 vídeos válidos (≤ 1 dias)
+2025-09-19 21:09:57,640 - INFO - app.youtube.run.20250919_210937 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-19 21:09:57,640 - INFO - app.youtube.run.20250919_210937 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-19 21:09:59,529 - INFO - youtube_extractor - Transcrição: disponíveis ['en', 'en(auto)'] para Dna__4QolLg
+2025-09-19 21:09:59,628 - INFO - youtube_extractor - Transcrição encontrada (10572 chars, en) para Dna__4QolLg
+2025-09-19 21:09:59,631 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para Dna__4QolLg
+2025-09-19 21:09:59,631 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para Dna__4QolLg
+2025-09-19 21:09:59,631 - INFO - app.domain.llm_client - [LLM] Cliente LLM ausente — usando resumo heurístico.
+2025-09-19 21:09:59,632 - INFO - app.youtube.run.20250919_210937 - Vídeo Dna__4QolLg analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:09:59,632 - INFO - app.youtube.run.20250919_210937 - Vídeo Dna__4QolLg analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:10:01,556 - INFO - youtube_extractor - Transcrição: disponíveis ['en', 'en(auto)'] para gYz_m6hcWys
+2025-09-19 21:10:01,649 - INFO - youtube_extractor - Transcrição encontrada (7473 chars, en) para gYz_m6hcWys
+2025-09-19 21:10:01,652 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para gYz_m6hcWys
+2025-09-19 21:10:01,652 - INFO - app.youtube.run.20250919_210937 - Transcrição nativa encontrada para gYz_m6hcWys
+2025-09-19 21:10:01,652 - INFO - app.domain.llm_client - [LLM] Cliente LLM ausente — usando resumo heurístico.
+2025-09-19 21:10:01,653 - INFO - app.youtube.run.20250919_210937 - Vídeo gYz_m6hcWys analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:10:01,653 - INFO - app.youtube.run.20250919_210937 - Vídeo gYz_m6hcWys analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:12:36,646 - INFO - app.youtube.run.20250919_211236 - Iniciando extração em lote de 11 canais
+2025-09-19 21:12:36,678 - INFO - app.youtube.run.20250919_211236 - Processando canal 1/11: @ColeMedin
+2025-09-19 21:12:37,093 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:12:37,350 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:12:37,351 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 21:12:37,351 - INFO - app.youtube.run.20250919_211236 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:12:37,352 - INFO - app.youtube.run.20250919_211236 - Processando canal 2/11: @DanGalletta
+2025-09-19 21:12:37,619 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:12:37,839 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:12:37,839 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 21:12:37,840 - INFO - app.youtube.run.20250919_211236 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:12:37,840 - INFO - app.youtube.run.20250919_211236 - Processando canal 3/11: @DataCouncil
+2025-09-19 21:12:38,206 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:12:38,535 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:12:38,535 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 21:12:38,536 - INFO - app.youtube.run.20250919_211236 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:12:38,536 - INFO - app.youtube.run.20250919_211236 - Processando canal 4/11: @Incomestreamsurfers
+2025-09-19 21:12:38,949 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:12:39,164 - INFO - youtube_extractor - Aba /videos: analisados=3, válidos=2, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:12:39,165 - INFO - youtube_extractor - Aba /videos: 2 vídeos válidos (≤ 1 dias)
+2025-09-19 21:12:39,165 - INFO - app.youtube.run.20250919_211236 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-19 21:12:40,967 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para EKk6yZiMMtc
+2025-09-19 21:12:41,081 - INFO - youtube_extractor - Transcrição encontrada (12577 chars, en) para EKk6yZiMMtc
+2025-09-19 21:12:41,084 - INFO - app.youtube.run.20250919_211236 - Transcrição nativa encontrada para EKk6yZiMMtc
+2025-09-19 21:12:42,205 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:12:57,752 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:12:58,280 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:13:02,989 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:13:03,807 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:13:07,803 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:13:08,005 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:13:13,532 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:13:13,732 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:13:22,921 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:13:23,402 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:13:30,150 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:13:30,152 - INFO - app.youtube.run.20250919_211236 - Vídeo EKk6yZiMMtc analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:13:31,909 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para rw_CCEFe4ks
+2025-09-19 21:13:32,004 - INFO - youtube_extractor - Transcrição encontrada (9971 chars, en) para rw_CCEFe4ks
+2025-09-19 21:13:32,006 - INFO - app.youtube.run.20250919_211236 - Transcrição nativa encontrada para rw_CCEFe4ks
+2025-09-19 21:13:32,219 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:13:47,449 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:13:47,702 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:13:50,555 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:13:50,740 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:14:01,510 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:14:01,742 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:14:05,633 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:14:05,829 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:14:14,196 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:14:14,671 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:14:29,213 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:14:29,216 - INFO - app.youtube.run.20250919_211236 - Vídeo rw_CCEFe4ks analisado com a transcrição disponibilizada pelo YouTube.
+2025-09-19 21:14:29,217 - INFO - app.youtube.run.20250919_211236 - Processando canal 5/11: @LiamOttley
+2025-09-19 21:14:29,555 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:14:29,813 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:14:29,813 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 21:14:29,814 - INFO - app.youtube.run.20250919_211236 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:14:31,898 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para 3HHMuaGIC30
+2025-09-19 21:14:32,490 - INFO - youtube_extractor - Transcrição: acesso bloqueado ou indisponível para 3HHMuaGIC30: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=3HHMuaGIC30! This is most likely caused by:
+2025-09-19 21:14:44,582 - INFO - app.youtube.run.20250919_211236 - [ASR ativado] Transcrição não encontrada; iniciando fallback para 3HHMuaGIC30
+2025-09-19 21:14:59,729 - INFO - app.youtube.run.20250919_211236 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpqc5dh82f/3HHMuaGIC30.m4a
+2025-09-19 21:15:17,676 - INFO - faster_whisper - Processing audio with duration 43:15.318
+2025-09-19 21:15:25,961 - INFO - faster_whisper - VAD filter removed 00:01.888 of audio
+2025-09-19 21:26:57,004 - INFO - app.youtube.run.20250919_211236 - Transcrição obtida via ASR faster-whisper para 3HHMuaGIC30
+2025-09-19 21:26:57,663 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:27:11,164 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:27:11,370 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:27:16,386 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:27:16,583 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:27:24,476 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:27:25,090 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:27:31,134 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:27:31,332 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:27:42,293 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:27:42,493 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:27:58,679 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:27:58,683 - INFO - app.youtube.run.20250919_211236 - Vídeo 3HHMuaGIC30 analisado via ASR (áudio baixado) [asr_faster_whisper].
+2025-09-19 21:27:58,683 - INFO - app.youtube.run.20250919_211236 - Processando canal 6/11: @SaraFinance
+2025-09-19 21:27:59,204 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:27:59,459 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:27:59,459 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-19 21:27:59,460 - INFO - app.youtube.run.20250919_211236 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-19 21:27:59,461 - INFO - app.youtube.run.20250919_211236 - Processando canal 7/11: @SuperHumansLife
+2025-09-19 21:27:59,821 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:28:00,102 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:28:00,103 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 21:28:00,103 - INFO - app.youtube.run.20250919_211236 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:28:01,812 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para NPcpJunt0YA
+2025-09-19 21:28:02,313 - INFO - youtube_extractor - Transcrição: acesso bloqueado ou indisponível para NPcpJunt0YA: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=NPcpJunt0YA! This is most likely caused by:
+2025-09-19 21:28:11,386 - INFO - app.youtube.run.20250919_211236 - [ASR ativado] Transcrição não encontrada; iniciando fallback para NPcpJunt0YA
+2025-09-19 21:28:25,928 - INFO - app.youtube.run.20250919_211236 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpzsz7mb89/NPcpJunt0YA.m4a
+2025-09-19 21:28:29,124 - INFO - faster_whisper - Processing audio with duration 31:22.186
+2025-09-19 21:28:34,632 - INFO - faster_whisper - VAD filter removed 00:00.016 of audio
+2025-09-19 21:35:09,846 - INFO - app.youtube.run.20250919_211236 - Transcrição obtida via ASR faster-whisper para NPcpJunt0YA
+2025-09-19 21:35:10,226 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:35:25,053 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:35:25,606 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:35:31,604 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:35:32,220 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:35:47,476 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:35:47,783 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:35:54,130 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:35:54,354 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:36:02,529 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:36:02,746 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 21:36:10,211 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 21:36:10,225 - INFO - app.youtube.run.20250919_211236 - Vídeo NPcpJunt0YA analisado via ASR (áudio baixado) [asr_faster_whisper].
+2025-09-19 21:36:10,225 - INFO - app.youtube.run.20250919_211236 - Processando canal 8/11: @eusoukelvincleto
+2025-09-19 21:36:10,748 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-19 21:36:11,024 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:36:11,024 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-19 21:36:11,025 - INFO - app.youtube.run.20250919_211236 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:36:12,828 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para f4PveaUJLd8
+2025-09-19 21:36:13,283 - INFO - youtube_extractor - Transcrição: acesso bloqueado ou indisponível para f4PveaUJLd8: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=f4PveaUJLd8! This is most likely caused by:
+2025-09-19 21:36:21,788 - INFO - app.youtube.run.20250919_211236 - [ASR ativado] Transcrição não encontrada; iniciando fallback para f4PveaUJLd8
+2025-09-19 21:36:30,020 - INFO - app.youtube.run.20250919_211236 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmp0dujt9p7/f4PveaUJLd8.m4a
+2025-09-19 21:36:31,643 - INFO - faster_whisper - Processing audio with duration 10:23.409
+2025-09-19 21:36:33,490 - INFO - faster_whisper - VAD filter removed 00:02.800 of audio
+2025-09-19 21:38:05,598 - INFO - app.youtube.run.20250919_211236 - Transcrição obtida via ASR faster-whisper para f4PveaUJLd8
+2025-09-19 21:38:05,925 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"

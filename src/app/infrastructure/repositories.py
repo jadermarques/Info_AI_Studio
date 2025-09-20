@@ -1,10 +1,32 @@
-"""Database repositories for domain entities."""
-
 from __future__ import annotations
 
-from typing import Any, Iterable
+"""Database repositories for domain entities."""
 
+from typing import Any, Iterable
 from app.infrastructure import db
+
+def update_llm_model(model_id: int, provedor: str, modelo: str, api_key: str, status: int = 1) -> None:
+    """Atualiza um modelo LLM existente pelo id."""
+    import sqlite3
+    conn = sqlite3.connect('data.db')
+    cursor = conn.cursor()
+    cursor.execute(
+        """
+        UPDATE modelo_llm SET modl_provedor=?, modl_modelo_llm=?, modl_api_key=?, modl_status=? WHERE modl_id=?
+        """,
+        (provedor, modelo, api_key, status, model_id)
+    )
+    conn.commit()
+    conn.close()
+
+def delete_llm_model(model_id: int) -> None:
+    """Remove um modelo LLM pelo id."""
+    import sqlite3
+    conn = sqlite3.connect('data.db')
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM modelo_llm WHERE modl_id=?", (model_id,))
+    conn.commit()
+    conn.close()
 
 
 def save_llm_model(provedor: str, modelo: str, api_key: str, status: int = 1) -> None:
@@ -87,6 +109,27 @@ def delete_youtube_channel(entry_id: int) -> None:
     db.execute("DELETE FROM fonte_youtube WHERE foyt_id = ?", (entry_id,))
 
 
+def update_youtube_channel(
+    entry_id: int,
+    nome_canal: str,
+    descricao: str,
+    grupos: str,
+    canal_id: str,
+    status: int = 1,
+) -> None:
+    """Atualiza um canal do YouTube pelo ID do registro."""
+    query = (
+        "UPDATE fonte_youtube SET"
+        " foyt_nome_canal = ?,"
+        " foyt_descricao = ?,"
+        " foyt_grupo_canal = ?,"
+        " foyt_id_canal = ?,"
+        " foyt_status = ?"
+        " WHERE foyt_id = ?"
+    )
+    db.execute(query, (nome_canal.strip(), descricao.strip(), grupos.strip(), canal_id.strip(), status, entry_id))
+
+
 def save_web_source(
     tipo: str,
     fonte: str,
@@ -100,6 +143,40 @@ def save_web_source(
         " VALUES (?, ?, ?, ?)"
     )
     db.execute(query, (tipo.strip(), fonte.strip(), descricao.strip(), status))
+
+
+def update_web_source(
+    entry_id: int,
+    tipo: str,
+    fonte: str,
+    descricao: str,
+    status: int = 1,
+) -> None:
+    """Atualiza uma fonte web existente pelo ID."""
+    query = (
+        "UPDATE fonte_web SET"
+        " fowe_tipo = ?,"
+        " fowe_fonte = ?,"
+        " fowe_descricao = ?,"
+        " fowe_status = ?"
+        " WHERE fowe_id = ?"
+    )
+    db.execute(query, (tipo.strip(), fonte.strip(), descricao.strip(), status, entry_id))
+
+
+def delete_web_source(entry_id: int) -> None:
+    """Remove uma fonte web pelo ID."""
+    db.execute("DELETE FROM fonte_web WHERE fowe_id = ?", (entry_id,))
+
+
+def get_llm_model(model_id: int) -> dict[str, Any] | None:
+    """Retorna um modelo LLM pelo ID (campos da tabela)."""
+    row = db.fetch_one(
+        "SELECT modl_id, modl_provedor, modl_modelo_llm, modl_api_key, modl_status, modl_created_at"
+        " FROM modelo_llm WHERE modl_id = ?",
+        (model_id,),
+    )
+    return dict(row) if row else None
 
 
 def list_web_sources(active_only: bool = True) -> list[dict[str, Any]]:
