@@ -178,6 +178,7 @@ class YouTubeExecutionService:
                     transcript = ""
                     analysis_source = "modo_simples"
                     summary: Optional[LLMResult] = None
+                    titulo_pt = None
                     start_time = time.time()
                     if self.config.mode.lower() == "full":
                         transcript, analysis_source = self._obter_transcricao(
@@ -195,6 +196,14 @@ class YouTubeExecutionService:
                             logger.info(
                                 "[LLM] Execução com --no-llm habilitado; resumos serão pulados."
                             )
+                        # Tradução opcional de título
+                        try:
+                            if bool(self.config.ui_extras.get("translate_titles")) and not self.config.no_llm:
+                                titulo_pt, t_in, t_out = llm_client.translate_title(video.get("title", ""))
+                                prompt_tokens_channel += int(t_in or 0)
+                                completion_tokens_channel += int(t_out or 0)
+                        except Exception:
+                            titulo_pt = None
                     self._log_analysis_origin(logger, video_id, analysis_source)
                     end_time = time.time()
                     analysis_time = end_time - start_time
@@ -219,6 +228,7 @@ class YouTubeExecutionService:
                         {
                             "id": video_id,
                             "title": video.get("title"),
+                            "title_pt": titulo_pt or video.get("title"),
                             "url": video.get("url"),
                             "published": video.get("published"),
                             "published_relative": video.get("published_relative"),

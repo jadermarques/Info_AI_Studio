@@ -155,6 +155,12 @@ else:
             key_prefix="simple", default_prefix="youtube_extract_simple", mode_label="modo simples"
         )
     with guia_completo:
+        # Opção específica do modo completo: traduzir títulos
+        st.checkbox(
+            "Traduzir títulos para PT-BR",
+            key="youtube_full_translate_titles",
+            help="Quando ligado, os títulos serão traduzidos para Português (Brasil) usando o LLM."
+        )
         run_full, prefix_full, report_format_full, asr_provider_full, no_asr_full, llm_label_full = _exec_form(
             key_prefix="full", default_prefix="youtube_extract_full", mode_label="modo completo"
         )
@@ -297,6 +303,7 @@ else:
                     "selected_groups": list(st.session_state.get("youtube_group_filter", [])),
                     "selected_channel_labels": list(selected_labels),
                     "manual_entries": manual_entries_v,
+                    "translate_titles": bool(st.session_state.get("youtube_full_translate_titles", False)),
                 },
             )
             service = YouTubeExecutionService(config)
@@ -484,6 +491,98 @@ else:
                         token_details.append(item)
                     ordered = sorted(token_details, key=lambda item: item["canal"])
                     st.dataframe(ordered, hide_index=True)
+                # Resumo Extração (somente Modo completo)
+                if mode == "full" and result.channels_data:
+                    st.subheader("Resumo Extração")
+                    from datetime import datetime, timezone, timedelta
+                    import io, csv
+                    rows_resumo: list[dict] = []
+                    for channel in result.channels_data:
+                        canal_nome = channel.get("name") or channel.get("channel_id")
+                        for v in channel.get("videos", []):
+                            # Data/hora do vídeo em horário de Brasília
+                            data_raw = v.get("date_published") or v.get("published") or v.get("published_relative") or ""
+                            dt_obj = None
+                            if data_raw:
+                                try:
+                                    dt_obj = datetime.fromisoformat(str(data_raw))
+                                except Exception:
+                                    for fmt in ["%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d/%m/%Y %H:%M", "%d/%m/%Y"]:
+                                        try:
+                                            dt_obj = datetime.strptime(str(data_raw), fmt)
+                                            break
+                                        except Exception:
+                                            continue
+                            if dt_obj:
+                                if dt_obj.tzinfo is None:
+                                    dt_obj = dt_obj.replace(tzinfo=timezone.utc)
+                                dt_brasilia = dt_obj.astimezone(timezone(timedelta(hours=-3)))
+                                data_fmt = dt_brasilia.strftime("%d/%m/%Y %H:%M")
+                            else:
+                                data_fmt = str(data_raw)
+                            # Origem do conteúdo
+                            analysis_source = v.get("analysis_source", "") or ""
+                            if analysis_source == "transcricao_youtube":
+                                origem_conteudo = "transcrição"
+                            elif str(analysis_source).startswith("asr_"):
+                                origem_conteudo = "áudio"
+                            else:
+                                origem_conteudo = "-"
+                            # Resumo/LLM
+                            summary = v.get("summary") or {}
+                            palavras_chave = summary.get("palavras_chave") or []
+                            if isinstance(palavras_chave, str):
+                                palavras_chave = [p.strip() for p in palavras_chave.split(",") if p.strip()]
+                            resumo_topicos = (summary.get("resumo_em_topicos") or "").strip()
+                            # Modelo
+                            modelo_llm = summary.get("model") or (selected_model.get("modelo") if 'selected_model' in locals() and selected_model else "")
+                            # Título pt: placeholder igual ao original se não houver campo dedicado
+                            titulo_original = v.get("title", "")
+                            titulo_pt = v.get("title_pt") or titulo_original
+                            titulo_traduzido = "sim" if (titulo_pt and titulo_pt != titulo_original) else "não"
+                            # Tempo de análise em minutos
+                            analise_seg = v.get("analysis_time") or 0
+                            try:
+                                analise_min = round(float(analise_seg) / 60.0, 2)
+                            except Exception:
+                                analise_min = 0.0
+                            # Tokens
+                            tokens_in = summary.get("prompt_tokens", 0) or 0
+                            tokens_out = summary.get("completion_tokens", 0) or 0
+                            rows_resumo.append({
+                                "data hora postagem video": data_fmt,
+                                "nome do canal": canal_nome,
+                                "titulo do video (lingua original)": titulo_original,
+                                "titulo do video (em portugues)": titulo_pt,
+                                "titulo foi traduzido": titulo_traduzido,
+                                "modelo LLM usado": modelo_llm,
+                                "resumo do video (1 frase)": summary.get("resumo_uma_frase", ""),
+                                "resumo": summary.get("resumo", ""),
+                                "palavras-chave": ", ".join(palavras_chave),
+                                "resumo em tópicos": resumo_topicos,
+                                "duracao do video": v.get("duration", ""),
+                                "origem do conteudo": origem_conteudo,
+                                "possui transcricao": "sim" if v.get("has_transcript") else "não",
+                                "url do video": v.get("url", ""),
+                                "tempo total de analise do video em minutos": analise_min,
+                                "tokens enviados": tokens_in,
+                                "tokens recebidos": tokens_out,
+                            })
+                    if rows_resumo:
+                        st.dataframe(rows_resumo, hide_index=True)
+                        # Exportar CSV
+                        csv_buffer = io.StringIO()
+                        fieldnames = list(rows_resumo[0].keys())
+                        writer = csv.DictWriter(csv_buffer, fieldnames=fieldnames)
+                        writer.writeheader()
+                        for r in rows_resumo:
+                            writer.writerow(r)
+                        st.download_button(
+                            label="Exportar CSV",
+                            data=csv_buffer.getvalue().encode("utf-8"),
+                            file_name="resumo_extracao.csv",
+                            mime="text/csv",
+                        )
                 # Modo simple: montar tabela de vídeos encontrados com campos solicitados
                 if mode == "simple" and result.channels_data:
                     st.subheader("Vídeos encontrados")

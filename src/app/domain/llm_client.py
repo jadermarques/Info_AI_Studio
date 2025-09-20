@@ -320,6 +320,32 @@ class LLMClient:
             heuristic = self._translate_result_fields(heuristic)
         return heuristic
 
+    def translate_title(self, title: str) -> tuple[str, int, int]:
+        """Traduz um título para PT-BR usando o provedor ativo, retornando (titulo_pt, prompt_tokens, completion_tokens).
+        Se o cliente não estiver ativo, retorna o próprio título.
+        """
+        text = (title or "").strip()
+        if not text:
+            return "", 0, 0
+        if not self.active:
+            return text, 0, 0
+        instruction = (
+            "Traduza o texto a seguir para Português (Brasil). Responda apenas com o texto traduzido, sem aspas nem comentários."
+        )
+        prompt = f"Texto: {text}"
+        try:
+            content, prompt_tokens, completion_tokens, _ = self._request_completion(
+                prompt=prompt,
+                language_mode="pt-br",
+                system_instruction=instruction,
+                expect_json=False,
+                max_output_tokens=120,
+            )
+            translated = (content or "").strip()
+            return translated, int(prompt_tokens or 0), int(completion_tokens or 0)
+        except Exception:
+            return text, 0, 0
+
     def _build_prompt(
         self,
         title: str,

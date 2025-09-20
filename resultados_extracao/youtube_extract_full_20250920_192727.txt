@@ -1,0 +1,63 @@
+=======================================================================
+Iniciando execução modo FULL
+Valores selecionados
+Grupos de canais selecionados: —
+Canais cadastrados: 1
+Canais adicionais: —
+Dias para filtrar: 1
+Limite de vídeos por canal: 1
+Prefixo dos arquivos: youtube_extract_full
+Formato do relatório: txt
+Fornecedor de ASR: faster-whisper
+Desativar ASR (sim ou não): não
+Modelo LLM: gpt-5-nano
+
+Canais
+Canais selecionados para análise: 1
+
+VÍDEOS ENCONTRADOS
+data video | nome canal | titulo do video | id do video | link do video (url) | tamanho do video | idioma original | tem transcricao | visualizacoes
+------------------------------------------------------------------------------------------------------------------------
+19/09/25 05:00 | @LiamOttley | Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes) | 3HHMuaGIC30 | https://www.youtube.com/watch?v=3HHMuaGIC30 | 43:15 |  | não | 17786
+
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: full
+Parâmetros: dias=1, max_videos=1, formato=txt
+
+• @LiamOttley
+   - URL: https://www.youtube.com/watch?v=3HHMuaGIC30
+   - Título: Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes)
+   - Duração: 43:15
+   - Origem do conteúdo: áudio
+   - Tempo de análise: 821.64 segundos
+   - Data de postagem: 2025-09-19T01:00:38-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 17786
+   - Assunto principal: Construir uma agência de automação com IA, com foco em automação de trabalho, superando 5 desafios para levar alguém de 0 a 100 mil (e escalar para 100 milhões), escolhendo uma área de atuação e aprendendo por meio de recursos gratuitos.
+   - Resumo (1 frase): Guia definitivo para iniciantes em IA: de 0 a 100 mil (e além) com automação, destacando 5 desafios, foco em uma área e uso de ferramentas como Make.com.
+   - Resumo (<= 150 palavras): Este vídeo oferece um guia prático para iniciantes sobre como usar IA para ir de 0 a 100 mil e avançar rumo a 100 milhões. O autor afirma que o primeiro milhão é mais fácil que o próximo patamar e apresenta o roteiro para começar na IA. Ele destaca 5 desafios prévios ao sucesso e oferece soluções para cada um. O ponto-chave é escolher uma área específica e não tentar fazer tudo de uma vez, já que muitos começam montando uma agência de automação, com agentes de voz ou bots de texto. A recomendação central é focar na automação de trabalho, com Make.com como base da IA Automation Agency. A habilidade fundamental é entender APIs e como as aplicações se comunicam. O conteúdo útil vem do YouTube e de recursos gratuitos, permitindo começar mesmo sem dinheiro, e usar isso para evoluir com o tempo.
+   - Palavras-chave: Inteligência Artificial, Automação, Agência de Inteligência Artificial, Make.com, Interfaces de Programação de Aplicações, Automação de Trabalho, Agentes de voz, Bots de texto, YouTube, Cursos gratuitos
+   - Resumo em tópicos:
+     - Contexto geral: o vídeo propõe um caminho de 0 a 100 mil com IA, com visão de chegar a 100 milhões no longo prazo.
+     - 5 desafios quentes: seleção de foco, gestão da sobrecarga de ferramentas, escolha de especialização, validação de oferta e operacionalização de projetos.
+     - Abordagem prática: foque em uma área específica (ex: automação de trabalho com Make.com para IA Automation Agency) para construir trajetórias reais.
+     - Habilidades centrais: dominar APIs e a forma como as aplicações se conectam, transformando isso em automação de workflows.
+     - Ferramentas e caminhos: agentes de voz, bots de texto, automação de trabalho; Make.com como base.
+     - Aprendizado: YouTube e conteúdos gratuitos são suficientes para começar; menos dependência de cursos caros.
+     - História financeira: começar com pouco dinheiro, usar recursos da família e aceleradores para acelerar o progresso.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 2206
+   - Tokens recebidos: 3208
+   - Custo estimado: R$ 0.0059
+
+Tempo de análise por vídeo:
+- Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes): 821.64 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

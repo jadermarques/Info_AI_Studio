@@ -1,0 +1,63 @@
+=======================================================================
+Iniciando execução modo FULL
+Valores selecionados
+Grupos de canais selecionados: —
+Canais cadastrados: 1
+Canais adicionais: —
+Dias para filtrar: 3
+Limite de vídeos por canal: 30
+Prefixo dos arquivos: youtube_extract_full
+Formato do relatório: txt
+Fornecedor de ASR: faster-whisper
+Desativar ASR (sim ou não): não
+Modelo LLM: gpt-5-nano
+
+Canais
+Canais selecionados para análise: 1
+
+VÍDEOS ENCONTRADOS
+data video | nome canal | titulo do video | id do video | link do video (url) | tamanho do video | idioma original | tem transcricao | visualizacoes
+------------------------------------------------------------------------------------------------------------------------
+19/09/25 18:55 | @SuperHumansLife | Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de... | NPcpJunt0YA | https://www.youtube.com/watch?v=NPcpJunt0YA | 31:22 |  | não | 5481
+
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 1
+Modo: full
+Parâmetros: dias=3, max_videos=30, formato=txt
+
+• @SuperHumansLife
+   - URL: https://www.youtube.com/watch?v=NPcpJunt0YA
+   - Título: Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...
+   - Duração: 31:22
+   - Origem do conteúdo: áudio
+   - Tempo de análise: 651.43 segundos
+   - Data de postagem: 2025-09-19T14:55:40-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 5481
+   - Assunto principal: 7 habilidades de IA de alto valor e o papel do estrategista visionário para se tornar irreplacável no mercado de trabalho, com um roteiro de 30 dias para monetizar.
+   - Resumo (1 frase): O vídeo apresenta 7 habilidades de IA bem remuneradas para se tornar irreplacável, com foco no estrategista visionário e num plano de 30 dias para monetizar rapidamente.
+   - Resumo (<= 150 palavras): Este vídeo discute como a IA está redefinindo empregos e por que dominar apenas habilidades gerais não basta; desde 2023, cerca de 1,5 milhão de técnicos perderam o emprego, mostrando que até profissionais habilidosos podem ser substituídos. O foco é em sete habilidades de IA bem remuneradas que ajudam você a se tornar irreplacável, com ênfase na primeira, o estrategista visionário: alguém que desenha a arquitetura de decisão, retorno sobre investimento (ROI), governança e gestão de risco para a adoção de IA. Empresas pagam pela confiança e pela entrega de resultados, não por conhecimento genérico. O exemplo IBM/BCG: 3,5 bilhões de dólares em economia e 50% de ganho de produtividade. Salários e honorários variam de 70 a 200 dólares americanos por hora, até 174 mil por ano. O vídeo propõe um plano de trinta dias: semana 1 leitura de relatórios, semana 2 modelos de ROI, semana 3 simulações com feedback, semana 4 lançamento da oferta.
+   - Palavras-chave: Inteligência Artificial, habilidades de IA de alto valor, estrategista visionário, Retorno sobre Investimento, governança de IA, adoção de IA, produtividade, consultoria de IA, carreira independente, mercado de trabalho, honorários, demissões, roteiro de adoção, monetização
+   - Resumo em tópicos:
+     - Contexto: IA está alterando o mercado de trabalho; milhões de demissões ocorrendo; alguns profissionais substituídos, outros pivotam com IA.
+     - Premissa: existem 7 habilidades de IA de alto valor; foco na primeira, o estrategista visionário.
+     - O que faz o estrategista visionário: desenha a arquitetura de decisão, ROI, governança e gestão de risco para a adoção de IA; vai além de sugerir soluções, criando o roadmap.
+     - Por que é valorizado: clientes pagam por confiança e pela entrega de resultados, não por conhecimento genérico.
+     - Exemplos: IBM/BCG transformando IA em economia e produtividade; remuneração típica de 70–200 USD/hora; salário anual entre 107–174 mil.
+     - Roteiro de 30 dias: Semana 1 leitura de relatórios da indústria; Semana 2 modelos de ROI; Semana 3 protótipos com feedback; Semana 4 lançamento da oferta.
+     - Observação: trate as 7 habilidades como um compasso; escolha uma, aprofunde-se, e busque parcerias para escalar.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 2171
+   - Tokens recebidos: 5355
+   - Custo estimado: R$ 0.0091
+
+Tempo de análise por vídeo:
+- Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...: 651.43 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA
