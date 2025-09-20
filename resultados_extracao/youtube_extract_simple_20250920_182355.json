@@ -1,0 +1,417 @@
+{
+  "executed_at": "2025-09-20T18:23:55.936292",
+  "mode": "simple",
+  "total_channels": 11,
+  "total_videos": 16,
+  "params": {
+    "days": 3,
+    "max_videos": 30,
+    "mode": "simple",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "txt",
+    "translate_results": "pt-br",
+    "resumo_max_palavras": 150,
+    "llm_model": "gpt-5-nano",
+    "ui_extras": {
+      "selected_groups": [
+        "Ideias e Negócios com IA"
+      ],
+      "selected_channel_labels": [
+        "ColeMedin (@ColeMedin)",
+        "DanGalletta (@DanGalletta)",
+        "DataCouncil (@DataCouncil)",
+        "Incomestreamsurfers (@Incomestreamsurfers)",
+        "LiamOttley (@LiamOttley)",
+        "SaraFinance (@SaraFinance)",
+        "SuperHumansLife (@SuperHumansLife)",
+        "eusoukelvincleto (@eusoukelvincleto)",
+        "krishnaik06 (@krishnaik06)",
+        "matthew_berman (@matthew_berman)",
+        "nocodemba (@nocodemba)"
+      ],
+      "manual_entries": ""
+    }
+  },
+  "channels": [
+    {
+      "channel_id": "@ColeMedin",
+      "name": "@ColeMedin",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "BcvjGTxzK40",
+          "title": "The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them)",
+          "url": "https://www.youtube.com/watch?v=BcvjGTxzK40",
+          "published": "2025-09-18T21:23:56.973480",
+          "published_relative": "há 2 dias",
+          "duration": "20:47",
+          "date_published": "2025-09-17T17:00:12-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0004551410675048828,
+          "language": "",
+          "view_count": 15625,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@DanGalletta",
+      "name": "@DanGalletta",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@DataCouncil",
+      "name": "@DataCouncil",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@Incomestreamsurfers",
+      "name": "@Incomestreamsurfers",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "EKk6yZiMMtc",
+          "title": "Claude Code + Codex = O NOVO Construtor de Sites Definitivo",
+          "url": "https://www.youtube.com/watch?v=EKk6yZiMMtc",
+          "published": "2025-09-19T21:23:59.652444",
+          "published_relative": "há 1 dia",
+          "duration": "15:12",
+          "date_published": "2025-09-19T04:38:46-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00016498565673828125,
+          "language": "",
+          "view_count": 1825,
+          "has_transcript": false
+        },
+        {
+          "id": "rw_CCEFe4ks",
+          "title": "Replit concluído: GPT-5-Codex ONE SHOTS aplicativos inteiros",
+          "url": "https://www.youtube.com/watch?v=rw_CCEFe4ks",
+          "published": "2025-09-18T21:23:59.652528",
+          "published_relative": "há 2 dias",
+          "duration": "10:31",
+          "date_published": "2025-09-18T07:26:13-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003612041473388672,
+          "language": "",
+          "view_count": 5611,
+          "has_transcript": false
+        },
+        {
+          "id": "6_CO0ilERA4",
+          "title": "Codex vs Claude Code… Quem REALMENTE vence?",
+          "url": "https://www.youtube.com/watch?v=6_CO0ilERA4",
+          "published": "2025-09-17T21:23:59.652549",
+          "published_relative": "há 3 dias",
+          "duration": "06:18",
+          "date_published": "2025-09-17T12:59:47-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00036907196044921875,
+          "language": "",
+          "view_count": 5739,
+          "has_transcript": false
+        },
+        {
+          "id": "vKcTIf9hJr0",
+          "title": "RIP CLAUDE CODE: Novo modelo GPT-5-Codex acaba de ser lançado",
+          "url": "https://www.youtube.com/watch?v=vKcTIf9hJr0",
+          "published": "2025-09-17T21:23:59.652566",
+          "published_relative": "há 3 dias",
+          "duration": "12:52",
+          "date_published": "2025-09-17T05:51:26-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003559589385986328,
+          "language": "",
+          "view_count": 2511,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@LiamOttley",
+      "name": "@LiamOttley",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "3HHMuaGIC30",
+          "title": "Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes)",
+          "url": "https://www.youtube.com/watch?v=3HHMuaGIC30",
+          "published": "2025-09-19T21:24:03.322913",
+          "published_relative": "há 1 dia",
+          "duration": "43:15",
+          "date_published": "2025-09-19T01:00:38-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003762245178222656,
+          "language": "",
+          "view_count": 17544,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@SaraFinance",
+      "name": "@SaraFinance",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@SuperHumansLife",
+      "name": "@SuperHumansLife",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "NPcpJunt0YA",
+          "title": "Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...",
+          "url": "https://www.youtube.com/watch?v=NPcpJunt0YA",
+          "published": "2025-09-19T22:24:05.281368",
+          "published_relative": "há 23 horas",
+          "duration": "31:22",
+          "date_published": "2025-09-19T14:55:40-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0001552104949951172,
+          "language": "",
+          "view_count": 5269,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@eusoukelvincleto",
+      "name": "@eusoukelvincleto",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "f4PveaUJLd8",
+          "title": "O que eu estudaria em vez de automação em 2026",
+          "url": "https://www.youtube.com/watch?v=f4PveaUJLd8",
+          "published": "2025-09-19T21:24:06.437385",
+          "published_relative": "há 1 dia",
+          "duration": "10:23",
+          "date_published": "2025-09-18T20:05:56-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00015807151794433594,
+          "language": "",
+          "view_count": 3256,
+          "has_transcript": false
+        },
+        {
+          "id": "V7UyaYpKyUg",
+          "title": "Como construir e vender infraestruturas de IA (guia completo)",
+          "url": "https://www.youtube.com/watch?v=V7UyaYpKyUg",
+          "published": "2025-09-17T21:24:06.437440",
+          "published_relative": "há 3 dias",
+          "duration": "44:26",
+          "date_published": "2025-09-16T17:49:32-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0001380443572998047,
+          "language": "",
+          "view_count": 3046,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@krishnaik06",
+      "name": "@krishnaik06",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "MMS04bku3FE",
+          "title": "4-Construindo RAG com Typesense - Pesquisa rápida e de código aberto",
+          "url": "https://www.youtube.com/watch?v=MMS04bku3FE",
+          "published": "2025-09-20T04:24:08.212768",
+          "published_relative": "há 17 horas",
+          "duration": "23:07",
+          "date_published": "2025-09-19T20:41:39-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0002110004425048828,
+          "language": "",
+          "view_count": 3188,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@matthew_berman",
+      "name": "@matthew_berman",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "UgNPfD-bZgU",
+          "title": "AI News: Meta Raybans, Gemini 3, World Labs, Grok 5, and more!",
+          "url": "https://www.youtube.com/watch?v=UgNPfD-bZgU",
+          "published": "2025-09-18T21:24:09.420345",
+          "published_relative": "há 2 dias",
+          "duration": "14:47",
+          "date_published": "2025-09-18T12:13:12-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003199577331542969,
+          "language": "",
+          "view_count": 51173,
+          "has_transcript": false
+        },
+        {
+          "id": "biwwQw0248w",
+          "title": "Is AI Killing the Economy? (Anthropic Report)",
+          "url": "https://www.youtube.com/watch?v=biwwQw0248w",
+          "published": "2025-09-18T21:24:09.420402",
+          "published_relative": "há 2 dias",
+          "duration": "16:29",
+          "date_published": "2025-09-17T14:30:06-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00038695335388183594,
+          "language": "",
+          "view_count": 50601,
+          "has_transcript": false
+        },
+        {
+          "id": "CZeEAgE5xGA",
+          "title": "Ex-OpenAI CTO Reveals Plan to Fix LLMs Biggest Problem",
+          "url": "https://www.youtube.com/watch?v=CZeEAgE5xGA",
+          "published": "2025-09-17T21:24:09.420410",
+          "published_relative": "há 3 dias",
+          "duration": "08:47",
+          "date_published": "2025-09-16T15:34:02-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00033593177795410156,
+          "language": "",
+          "view_count": 45619,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@nocodemba",
+      "name": "@nocodemba",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "Dna__4QolLg",
+          "title": "O que substituirá as landing pages em 2025 (+ modelo gratuito)",
+          "url": "https://www.youtube.com/watch?v=Dna__4QolLg",
+          "published": "2025-09-19T21:24:12.386418",
+          "published_relative": "há 1 dia",
+          "duration": "09:25",
+          "date_published": "2025-09-19T07:51:39-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003819465637207031,
+          "language": "",
+          "view_count": 281,
+          "has_transcript": false
+        },
+        {
+          "id": "gYz_m6hcWys",
+          "title": "As planilhas estão mortas! Criei um painel de IA incrivelmente poderoso com o Databutton",
+          "url": "https://www.youtube.com/watch?v=gYz_m6hcWys",
+          "published": "2025-09-18T21:24:12.386507",
+          "published_relative": "há 2 dias",
+          "duration": "06:38",
+          "date_published": "2025-09-18T09:25:02-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00028014183044433594,
+          "language": "",
+          "view_count": 584,
+          "has_transcript": false
+        },
+        {
+          "id": "gqqzvGvqKr0",
+          "title": "A nova IA do Bubble pode vencer Lovable e Base44?",
+          "url": "https://www.youtube.com/watch?v=gqqzvGvqKr0",
+          "published": "2025-09-17T21:24:12.386525",
+          "published_relative": "há 3 dias",
+          "duration": "08:21",
+          "date_published": "2025-09-17T08:10:01-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0002949237823486328,
+          "language": "",
+          "view_count": 547,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

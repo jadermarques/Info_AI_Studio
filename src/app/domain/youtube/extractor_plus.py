@@ -471,15 +471,24 @@ class YouTubeExtractor:
         return f"{m:02d}:{s:02d}"
 
     def fetch_video_details(self, video_id: str) -> Dict[str, str]:
-        """Duração (segundos, hh:mm:ss) e data de publicação pela página do vídeo."""
+        """Duração (segundos, hh:mm:ss), data de publicação, visualizações e idioma pela página do vídeo."""
         url = f"https://www.youtube.com/watch?v={video_id}"
         resp = self._make_request(url)
         if not resp or resp.status_code != 200:
-            return {"duration_seconds": 0, "duration_hhmmss": "", "date_published": "", "url": url}
+            return {
+                "duration_seconds": 0,
+                "duration_hhmmss": "",
+                "date_published": "",
+                "url": url,
+                "view_count": 0,
+                "language": "",
+            }
 
         html = resp.text
         duration_seconds = 0
         date_published = ""
+        view_count = 0
+        language = ""
 
         # JSON-LD
         try:
@@ -491,10 +500,12 @@ class YouTubeExtractor:
                             iso = item.get("duration") or ""
                             duration_seconds = self._parse_iso8601_duration(iso) or duration_seconds
                             date_published = item.get("uploadDate") or item.get("datePublished") or date_published
+                            language = item.get("inLanguage") or language
                 elif isinstance(data, dict) and data.get("@type") == "VideoObject":
                     iso = data.get("duration") or ""
                     duration_seconds = self._parse_iso8601_duration(iso) or duration_seconds
                     date_published = data.get("uploadDate") or data.get("datePublished") or date_published
+                    language = data.get("inLanguage") or language
         except Exception:
             pass
 
@@ -504,11 +515,17 @@ class YouTubeExtractor:
                 m = re.search(r"ytInitialPlayerResponse\s*=\s*(\{.*?\})\s*;", html, re.S)
                 if m:
                     p = json.loads(m.group(1))
-                    ls = p.get("videoDetails", {}).get("lengthSeconds")
+                    vd = p.get("videoDetails", {})
+                    ls = vd.get("lengthSeconds")
                     if ls and str(ls).isdigit():
                         duration_seconds = int(ls)
                     micro = p.get("microformat", {}).get("playerMicroformatRenderer", {})
                     date_published = micro.get("publishDate") or micro.get("uploadDate") or date_published
+                    # view count e idioma
+                    vc = vd.get("viewCount")
+                    if vc and str(vc).isdigit():
+                        view_count = int(vc)
+                    language = vd.get("defaultLanguage") or vd.get("defaultAudioLanguage") or language
             except Exception:
                 pass
 
@@ -517,7 +534,22 @@ class YouTubeExtractor:
             "duration_hhmmss": self._format_hhmmss(duration_seconds) if duration_seconds else "",
             "date_published": date_published or "",
             "url": url,
+            "view_count": view_count,
+            "language": language,
         }
+
+    def has_transcript(self, video_id: str) -> bool:
+        """Retorna True se houver qualquer transcrição disponível para o vídeo."""
+        try:
+            from youtube_transcript_api import YouTubeTranscriptApi  # type: ignore
+        except Exception:
+            return False
+        try:
+            transcripts = YouTubeTranscriptApi.list_transcripts(video_id)
+            # qualquer track disponível conta como transcrição existente (manual ou automática)
+            return any(True for _ in transcripts)
+        except Exception:
+            return False
 
     def _fetch_transcript_ytdlp(self, video_id: str, preferred_langs=None) -> str:
         """Fallback de transcrição via yt-dlp, usando legendas do YouTube."""

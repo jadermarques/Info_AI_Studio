@@ -1,0 +1,91 @@
+=======================================================================
+Iniciando execução modo FULL
+Valores selecionados
+Grupos de canais selecionados: —
+Canais cadastrados: 1
+Canais adicionais: —
+Dias para filtrar: 3
+Limite de vídeos por canal: 30
+Prefixo dos arquivos: youtube_extract_full
+Formato do relatório: txt
+Fornecedor de ASR: faster-whisper
+Desativar ASR (sim ou não): não
+Modelo LLM: gpt-5-nano
+
+Canais
+Canais selecionados para análise: 1
+
+VÍDEOS ENCONTRADOS
+data video | nome canal | titulo do video | id do video | link do video (url) | tamanho do video | idioma original | tem transcricao | visualizacoes
+------------------------------------------------------------------------------------------------------------------------
+19/09/25 00:05 | @eusoukelvincleto | O que eu estudaria em vez de automação em 2026 | f4PveaUJLd8 | https://www.youtube.com/watch?v=f4PveaUJLd8 | 10:23 |  | não | 3256
+16/09/25 21:49 | @eusoukelvincleto | Como construir e vender infraestruturas de IA (guia completo) | V7UyaYpKyUg | https://www.youtube.com/watch?v=V7UyaYpKyUg | 44:26 |  | não | 3046
+
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 2
+Modo: full
+Parâmetros: dias=3, max_videos=30, formato=txt
+
+• @eusoukelvincleto
+   - URL: https://www.youtube.com/watch?v=f4PveaUJLd8
+   - Título: O que eu estudaria em vez de automação em 2026
+   - Duração: 10:23
+   - Origem do conteúdo: áudio
+   - Tempo de análise: 170.13 segundos
+   - Data de postagem: 2025-09-18T20:05:56-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 3256
+   - Assunto principal: Tendências de automação e IA para 2026 e a importância de combinar habilidades de negócios com automação para entregar valor
+   - Resumo (1 frase): Apesar do crescimento da automação e da IA, o vídeo orienta não focar apenas em ser automatizador: em 2026 é essencial combinar conhecimento de negócios, automação e IA para gerar resultados reais e aumentar receitas.
+   - Resumo (<= 150 palavras): Quem fala tem ampla experiência em tecnologia e negócios e sustenta que a evolução da IA permitirá, em poucos meses, criar qualquer tipo de automação por meio de linguagem natural, com prompts bem elaborados. Por isso não é recomendado abandonar a automação, mas evitar saturar o mercado de automatizadores. O foco deve ser desenvolver outras habilidades: entender de negócios, processos (vendas, entrega, pós-venda, finanças, captação de leads) e a lógica de software, para entregar resultados reais a clientes B2B. Um argumento central é que a automação é o meio, não o fim; quem gera valor é quem resolve problemas de negócio de forma mais eficiente. Exemplo: a recuperação de carrinho com CRM e fluxos diversificados dobrou a conversão de 5% para 10%, aumentando o faturamento. Há convite para um workshop online em 4 de outubro sobre empreender com IA, com 200 vagas.
+   - Palavras-chave: automação, Inteligência Artificial, instruções, baixo código, N8N, Make, automatizador, negócios, processos, vendas, entrega, pós-venda, marketing, financeiro, recuperação de carrinho, conversão, faturamento, oficina, 4 de outubro, empresa para empresa, valor do negócio
+   - Resumo em tópicos:
+     Resumo em tópicos:
+     - Contexto e visão: IA evolui rapidamente; automação via linguagem natural é o futuro próximo.
+     - Aviso de mercado: a barreira para automatizadores está caindo; o mercado pode ficar saturado.
+     - Principal mensagem: não abandonar a automação, mas buscar outras habilidades para 2026.
+     - Habilidades sugeridas: conhecimento de negócios, compreensão de processos e lógica de software.
+     - Lógica de negócio vs. ferramenta: automação é meio para resolver problemas de negócios, não o fim.
+     - Exemplo prático: recuperação de carrinho com CRM elevou a conversão de 5% para 10%, aumentando o faturamento.
+     - Convite: workshop online em 4 de outubro sobre empreender com IA, com 200 vagas.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 2034
+   - Tokens recebidos: 2979
+   - Custo estimado: R$ 0.0055
+   - URL: https://www.youtube.com/watch?v=V7UyaYpKyUg
+   - Título: Como construir e vender infraestruturas de IA (guia completo)
+   - Duração: 44:26
+   - Origem do conteúdo: áudio
+   - Tempo de análise: 556.77 segundos
+   - Data de postagem: 2025-09-16T17:49:32-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 3046
+   - Assunto principal: Infraestrutura de crescimento com IA para aumentar as vendas e entregar valor
+   - Resumo (1 frase): Guia prático para construir, embalar e vender uma infraestrutura de IA voltada ao crescimento, com foco em oferta, marketing e vendas, não em aspectos técnicos.
+   - Resumo (<= 150 palavras): Neste vídeo, Kelvin ensina como criar uma infraestrutura de crescimento com IA, enfatizando que não é conteúdo técnico. Ele descreve o ciclo de um negócio (oferta, marketing, venda, entrega/integração, entrega, feedback e otimização) e aponta que o dinheiro vem das áreas de oferta, marketing e vendas, enquanto a entrega é menos priorizada. O conceito central é uma infraestrutura de IA que combina sistemas, ferramentas e processos para gerar resultados para clientes. Exemplos práticos incluem a atuação da General Clens na regulação de sinistros. O vídeo também destaca que há oportunidades para quem não é técnico e menciona que a Celera 360 pode ajudar a chegar às primeiras notas fiscais com IA em até 90 dias.
+   - Palavras-chave: infraestrutura de crescimento com inteligência artificial, inteligência artificial vertical, oferta, marketing, vendas, entrega, integração, retroalimentação, NPS, crescimento, segurtech, General Clens, regulação de sinistros, Celera 360, empreendedorismo, modelo de negócio
+   - Resumo em tópicos:
+     - Contexto e objetivo: vídeo não técnico, voltado a ganhar dinheiro com IA.
+     - Ciclo de negócio: oferta → marketing → venda → integração/implantação → entrega → feedback/otimização.
+     - Foco estratégico: priorizar áreas que geram dinheiro (oferta, marketing, vendas); entrega menos priorizada.
+     - Infraestrutura de crescimento com IA: combinação de IA, ferramentas e processos para entregar resultados.
+     - Exemplo prático: General Clens atua em regulação de sinistros no setor de seguros.
+     - Acesso para não técnicos: oportunidade para todos; caminho para emitir notas fiscais com IA em até 90 dias pela Celera 360.
+     - Mensagem final: capitalizar a oportunidade da IA vertical e o crescimento com infraestrutura orientada a resultados.
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 2121
+   - Tokens recebidos: 3003
+   - Custo estimado: R$ 0.0056
+
+Tempo de análise por vídeo:
+- O que eu estudaria em vez de automação em 2026: 170.13 segundos
+- Como construir e vender infraestruturas de IA (guia completo): 556.77 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

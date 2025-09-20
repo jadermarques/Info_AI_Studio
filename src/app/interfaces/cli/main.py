@@ -286,7 +286,7 @@ def youtube_exec(
     ),
     user_agent: str = typer.Option(DEFAULT_USER_AGENT, "--user-agent", help="User-Agent usado nas requisições."),
     report_format: str = typer.Option(
-        "txt", "--format", help="Formato do relatório (txt, json, pdf, html)."
+        "txt", "--format", help="Formato do relatório (txt, md, json, pdf, html)."
     ),
     max_videos: Optional[int] = typer.Option(
         None, "--max-videos", help="Limita a quantidade de vídeos por canal."
@@ -306,8 +306,8 @@ def youtube_exec(
         typer.echo("Fornecedor de ASR inválido. Use 'faster-whisper' ou 'openai'.")
         raise typer.Exit(code=1)
     report_format_normalized = report_format.lower()
-    if report_format_normalized not in {"txt", "json", "pdf", "html"}:
-        typer.echo("Formato inválido. Use txt, json, pdf ou html.")
+    if report_format_normalized not in {"txt", "md", "json", "pdf", "html"}:
+        typer.echo("Formato inválido. Use txt, md, json, pdf ou html.")
         raise typer.Exit(code=1)
     config = YouTubeExtractionConfig(
         outdir=output_dir,

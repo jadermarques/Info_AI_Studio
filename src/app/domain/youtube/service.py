@@ -149,11 +149,32 @@ class YouTubeExecutionService:
                 enriched_videos = []
                 prompt_tokens_channel = 0
                 completion_tokens_channel = 0
-                for video in videos:
+                total_videos_channel = len(videos)
+                # Sinaliza início da análise de vídeos deste canal
+                self._notify(
+                    progress_callback,
+                    f"Iniciando vídeos do canal {index}/{len(channels)}: {total_videos_channel} vídeo(s)",
+                )
+                for v_index, video in enumerate(videos, start=1):
+                    # Progresso por vídeo (i/M) dentro do canal (k/N), incluindo título
+                    titulo_atual = (video.get("title") or "").strip()
+                    msg_video = (
+                        f"Processando vídeo {v_index}/{total_videos_channel} do canal {index}/{len(channels)}"
+                        + (f": {titulo_atual}" if titulo_atual else "")
+                    )
+                    self._notify(progress_callback, msg_video)
                     video_id = video.get("id")
                     if not video_id:
                         continue
                     details = extractor.fetch_video_details(video_id)
+                    # Campos extras para modo simple: idioma, visualizações e flag de transcrição
+                    video_language = details.get("language", "")
+                    view_count = int(details.get("view_count", 0) or 0)
+                    has_transcript_flag = False
+                    try:
+                        has_transcript_flag = extractor.has_transcript(video_id)
+                    except Exception:
+                        has_transcript_flag = False
                     transcript = ""
                     analysis_source = "modo_simples"
                     summary: Optional[LLMResult] = None
@@ -208,6 +229,9 @@ class YouTubeExecutionService:
                             "analysis_source": analysis_source,
                             "summary": summary_payload,
                             "analysis_time": analysis_time,
+                            "language": video_language,
+                            "view_count": view_count,
+                            "has_transcript": has_transcript_flag,
                         }
                     )
                 total_videos += len(enriched_videos)
@@ -499,6 +523,7 @@ class YouTubeExecutionService:
             "translate_results": self.config.translate_results,
             "resumo_max_palavras": self.config.resumo_max_palavras,
             "llm_model": self.config.llm_model,
+            "ui_extras": getattr(self.config, "ui_extras", {}),
         }
 
     def _build_metadata(
@@ -547,7 +572,90 @@ class YouTubeExecutionService:
         return path
 
     def _report_text(self, metadata: dict) -> str:
-        lines = []
+        lines: list[str] = []
+        # Cabeçalho com parâmetros selecionados (mostrado também na tela)
+        params = metadata.get("params", {})
+        lines.append("=======================================================================")
+        lines.append(f"Iniciando execução modo {str(params.get('mode', '')).upper()}")
+
+        lines.append("Valores selecionados")
+        ui_extras = params.get("ui_extras", {}) or {}
+        sel_groups = ", ".join(ui_extras.get("selected_groups", [])) or "—"
+        lines.append(f"Grupos de canais selecionados: {sel_groups}")
+        lines.append(f"Canais cadastrados: {len(ui_extras.get('selected_channel_labels', []))}")
+        lines.append(f"Canais adicionais: {ui_extras.get('manual_entries') or '—'}")
+
+        # Os seguintes campos devem corresponder ao que a interface mostra
+        lines.append(f"Dias para filtrar: {params.get('days')}")
+        lines.append(f"Limite de vídeos por canal: {params.get('max_videos')}")
+        lines.append(f"Prefixo dos arquivos: {self.config.prefix}")
+        lines.append(f"Formato do relatório: {params.get('format')}")
+        lines.append(f"Fornecedor de ASR: {params.get('asr_provider')}")
+        lines.append(f"Desativar ASR (sim ou não): {'sim' if not self.config.asr_enabled else 'não'}")
+        lines.append(f"Modelo LLM: {params.get('llm_model')}")
+        lines.append("")
+        lines.append("Canais")
+        lines.append(f"Canais selecionados para análise: {metadata.get('total_channels', 0)}")
+        lines.append("")
+
+        # Seção "Vídeos encontrados" (paridade com a tela)
+        try:
+            from datetime import datetime as dt, timezone, timedelta
+            rows: list[dict[str, object]] = []
+            for channel in metadata.get("channels", []):
+                canal_nome = channel.get("name") or channel.get("channel_id")
+                for v in channel.get("videos", []):
+                    data_raw = v.get("date_published") or v.get("published")
+                    dt_obj = None
+                    if data_raw:
+                        try:
+                            dt_obj = dt.fromisoformat(str(data_raw))
+                        except Exception:
+                            for fmt in ("%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d/%m/%Y %H:%M", "%d/%m/%Y"):
+                                try:
+                                    dt_obj = dt.strptime(str(data_raw), fmt)
+                                    break
+                                except Exception:
+                                    continue
+                    if dt_obj:
+                        if dt_obj.tzinfo is None:
+                            dt_obj = dt_obj.replace(tzinfo=timezone.utc)
+                        dt_brasilia = dt_obj.astimezone(timezone(timedelta(hours=-3)))
+                        data_fmt = dt_brasilia.strftime("%d/%m/%y %H:%M")
+                    else:
+                        data_fmt = str(data_raw or "")
+                    rows.append({
+                        "data video": data_fmt,
+                        "nome canal": canal_nome,
+                        "titulo do video": v.get("title", ""),
+                        "id do video": v.get("id", ""),
+                        "link do video (url)": v.get("url", ""),
+                        "tamanho do video": v.get("duration", ""),
+                        "idioma original": v.get("language", ""),
+                        "tem transcricao": "sim" if v.get("has_transcript") else "não",
+                        "visualizacoes": v.get("view_count", 0),
+                    })
+            if rows:
+                lines.append("VÍDEOS ENCONTRADOS")
+                header = [
+                    "data video",
+                    "nome canal",
+                    "titulo do video",
+                    "id do video",
+                    "link do video (url)",
+                    "tamanho do video",
+                    "idioma original",
+                    "tem transcricao",
+                    "visualizacoes",
+                ]
+                lines.append(" | ".join(header))
+                lines.append("-" * 120)
+                for r in rows:
+                    lines.append(" | ".join(str(r[k]) for k in header))
+                lines.append("")
+        except Exception:
+            pass
+
         lines.append("=======================================================================")
         lines.append("RESUMO DA EXTRAÇÃO")
         lines.append("=======================================================================\n")
@@ -555,12 +663,12 @@ class YouTubeExecutionService:
         lines.append(f"Total de vídeos extraídos: {metadata['total_videos']}")
         lines.append(f"Modo: {metadata['params']['mode']}")
         lines.append(
-            f"Parâmetros: dias={metadata['params']['days']}, max_videos={metadata['params']['max_videos']},"
-            f" formato={metadata['params']['format']}"
+            f"Parâmetros: dias={metadata['params']['days']}, max_videos={metadata['params']['max_videos']}, formato={metadata['params']['format']}"
         )
         lines.append("")
+
         tempo_total_exec = None
-        tempos_videos = []
+        tempos_videos: list[tuple[str, float]] = []
         for channel in metadata.get("channels", []):
             channel_handle = channel.get("channel_id") or channel.get("name", "Canal")
             lines.append(f"• {channel_handle}")
@@ -574,26 +682,34 @@ class YouTubeExecutionService:
                 if isinstance(keywords, str):
                     keywords = [item.strip() for item in keywords.split(",") if item.strip()]
                 cost = summary.get("cost", 0.0) or 0.0
-                origem_conteudo = "transcrição" if video.get("analysis_source") == "transcricao_youtube" else ("áudio" if str(video.get("analysis_source", "")).startswith("asr_") else "-")
+                origem_conteudo = (
+                    "transcrição"
+                    if video.get("analysis_source") == "transcricao_youtube"
+                    else ("áudio" if str(video.get("analysis_source", "")).startswith("asr_") else "-")
+                )
                 tempo_analise = video.get("analysis_time")
                 if tempo_analise:
-                    tempos_videos.append((video.get("title", ""), tempo_analise))
+                    tempos_videos.append((video.get("title", ""), float(tempo_analise)))
                 lines.append(f"   - URL: {video.get('url', '')}")
                 lines.append(f"   - Título: {video.get('title', '')}")
                 lines.append(f"   - Duração: {video.get('duration') or 'N/A'}")
                 lines.append(f"   - Origem do conteúdo: {origem_conteudo}")
-                lines.append(f"   - Tempo de análise: {tempo_analise:.2f} segundos" if tempo_analise else "   - Tempo de análise: N/A")
+                lines.append(
+                    f"   - Tempo de análise: {tempo_analise:.2f} segundos" if tempo_analise else "   - Tempo de análise: N/A"
+                )
                 lines.append(
                     f"   - Data de postagem: {video.get('date_published') or video.get('published') or video.get('published_relative') or ''}"
                 )
+                # Campos adicionais solicitados (modo simple)
+                lines.append(f"   - Idioma original do vídeo: {video.get('language','')}")
+                lines.append(f"   - Possui transcrição: {'sim' if video.get('has_transcript') else 'não'}")
+                lines.append(f"   - Visualizações: {video.get('view_count', 0)}")
                 lines.append(f"   - Assunto principal: {summary.get('assunto_principal', '')}")
                 lines.append(f"   - Resumo (1 frase): {summary.get('resumo_uma_frase', '')}")
                 lines.append(
                     f"   - Resumo (<= {self.config.resumo_max_palavras} palavras): {summary.get('resumo', '')}"
                 )
-                lines.append(
-                    "   - Palavras-chave: " + (", ".join(keywords) if keywords else "")
-                )
+                lines.append("   - Palavras-chave: " + (", ".join(keywords) if keywords else ""))
                 topics = summary.get("resumo_em_topicos", "").strip()
                 if topics:
                     lines.append("   - Resumo em tópicos:")
@@ -604,24 +720,27 @@ class YouTubeExecutionService:
                 lines.append(f"   - Tokens recebidos: {summary.get('completion_tokens', 0)}")
                 lines.append(f"   - Custo estimado: R$ {cost:.4f}")
             lines.append("")
-        # Tempo total de execução
+
+        # Tempo total de execução (melhor esforço; pode não estar disponível)
         if "executed_at" in metadata and "channels" in metadata:
-            from datetime import datetime
+            from datetime import datetime as dt2
             import os
             try:
                 log_path = metadata.get("log_path")
                 if log_path and os.path.exists(log_path):
                     tempo_final = os.path.getmtime(log_path)
-                    tempo_inicio = datetime.fromisoformat(metadata["executed_at"]).timestamp()
+                    tempo_inicio = dt2.fromisoformat(metadata["executed_at"]).timestamp()
                     tempo_total_exec = tempo_final - tempo_inicio
             except Exception:
                 tempo_total_exec = None
+
         if tempos_videos:
             lines.append("Tempo de análise por vídeo:")
             for titulo, tempo in tempos_videos:
                 lines.append(f"- {titulo}: {tempo:.2f} segundos")
         if tempo_total_exec:
             lines.append(f"Tempo total de execução: {tempo_total_exec:.2f} segundos")
+
         lines.append("\n=======================================================================")
         lines.append("EXTRAÇÃO CONCLUÍDA")
         return "\n".join(lines)

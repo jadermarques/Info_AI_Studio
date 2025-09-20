@@ -1,0 +1,17 @@
+2025-09-20 18:24:59,492 - INFO - app.youtube.run.20250920_182459 - Iniciando extração em lote de 11 canais
+2025-09-20 18:24:59,492 - INFO - app.youtube.run.20250920_182459 - Iniciando extração em lote de 11 canais
+2025-09-20 18:24:59,506 - INFO - app.youtube.run.20250920_182459 - Processando canal 1/11: @ColeMedin
+2025-09-20 18:24:59,506 - INFO - app.youtube.run.20250920_182459 - Processando canal 1/11: @ColeMedin
+2025-09-20 18:25:00,193 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-20 18:25:00,422 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-20 18:25:00,422 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-20 18:25:00,422 - INFO - app.youtube.run.20250920_182459 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-20 18:25:00,422 - INFO - app.youtube.run.20250920_182459 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-20 18:25:01,975 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para BcvjGTxzK40
+2025-09-20 18:25:02,343 - INFO - youtube_extractor - Transcrição: acesso bloqueado ou indisponível para BcvjGTxzK40: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=BcvjGTxzK40! This is most likely caused by:
+2025-09-20 18:25:11,260 - INFO - app.youtube.run.20250920_182459 - [ASR ativado] Transcrição não encontrada; iniciando fallback para BcvjGTxzK40
+2025-09-20 18:25:11,260 - INFO - app.youtube.run.20250920_182459 - [ASR ativado] Transcrição não encontrada; iniciando fallback para BcvjGTxzK40
+2025-09-20 18:25:23,165 - INFO - app.youtube.run.20250920_182459 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpn7d3kg90/BcvjGTxzK40.m4a
+2025-09-20 18:25:23,165 - INFO - app.youtube.run.20250920_182459 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpn7d3kg90/BcvjGTxzK40.m4a
+2025-09-20 18:25:26,312 - INFO - faster_whisper - Processing audio with duration 20:46.610
+2025-09-20 18:25:30,046 - INFO - faster_whisper - VAD filter removed 00:00.000 of audio

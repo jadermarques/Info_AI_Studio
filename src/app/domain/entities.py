@@ -63,6 +63,7 @@ class YouTubeExtractionConfig:
     report_format: str
     max_videos: Optional[int]
     translate_results: str
+    ui_extras: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass(slots=True)

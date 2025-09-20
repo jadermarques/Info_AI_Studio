@@ -219,11 +219,58 @@ else:
             st.stop()
         progress_messages: list[str] = []
         progress_placeholder = progress_container.empty()
+        total_channels_exec = len(channels)
 
         def update_progress(message: str) -> None:
+            # Atualiza log textual
             progress_messages.append(message)
             formatted = "\n".join(f"- {msg}" for msg in progress_messages)
             progress_placeholder.markdown(formatted or "- Aguardando início da execução...")
+            # Tenta atualizar barra de progresso conforme canal atual
+            try:
+                import re
+                # Por canal
+                m = re.search(r"Processando canal\s+(\d+)/(\d+)", message)
+                if m:
+                    idx = int(m.group(1))
+                    tot = int(m.group(2)) or total_channels_exec or 1
+                    percent = max(0, min(100, int(idx * 100 / tot)))
+                    progress_bar.progress(percent)
+                    try:
+                        progress_caption.caption(f"Canal {idx}/{tot}")
+                    except Exception:
+                        pass
+                # Por vídeo dentro do canal
+                # Captura opcional do título após dois-pontos
+                mv = re.search(r"Processando vídeo\s+(\d+)/(\d+) do canal\s+(\d+)/(\d+)(?::\s*(.*))?", message)
+                if mv:
+                    vid_i = int(mv.group(1))
+                    vid_tot = max(1, int(mv.group(2)))
+                    ch_i = int(mv.group(3))
+                    ch_tot = max(1, int(mv.group(4)))
+                    titulo = (mv.group(5) or "").strip()
+                    if titulo:
+                        # Trunca título para não quebrar layout
+                        max_len = 80
+                        if len(titulo) > max_len:
+                            titulo = titulo[:max_len - 1].rstrip() + "…"
+                    # Progresso composto: progresso por canal + fração do canal atual
+                    base = (ch_i - 1) / ch_tot
+                    frac_canal = (vid_i / vid_tot) / ch_tot
+                    percent = int((base + frac_canal) * 100)
+                    percent = max(0, min(100, percent))
+                    progress_bar.progress(percent)
+                    try:
+                        caption_txt = f"Canal {ch_i}/{ch_tot} — Vídeo {vid_i}/{vid_tot}"
+                        if titulo:
+                            caption_txt += f" — {titulo}"
+                        progress_caption.caption(caption_txt)
+                    except Exception:
+                        pass
+                elif "Iniciando processamento" in message:
+                    progress_bar.progress(1)
+            except Exception:
+                pass
 
         update_progress("Preparando execução...")
         try:
@@ -246,8 +293,33 @@ else:
                 report_format=report_format_v,
                 max_videos=int(max_videos_v) if max_videos_v else None,
                 translate_results=settings.translate_results,
+                ui_extras={
+                    "selected_groups": list(st.session_state.get("youtube_group_filter", [])),
+                    "selected_channel_labels": list(selected_labels),
+                    "manual_entries": manual_entries_v,
+                },
             )
             service = YouTubeExecutionService(config)
+            # Mostra parâmetros selecionados ANTES de iniciar
+            with results_container:
+                st.subheader(f"Iniciando execução modo {mode.upper()}")
+                st.markdown("**Valores selecionados**")
+                st.write(f"Grupos de canais selecionados: {', '.join(st.session_state.get('youtube_group_filter', [])) or '—'}")
+                st.write(f"Canais cadastrados: {len([l for l in selected_labels if l in channel_options])}")
+                st.write(f"Canais adicionais: {manual_entries_v or '—'}")
+                st.write(f"Dias para filtrar: {days_v}")
+                st.write(f"Limite de vídeos por canal: {max_videos_v}")
+                st.write(f"Prefixo dos arquivos: {prefix_v}")
+                st.write(f"Formato do relatório: {report_format_v}")
+                st.write(f"Fornecedor de ASR: {asr_provider_v}")
+                st.write(f"Desativar ASR (sim ou não): {'sim' if no_asr_v else 'não'}")
+                st.write(f"Modelo LLM: {llm_label_v}")
+                st.divider()
+                st.markdown("**Canais**")
+                st.write(f"Canais selecionados para análise: {len(channels)}")
+                progress_caption = st.empty()
+                progress_bar = st.progress(0)
+            # Executa serviço
             result = service.run(progress_callback=update_progress)
         except Exception as exc:
             st.error(f"Falha na execução: {exc}")
@@ -256,9 +328,35 @@ else:
                 st.success(result.message)
                 st.write(f"Canais processados: {result.total_channels}")
                 st.write(f"Vídeos extraídos: {result.total_videos}")
-                st.write(f"JSON: {result.json_path}")
+                # Linha JSON: caminho à esquerda, links à direita
+                json_col_left, json_col_right = st.columns([3, 2])
+                with json_col_left:
+                    st.write(f"JSON: {result.json_path}")
+                with json_col_right:
+                    try:
+                        if result.json_path:
+                            jp = Path(result.json_path)
+                            if jp.exists():
+                                st.markdown(
+                                    f"[🔗 Abrir arquivo]({jp.as_uri()}) · [📁 Abrir pasta]({jp.parent.as_uri()})"
+                                )
+                    except Exception:
+                        pass
                 if result.report_path:
-                    st.write(f"Relatório: {result.report_path}")
+                    rep_col_left, rep_col_right = st.columns([3, 2])
+                    with rep_col_left:
+                        st.write(f"Relatório: {result.report_path}")
+                    with rep_col_right:
+                        try:
+                            rp = Path(result.report_path)
+                            if rp.exists():
+                                file_uri = rp.as_uri()
+                                dir_uri = rp.parent.as_uri()
+                                st.markdown(
+                                    f"[🔗 Abrir arquivo]({file_uri}) · [📁 Abrir pasta]({dir_uri})"
+                                )
+                        except Exception:
+                            pass
                 if (
                     mode == "full"
                     and result.report_path
@@ -271,16 +369,45 @@ else:
                         except Exception as exc:
                             st.warning(f"Não foi possível carregar o relatório TXT: {exc}")
                         else:
-                            st.subheader("Conteúdo do relatório (TXT)")
-                            line_count = len(report_text.splitlines()) or 1
-                            dynamic_height = min(900, max(200, line_count * 24))
-                            st.text_area(
-                                "Relatório TXT",
-                                report_text,
-                                height=dynamic_height,
-                                disabled=True,
-                            )
-                st.write(f"Log: {result.log_path}")
+                            if report_text.strip():
+                                with st.expander("Conteúdo do relatório (TXT)", expanded=False):
+                                    line_count = len(report_text.splitlines()) or 1
+                                    dynamic_height = min(600, max(240, line_count * 18))
+                                    st.text_area(
+                                        "Relatório TXT",
+                                        report_text,
+                                        height=dynamic_height,
+                                        disabled=True,
+                                    )
+                            else:
+                                st.info("Relatório vazio (TXT)")
+                # Prévia de relatório Markdown quando gerado
+                if result.report_path and Path(result.report_path).suffix.lower() == ".md":
+                    report_path = Path(result.report_path)
+                    if report_path.exists():
+                        try:
+                            md_text = report_path.read_text(encoding="utf-8")
+                        except Exception as exc:
+                            st.warning(f"Não foi possível carregar o relatório MD: {exc}")
+                        else:
+                            if md_text.strip():
+                                with st.expander("Conteúdo do relatório (Markdown)", expanded=False):
+                                    st.markdown(md_text)
+                            else:
+                                st.info("Relatório vazio (Markdown)")
+                log_col_left, log_col_right = st.columns([3, 2])
+                with log_col_left:
+                    st.write(f"Log: {result.log_path}")
+                with log_col_right:
+                    try:
+                        if result.log_path:
+                            lp = Path(result.log_path)
+                            if lp.exists():
+                                st.markdown(
+                                    f"[🔗 Abrir arquivo]({lp.as_uri()}) · [📁 Abrir pasta]({lp.parent.as_uri()})"
+                                )
+                    except Exception:
+                        pass
                 if result.channels_data:
                     st.subheader("Origem da análise por vídeo")
                     for channel_info in result.channels_data:
@@ -357,6 +484,49 @@ else:
                         token_details.append(item)
                     ordered = sorted(token_details, key=lambda item: item["canal"])
                     st.dataframe(ordered, hide_index=True)
+                # Modo simple: montar tabela de vídeos encontrados com campos solicitados
+                if mode == "simple" and result.channels_data:
+                    st.subheader("Vídeos encontrados")
+                    rows = []
+                    from datetime import datetime, timezone, timedelta
+                    for channel in result.channels_data:
+                        canal_nome = channel.get("name") or channel.get("channel_id")
+                        for v in channel.get("videos", []):
+                            # data do vídeo: converter para Brasília
+                            data_raw = v.get("date_published") or v.get("published")
+                            dt_fmt = None
+                            dt_obj = None
+                            if data_raw:
+                                try:
+                                    dt_obj = datetime.fromisoformat(str(data_raw))
+                                except Exception:
+                                    for fmt in ["%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d/%m/%Y %H:%M", "%d/%m/%Y"]:
+                                        try:
+                                            dt_obj = datetime.strptime(str(data_raw), fmt)
+                                            break
+                                        except Exception:
+                                            continue
+                            if dt_obj:
+                                if dt_obj.tzinfo is None:
+                                    dt_obj = dt_obj.replace(tzinfo=timezone.utc)
+                                dt_brasilia = dt_obj.astimezone(timezone(timedelta(hours=-3)))
+                                data_fmt = dt_brasilia.strftime("%d/%m/%y %H:%M")
+                            else:
+                                data_fmt = str(data_raw or "")
+                            rows.append({
+                                "data video": data_fmt,
+                                "nome canal": canal_nome,
+                                "titulo do video": v.get("title",""),
+                                "id do video": v.get("id",""),
+                                "link do video (url)": v.get("url",""),
+                                "tamanho do video": v.get("duration",""),
+                                "idioma original": v.get("language",""),
+                                "tem transcricao": "sim" if v.get("has_transcript") else "não",
+                                "visualizacoes": v.get("view_count", 0),
+                            })
+                    if rows:
+                        st.dataframe(rows, hide_index=True)
+                # Tokens
                 total_prompt = result.total_prompt_tokens
                 total_completion = result.total_completion_tokens
                 total_tokens = total_prompt + total_completion
@@ -391,3 +561,8 @@ else:
                         st.write(f"{titulo}: {tempo:.2f} segundos")
                     if tempo_total:
                         st.write(f"Tempo total de execução: {tempo_total:.2f} segundos")
+                # Atualiza barra de progresso para 100% ao final (somente tela)
+                try:
+                    progress_bar.progress(100)
+                except Exception:
+                    pass

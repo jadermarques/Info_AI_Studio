@@ -1,0 +1,57 @@
+2025-09-20 18:26:02,608 - INFO - app.youtube.run.20250920_182602 - Iniciando extração em lote de 1 canais
+2025-09-20 18:26:02,608 - INFO - app.youtube.run.20250920_182602 - Iniciando extração em lote de 1 canais
+2025-09-20 18:26:02,642 - INFO - app.youtube.run.20250920_182602 - Processando canal 1/1: @eusoukelvincleto
+2025-09-20 18:26:02,642 - INFO - app.youtube.run.20250920_182602 - Processando canal 1/1: @eusoukelvincleto
+2025-09-20 18:26:03,049 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-20 18:26:03,278 - INFO - youtube_extractor - Aba /videos: analisados=3, válidos=2, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-20 18:26:03,278 - INFO - youtube_extractor - Aba /videos: 2 vídeos válidos (≤ 3 dias)
+2025-09-20 18:26:03,279 - INFO - app.youtube.run.20250920_182602 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-20 18:26:03,279 - INFO - app.youtube.run.20250920_182602 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-20 18:26:04,667 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para f4PveaUJLd8
+2025-09-20 18:26:05,014 - INFO - youtube_extractor - Transcrição: acesso bloqueado ou indisponível para f4PveaUJLd8: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=f4PveaUJLd8! This is most likely caused by:
+2025-09-20 18:26:13,661 - INFO - app.youtube.run.20250920_182602 - [ASR ativado] Transcrição não encontrada; iniciando fallback para f4PveaUJLd8
+2025-09-20 18:26:13,661 - INFO - app.youtube.run.20250920_182602 - [ASR ativado] Transcrição não encontrada; iniciando fallback para f4PveaUJLd8
+2025-09-20 18:26:22,041 - INFO - app.youtube.run.20250920_182602 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpo2g3gulc/f4PveaUJLd8.m4a
+2025-09-20 18:26:22,041 - INFO - app.youtube.run.20250920_182602 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpo2g3gulc/f4PveaUJLd8.m4a
+2025-09-20 18:26:23,718 - INFO - faster_whisper - Processing audio with duration 10:23.409
+2025-09-20 18:26:25,638 - INFO - faster_whisper - VAD filter removed 00:02.800 of audio
+2025-09-20 18:27:58,121 - INFO - app.youtube.run.20250920_182602 - Transcrição obtida via ASR faster-whisper para f4PveaUJLd8
+2025-09-20 18:27:58,121 - INFO - app.youtube.run.20250920_182602 - Transcrição obtida via ASR faster-whisper para f4PveaUJLd8
+2025-09-20 18:27:59,189 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:28:18,855 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:28:19,684 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:28:23,664 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:28:24,216 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:28:33,433 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:28:34,005 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:28:36,258 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:28:36,523 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:28:41,254 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:28:41,700 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:28:53,975 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:28:53,981 - INFO - app.youtube.run.20250920_182602 - Vídeo f4PveaUJLd8 analisado via ASR (áudio baixado) [asr_faster_whisper].
+2025-09-20 18:28:53,981 - INFO - app.youtube.run.20250920_182602 - Vídeo f4PveaUJLd8 analisado via ASR (áudio baixado) [asr_faster_whisper].
+2025-09-20 18:28:55,478 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para V7UyaYpKyUg
+2025-09-20 18:28:56,022 - INFO - youtube_extractor - Transcrição: acesso bloqueado ou indisponível para V7UyaYpKyUg: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=V7UyaYpKyUg! This is most likely caused by:
+2025-09-20 18:29:03,918 - INFO - app.youtube.run.20250920_182602 - [ASR ativado] Transcrição não encontrada; iniciando fallback para V7UyaYpKyUg
+2025-09-20 18:29:03,918 - INFO - app.youtube.run.20250920_182602 - [ASR ativado] Transcrição não encontrada; iniciando fallback para V7UyaYpKyUg
+2025-09-20 18:29:14,705 - INFO - app.youtube.run.20250920_182602 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpsims1j8y/V7UyaYpKyUg.m4a
+2025-09-20 18:29:14,705 - INFO - app.youtube.run.20250920_182602 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpsims1j8y/V7UyaYpKyUg.m4a
+2025-09-20 18:29:18,624 - INFO - faster_whisper - Processing audio with duration 44:25.837
+2025-09-20 18:29:26,890 - INFO - faster_whisper - VAD filter removed 00:41.664 of audio
+2025-09-20 18:36:50,153 - INFO - app.youtube.run.20250920_182602 - Transcrição obtida via ASR faster-whisper para V7UyaYpKyUg
+2025-09-20 18:36:50,153 - INFO - app.youtube.run.20250920_182602 - Transcrição obtida via ASR faster-whisper para V7UyaYpKyUg
+2025-09-20 18:36:50,859 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:37:08,885 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:37:09,491 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:37:16,965 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:37:17,159 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:37:29,662 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:37:29,897 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:37:35,794 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:37:36,006 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:37:53,623 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:37:53,851 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-20 18:38:11,312 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-20 18:38:11,316 - INFO - app.youtube.run.20250920_182602 - Vídeo V7UyaYpKyUg analisado via ASR (áudio baixado) [asr_faster_whisper].
+2025-09-20 18:38:11,316 - INFO - app.youtube.run.20250920_182602 - Vídeo V7UyaYpKyUg analisado via ASR (áudio baixado) [asr_faster_whisper].
