@@ -1,0 +1,33 @@
+2025-09-19 21:54:50,738 - INFO - app.youtube.run.20250919_215450 - Iniciando extração em lote de 1 canais
+2025-09-19 21:54:50,738 - INFO - app.youtube.run.20250919_215450 - Iniciando extração em lote de 1 canais
+2025-09-19 21:54:50,770 - INFO - app.youtube.run.20250919_215450 - Processando canal 1/1: @MattVidPro
+2025-09-19 21:54:50,770 - INFO - app.youtube.run.20250919_215450 - Processando canal 1/1: @MattVidPro
+2025-09-19 21:54:51,607 - INFO - youtube_extractor - Extraindo vídeos do canal @MattVidPro (max_age_days=3, videos_tab_only=True, max_videos=3)
+2025-09-19 21:54:51,817 - INFO - youtube_extractor - Aba /videos: analisados=2, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-19 21:54:51,817 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 3 dias)
+2025-09-19 21:54:51,818 - INFO - app.youtube.run.20250919_215450 - Canal @MattVidPro extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:54:51,818 - INFO - app.youtube.run.20250919_215450 - Canal @MattVidPro extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-19 21:54:53,427 - INFO - youtube_extractor - Transcrição: disponíveis ['en(auto)'] para Hk7QDEtAREw
+2025-09-19 21:54:53,975 - INFO - youtube_extractor - Transcrição: acesso bloqueado ou indisponível para Hk7QDEtAREw: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=Hk7QDEtAREw! This is most likely caused by:
+2025-09-19 21:55:03,097 - INFO - app.youtube.run.20250919_215450 - [ASR ativado] Transcrição não encontrada; iniciando fallback para Hk7QDEtAREw
+2025-09-19 21:55:03,097 - INFO - app.youtube.run.20250919_215450 - [ASR ativado] Transcrição não encontrada; iniciando fallback para Hk7QDEtAREw
+2025-09-19 21:55:12,543 - INFO - app.youtube.run.20250919_215450 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpt44x1zfw/Hk7QDEtAREw.m4a
+2025-09-19 21:55:12,543 - INFO - app.youtube.run.20250919_215450 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpt44x1zfw/Hk7QDEtAREw.m4a
+2025-09-19 21:55:15,860 - INFO - faster_whisper - Processing audio with duration 20:56.455
+2025-09-19 21:55:19,716 - INFO - faster_whisper - VAD filter removed 00:00.000 of audio
+2025-09-19 21:59:48,585 - INFO - app.youtube.run.20250919_215450 - Transcrição obtida via ASR faster-whisper para Hk7QDEtAREw
+2025-09-19 21:59:48,585 - INFO - app.youtube.run.20250919_215450 - Transcrição obtida via ASR faster-whisper para Hk7QDEtAREw
+2025-09-19 21:59:49,403 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 22:00:06,355 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 22:00:07,325 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 22:00:11,115 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 22:00:11,548 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 22:00:15,606 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 22:00:16,035 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 22:00:19,284 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 22:00:19,489 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 22:00:24,231 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 22:00:25,140 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-09-19 22:00:31,799 - INFO - httpx - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 22:00:31,804 - INFO - app.youtube.run.20250919_215450 - Vídeo Hk7QDEtAREw analisado via ASR (áudio baixado) [asr_faster_whisper].
+2025-09-19 22:00:31,804 - INFO - app.youtube.run.20250919_215450 - Vídeo Hk7QDEtAREw analisado via ASR (áudio baixado) [asr_faster_whisper].

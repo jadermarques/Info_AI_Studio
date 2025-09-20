@@ -7,26 +7,14 @@ from app.infrastructure import db
 
 def update_llm_model(model_id: int, provedor: str, modelo: str, api_key: str, status: int = 1) -> None:
     """Atualiza um modelo LLM existente pelo id."""
-    import sqlite3
-    conn = sqlite3.connect('data.db')
-    cursor = conn.cursor()
-    cursor.execute(
-        """
-        UPDATE modelo_llm SET modl_provedor=?, modl_modelo_llm=?, modl_api_key=?, modl_status=? WHERE modl_id=?
-        """,
-        (provedor, modelo, api_key, status, model_id)
+    db.execute(
+        "UPDATE modelo_llm SET modl_provedor=?, modl_modelo_llm=?, modl_api_key=?, modl_status=? WHERE modl_id=?",
+        (provedor, modelo, api_key, status, model_id),
     )
-    conn.commit()
-    conn.close()
 
 def delete_llm_model(model_id: int) -> None:
     """Remove um modelo LLM pelo id."""
-    import sqlite3
-    conn = sqlite3.connect('data.db')
-    cursor = conn.cursor()
-    cursor.execute("DELETE FROM modelo_llm WHERE modl_id=?", (model_id,))
-    conn.commit()
-    conn.close()
+    db.execute("DELETE FROM modelo_llm WHERE modl_id = ?", (model_id,))
 
 
 def save_llm_model(provedor: str, modelo: str, api_key: str, status: int = 1) -> None:

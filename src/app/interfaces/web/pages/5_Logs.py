@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import streamlit as st
+from app.interfaces.web.components.ui_helpers import paginate, render_pagination_controls
 
 from app.config import get_settings
 from app.infrastructure import repositories
@@ -23,4 +24,17 @@ else:
     st.info("Nenhum log disponível.")
 
 st.subheader("Histórico de execuções do YouTube")
-st.table(repositories.list_youtube_extractions(limit=20))
+historico = repositories.list_youtube_extractions(limit=10000)
+paginated, page, start, end = paginate(historico, "page_ytex_logs")
+st.write(f"Exibindo {start+1} a {end} de {len(historico)}")
+render_pagination_controls(
+    "page_ytex_logs",
+    page,
+    end,
+    len(historico),
+    "ytex_prev",
+    "ytex_next",
+    size_key="page_ytex_logs_size",
+)
+if paginated:
+    st.dataframe(paginated, hide_index=True, use_container_width=True)
