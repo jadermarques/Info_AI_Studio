@@ -1,0 +1,17 @@
+2025-09-20 17:00:12,779 - INFO - app.youtube.run.20250920_170012 - Iniciando extração em lote de 1 canais
+2025-09-20 17:00:12,779 - INFO - app.youtube.run.20250920_170012 - Iniciando extração em lote de 1 canais
+2025-09-20 17:00:12,790 - INFO - app.youtube.run.20250920_170012 - Processando canal 1/1: @eusoukelvincleto
+2025-09-20 17:00:12,790 - INFO - app.youtube.run.20250920_170012 - Processando canal 1/1: @eusoukelvincleto
+2025-09-20 17:00:13,128 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=3, videos_tab_only=True, max_videos=30)
+2025-09-20 17:00:13,367 - INFO - youtube_extractor - Aba /videos: analisados=3, válidos=2, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-20 17:00:13,367 - INFO - youtube_extractor - Aba /videos: 2 vídeos válidos (≤ 3 dias)
+2025-09-20 17:00:13,368 - INFO - app.youtube.run.20250920_170012 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-20 17:00:13,368 - INFO - app.youtube.run.20250920_170012 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-20 17:00:14,778 - INFO - youtube_extractor - Transcrição: disponíveis ['pt(auto)'] para f4PveaUJLd8
+2025-09-20 17:00:15,094 - INFO - youtube_extractor - Transcrição: acesso bloqueado ou indisponível para f4PveaUJLd8: Could not retrieve a transcript for the video https://www.youtube.com/watch?v=f4PveaUJLd8! This is most likely caused by:
+2025-09-20 17:00:24,081 - INFO - app.youtube.run.20250920_170012 - [ASR ativado] Transcrição não encontrada; iniciando fallback para f4PveaUJLd8
+2025-09-20 17:00:24,081 - INFO - app.youtube.run.20250920_170012 - [ASR ativado] Transcrição não encontrada; iniciando fallback para f4PveaUJLd8
+2025-09-20 17:00:33,081 - INFO - app.youtube.run.20250920_170012 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpgad_galp/f4PveaUJLd8.m4a
+2025-09-20 17:00:33,081 - INFO - app.youtube.run.20250920_170012 - Áudio baixado para /var/folders/mh/9_khstt17qv990njk4krvswm0000gn/T/tmpgad_galp/f4PveaUJLd8.m4a
+2025-09-20 17:00:35,176 - INFO - faster_whisper - Processing audio with duration 10:23.409
+2025-09-20 17:00:37,097 - INFO - faster_whisper - VAD filter removed 00:02.800 of audio

@@ -31,6 +31,7 @@ class Settings:
     log_dir: Path
     cookies_path: Optional[Path]
     translate_results: str
+    user_agent: str
 
 
 def _load_env() -> None:
@@ -65,6 +66,11 @@ def get_settings() -> Settings:
     log_dir = Path(os.getenv("LOG_DIR", "logs"))
     cookies_env = os.getenv("COOKIES_PATH", "cookies.txt").strip()
     cookies_path = Path(cookies_env) if cookies_env else None
+    default_ua = (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+    )
+    user_agent = os.getenv("USER_AGENT", default_ua).strip()
     return Settings(
         db_path=db_path,
         max_palavras_resumo=max_palavras,
@@ -77,6 +83,7 @@ def get_settings() -> Settings:
         log_dir=log_dir,
         cookies_path=cookies_path,
         translate_results=translate_results,
+        user_agent=user_agent,
     )
 
 

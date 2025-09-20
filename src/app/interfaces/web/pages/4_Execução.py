@@ -105,74 +105,115 @@ else:
 
     # Importante: não chamar aqui para evitar sobrescrever seleção ao submeter o formulário
 
-    with st.form("youtube_exec_form"):
-        col1, col2 = st.columns(2)
-        with col1:
+    # Shared selection controls (outside tabs) to keep state consistent
+    with st.container():
+        col_left, col_right = st.columns(2)
+        with col_left:
             selected_widget = st.multiselect(
                 "Canais cadastrados",
                 options=list(channel_options.keys()),
                 key="youtube_selected_channels",
             )
-            manual_entries = st.text_area("Canais adicionais (um por linha)")
-            days = st.number_input("Dias para filtrar", min_value=0, max_value=30, value=3)
+            manual_entries = st.text_area("Canais adicionais (um por linha)", key="youtube_manual_entries")
+        with col_right:
+            days = st.number_input("Dias para filtrar", min_value=0, max_value=30, value=3, key="youtube_days")
             max_videos = st.number_input(
-                "Limite de vídeos por canal", min_value=0, max_value=200, value=30
+                "Limite de vídeos por canal", min_value=0, max_value=200, value=30, key="youtube_max_videos"
             )
-        with col2:
-            prefix = st.text_input("Prefixo dos arquivos", value="youtube_extraction")
-            report_format = st.selectbox(
-                "Formato do relatório", options=["txt", "json", "pdf", "html"], index=0
+
+    # Tabs: Simple and Full (each with its own form for execution options)
+    guia_simples, guia_completo = st.tabs(["Modo simples", "Modo completo"])
+
+    def _exec_form(key_prefix: str, default_prefix: str, mode_label: str):
+        with st.form(f"youtube_exec_form_{key_prefix}"):
+            # Campos alinhados à esquerda dentro do formulário
+            prefix = st.text_input("Prefixo dos arquivos", value=default_prefix, key=f"prefix_{key_prefix}")
+            report_format = st.radio(
+                "Formato do relatório",
+                options=["txt", "md", "json", "pdf", "html"],
+                index=0,
+                horizontal=True,
+                help="Escolha apenas um formato. 'md' gera Markdown.",
+                key=f"report_format_{key_prefix}",
             )
-            asr_provider = st.selectbox("Fornecedor de ASR", options=["faster-whisper", "openai"])
-            no_asr = st.checkbox("Desativar ASR", value=False)
+            asr_provider = st.selectbox("Fornecedor de ASR", options=["faster-whisper", "openai"], key=f"asr_provider_{key_prefix}")
+            no_asr = st.checkbox("Desativar ASR", value=False, key=f"no_asr_{key_prefix}")
             llm_label = st.selectbox(
                 "Modelo LLM",
                 options=list(llm_options.keys()),
                 disabled=not llm_options,
+                key=f"llm_label_{key_prefix}",
             )
-            resumo_max = st.number_input(
-                "Máximo de palavras no resumo",
-                min_value=50,
-                max_value=1000,
-                value=settings.max_palavras_resumo,
-                disabled=True,
-                help="Altere este valor pelo menu de Configurações.",
+            # legenda removida conforme solicitado
+            run_btn = st.form_submit_button(
+                f"Executar {mode_label}", use_container_width=True, disabled=not llm_options
             )
-            user_agent = st.text_input("User-Agent", value=DEFAULT_USER_AGENT)
-        col_run1, col_run2 = st.columns(2)
-        disabled_buttons = not llm_options
-        run_simple = col_run1.form_submit_button(
-            "Executar modo simple", use_container_width=True, disabled=disabled_buttons
+        return run_btn, prefix, report_format, asr_provider, no_asr, llm_label
+
+    with guia_simples:
+        run_simple, prefix, report_format, asr_provider, no_asr, llm_label = _exec_form(
+            key_prefix="simple", default_prefix="youtube_extract_simple", mode_label="modo simples"
         )
-        run_full = col_run2.form_submit_button(
-            "Executar modo full", use_container_width=True, disabled=disabled_buttons
+    with guia_completo:
+        run_full, prefix_full, report_format_full, asr_provider_full, no_asr_full, llm_label_full = _exec_form(
+            key_prefix="full", default_prefix="youtube_extract_full", mode_label="modo completo"
         )
     # Atualiza session_state apenas após submit
-    if run_simple or run_full:
+    # Decide qual guia acionou
+    triggered = None
+    if run_simple:
+        triggered = "simple"
         selected_labels = list(selected_widget)
+        manual_entries_v = st.session_state.get("youtube_manual_entries", "")
+        days_v = int(st.session_state.get("youtube_days", 3) or 3)
+        max_videos_v = int(st.session_state.get("youtube_max_videos", 30) or 30)
+        prefix_v = prefix
+        report_format_v = report_format
+        asr_provider_v = asr_provider
+        no_asr_v = no_asr
+        llm_label_v = llm_label
+    elif run_full:
+        triggered = "full"
+        selected_labels = list(selected_widget)
+        manual_entries_v = st.session_state.get("youtube_manual_entries", "")
+        days_v = int(st.session_state.get("youtube_days", 3) or 3)
+        max_videos_v = int(st.session_state.get("youtube_max_videos", 30) or 30)
+        prefix_v = prefix_full
+        report_format_v = report_format_full
+        asr_provider_v = asr_provider_full
+        no_asr_v = no_asr_full
+        llm_label_v = llm_label_full
     else:
-        selected_labels = list(selected_widget)
+        selected_labels = list(st.session_state.get("youtube_selected_channels", []))
+        manual_entries_v = ""
+        days_v = 3
+        max_videos_v = 30
+        prefix_v = "youtube_extract_simple"
+        report_format_v = "txt"
+        asr_provider_v = "faster-whisper"
+        no_asr_v = False
+        llm_label_v = next(iter(llm_options.keys()), "") if llm_options else ""
     progress_container = st.container()
     results_container = st.container()
     if run_simple or run_full:
-        mode = "simple" if run_simple else "full"
+        mode = "simple" if triggered == "simple" else "full"
         channels: list[str] = [
             channel_options[label]
             for label in selected_labels
             if label in channel_options
         ]
-        if manual_entries:
-            channels.extend([line.strip() for line in manual_entries.splitlines() if line.strip()])
+        if manual_entries_v:
+            channels.extend([line.strip() for line in manual_entries_v.splitlines() if line.strip()])
         if not selected_labels:
             st.error("Selecione ao menos um canal cadastrado para executar a pesquisa.")
             st.stop()
         if not channels:
             st.error("Nenhum canal válido informado.")
             st.stop()
-        if not llm_label:
+        if not llm_label_v:
             st.error("Selecione um modelo LLM para continuar.")
             st.stop()
-        selected_model = llm_options.get(llm_label)
+        selected_model = llm_options.get(llm_label_v)
         if not selected_model or not selected_model.get("api_key"):
             st.error("O modelo LLM selecionado não possui uma chave de API válida.")
             st.stop()
@@ -188,22 +229,22 @@ else:
         try:
             config = YouTubeExtractionConfig(
                 outdir=(settings.resultados_dir).resolve(),
-                prefix=prefix,
-                days=int(days) if days else None,
+                prefix=prefix_v,
+                days=int(days_v) if days_v else None,
                 channels=channels,
                 channels_file=None,
                 mode=mode,
                 no_llm=False,
-                asr_enabled=not no_asr,
-                asr_provider=asr_provider,
+                asr_enabled=not no_asr_v,
+                asr_provider=asr_provider_v,
                 llm_provider=selected_model.get("provedor"),
                 llm_model=selected_model.get("modelo", settings.llm_model),
                 llm_key=selected_model.get("api_key"),
-                resumo_max_palavras=int(resumo_max),
+                resumo_max_palavras=int(settings.max_palavras_resumo),
                 cookies=settings.cookies_path,
-                user_agent=user_agent,
-                report_format=report_format,
-                max_videos=int(max_videos) if max_videos else None,
+                user_agent=settings.user_agent,
+                report_format=report_format_v,
+                max_videos=int(max_videos_v) if max_videos_v else None,
                 translate_results=settings.translate_results,
             )
             service = YouTubeExecutionService(config)

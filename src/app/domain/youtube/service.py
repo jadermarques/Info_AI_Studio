@@ -529,6 +529,12 @@ class YouTubeExecutionService:
             html_content = f"<html><body><pre>{html.escape(texto)}</pre></body></html>"
             path.write_text(html_content, encoding="utf-8")
             return path
+        if formato == "md":
+            # Simple markdown: wrap report text in fenced block to preserve layout
+            path = self.resultados_dir / f"{self.config.prefix}_{run_id}.md"
+            md_content = "\n".join(["```", texto, "```"])
+            path.write_text(md_content, encoding="utf-8")
+            return path
         if formato == "pdf":
             path = self.resultados_dir / f"{self.config.prefix}_{run_id}.pdf"
             self._save_pdf(texto, path)

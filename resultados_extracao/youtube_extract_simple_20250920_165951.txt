@@ -1,0 +1,45 @@
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 1
+Total de vídeos extraídos: 2
+Modo: simple
+Parâmetros: dias=3, max_videos=30, formato=txt
+
+• @eusoukelvincleto
+   - URL: https://www.youtube.com/watch?v=f4PveaUJLd8
+   - Título: O que eu estudaria em vez de automação em 2026
+   - Duração: 10:23
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-18T20:05:56-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=V7UyaYpKyUg
+   - Título: Como construir e vender infraestruturas de IA (guia completo)
+   - Duração: 44:26
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-16T17:49:32-07:00
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+Tempo de análise por vídeo:
+- O que eu estudaria em vez de automação em 2026: 0.00 segundos
+- Como construir e vender infraestruturas de IA (guia completo): 0.00 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA
