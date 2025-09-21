@@ -75,6 +75,9 @@ else:
     st.session_state.setdefault("youtube_selected_channels", [])
 
     def _apply_group_filter() -> None:
+        """Atualiza apenas a lista automática para visualização; não altera a seleção manual.
+        A seleção efetiva por grupos será calculada no momento da execução.
+        """
         selected_groups = set(st.session_state.get("youtube_group_filter", []))
         if not selected_groups:
             auto_labels: list[str] = []
@@ -87,10 +90,6 @@ else:
         sorted_auto = sorted(auto_labels)
         if st.session_state.youtube_auto_channels != sorted_auto:
             st.session_state.youtube_auto_channels = sorted_auto
-        # Não sobrescreve seleção manual do usuário durante reruns.
-        # Se ainda não houver seleção, preenche com os canais do grupo.
-        if not st.session_state.get("youtube_selected_channels"):
-            st.session_state.youtube_selected_channels = sorted_auto
 
     with st.container():
         filter_col, _ = st.columns(2)
@@ -100,7 +99,11 @@ else:
                 options=YOUTUBE_CHANNEL_GROUP_OPTIONS,
                 key="youtube_group_filter",
                 on_change=_apply_group_filter,
-                help="Selecione um ou mais grupos para carregar automaticamente os canais vinculados.",
+                help=(
+                    "Escolha um ou mais grupos OU escolha canais cadastrados ao lado. "
+                    "Quando grupos forem selecionados, a seleção de canais será desabilitada."
+                ),
+                disabled=bool(st.session_state.get("youtube_selected_channels")),
             )
 
     # Importante: não chamar aqui para evitar sobrescrever seleção ao submeter o formulário
@@ -113,8 +116,14 @@ else:
                 "Canais cadastrados",
                 options=list(channel_options.keys()),
                 key="youtube_selected_channels",
+                disabled=bool(st.session_state.get("youtube_group_filter")),
             )
-            manual_entries = st.text_area("Canais adicionais (um por linha)", key="youtube_manual_entries")
+            manual_entries = st.text_area(
+                "Canais adicionais (um por linha)",
+                key="youtube_manual_entries",
+                disabled=True,
+                help="Campo desabilitado. Use grupos OU canais cadastrados."
+            )
         with col_right:
             days = st.number_input("Dias para filtrar", min_value=0, max_value=30, value=3, key="youtube_days")
             max_videos = st.number_input(
@@ -219,18 +228,31 @@ else:
     results_container = st.container()
     if run_simple or run_full:
         mode = "simple" if triggered == "simple" else "full"
-        channels: list[str] = [
-            channel_options[label]
-            for label in selected_labels
-            if label in channel_options
-        ]
-        if manual_entries_v:
-            channels.extend([line.strip() for line in manual_entries_v.splitlines() if line.strip()])
-        if not selected_labels:
-            st.error("Selecione ao menos um canal cadastrado para executar a pesquisa.")
+        # Determina canais conforme regra: se grupos selecionados, usar TODOS os canais dos grupos;
+        # caso contrário, usar os canais cadastrados selecionados.
+        selected_groups_exec = set(st.session_state.get("youtube_group_filter", []))
+        if selected_groups_exec:
+            channels: list[str] = [
+                channel_options[label]
+                for label, groups in channel_groups_map.items()
+                if groups and selected_groups_exec.intersection(groups)
+            ]
+            # remove duplicados preservando ordem
+            seen = set()
+            channels = [c for c in channels if not (c in seen or seen.add(c))]
+        else:
+            channels = [
+                channel_options[label]
+                for label in selected_labels
+                if label in channel_options
+            ]
+        # Validação: deve haver ao menos um grupo selecionado OU um canal selecionado
+        if not selected_groups_exec and not channels:
+            st.error("Selecione um ou mais grupos de canais OU um ou mais canais cadastrados.")
             st.stop()
-        if not channels:
-            st.error("Nenhum canal válido informado.")
+        # Se grupos foram selecionados mas não há canais vinculados, interrompe
+        if selected_groups_exec and not channels:
+            st.error("Nenhum canal encontrado nos grupos de canais selecionados.")
             st.stop()
         if not llm_label_v:
             st.error("Selecione um modelo LLM para continuar.")
