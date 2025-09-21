@@ -1,0 +1,23 @@
+=======================================================================
+Iniciando execução modo SIMPLE
+Valores selecionados
+Grupos de canais selecionados: —
+Canais cadastrados: 1
+Canais adicionais: —
+Dias para filtrar: 3
+Limite de vídeos por canal: 30
+Prefixo dos arquivos: youtube_extract_simple
+Formato do relatório: txt
+Fornecedor de ASR: faster-whisper
+Desativar ASR (sim ou não): não
+Modelo LLM: gpt-5-nano
+
+Canais
+Canais selecionados para análise: 1
+
+VÍDEOS ENCONTRADOS
+data video | nome canal | titulo do video | id do video | link do video (url) | tamanho do video | idioma original | tem transcricao | visualizacoes
+------------------------------------------------------------------------------------------------------------------------
+17/09/25 21:00 | @ColeMedin | The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them) | BcvjGTxzK40 | https://www.youtube.com/watch?v=BcvjGTxzK40 | 20:47 |  | não | 16872
+
+Total de canais: 1 | Total de vídeos: 1

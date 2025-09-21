@@ -33,3 +33,58 @@ def test_excluir_fonte():
     delete_web_source(fonte_id)
     fontes = list_web_sources()
     assert not any(f["fowe_id"] == fonte_id for f in fontes)
+
+# --- Novo teste para XML do YouTubeExecutionService ---
+
+def test_report_xml_boolean_and_params(tmp_path, monkeypatch):
+    # Evita acessar config real
+    from app.domain.youtube.service import YouTubeExecutionService
+    svc = YouTubeExecutionService.__new__(YouTubeExecutionService)
+    class C: pass
+    c = C()
+    c.report_format = 'xml'
+    c.prefix = 'test'
+    c.outdir = tmp_path
+    setattr(svc, 'config', c)
+    setattr(svc, 'resultados_dir', tmp_path)
+    # Monta metadata mínima
+    metadata = {
+        'executed_at': '2025-09-21T10:00:00',
+        'mode': 'simple',
+        'total_channels': 1,
+        'total_videos': 1,
+        'params': {
+            'no_llm': True,
+            'ui_extras': {'a': 1, 'b': [1,2]},
+            'format': 'xml',
+        },
+        'channels': [
+            {
+                'channel_id': '@test',
+                'name': 'Canal Teste',
+                'status': 'success',
+                'videos': [
+                    {
+                        'id': 'vid1',
+                        'url': 'u',
+                        'title': 't',
+                        'title_pt': 'tp',
+                        'language': 'en',
+                        'view_count': 10,
+                        'has_transcript': False,
+                        'analysis_source': 'modo_simples',
+                    }
+                ]
+            }
+        ]
+    }
+    xml = svc._report_xml(metadata)
+    # Cabeçalho XML
+    assert xml.startswith('<?xml'), 'XML deve começar com declaração XML'
+    # Booleanos normalizados
+    assert '<tem_transcricao>false</tem_transcricao>' in xml
+    # Params dict/list em JSON como texto
+    assert '<no_llm>true</no_llm>' in xml
+    assert '<format>xml</format>' in xml
+    # ui_extras vira JSON string
+    assert '"a": 1' in xml and '"b": [1, 2]' in xml

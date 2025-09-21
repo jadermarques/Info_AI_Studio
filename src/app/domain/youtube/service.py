@@ -12,7 +12,12 @@ from http.cookiejar import MozillaCookieJar
 from pathlib import Path
 from typing import Callable, Optional
 
-from fpdf import FPDF
+try:
+    from fpdf import FPDF  # type: ignore
+except Exception:  # pragma: no cover - dependência opcional
+    FPDF = None  # type: ignore[assignment]
+import xml.etree.ElementTree as ET
+from xml.dom import minidom
 
 from app.config import get_settings
 from app.domain import validators
@@ -570,6 +575,11 @@ class YouTubeExecutionService:
             md_content = "\n".join(["```", texto, "```"])
             path.write_text(md_content, encoding="utf-8")
             return path
+        if formato == "xml":
+            path = self.resultados_dir / f"{self.config.prefix}_{run_id}.xml"
+            xml_content = self._report_xml(metadata)
+            path.write_text(xml_content, encoding="utf-8")
+            return path
         if formato == "pdf":
             path = self.resultados_dir / f"{self.config.prefix}_{run_id}.pdf"
             self._save_pdf(texto, path)
@@ -583,7 +593,7 @@ class YouTubeExecutionService:
 
     def _report_text(self, metadata: dict) -> str:
         lines: list[str] = []
-        # Cabeçalho com parâmetros selecionados (mostrado também na tela)
+        # Cabeçalho com parâmetros selecionados (paridade com a UI)
         params = metadata.get("params", {})
         lines.append("=======================================================================")
         lines.append(f"Iniciando execução modo {str(params.get('mode', '')).upper()}")
@@ -595,7 +605,6 @@ class YouTubeExecutionService:
         lines.append(f"Canais cadastrados: {len(ui_extras.get('selected_channel_labels', []))}")
         lines.append(f"Canais adicionais: {ui_extras.get('manual_entries') or '—'}")
 
-        # Os seguintes campos devem corresponder ao que a interface mostra
         lines.append(f"Dias para filtrar: {params.get('days')}")
         lines.append(f"Limite de vídeos por canal: {params.get('max_videos')}")
         lines.append(f"Prefixo dos arquivos: {self.config.prefix}")
@@ -608,154 +617,184 @@ class YouTubeExecutionService:
         lines.append(f"Canais selecionados para análise: {metadata.get('total_channels', 0)}")
         lines.append("")
 
-        # Seção "Vídeos encontrados" (paridade com a tela)
-        try:
-            from datetime import datetime as dt, timezone, timedelta
-            rows: list[dict[str, object]] = []
-            for channel in metadata.get("channels", []):
-                canal_nome = channel.get("name") or channel.get("channel_id")
-                for v in channel.get("videos", []):
-                    data_raw = v.get("date_published") or v.get("published")
-                    dt_obj = None
-                    if data_raw:
-                        try:
-                            dt_obj = dt.fromisoformat(str(data_raw))
-                        except Exception:
-                            for fmt in ("%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d/%m/%Y %H:%M", "%d/%m/%Y"):
-                                try:
-                                    dt_obj = dt.strptime(str(data_raw), fmt)
-                                    break
-                                except Exception:
-                                    continue
-                    if dt_obj:
-                        if dt_obj.tzinfo is None:
-                            dt_obj = dt_obj.replace(tzinfo=timezone.utc)
-                        dt_brasilia = dt_obj.astimezone(timezone(timedelta(hours=-3)))
-                        data_fmt = dt_brasilia.strftime("%d/%m/%y %H:%M")
-                    else:
-                        data_fmt = str(data_raw or "")
-                    rows.append({
-                        "data video": data_fmt,
-                        "nome canal": canal_nome,
-                        "titulo do video": v.get("title", ""),
-                        "id do video": v.get("id", ""),
-                        "link do video (url)": v.get("url", ""),
-                        "tamanho do video": v.get("duration", ""),
-                        "idioma original": v.get("language", ""),
-                        "tem transcricao": "sim" if v.get("has_transcript") else "não",
-                        "visualizacoes": v.get("view_count", 0),
-                    })
-            if rows:
-                lines.append("VÍDEOS ENCONTRADOS")
-                header = [
-                    "data video",
-                    "nome canal",
-                    "titulo do video",
-                    "id do video",
-                    "link do video (url)",
-                    "tamanho do video",
-                    "idioma original",
-                    "tem transcricao",
-                    "visualizacoes",
-                ]
-                lines.append(" | ".join(header))
-                lines.append("-" * 120)
-                for r in rows:
-                    lines.append(" | ".join(str(r[k]) for k in header))
-                lines.append("")
-        except Exception:
-            pass
-
-        lines.append("=======================================================================")
-        lines.append("RESUMO DA EXTRAÇÃO")
-        lines.append("=======================================================================\n")
-        lines.append(f"Canais processados: {metadata['total_channels']}")
-        lines.append(f"Total de vídeos extraídos: {metadata['total_videos']}")
-        lines.append(f"Modo: {metadata['params']['mode']}")
-        lines.append(
-            f"Parâmetros: dias={metadata['params']['days']}, max_videos={metadata['params']['max_videos']}, formato={metadata['params']['format']}"
-        )
-        lines.append("")
-
-        tempo_total_exec = None
-        tempos_videos: list[tuple[str, float]] = []
-        for channel in metadata.get("channels", []):
-            channel_handle = channel.get("channel_id") or channel.get("name", "Canal")
-            lines.append(f"• {channel_handle}")
-            videos = channel.get("videos", [])
-            if not videos:
-                lines.append("   - Nenhum vídeo dentro do critério.")
-                continue
-            for video in videos:
-                summary = video.get("summary") or {}
-                keywords = summary.get("palavras_chave") or []
-                if isinstance(keywords, str):
-                    keywords = [item.strip() for item in keywords.split(",") if item.strip()]
-                cost = summary.get("cost", 0.0) or 0.0
-                origem_conteudo = (
-                    "transcrição"
-                    if video.get("analysis_source") == "transcricao_youtube"
-                    else ("áudio" if str(video.get("analysis_source", "")).startswith("asr_") else "-")
-                )
-                tempo_analise = video.get("analysis_time")
-                if tempo_analise:
-                    tempos_videos.append((video.get("title", ""), float(tempo_analise)))
-                lines.append(f"   - URL: {video.get('url', '')}")
-                lines.append(f"   - Título: {video.get('title', '')}")
-                lines.append(f"   - Duração: {video.get('duration') or 'N/A'}")
-                lines.append(f"   - Origem do conteúdo: {origem_conteudo}")
-                lines.append(
-                    f"   - Tempo de análise: {tempo_analise:.2f} segundos" if tempo_analise else "   - Tempo de análise: N/A"
-                )
-                lines.append(
-                    f"   - Data de postagem: {video.get('date_published') or video.get('published') or video.get('published_relative') or ''}"
-                )
-                # Campos adicionais solicitados (modo simple)
-                lines.append(f"   - Idioma original do vídeo: {video.get('language','')}")
-                lines.append(f"   - Possui transcrição: {'sim' if video.get('has_transcript') else 'não'}")
-                lines.append(f"   - Visualizações: {video.get('view_count', 0)}")
-                lines.append(f"   - Assunto principal: {summary.get('assunto_principal', '')}")
-                lines.append(f"   - Resumo (1 frase): {summary.get('resumo_uma_frase', '')}")
-                lines.append(
-                    f"   - Resumo (<= {self.config.resumo_max_palavras} palavras): {summary.get('resumo', '')}"
-                )
-                lines.append("   - Palavras-chave: " + (", ".join(keywords) if keywords else ""))
-                topics = summary.get("resumo_em_topicos", "").strip()
-                if topics:
-                    lines.append("   - Resumo em tópicos:")
-                    for topic_line in topics.splitlines():
-                        lines.append(f"     {topic_line}")
-                lines.append(f"   - Modelo LLM: {summary.get('model', self.settings.llm_model)}")
-                lines.append(f"   - Tokens enviados: {summary.get('prompt_tokens', 0)}")
-                lines.append(f"   - Tokens recebidos: {summary.get('completion_tokens', 0)}")
-                lines.append(f"   - Custo estimado: R$ {cost:.4f}")
+        # Vídeos encontrados
+        from datetime import datetime as dt, timezone, timedelta
+        rows: list[dict[str, object]] = []
+        for channel in metadata.get("channels", []) or []:
+            canal_nome = channel.get("name") or channel.get("channel_id")
+            for v in channel.get("videos", []) or []:
+                data_raw = v.get("date_published") or v.get("published")
+                dt_obj = None
+                if data_raw:
+                    try:
+                        dt_obj = dt.fromisoformat(str(data_raw))
+                    except Exception:
+                        for fmt in ("%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d/%m/%Y %H:%M", "%d/%m/%Y"):
+                            try:
+                                dt_obj = dt.strptime(str(data_raw), fmt)
+                                break
+                            except Exception:
+                                continue
+                if dt_obj:
+                    if dt_obj.tzinfo is None:
+                        dt_obj = dt_obj.replace(tzinfo=timezone.utc)
+                    dt_brasilia = dt_obj.astimezone(timezone(timedelta(hours=-3)))
+                    data_fmt = dt_brasilia.strftime("%d/%m/%y %H:%M")
+                else:
+                    data_fmt = str(data_raw or "")
+                rows.append({
+                    "data video": data_fmt,
+                    "nome canal": canal_nome,
+                    "titulo do video": v.get("title", ""),
+                    "id do video": v.get("id", ""),
+                    "link do video (url)": v.get("url", ""),
+                    "tamanho do video": v.get("duration", ""),
+                    "idioma original": v.get("language", ""),
+                    "tem transcricao": "sim" if v.get("has_transcript") else "não",
+                    "visualizacoes": v.get("view_count", 0),
+                })
+        if rows:
+            lines.append("VÍDEOS ENCONTRADOS")
+            header = [
+                "data video",
+                "nome canal",
+                "titulo do video",
+                "id do video",
+                "link do video (url)",
+                "tamanho do video",
+                "idioma original",
+                "tem transcricao",
+                "visualizacoes",
+            ]
+            lines.append(" | ".join(header))
+            lines.append("-" * 120)
+            for r in rows:
+                lines.append(" | ".join(str(r[k]) for k in header))
             lines.append("")
 
-        # Tempo total de execução (melhor esforço; pode não estar disponível)
-        if "executed_at" in metadata and "channels" in metadata:
-            from datetime import datetime as dt2
-            import os
-            try:
-                log_path = metadata.get("log_path")
-                if log_path and os.path.exists(log_path):
-                    tempo_final = os.path.getmtime(log_path)
-                    tempo_inicio = dt2.fromisoformat(metadata["executed_at"]).timestamp()
-                    tempo_total_exec = tempo_final - tempo_inicio
-            except Exception:
-                tempo_total_exec = None
-
-        if tempos_videos:
-            lines.append("Tempo de análise por vídeo:")
-            for titulo, tempo in tempos_videos:
-                lines.append(f"- {titulo}: {tempo:.2f} segundos")
-        if tempo_total_exec:
-            lines.append(f"Tempo total de execução: {tempo_total_exec:.2f} segundos")
-
-        lines.append("\n=======================================================================")
-        lines.append("EXTRAÇÃO CONCLUÍDA")
+        # Rodapé
+        lines.append(f"Total de canais: {metadata.get('total_channels', 0)} | Total de vídeos: {metadata.get('total_videos', 0)}")
         return "\n".join(lines)
 
+    def _report_xml(self, metadata: dict) -> str:
+        """Gera um XML bem-formado a partir de metadata.
+        Estrutura:
+        <extracao executed_at="..." mode="..." total_channels=".." total_videos="..">
+          <params>...</params>
+          <canais>
+            <canal id="..." nome="..." status="...">
+              <videos>
+                <video id="..." url="...">
+                  <titulo>...</titulo>
+                  <titulo_pt>...</titulo_pt>
+                  <publicado>...</publicado>
+                  <duracao>...</duracao>
+                  <idioma>...</idioma>
+                  <visualizacoes>...</visualizacoes>
+                  <tem_transcricao>true|false</tem_transcricao>
+                  <fonte_analise>...</fonte_analise>
+                  <!-- Campos adicionais somente no modo full -->
+                  <resumo modelo="..." tokens_entrada=".." tokens_saida=".." custo="..">
+                    <texto>...</texto>
+                  </resumo>
+                </video>
+              </videos>
+            </canal>
+          </canais>
+        </extracao>
+        """
+        def _text(elem: ET.Element, tag: str, value) -> ET.Element:
+            child = ET.SubElement(elem, tag)
+            # Normaliza booleanos para 'true'/'false'
+            if isinstance(value, bool):
+                child.text = "true" if value else "false"
+            else:
+                try:
+                    import json as _json
+                    # Para dict/list em <params> ou similares, gravar como JSON
+                    if isinstance(value, (dict, list)):
+                        child.text = _json.dumps(value, ensure_ascii=False)
+                    else:
+                        child.text = "" if value is None else str(value)
+                except Exception:
+                    child.text = "" if value is None else str(value)
+            return child
+
+        root = ET.Element(
+            "extracao",
+            {
+                "executed_at": str(metadata.get("executed_at", "")),
+                "mode": str(metadata.get("mode", "")),
+                "total_channels": str(metadata.get("total_channels", 0)),
+                "total_videos": str(metadata.get("total_videos", 0)),
+            },
+        )
+        # params
+        params_el = ET.SubElement(root, "params")
+        for k, v in (metadata.get("params") or {}).items():
+            # Normaliza booleanos e mantém outros tipos; dict/list como JSON
+            _text(params_el, str(k), v)
+        # canais
+        canais_el = ET.SubElement(root, "canais")
+        for ch in metadata.get("channels", []) or []:
+            canal_el = ET.SubElement(
+                canais_el,
+                "canal",
+                {
+                    "id": str(ch.get("channel_id", "")),
+                    "nome": str(ch.get("name", "")),
+                    "status": str(ch.get("status", "")),
+                },
+            )
+            _text(canal_el, "assinantes", ch.get("subscriber_count"))
+            _text(canal_el, "descricao", ch.get("description"))
+            _text(canal_el, "quantidade_videos", ch.get("video_count"))
+            vids_el = ET.SubElement(canal_el, "videos")
+            for v in ch.get("videos", []) or []:
+                video_el = ET.SubElement(
+                    vids_el,
+                    "video",
+                    {
+                        "id": str(v.get("id", "")),
+                        "url": str(v.get("url", "")),
+                    },
+                )
+                _text(video_el, "titulo", v.get("title"))
+                _text(video_el, "titulo_pt", v.get("title_pt"))
+                _text(video_el, "publicado", v.get("published") or v.get("date_published"))
+                _text(video_el, "duracao", v.get("duration"))
+                _text(video_el, "idioma", v.get("language"))
+                _text(video_el, "visualizacoes", v.get("view_count"))
+                _text(video_el, "tem_transcricao", bool(v.get("has_transcript")))
+                _text(video_el, "fonte_analise", v.get("analysis_source"))
+                # resumo (modo full)
+                resumo = v.get("summary") or {}
+                if resumo:
+                    resumo_el = ET.SubElement(
+                        video_el,
+                        "resumo",
+                        {
+                            "modelo": str(resumo.get("model", "")),
+                            "tokens_entrada": str(resumo.get("prompt_tokens", 0)),
+                            "tokens_saida": str(resumo.get("completion_tokens", 0)),
+                            "custo": str(resumo.get("cost", 0.0)),
+                        },
+                    )
+                    _text(resumo_el, "texto", resumo.get("text"))
+
+        # pretty print
+        rough = ET.tostring(root, encoding="utf-8")
+        try:
+            parsed = minidom.parseString(rough)
+            pretty = parsed.toprettyxml(indent="  ", encoding="utf-8")
+            return pretty.decode("utf-8")
+        except Exception:
+            # fallback sem pretty
+            return rough.decode("utf-8")
+
     def _save_pdf(self, texto: str, path: Path) -> None:
+        if FPDF is None:
+            raise RuntimeError("Biblioteca 'fpdf' não instalada; não é possível gerar PDF.")
         pdf = FPDF()
         pdf.add_page()
         try:

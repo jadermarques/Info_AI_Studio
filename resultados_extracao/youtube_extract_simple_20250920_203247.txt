@@ -1,0 +1,1614 @@
+=======================================================================
+Iniciando execução modo SIMPLE
+Valores selecionados
+Grupos de canais selecionados: Ideias e Negócios com IA
+Canais cadastrados: 11
+Canais adicionais: —
+Dias para filtrar: 15
+Limite de vídeos por canal: 30
+Prefixo dos arquivos: youtube_extract_simple
+Formato do relatório: txt
+Fornecedor de ASR: faster-whisper
+Desativar ASR (sim ou não): não
+Modelo LLM: gpt-5-nano
+
+Canais
+Canais selecionados para análise: 11
+
+VÍDEOS ENCONTRADOS
+data video | nome canal | titulo do video | id do video | link do video (url) | tamanho do video | idioma original | tem transcricao | visualizacoes
+------------------------------------------------------------------------------------------------------------------------
+17/09/25 21:00 | @ColeMedin | The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them) | BcvjGTxzK40 | https://www.youtube.com/watch?v=BcvjGTxzK40 | 20:47 |  | não | 15797
+10/09/25 21:00 | @ColeMedin | Este novo protocolo mudará a codificação da IA ​​para sempre (ACP) | 5gUR55_gbzc | https://www.youtube.com/watch?v=5gUR55_gbzc | 22:34 |  | não | 19144
+03/09/25 21:00 | @ColeMedin | Seu modelo de agente n8n RAG AI ULTIMATE acaba de receber uma atualização massiva | iV5RZ_XKXBc | https://www.youtube.com/watch?v=iV5RZ_XKXBc | 19:19 |  | não | 31325
+19/09/25 08:38 | @Incomestreamsurfers | Claude Code + Codex = O NOVO Construtor de Sites Definitivo | EKk6yZiMMtc | https://www.youtube.com/watch?v=EKk6yZiMMtc | 15:12 |  | não | 1897
+18/09/25 11:26 | @Incomestreamsurfers | Replit concluído: GPT-5-Codex ONE SHOTS aplicativos inteiros | rw_CCEFe4ks | https://www.youtube.com/watch?v=rw_CCEFe4ks | 10:31 |  | não | 5691
+17/09/25 16:59 | @Incomestreamsurfers | Codex vs Claude Code… Quem REALMENTE vence? | 6_CO0ilERA4 | https://www.youtube.com/watch?v=6_CO0ilERA4 | 06:18 |  | não | 5813
+17/09/25 09:51 | @Incomestreamsurfers | RIP CLAUDE CODE: Novo modelo GPT-5-Codex acaba de ser lançado | vKcTIf9hJr0 | https://www.youtube.com/watch?v=vKcTIf9hJr0 | 12:52 |  | não | 2521
+16/09/25 11:00 | @Incomestreamsurfers | Pare de usar essas ferramentas de IA (faça ISTO em vez disso) | iCnRbfWqDN8 | https://www.youtube.com/watch?v=iCnRbfWqDN8 | 09:52 |  | não | 1676
+15/09/25 16:08 | @Incomestreamsurfers | Por que troquei o Claude Code pelo Codex (A Verdade) | pyc2SieEZXc | https://www.youtube.com/watch?v=pyc2SieEZXc | 06:23 |  | não | 6105
+15/09/25 09:26 | @Incomestreamsurfers | Claude Code + Codex = PILHA DE CODIFICAÇÃO INCRÍVEL | 5AyoszGZHHU | https://www.youtube.com/watch?v=5AyoszGZHHU | 08:29 |  | não | 4607
+14/09/25 18:58 | @Incomestreamsurfers | Claude Code QUEBROU O ECOM (COMÉRCIO INSTANTÂNEO) | Gpt2em_robs | https://www.youtube.com/watch?v=Gpt2em_robs | 12:22 |  | não | 3331
+14/09/25 09:45 | @Incomestreamsurfers | Como usar o Claude Code AI completamente de graça | cV413ZDo3bA | https://www.youtube.com/watch?v=cV413ZDo3bA | 06:19 |  | não | 4590
+13/09/25 09:25 | @Incomestreamsurfers | Gemini Canvas + Codex juntos me surpreenderam | rN5YocY1D4c | https://www.youtube.com/watch?v=rN5YocY1D4c | 07:25 |  | não | 1720
+12/09/25 07:02 | @Incomestreamsurfers | O Google Gemini QUEBROU tudo (Construtor de IA gratuito) | N2Y_H6R0Q10 | https://www.youtube.com/watch?v=N2Y_H6R0Q10 | 11:29 |  | não | 26028
+11/09/25 09:34 | @Incomestreamsurfers | O sistema de codificação de agentes de IA do CODE BUFF é uma LOUCURA (RIP CLAUDE CODE) | 8lQ1PuAHMnY | https://www.youtube.com/watch?v=8lQ1PuAHMnY | 08:26 |  | não | 3829
+10/09/25 11:14 | @Incomestreamsurfers | Claude Code é "uma droga" para 90% dos usuários (verdade nua e crua) | 7H9QLaF83I4 | https://www.youtube.com/watch?v=7H9QLaF83I4 | 08:06 |  | não | 3568
+09/09/25 12:00 | @Incomestreamsurfers | Crie sites que vendem 99% dos produtos INSTANTANEAMENTE | oCUyonfI3UY | https://www.youtube.com/watch?v=oCUyonfI3UY | 06:01 |  | não | 3274
+09/09/25 07:57 | @Incomestreamsurfers | Como ganhei US$ 5 mil por mês usando MCPs (tutorial completo) | wx_KUAiSFTs | https://www.youtube.com/watch?v=wx_KUAiSFTs | 13:24 |  | não | 2770
+08/09/25 08:20 | @Incomestreamsurfers | Este MCP CORRIGE 99% dos erros do Claude Code GRATUITAMENTE | x7aJyavuKL4 | https://www.youtube.com/watch?v=x7aJyavuKL4 | 10:12 |  | não | 7579
+07/09/25 08:16 | @Incomestreamsurfers | SEO ESTÁ MORTO... Aqui Estão as Novas Regras para 2026 | uBgSFL6TjA8 | https://www.youtube.com/watch?v=uBgSFL6TjA8 | 10:50 |  | não | 4025
+06/09/25 13:34 | @Incomestreamsurfers | Este modelo de IA STEALTH tem 2 milhões de tokens - Veja o que aconteceu | heKFHAz1Mzw | https://www.youtube.com/watch?v=heKFHAz1Mzw | 11:28 |  | não | 2766
+06/09/25 10:16 | @Incomestreamsurfers | Kilo Code + Kimi K2 0905 = A MELHOR combinação de desenvolvimento de código aberto? | 12-hJO6lW9Q | https://www.youtube.com/watch?v=12-hJO6lW9Q | 06:33 |  | não | 1572
+05/09/25 18:32 | @Incomestreamsurfers | Qwen3 Max acabou de cair e é o PRÓXIMO NÍVEL (RIP CHATGPT-5) | 6zKV54dEmUE | https://www.youtube.com/watch?v=6zKV54dEmUE | 08:45 |  | não | 5661
+05/09/25 09:18 | @Incomestreamsurfers | Os fluxos personalizados de Claude são INSANOS (GUIA GRATUITO) | TZvhAPOmCoA | https://www.youtube.com/watch?v=TZvhAPOmCoA | 26:31 |  | não | 2689
+04/09/25 15:04 | @Incomestreamsurfers | Esta nova atualização do Google Gemini economiza MILHARES de horas | rWTlSRNeJOk | https://www.youtube.com/watch?v=rWTlSRNeJOk | 04:23 |  | não | 3244
+04/09/25 08:48 | @Incomestreamsurfers | Warp.Dev: Este desenvolvedor de IA agente GRATUITO é INCRÍVEL | r8qT1_v1kDk | https://www.youtube.com/watch?v=r8qT1_v1kDk | 09:34 |  | não | 2077
+03/09/25 05:17 | @Incomestreamsurfers | Claude Code + Este MCP = Uma Mudança Total no Jogo | qA0S4shCw6g | https://www.youtube.com/watch?v=qA0S4shCw6g | 12:56 |  | não | 4874
+02/09/25 15:01 | @Incomestreamsurfers | A maior atualização do Claude Code até agora (revenda) | hlkLEr1Ijq8 | https://www.youtube.com/watch?v=hlkLEr1Ijq8 | 09:58 |  | não | 2793
+01/09/25 06:28 | @Incomestreamsurfers | Os fluxos de trabalho do agente personalizado do GPT-5 Codex são INSANOS | nugLoUrG5AU | https://www.youtube.com/watch?v=nugLoUrG5AU | 06:52 |  | não | 3038
+31/08/25 15:01 | @Incomestreamsurfers | O Codex GPT-5 pode REALMENTE ser melhor que o Claude Code | 4pcp7mj_5rU | https://www.youtube.com/watch?v=4pcp7mj_5rU | 11:47 |  | não | 5603
+31/08/25 05:15 | @Incomestreamsurfers | xAI está cozinhando? Grok 4 Fast Coder 1 acabou de sair (vamos testar) | diKEt14VBfI | https://www.youtube.com/watch?v=diKEt14VBfI | 09:16 |  | não | 1042
+19/09/25 05:00 | @LiamOttley | Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes) | 3HHMuaGIC30 | https://www.youtube.com/watch?v=3HHMuaGIC30 | 43:15 |  | não | 18019
+16/09/25 03:09 | @LiamOttley | Se eu quisesse me tornar um milionário em 2026, faria isso com IA | amvEyw_Qrrw | https://www.youtube.com/watch?v=amvEyw_Qrrw | 20:59 |  | não | 72861
+14/09/25 07:21 | @LiamOttley | Replit Agent 3 é INSANO… Aqui estão 4 maneiras de ganhar dinheiro com ele | yvYj11GdUTc | https://www.youtube.com/watch?v=yvYj11GdUTc | 14:49 |  | não | 44769
+09/09/25 11:58 | @LiamOttley | A chata oferta de US$ 15 mil em IA que está acabando com o SaaS (e criando milionários) | IyrSfHizvWc | https://www.youtube.com/watch?v=IyrSfHizvWc | 40:24 |  | não | 35959
+07/09/25 03:44 | @LiamOttley | Como automatizar qualquer negócio com IA em 3 etapas (guia para iniciantes) | kQFW3bUrOu4 | https://www.youtube.com/watch?v=kQFW3bUrOu4 | 16:50 |  | não | 37585
+04/09/25 18:05 | @LiamOttley | Por que 95% dos sites de agências de IA NUNCA geram leads (+ modelo GRATUITO) | ENPN-KutYJc | https://www.youtube.com/watch?v=ENPN-KutYJc | 29:18 |  | não | 18867
+02/09/25 21:45 | @LiamOttley | Como dois jovens de 19 anos ganharam US$ 320 mil em 6 meses vendendo auditorias de IA (análise co... | 2CdNLDttOSg | https://www.youtube.com/watch?v=2CdNLDttOSg | 33:47 |  | não | 22881
+31/08/25 06:23 | @LiamOttley | Como largar seu emprego em uma empresa de IA com apenas uma pessoa (e ganhar MAIS dinheiro) | T6iDmSIpitc | https://www.youtube.com/watch?v=T6iDmSIpitc | 13:21 |  | não | 110759
+19/09/25 18:55 | @SuperHumansLife | Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de... | NPcpJunt0YA | https://www.youtube.com/watch?v=NPcpJunt0YA | 31:22 |  | não | 5565
+14/09/25 13:21 | @SuperHumansLife | Encontrei uma oportunidade de um bilhão de dólares | 1_0OZvSjabM | https://www.youtube.com/watch?v=1_0OZvSjabM | 15:50 |  | não | 24553
+11/09/25 12:00 | @SuperHumansLife | Tentei lançar um negócio de IA com US$ 0 | 8HHTBCcxipM | https://www.youtube.com/watch?v=8HHTBCcxipM | 18:05 |  | não | 12155
+08/09/25 18:19 | @SuperHumansLife | O Mapa de Oportunidades de Negócios de IA de US$ 3,76 Trilhões (6 Setores Prestes a Explodir) | i4zwTrYmiuE | https://www.youtube.com/watch?v=i4zwTrYmiuE | 16:51 |  | não | 35996
+07/09/25 12:33 | @SuperHumansLife | Melhores certificações e recursos de IA em 2025 | PUlSon0DIus | https://www.youtube.com/watch?v=PUlSon0DIus | 18:50 |  | não | 12318
+04/09/25 10:00 | @SuperHumansLife | Por que 90% das empresas de IA irão fracassar (e como estar entre os 10%) | 0JoQe7hRcbA | https://www.youtube.com/watch?v=0JoQe7hRcbA | 20:10 |  | não | 10716
+19/09/25 00:05 | @eusoukelvincleto | O que eu estudaria em vez de automação em 2026 | f4PveaUJLd8 | https://www.youtube.com/watch?v=f4PveaUJLd8 | 10:23 |  | não | 3367
+16/09/25 21:49 | @eusoukelvincleto | Como construir e vender infraestruturas de IA (guia completo) | V7UyaYpKyUg | https://www.youtube.com/watch?v=V7UyaYpKyUg | 44:26 |  | não | 3065
+13/09/25 23:58 | @eusoukelvincleto | Parei minha consultoria de R$600.000/mês para vender ISSO (vou te explicar) | Ze2O5pfmdRo | https://www.youtube.com/watch?v=Ze2O5pfmdRo | 14:47 |  | não | 1592
+11/09/25 19:30 | @eusoukelvincleto | Você não vai enriquecer com IA (sem entender o JOGO) | X7TYWqQfukA | https://www.youtube.com/watch?v=X7TYWqQfukA | 23:11 |  | não | 1410
+08/09/25 21:00 | @eusoukelvincleto | Esses Sistemas de IA Estão Criando uma Nova Classe de Milionários Silenciosos (sem Você Saber) | XeBBlmAaRhg | https://www.youtube.com/watch?v=XeBBlmAaRhg | 14:04 |  | não | 2330
+05/09/25 09:01 | @eusoukelvincleto | A Verdade sobre Vender Automações de IA (Erro de R$ 1.2Mi/ano) | d4qVbWil1R8 | https://www.youtube.com/watch?v=d4qVbWil1R8 | 24:08 |  | não | 1856
+02/09/25 13:01 | @eusoukelvincleto | O Futuro do Varejo com IA Vertical em 2025 (Quem Entrar Agora Vai Liderar) | dmLxOFJeYNY | https://www.youtube.com/watch?v=dmLxOFJeYNY | 44:52 |  | não | 4948
+20/09/25 00:41 | @krishnaik06 | 4-Construindo RAG com Typesense - Pesquisa rápida e de código aberto | MMS04bku3FE | https://www.youtube.com/watch?v=MMS04bku3FE | 23:07 |  | não | 3312
+16/09/25 12:06 | @krishnaik06 | Abordagem moderna para aprender IA para qualquer função | GdohqcPB33U | https://www.youtube.com/watch?v=GdohqcPB33U | 12:22 |  | não | 25251
+08/09/25 11:54 | @krishnaik06 | Começando com o Claude Code com o VS Code | 0lL94h1z72A | https://www.youtube.com/watch?v=0lL94h1z72A | 16:02 |  | não | 19328
+08/09/25 06:52 | @krishnaik06 | 3-Build RAG Pipeline From Scratch-Building Advanced Retreival Query Pipline-Part 2 | adPi3a8fq4c | https://www.youtube.com/watch?v=adPi3a8fq4c | 16:40 |  | não | 11686
+07/09/25 06:53 | @krishnaik06 | IA Generativa para Iniciantes - Anúncio do Bootcamp para Profissionais e Líderes | aJfebE5_nHk | https://www.youtube.com/watch?v=aJfebE5_nHk | 11:00 |  | não | 8202
+05/09/25 04:56 | @krishnaik06 | O futuro da codificação está nos agentes de IA | 5AfJ0N3MvpA | https://www.youtube.com/watch?v=5AfJ0N3MvpA | 15:48 |  | não | 25076
+03/09/25 01:42 | @krishnaik06 | 2-Construindo um pipeline RAG do zero - Ingestão de dados para o pipeline Vector DB - Parte 1 | MykcjWPJ6T4 | https://www.youtube.com/watch?v=MykcjWPJ6T4 | 59:07 |  | não | 28377
+31/08/25 04:07 | @krishnaik06 | Introdução à compreensão do RAG (Recuperação-Geração Aumentada) | fZM3oX4xEyg | https://www.youtube.com/watch?v=fZM3oX4xEyg | 20:40 |  | não | 46922
+18/09/25 16:13 | @matthew_berman | AI News: Meta Raybans, Gemini 3, World Labs, Grok 5, and more! | UgNPfD-bZgU | https://www.youtube.com/watch?v=UgNPfD-bZgU | 14:47 |  | não | 51655
+17/09/25 18:30 | @matthew_berman | Is AI Killing the Economy? (Anthropic Report) | biwwQw0248w | https://www.youtube.com/watch?v=biwwQw0248w | 16:29 |  | não | 50896
+16/09/25 19:34 | @matthew_berman | Ex-OpenAI CTO Reveals Plan to Fix LLMs Biggest Problem | CZeEAgE5xGA | https://www.youtube.com/watch?v=CZeEAgE5xGA | 08:47 |  | não | 45760
+16/09/25 15:18 | @matthew_berman | Genie 3 Team: Agents, Training Genie, Simulation Theory, Text vs Video, and more! | t09WttAGaag | https://www.youtube.com/watch?v=t09WttAGaag | 52:19 |  | não | 11081
+15/09/25 19:31 | @matthew_berman | GPT-5 Codex is nuts... | yqtujbev9zI | https://www.youtube.com/watch?v=yqtujbev9zI | 07:04 |  | não | 41745
+15/09/25 15:33 | @matthew_berman | AI News: Qwen3-Max, OpenAI for Profit, Claude Updates, New Models, and more! | dZF9wHqrTRw | https://www.youtube.com/watch?v=dZF9wHqrTRw | 18:05 |  | não | 45234
+11/09/25 19:44 | @matthew_berman | Amjad Masad: Vibe Coding, Platform Risk, Agentic Future, Permanent Underclass, and more! | s6TKlCdKbIs | https://www.youtube.com/watch?v=s6TKlCdKbIs | 56:45 |  | não | 11939
+09/09/25 16:43 | @matthew_berman | This Anthropic Settlement is massive... | uVDaNvKUOtM | https://www.youtube.com/watch?v=uVDaNvKUOtM | 11:17 |  | não | 26717
+08/09/25 12:18 | @matthew_berman | Did OpenAI just solve hallucinations? | xGO5Q94XXf0 | https://www.youtube.com/watch?v=xGO5Q94XXf0 | 13:13 |  | não | 123166
+04/09/25 14:46 | @matthew_berman | AI News: xAI Sues OpenAI, Microsoft's MAI, Anthropic Funding, OpenAI Acquisition, and more! | axLs1urvr3o | https://www.youtube.com/watch?v=axLs1urvr3o | 15:26 |  | não | 43117
+03/09/25 16:08 | @matthew_berman | Reid Hoffman: AGI, Agents, Memory, White Collar, Global Competition, AI Companions, and more! | v2tK0fMWeuA | https://www.youtube.com/watch?v=v2tK0fMWeuA | 01:02:47 |  | não | 12089
+19/09/25 11:51 | @nocodemba | O que substituirá as landing pages em 2025 (+ modelo gratuito) | Dna__4QolLg | https://www.youtube.com/watch?v=Dna__4QolLg | 09:25 |  | não | 281
+18/09/25 13:25 | @nocodemba | As planilhas estão mortas! Criei um painel de IA incrivelmente poderoso com o Databutton | gYz_m6hcWys | https://www.youtube.com/watch?v=gYz_m6hcWys | 06:38 |  | não | 589
+17/09/25 12:10 | @nocodemba | A nova IA do Bubble pode vencer Lovable e Base44? | gqqzvGvqKr0 | https://www.youtube.com/watch?v=gqqzvGvqKr0 | 08:21 |  | não | 556
+15/09/25 12:30 | @nocodemba | Você pode nunca mais usar o Figma depois de usar esta ferramenta de IA | voLsGe0Swbk | https://www.youtube.com/watch?v=voLsGe0Swbk | 09:16 |  | não | 759
+12/09/25 12:54 | @nocodemba | Novo fluxo de trabalho insano que pode clonar qualquer coisa com IA | yNVkufbhpvw | https://www.youtube.com/watch?v=yNVkufbhpvw | 08:34 |  | não | 411
+11/09/25 14:10 | @nocodemba | Do zero ao aplicativo de IA em 8 minutos - veja como é fácil | htFdXJySysI | https://www.youtube.com/watch?v=htFdXJySysI | 07:40 |  | não | 556
+10/09/25 12:53 | @nocodemba | O criador de aplicativos de IA 2 em 1 que você precisa experimentar | RQCqQIYTefU | https://www.youtube.com/watch?v=RQCqQIYTefU | 04:48 |  | não | 1805
+08/09/25 13:17 | @nocodemba | Criador de aplicativos de IA GRATUITO do Google + Teste Nano Banana | NXivRTlnq4E | https://www.youtube.com/watch?v=NXivRTlnq4E | 06:17 |  | não | 4537
+05/09/25 09:16 | @nocodemba | Lovable vs Carrd: qual ferramenta cria a melhor landing page? | aCH2C6ikPSE | https://www.youtube.com/watch?v=aCH2C6ikPSE | 07:23 |  | não | 477
+03/09/25 10:23 | @nocodemba | Lovable vs Figma Make: Qual designer de IA se sai melhor? | hDb14KTmbgk | https://www.youtube.com/watch?v=hDb14KTmbgk | 07:25 |  | não | 657
+01/09/25 11:06 | @nocodemba | Eu vi que codifiquei um aplicativo social real em minutos (irreal) | Xjjoc0PDm-M | https://www.youtube.com/watch?v=Xjjoc0PDm-M | 11:10 |  | não | 515
+
+=======================================================================
+RESUMO DA EXTRAÇÃO
+=======================================================================
+
+Canais processados: 11
+Total de vídeos extraídos: 82
+Modo: simple
+Parâmetros: dias=15, max_videos=30, formato=txt
+
+• @ColeMedin
+   - URL: https://www.youtube.com/watch?v=BcvjGTxzK40
+   - Título: The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them)
+   - Duração: 20:47
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-17T17:00:12-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 15797
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=5gUR55_gbzc
+   - Título: Este novo protocolo mudará a codificação da IA ​​para sempre (ACP)
+   - Duração: 22:34
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-10T17:00:11-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 19144
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=iV5RZ_XKXBc
+   - Título: Seu modelo de agente n8n RAG AI ULTIMATE acaba de receber uma atualização massiva
+   - Duração: 19:19
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-03T17:00:50-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 31325
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @DanGalletta
+   - Nenhum vídeo dentro do critério.
+• @DataCouncil
+   - Nenhum vídeo dentro do critério.
+• @Incomestreamsurfers
+   - URL: https://www.youtube.com/watch?v=EKk6yZiMMtc
+   - Título: Claude Code + Codex = O NOVO Construtor de Sites Definitivo
+   - Duração: 15:12
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-19T04:38:46-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 1897
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=rw_CCEFe4ks
+   - Título: Replit concluído: GPT-5-Codex ONE SHOTS aplicativos inteiros
+   - Duração: 10:31
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-18T07:26:13-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 5691
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=6_CO0ilERA4
+   - Título: Codex vs Claude Code… Quem REALMENTE vence?
+   - Duração: 06:18
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-17T12:59:47-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 5813
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=vKcTIf9hJr0
+   - Título: RIP CLAUDE CODE: Novo modelo GPT-5-Codex acaba de ser lançado
+   - Duração: 12:52
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-17T05:51:26-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 2521
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=iCnRbfWqDN8
+   - Título: Pare de usar essas ferramentas de IA (faça ISTO em vez disso)
+   - Duração: 09:52
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-16T07:00:45-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 1676
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=pyc2SieEZXc
+   - Título: Por que troquei o Claude Code pelo Codex (A Verdade)
+   - Duração: 06:23
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-15T12:08:39-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 6105
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=5AyoszGZHHU
+   - Título: Claude Code + Codex = PILHA DE CODIFICAÇÃO INCRÍVEL
+   - Duração: 08:29
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-15T05:26:23-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 4607
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=Gpt2em_robs
+   - Título: Claude Code QUEBROU O ECOM (COMÉRCIO INSTANTÂNEO)
+   - Duração: 12:22
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-14T14:58:08-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 3331
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=cV413ZDo3bA
+   - Título: Como usar o Claude Code AI completamente de graça
+   - Duração: 06:19
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-14T05:45:57-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 4590
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=rN5YocY1D4c
+   - Título: Gemini Canvas + Codex juntos me surpreenderam
+   - Duração: 07:25
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-13T05:25:15-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 1720
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=N2Y_H6R0Q10
+   - Título: O Google Gemini QUEBROU tudo (Construtor de IA gratuito)
+   - Duração: 11:29
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-12T03:02:04-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 26028
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=8lQ1PuAHMnY
+   - Título: O sistema de codificação de agentes de IA do CODE BUFF é uma LOUCURA (RIP CLAUDE CODE)
+   - Duração: 08:26
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-11T05:34:05-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 3829
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=7H9QLaF83I4
+   - Título: Claude Code é "uma droga" para 90% dos usuários (verdade nua e crua)
+   - Duração: 08:06
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-10T07:14:33-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 3568
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=oCUyonfI3UY
+   - Título: Crie sites que vendem 99% dos produtos INSTANTANEAMENTE
+   - Duração: 06:01
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-09T08:00:48-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 3274
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=wx_KUAiSFTs
+   - Título: Como ganhei US$ 5 mil por mês usando MCPs (tutorial completo)
+   - Duração: 13:24
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-09T03:57:48-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 2770
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=x7aJyavuKL4
+   - Título: Este MCP CORRIGE 99% dos erros do Claude Code GRATUITAMENTE
+   - Duração: 10:12
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-08T04:20:37-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 7579
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=uBgSFL6TjA8
+   - Título: SEO ESTÁ MORTO... Aqui Estão as Novas Regras para 2026
+   - Duração: 10:50
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-07T04:16:12-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 4025
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=heKFHAz1Mzw
+   - Título: Este modelo de IA STEALTH tem 2 milhões de tokens - Veja o que aconteceu
+   - Duração: 11:28
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-06T09:34:49-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 2766
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=12-hJO6lW9Q
+   - Título: Kilo Code + Kimi K2 0905 = A MELHOR combinação de desenvolvimento de código aberto?
+   - Duração: 06:33
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-06T06:16:39-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 1572
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=6zKV54dEmUE
+   - Título: Qwen3 Max acabou de cair e é o PRÓXIMO NÍVEL (RIP CHATGPT-5)
+   - Duração: 08:45
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-05T14:32:55-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 5661
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=TZvhAPOmCoA
+   - Título: Os fluxos personalizados de Claude são INSANOS (GUIA GRATUITO)
+   - Duração: 26:31
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-05T05:18:43-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 2689
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=rWTlSRNeJOk
+   - Título: Esta nova atualização do Google Gemini economiza MILHARES de horas
+   - Duração: 04:23
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-04T11:04:04-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 3244
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=r8qT1_v1kDk
+   - Título: Warp.Dev: Este desenvolvedor de IA agente GRATUITO é INCRÍVEL
+   - Duração: 09:34
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-04T04:48:49-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 2077
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=qA0S4shCw6g
+   - Título: Claude Code + Este MCP = Uma Mudança Total no Jogo
+   - Duração: 12:56
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-03T01:17:53-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 4874
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=hlkLEr1Ijq8
+   - Título: A maior atualização do Claude Code até agora (revenda)
+   - Duração: 09:58
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-02T11:01:55-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 2793
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=nugLoUrG5AU
+   - Título: Os fluxos de trabalho do agente personalizado do GPT-5 Codex são INSANOS
+   - Duração: 06:52
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-01T02:28:36-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 3038
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=4pcp7mj_5rU
+   - Título: O Codex GPT-5 pode REALMENTE ser melhor que o Claude Code
+   - Duração: 11:47
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-08-31T11:01:24-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 5603
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=diKEt14VBfI
+   - Título: xAI está cozinhando? Grok 4 Fast Coder 1 acabou de sair (vamos testar)
+   - Duração: 09:16
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-08-31T01:15:01-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 1042
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @LiamOttley
+   - URL: https://www.youtube.com/watch?v=3HHMuaGIC30
+   - Título: Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes)
+   - Duração: 43:15
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-19T01:00:38-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 18019
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=amvEyw_Qrrw
+   - Título: Se eu quisesse me tornar um milionário em 2026, faria isso com IA
+   - Duração: 20:59
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-15T23:09:56-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 72861
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=yvYj11GdUTc
+   - Título: Replit Agent 3 é INSANO… Aqui estão 4 maneiras de ganhar dinheiro com ele
+   - Duração: 14:49
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-14T03:21:49-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 44769
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=IyrSfHizvWc
+   - Título: A chata oferta de US$ 15 mil em IA que está acabando com o SaaS (e criando milionários)
+   - Duração: 40:24
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-09T07:58:58-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 35959
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=kQFW3bUrOu4
+   - Título: Como automatizar qualquer negócio com IA em 3 etapas (guia para iniciantes)
+   - Duração: 16:50
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-06T23:44:12-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 37585
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=ENPN-KutYJc
+   - Título: Por que 95% dos sites de agências de IA NUNCA geram leads (+ modelo GRATUITO)
+   - Duração: 29:18
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-04T14:05:46-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 18867
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=2CdNLDttOSg
+   - Título: Como dois jovens de 19 anos ganharam US$ 320 mil em 6 meses vendendo auditorias de IA (análise co...
+   - Duração: 33:47
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-02T17:45:58-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 22881
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=T6iDmSIpitc
+   - Título: Como largar seu emprego em uma empresa de IA com apenas uma pessoa (e ganhar MAIS dinheiro)
+   - Duração: 13:21
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-08-31T02:23:15-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 110759
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @SaraFinance
+   - Nenhum vídeo dentro do critério.
+• @SuperHumansLife
+   - URL: https://www.youtube.com/watch?v=NPcpJunt0YA
+   - Título: Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...
+   - Duração: 31:22
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-19T14:55:40-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 5565
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=1_0OZvSjabM
+   - Título: Encontrei uma oportunidade de um bilhão de dólares
+   - Duração: 15:50
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-14T09:21:57-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 24553
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=8HHTBCcxipM
+   - Título: Tentei lançar um negócio de IA com US$ 0
+   - Duração: 18:05
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-11T08:00:25-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 12155
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=i4zwTrYmiuE
+   - Título: O Mapa de Oportunidades de Negócios de IA de US$ 3,76 Trilhões (6 Setores Prestes a Explodir)
+   - Duração: 16:51
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-08T14:19:30-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 35996
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=PUlSon0DIus
+   - Título: Melhores certificações e recursos de IA em 2025
+   - Duração: 18:50
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-07T08:33:11-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 12318
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=0JoQe7hRcbA
+   - Título: Por que 90% das empresas de IA irão fracassar (e como estar entre os 10%)
+   - Duração: 20:10
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-04T06:00:02-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 10716
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @eusoukelvincleto
+   - URL: https://www.youtube.com/watch?v=f4PveaUJLd8
+   - Título: O que eu estudaria em vez de automação em 2026
+   - Duração: 10:23
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-18T20:05:56-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 3367
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=V7UyaYpKyUg
+   - Título: Como construir e vender infraestruturas de IA (guia completo)
+   - Duração: 44:26
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-16T17:49:32-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 3065
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=Ze2O5pfmdRo
+   - Título: Parei minha consultoria de R$600.000/mês para vender ISSO (vou te explicar)
+   - Duração: 14:47
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-13T19:58:03-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 1592
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=X7TYWqQfukA
+   - Título: Você não vai enriquecer com IA (sem entender o JOGO)
+   - Duração: 23:11
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-11T15:30:05-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 1410
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=XeBBlmAaRhg
+   - Título: Esses Sistemas de IA Estão Criando uma Nova Classe de Milionários Silenciosos (sem Você Saber)
+   - Duração: 14:04
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-08T17:00:39-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 2330
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=d4qVbWil1R8
+   - Título: A Verdade sobre Vender Automações de IA (Erro de R$ 1.2Mi/ano)
+   - Duração: 24:08
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-05T05:01:16-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 1856
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=dmLxOFJeYNY
+   - Título: O Futuro do Varejo com IA Vertical em 2025 (Quem Entrar Agora Vai Liderar)
+   - Duração: 44:52
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-02T09:01:08-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 4948
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @krishnaik06
+   - URL: https://www.youtube.com/watch?v=MMS04bku3FE
+   - Título: 4-Construindo RAG com Typesense - Pesquisa rápida e de código aberto
+   - Duração: 23:07
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-19T20:41:39-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 3312
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=GdohqcPB33U
+   - Título: Abordagem moderna para aprender IA para qualquer função
+   - Duração: 12:22
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-16T08:06:56-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 25251
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=0lL94h1z72A
+   - Título: Começando com o Claude Code com o VS Code
+   - Duração: 16:02
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-08T07:54:04-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 19328
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=adPi3a8fq4c
+   - Título: 3-Build RAG Pipeline From Scratch-Building Advanced Retreival Query Pipline-Part 2
+   - Duração: 16:40
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-08T02:52:21-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 11686
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=aJfebE5_nHk
+   - Título: IA Generativa para Iniciantes - Anúncio do Bootcamp para Profissionais e Líderes
+   - Duração: 11:00
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-07T02:53:36-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 8202
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=5AfJ0N3MvpA
+   - Título: O futuro da codificação está nos agentes de IA
+   - Duração: 15:48
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-05T00:56:27-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 25076
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=MykcjWPJ6T4
+   - Título: 2-Construindo um pipeline RAG do zero - Ingestão de dados para o pipeline Vector DB - Parte 1
+   - Duração: 59:07
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-02T21:42:54-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 28377
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=fZM3oX4xEyg
+   - Título: Introdução à compreensão do RAG (Recuperação-Geração Aumentada)
+   - Duração: 20:40
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-08-31T00:07:59-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 46922
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @matthew_berman
+   - URL: https://www.youtube.com/watch?v=UgNPfD-bZgU
+   - Título: AI News: Meta Raybans, Gemini 3, World Labs, Grok 5, and more!
+   - Duração: 14:47
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-18T12:13:12-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 51655
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=biwwQw0248w
+   - Título: Is AI Killing the Economy? (Anthropic Report)
+   - Duração: 16:29
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-17T14:30:06-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 50896
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=CZeEAgE5xGA
+   - Título: Ex-OpenAI CTO Reveals Plan to Fix LLMs Biggest Problem
+   - Duração: 08:47
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-16T15:34:02-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 45760
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=t09WttAGaag
+   - Título: Genie 3 Team: Agents, Training Genie, Simulation Theory, Text vs Video, and more!
+   - Duração: 52:19
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-16T11:18:17-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 11081
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=yqtujbev9zI
+   - Título: GPT-5 Codex is nuts...
+   - Duração: 07:04
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-15T15:31:47-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 41745
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=dZF9wHqrTRw
+   - Título: AI News: Qwen3-Max, OpenAI for Profit, Claude Updates, New Models, and more!
+   - Duração: 18:05
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-15T11:33:24-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 45234
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=s6TKlCdKbIs
+   - Título: Amjad Masad: Vibe Coding, Platform Risk, Agentic Future, Permanent Underclass, and more!
+   - Duração: 56:45
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-11T15:44:42-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 11939
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=uVDaNvKUOtM
+   - Título: This Anthropic Settlement is massive...
+   - Duração: 11:17
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-09T12:43:01-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 26717
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=xGO5Q94XXf0
+   - Título: Did OpenAI just solve hallucinations?
+   - Duração: 13:13
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-08T08:18:04-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 123166
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=axLs1urvr3o
+   - Título: AI News: xAI Sues OpenAI, Microsoft's MAI, Anthropic Funding, OpenAI Acquisition, and more!
+   - Duração: 15:26
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-04T10:46:47-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 43117
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=v2tK0fMWeuA
+   - Título: Reid Hoffman: AGI, Agents, Memory, White Collar, Global Competition, AI Companions, and more!
+   - Duração: 01:02:47
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-03T12:08:21-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 12089
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+• @nocodemba
+   - URL: https://www.youtube.com/watch?v=Dna__4QolLg
+   - Título: O que substituirá as landing pages em 2025 (+ modelo gratuito)
+   - Duração: 09:25
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-19T07:51:39-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 281
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=gYz_m6hcWys
+   - Título: As planilhas estão mortas! Criei um painel de IA incrivelmente poderoso com o Databutton
+   - Duração: 06:38
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-18T09:25:02-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 589
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=gqqzvGvqKr0
+   - Título: A nova IA do Bubble pode vencer Lovable e Base44?
+   - Duração: 08:21
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-17T08:10:01-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 556
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=voLsGe0Swbk
+   - Título: Você pode nunca mais usar o Figma depois de usar esta ferramenta de IA
+   - Duração: 09:16
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-15T08:30:48-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 759
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=yNVkufbhpvw
+   - Título: Novo fluxo de trabalho insano que pode clonar qualquer coisa com IA
+   - Duração: 08:34
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-12T08:54:25-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 411
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=htFdXJySysI
+   - Título: Do zero ao aplicativo de IA em 8 minutos - veja como é fácil
+   - Duração: 07:40
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-11T10:10:57-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 556
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=RQCqQIYTefU
+   - Título: O criador de aplicativos de IA 2 em 1 que você precisa experimentar
+   - Duração: 04:48
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-10T08:53:30-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 1805
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=NXivRTlnq4E
+   - Título: Criador de aplicativos de IA GRATUITO do Google + Teste Nano Banana
+   - Duração: 06:17
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-08T09:17:40-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 4537
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=aCH2C6ikPSE
+   - Título: Lovable vs Carrd: qual ferramenta cria a melhor landing page?
+   - Duração: 07:23
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-05T05:16:03-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 477
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=hDb14KTmbgk
+   - Título: Lovable vs Figma Make: Qual designer de IA se sai melhor?
+   - Duração: 07:25
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-03T06:23:13-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 657
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+   - URL: https://www.youtube.com/watch?v=Xjjoc0PDm-M
+   - Título: Eu vi que codifiquei um aplicativo social real em minutos (irreal)
+   - Duração: 11:10
+   - Origem do conteúdo: -
+   - Tempo de análise: 0.00 segundos
+   - Data de postagem: 2025-09-01T07:06:56-07:00
+   - Idioma original do vídeo: 
+   - Possui transcrição: não
+   - Visualizações: 515
+   - Assunto principal: 
+   - Resumo (1 frase): 
+   - Resumo (<= 150 palavras): 
+   - Palavras-chave: 
+   - Modelo LLM: gpt-5-nano
+   - Tokens enviados: 0
+   - Tokens recebidos: 0
+   - Custo estimado: R$ 0.0000
+
+Tempo de análise por vídeo:
+- The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them): 0.00 segundos
+- Este novo protocolo mudará a codificação da IA ​​para sempre (ACP): 0.00 segundos
+- Seu modelo de agente n8n RAG AI ULTIMATE acaba de receber uma atualização massiva: 0.00 segundos
+- Claude Code + Codex = O NOVO Construtor de Sites Definitivo: 0.00 segundos
+- Replit concluído: GPT-5-Codex ONE SHOTS aplicativos inteiros: 0.00 segundos
+- Codex vs Claude Code… Quem REALMENTE vence?: 0.00 segundos
+- RIP CLAUDE CODE: Novo modelo GPT-5-Codex acaba de ser lançado: 0.00 segundos
+- Pare de usar essas ferramentas de IA (faça ISTO em vez disso): 0.00 segundos
+- Por que troquei o Claude Code pelo Codex (A Verdade): 0.00 segundos
+- Claude Code + Codex = PILHA DE CODIFICAÇÃO INCRÍVEL: 0.00 segundos
+- Claude Code QUEBROU O ECOM (COMÉRCIO INSTANTÂNEO): 0.00 segundos
+- Como usar o Claude Code AI completamente de graça: 0.00 segundos
+- Gemini Canvas + Codex juntos me surpreenderam: 0.00 segundos
+- O Google Gemini QUEBROU tudo (Construtor de IA gratuito): 0.00 segundos
+- O sistema de codificação de agentes de IA do CODE BUFF é uma LOUCURA (RIP CLAUDE CODE): 0.00 segundos
+- Claude Code é "uma droga" para 90% dos usuários (verdade nua e crua): 0.00 segundos
+- Crie sites que vendem 99% dos produtos INSTANTANEAMENTE: 0.00 segundos
+- Como ganhei US$ 5 mil por mês usando MCPs (tutorial completo): 0.00 segundos
+- Este MCP CORRIGE 99% dos erros do Claude Code GRATUITAMENTE: 0.00 segundos
+- SEO ESTÁ MORTO... Aqui Estão as Novas Regras para 2026: 0.00 segundos
+- Este modelo de IA STEALTH tem 2 milhões de tokens - Veja o que aconteceu: 0.00 segundos
+- Kilo Code + Kimi K2 0905 = A MELHOR combinação de desenvolvimento de código aberto?: 0.00 segundos
+- Qwen3 Max acabou de cair e é o PRÓXIMO NÍVEL (RIP CHATGPT-5): 0.00 segundos
+- Os fluxos personalizados de Claude são INSANOS (GUIA GRATUITO): 0.00 segundos
+- Esta nova atualização do Google Gemini economiza MILHARES de horas: 0.00 segundos
+- Warp.Dev: Este desenvolvedor de IA agente GRATUITO é INCRÍVEL: 0.00 segundos
+- Claude Code + Este MCP = Uma Mudança Total no Jogo: 0.00 segundos
+- A maior atualização do Claude Code até agora (revenda): 0.00 segundos
+- Os fluxos de trabalho do agente personalizado do GPT-5 Codex são INSANOS: 0.00 segundos
+- O Codex GPT-5 pode REALMENTE ser melhor que o Claude Code: 0.00 segundos
+- xAI está cozinhando? Grok 4 Fast Coder 1 acabou de sair (vamos testar): 0.00 segundos
+- Como ir de US$ 0 a US$ 100 mil com IA (Guia definitivo para iniciantes): 0.00 segundos
+- Se eu quisesse me tornar um milionário em 2026, faria isso com IA: 0.00 segundos
+- Replit Agent 3 é INSANO… Aqui estão 4 maneiras de ganhar dinheiro com ele: 0.00 segundos
+- A chata oferta de US$ 15 mil em IA que está acabando com o SaaS (e criando milionários): 0.00 segundos
+- Como automatizar qualquer negócio com IA em 3 etapas (guia para iniciantes): 0.00 segundos
+- Por que 95% dos sites de agências de IA NUNCA geram leads (+ modelo GRATUITO): 0.00 segundos
+- Como dois jovens de 19 anos ganharam US$ 320 mil em 6 meses vendendo auditorias de IA (análise co...: 0.00 segundos
+- Como largar seu emprego em uma empresa de IA com apenas uma pessoa (e ganhar MAIS dinheiro): 0.00 segundos
+- Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de...: 0.00 segundos
+- Encontrei uma oportunidade de um bilhão de dólares: 0.00 segundos
+- Tentei lançar um negócio de IA com US$ 0: 0.00 segundos
+- O Mapa de Oportunidades de Negócios de IA de US$ 3,76 Trilhões (6 Setores Prestes a Explodir): 0.00 segundos
+- Melhores certificações e recursos de IA em 2025: 0.00 segundos
+- Por que 90% das empresas de IA irão fracassar (e como estar entre os 10%): 0.00 segundos
+- O que eu estudaria em vez de automação em 2026: 0.00 segundos
+- Como construir e vender infraestruturas de IA (guia completo): 0.00 segundos
+- Parei minha consultoria de R$600.000/mês para vender ISSO (vou te explicar): 0.00 segundos
+- Você não vai enriquecer com IA (sem entender o JOGO): 0.00 segundos
+- Esses Sistemas de IA Estão Criando uma Nova Classe de Milionários Silenciosos (sem Você Saber): 0.00 segundos
+- A Verdade sobre Vender Automações de IA (Erro de R$ 1.2Mi/ano): 0.00 segundos
+- O Futuro do Varejo com IA Vertical em 2025 (Quem Entrar Agora Vai Liderar): 0.00 segundos
+- 4-Construindo RAG com Typesense - Pesquisa rápida e de código aberto: 0.00 segundos
+- Abordagem moderna para aprender IA para qualquer função: 0.00 segundos
+- Começando com o Claude Code com o VS Code: 0.00 segundos
+- 3-Build RAG Pipeline From Scratch-Building Advanced Retreival Query Pipline-Part 2: 0.00 segundos
+- IA Generativa para Iniciantes - Anúncio do Bootcamp para Profissionais e Líderes: 0.00 segundos
+- O futuro da codificação está nos agentes de IA: 0.00 segundos
+- 2-Construindo um pipeline RAG do zero - Ingestão de dados para o pipeline Vector DB - Parte 1: 0.00 segundos
+- Introdução à compreensão do RAG (Recuperação-Geração Aumentada): 0.00 segundos
+- AI News: Meta Raybans, Gemini 3, World Labs, Grok 5, and more!: 0.00 segundos
+- Is AI Killing the Economy? (Anthropic Report): 0.00 segundos
+- Ex-OpenAI CTO Reveals Plan to Fix LLMs Biggest Problem: 0.00 segundos
+- Genie 3 Team: Agents, Training Genie, Simulation Theory, Text vs Video, and more!: 0.00 segundos
+- GPT-5 Codex is nuts...: 0.00 segundos
+- AI News: Qwen3-Max, OpenAI for Profit, Claude Updates, New Models, and more!: 0.00 segundos
+- Amjad Masad: Vibe Coding, Platform Risk, Agentic Future, Permanent Underclass, and more!: 0.00 segundos
+- This Anthropic Settlement is massive...: 0.00 segundos
+- Did OpenAI just solve hallucinations?: 0.00 segundos
+- AI News: xAI Sues OpenAI, Microsoft's MAI, Anthropic Funding, OpenAI Acquisition, and more!: 0.00 segundos
+- Reid Hoffman: AGI, Agents, Memory, White Collar, Global Competition, AI Companions, and more!: 0.00 segundos
+- O que substituirá as landing pages em 2025 (+ modelo gratuito): 0.00 segundos
+- As planilhas estão mortas! Criei um painel de IA incrivelmente poderoso com o Databutton: 0.00 segundos
+- A nova IA do Bubble pode vencer Lovable e Base44?: 0.00 segundos
+- Você pode nunca mais usar o Figma depois de usar esta ferramenta de IA: 0.00 segundos
+- Novo fluxo de trabalho insano que pode clonar qualquer coisa com IA: 0.00 segundos
+- Do zero ao aplicativo de IA em 8 minutos - veja como é fácil: 0.00 segundos
+- O criador de aplicativos de IA 2 em 1 que você precisa experimentar: 0.00 segundos
+- Criador de aplicativos de IA GRATUITO do Google + Teste Nano Banana: 0.00 segundos
+- Lovable vs Carrd: qual ferramenta cria a melhor landing page?: 0.00 segundos
+- Lovable vs Figma Make: Qual designer de IA se sai melhor?: 0.00 segundos
+- Eu vi que codifiquei um aplicativo social real em minutos (irreal): 0.00 segundos
+
+=======================================================================
+EXTRAÇÃO CONCLUÍDA

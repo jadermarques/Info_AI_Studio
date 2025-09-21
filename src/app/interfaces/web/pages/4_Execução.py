@@ -130,7 +130,7 @@ else:
             prefix = st.text_input("Prefixo dos arquivos", value=default_prefix, key=f"prefix_{key_prefix}")
             report_format = st.radio(
                 "Formato do relatório",
-                options=["txt", "md", "json", "pdf", "html"],
+                options=["txt", "md", "json", "pdf", "html", "xml"],
                 index=0,
                 horizontal=True,
                 help="Escolha apenas um formato. 'md' gera Markdown.",
@@ -154,6 +154,14 @@ else:
         run_simple, prefix, report_format, asr_provider, no_asr, llm_label = _exec_form(
             key_prefix="simple", default_prefix="youtube_extract_simple", mode_label="modo simples"
         )
+        # Aviso se PDF foi selecionado e dependência não estiver instalada
+        try:
+            import fpdf  # type: ignore
+            _pdf_ok_simple = True
+        except Exception:
+            _pdf_ok_simple = False
+        if report_format == "pdf" and not _pdf_ok_simple:
+            st.warning("Para gerar PDF, instale a biblioteca 'fpdf2' (pip install fpdf2).", icon="ℹ️")
     with guia_completo:
         # Opção específica do modo completo: traduzir títulos
         st.checkbox(
@@ -164,6 +172,14 @@ else:
         run_full, prefix_full, report_format_full, asr_provider_full, no_asr_full, llm_label_full = _exec_form(
             key_prefix="full", default_prefix="youtube_extract_full", mode_label="modo completo"
         )
+        # Aviso se PDF foi selecionado e dependência não estiver instalada
+        try:
+            import fpdf  # type: ignore
+            _pdf_ok_full = True
+        except Exception:
+            _pdf_ok_full = False
+        if report_format_full == "pdf" and not _pdf_ok_full:
+            st.warning("Para gerar PDF, instale a biblioteca 'fpdf2' (pip install fpdf2).", icon="ℹ️")
     # Atualiza session_state apenas após submit
     # Decide qual guia acionou
     triggered = None
@@ -352,16 +368,49 @@ else:
                 if result.report_path:
                     rep_col_left, rep_col_right = st.columns([3, 2])
                     with rep_col_left:
-                        st.write(f"Relatório: {result.report_path}")
+                        rp = Path(result.report_path)
+                        size_txt = ""
+                        try:
+                            if rp.exists():
+                                size = rp.stat().st_size
+                                # tamanho humano
+                                for unit in ["B","KB","MB","GB"]:
+                                    if size < 1024.0:
+                                        size_txt = f" ({size:.1f} {unit})" if unit != "B" else f" ({int(size)} {unit})"
+                                        break
+                                    size /= 1024.0
+                        except Exception:
+                            pass
+                        st.write(f"Relatório: {result.report_path}{size_txt}")
                     with rep_col_right:
                         try:
-                            rp = Path(result.report_path)
                             if rp.exists():
                                 file_uri = rp.as_uri()
                                 dir_uri = rp.parent.as_uri()
                                 st.markdown(
                                     f"[🔗 Abrir arquivo]({file_uri}) · [📁 Abrir pasta]({dir_uri})"
                                 )
+                                # Botão de download
+                                mime_map = {
+                                    ".xml": "application/xml",
+                                    ".json": "application/json",
+                                    ".txt": "text/plain; charset=utf-8",
+                                    ".md": "text/markdown; charset=utf-8",
+                                    ".html": "text/html; charset=utf-8",
+                                    ".pdf": "application/pdf",
+                                }
+                                ext = rp.suffix.lower()
+                                mime = mime_map.get(ext, "application/octet-stream")
+                                try:
+                                    data = rp.read_bytes()
+                                    st.download_button(
+                                        label=f"Baixar relatório ({ext[1:]})",
+                                        data=data,
+                                        file_name=rp.name,
+                                        mime=mime,
+                                    )
+                                except Exception:
+                                    pass
                         except Exception:
                             pass
                 if (
@@ -402,6 +451,52 @@ else:
                                     st.markdown(md_text)
                             else:
                                 st.info("Relatório vazio (Markdown)")
+                # Prévia de relatório JSON quando gerado
+                if result.report_path and Path(result.report_path).suffix.lower() == ".json":
+                    report_path = Path(result.report_path)
+                    if report_path.exists():
+                        try:
+                            import json as _json
+                            raw = report_path.read_text(encoding="utf-8")
+                            obj = _json.loads(raw)
+                            pretty = _json.dumps(obj, ensure_ascii=False, indent=2)
+                        except Exception as exc:
+                            st.warning(f"Não foi possível carregar o relatório JSON: {exc}")
+                        else:
+                            if pretty.strip():
+                                with st.expander("Conteúdo do relatório (JSON)", expanded=False):
+                                    st.code(pretty, language="json")
+                            else:
+                                st.info("Relatório vazio (JSON)")
+                # Prévia de relatório HTML quando gerado
+                if result.report_path and Path(result.report_path).suffix.lower() == ".html":
+                    report_path = Path(result.report_path)
+                    if report_path.exists():
+                        try:
+                            html_text = report_path.read_text(encoding="utf-8")
+                        except Exception as exc:
+                            st.warning(f"Não foi possível carregar o relatório HTML: {exc}")
+                        else:
+                            if html_text.strip():
+                                with st.expander("Conteúdo do relatório (HTML)", expanded=False):
+                                    st.code(html_text, language="html")
+                            else:
+                                st.info("Relatório vazio (HTML)")
+                # Prévia de relatório XML quando gerado
+                if result.report_path and Path(result.report_path).suffix.lower() == ".xml":
+                    report_path = Path(result.report_path)
+                    if report_path.exists():
+                        try:
+                            xml_text = report_path.read_text(encoding="utf-8")
+                        except Exception as exc:
+                            st.warning(f"Não foi possível carregar o relatório XML: {exc}")
+                        else:
+                            if xml_text.strip():
+                                with st.expander("Conteúdo do relatório (XML)", expanded=False):
+                                    # Exibe com syntax highlight
+                                    st.code(xml_text, language="xml")
+                            else:
+                                st.info("Relatório vazio (XML)")
                 log_col_left, log_col_right = st.columns([3, 2])
                 with log_col_left:
                     st.write(f"Log: {result.log_path}")

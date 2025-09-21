@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extracao executed_at="2025-09-21T16:32:32.348855" mode="simple" total_channels="1" total_videos="1">
+  <params>
+    <days>3</days>
+    <max_videos>30</max_videos>
+    <mode>simple</mode>
+    <no_llm>false</no_llm>
+    <asr_provider>faster-whisper</asr_provider>
+    <format>xml</format>
+    <translate_results>pt-br</translate_results>
+    <resumo_max_palavras>150</resumo_max_palavras>
+    <llm_model>gpt-5-nano</llm_model>
+    <ui_extras>{"selected_groups": [], "selected_channel_labels": ["ColeMedin (@ColeMedin)"], "manual_entries": "", "translate_titles": false}</ui_extras>
+  </params>
+  <canais>
+    <canal id="@ColeMedin" nome="@ColeMedin" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos>
+        <video id="BcvjGTxzK40" url="https://www.youtube.com/watch?v=BcvjGTxzK40">
+          <titulo>The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them)</titulo>
+          <titulo_pt>The Future of AI and SaaS is Agentic Experiences (Here's How to Build Them)</titulo_pt>
+          <publicado>2025-09-18T19:32:33.319553</publicado>
+          <duracao>20:47</duracao>
+          <idioma/>
+          <visualizacoes>16872</visualizacoes>
+          <tem_transcricao>false</tem_transcricao>
+          <fonte_analise>modo_simples</fonte_analise>
+        </video>
+      </videos>
+    </canal>
+  </canais>
+</extracao>
