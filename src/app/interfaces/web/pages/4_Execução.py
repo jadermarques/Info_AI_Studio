@@ -38,14 +38,24 @@ def _analysis_method_label(source: str | None) -> str:
 
 st.title("Execução")
 
-st.subheader("Pesquisa Fontes WEB")
-st.info(
-    "Funcionalidade em desenvolvimento. Aqui serão executadas buscas em sites e blogs registrados."
+# Submenus da execução na barra lateral
+submenu = st.sidebar.radio(
+    "Execução",
+    options=["YouTube", "Fontes Web"],
+    index=0,
+    key="exec_submenu",
+    help="Escolha o módulo de execução."
 )
-if st.button("Iniciar placeholder", icon="🛠️"):
-    st.toast("Execução simulada concluída.")
 
-st.divider()
+# Submenu: Fontes Web (mantém placeholder atual)
+if submenu == "Fontes Web":
+    st.subheader("Fontes Web")
+    st.info(
+        "Funcionalidade em desenvolvimento. Aqui serão executadas buscas em sites e blogs registrados."
+    )
+    if st.button("Iniciar placeholder", icon="🛠️"):
+        st.toast("Execução simulada concluída.")
+    st.stop()
 
 st.subheader("Pesquisa YouTube")
 if not is_database_initialized():

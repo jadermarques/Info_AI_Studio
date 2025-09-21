@@ -1,0 +1,76 @@
+=======================================================================
+Iniciando execução modo SIMPLE
+Valores selecionados
+Grupos de canais selecionados: Ideias e Negócios com IA, Notícias e Novidades em IA, Tendências em IA, Informações Big Techs IA, Ferramentas de IA, Pesquisas em IA, Influenciadores IA, Crítica/Opinião sobre IA, Ética/Regulamentação/Segurança IA
+Canais cadastrados: 0
+Canais adicionais: —
+Dias para filtrar: 1
+Limite de vídeos por canal: 30
+Prefixo dos arquivos: youtube_extract_simple
+Formato do relatório: txt
+Fornecedor de ASR: faster-whisper
+Desativar ASR (sim ou não): não
+Modelo LLM: gpt-5-nano
+
+Canais
+Canais selecionados para análise: 107
+
+VÍDEOS ENCONTRADOS
+data video | nome canal | titulo do video | id do video | link do video (url) | tamanho do video | idioma original | tem transcricao | visualizacoes
+------------------------------------------------------------------------------------------------------------------------
+21/09/25 09:20 | @AIDailyBrief | The Truth About the AI Bubble | DPFNiLW_yqg | https://www.youtube.com/watch?v=DPFNiLW_yqg | 29:29 |  | não | 1997
+20/09/25 12:32 | @AIDailyBrief | A Microsoft conseguirá sobreviver à era da IA? | 3kvHLvVufD4 | https://www.youtube.com/watch?v=3kvHLvVufD4 | 07:24 |  | não | 2750
+19/09/25 20:09 | @AIDailyBrief | Implantações de agentes de IA quadruplicam em 2025 | ZlHcSsJdtuI | https://www.youtube.com/watch?v=ZlHcSsJdtuI | 11:32 |  | não | 2117
+20/09/25 16:18 | @Aitrepreneur | RIP ELEVENLABS! Create PERFECT TTS AI Voices LOCALLY For FREE! | XtaPZmlyMMw | https://www.youtube.com/watch?v=XtaPZmlyMMw | 30:47 |  | não | 13736
+20/09/25 04:00 | @Analyticsvidhya | Crie automaticamente pôsteres de produtos impressionantes com n8n e Google Nano Banana | A9zRlrHoJrc | https://www.youtube.com/watch?v=A9zRlrHoJrc | 10:05 |  | não | 147
+20/09/25 17:30 | @Argonalyst | Meta Ray-Ban Display: o “novo Google Glass”? Falhas, testes e o que funciona | WPZMtuB2wkk | https://www.youtube.com/watch?v=WPZMtuB2wkk | 12:02 |  | não | 1313
+21/09/25 09:05 | @Incomestreamsurfers | Claude Code ESTÁ DE VOLTA? A Anthropic FINALMENTE corrige isso (aparentemente) | PljZOdMYYr0 | https://www.youtube.com/watch?v=PljZOdMYYr0 | 09:35 |  | não | 2386
+21/09/25 14:00 | @JulianGoldieSEO | As NOVAS atualizações de IA do Google Gemini são INSANAS! | hnTeVBHbcow | https://www.youtube.com/watch?v=hnTeVBHbcow | 08:25 |  | não | 2038
+21/09/25 09:59 | @JulianGoldieSEO | NEW Magistral 1.2 AI Update is INSANE (FREE!) | 0CpOluwidb0 | https://www.youtube.com/watch?v=0CpOluwidb0 | 13:05 |  | não | 2098
+21/09/25 05:00 | @JulianGoldieSEO | O navegador Genspark AI assume o controle... | Cljuhn4qeUM | https://www.youtube.com/watch?v=Cljuhn4qeUM | 10:02 |  | não | 2394
+21/09/25 01:01 | @JulianGoldieSEO | O NOVO Super Agente de IA do Mail Manus é INSANO! | kDLduIqF_6I | https://www.youtube.com/watch?v=kDLduIqF_6I | 09:46 |  | não | 1614
+20/09/25 21:00 | @JulianGoldieSEO | O NOVO Google Gemini Canvas é INSANO! | O810mDozRJw | https://www.youtube.com/watch?v=O810mDozRJw | 12:44 |  | não | 6401
+20/09/25 17:00 | @JulianGoldieSEO | O NOVO AI Studio Vibe Coder do Google é INSANO! | jQHEPRvRUS4 | https://www.youtube.com/watch?v=jQHEPRvRUS4 | 11:35 |  | não | 20398
+20/09/25 12:45 | @JulianGoldieSEO | O novo agente de IA do Google Gemini é INSANO! | N3Cj0JVCyx4 | https://www.youtube.com/watch?v=N3Cj0JVCyx4 | 11:44 |  | não | 3123
+20/09/25 09:01 | @JulianGoldieSEO | A atualização do ByteDance SAIL-VL2 é INSANA! 🤯 | vRB0Lv45aSA | https://www.youtube.com/watch?v=vRB0Lv45aSA | 10:20 |  | não | 1760
+20/09/25 04:33 | @JulianGoldieSEO | NOVO Código GLM MAX DESTRÓI Claude Code? | ioOsCnUtmRQ | https://www.youtube.com/watch?v=ioOsCnUtmRQ | 08:01 |  | não | 5934
+19/09/25 23:00 | @JulianGoldieSEO | A atualização do agente AP2 do Google é INSANA! | 32xjiLJtQVk | https://www.youtube.com/watch?v=32xjiLJtQVk | 09:50 |  | não | 2961
+21/09/25 11:01 | @KyserClark | Por que reprovar em uma certificação não significa que você é um fracasso | k_tJf1EuCf0 | https://www.youtube.com/watch?v=k_tJf1EuCf0 | 09:08 |  | não | 73
+20/09/25 22:07 | @KyserClark | Hacking de IA: O que é Injeção Rápida? (Nível 8 de Gandalf) | BT7wIAxxdu8 | https://www.youtube.com/watch?v=BT7wIAxxdu8 | 19:58 |  | não | 3
+20/09/25 10:00 | @NateBJones | Semana de US$ 100 bilhões da IA: Nvidia e Intel encerram guerra de 30 anos + mais 7 histórias de IA | ImOo1BxAG7g | https://www.youtube.com/watch?v=ImOo1BxAG7g | 16:05 |  | não | 2867
+21/09/25 14:00 | @NewMachina | O que é LLM RLHF? | VVxl4nUepuk | https://www.youtube.com/watch?v=VVxl4nUepuk | 06:18 |  | não | 32
+21/09/25 13:01 | @OlharDigital | Apophis: o primeiro asteroide potencialmente perigoso visível a olho nu | gtxw-mfUREk | https://www.youtube.com/watch?v=gtxw-mfUREk | 05:28 |  | não | 1172
+21/09/25 12:01 | @OlharDigital | Tem empresa pagando pela mineração da Lua - e essa tecnologia ainda nem existe! | V7OAQyobtiw | https://www.youtube.com/watch?v=V7OAQyobtiw | 04:43 |  | não | 347
+21/09/25 11:00 | @OlharDigital | Brasil pode se tornar um polo global de data centers, mas há desafios | 9beUZz4ZJsU | https://www.youtube.com/watch?v=9beUZz4ZJsU | 04:29 |  | não | 697
+21/09/25 10:01 | @OlharDigital | Onde está Mercúrio? Entenda o fenômeno que faz o planeta sumir do céu. | n6aRxZA0puE | https://www.youtube.com/watch?v=n6aRxZA0puE | 04:10 |  | não | 685
+21/09/25 09:00 | @OlharDigital | Hoje tem eclipse solar! Assista com o Olhar Digital! | AyxTMbMDG0c | https://www.youtube.com/watch?v=AyxTMbMDG0c | 01:32 |  | não | 7528
+20/09/25 14:00 | @OlharDigital | A evolução humana não acabou – e pode estar mudando de rumo | 4321AMLaGdo | https://www.youtube.com/watch?v=4321AMLaGdo | 05:27 |  | não | 4572
+20/09/25 13:01 | @OlharDigital | Themis: foguete 'estilo SpaceX' pode ajudar a Europa na corrida espacial | vZjNowzxlCY | https://www.youtube.com/watch?v=vZjNowzxlCY | 04:34 |  | não | 1960
+20/09/25 12:00 | @OlharDigital | Não gostou do visual do iOS 26? Saiba como mudar! | IG5W8OFjq50 | https://www.youtube.com/watch?v=IG5W8OFjq50 | 03:10 |  | não | 901
+20/09/25 11:01 | @OlharDigital | Nasa alerta: o Sol está ficando mais agitado e não sabemos o motivo | wp6H5gk-2Bc | https://www.youtube.com/watch?v=wp6H5gk-2Bc | 05:28 |  | não | 8824
+20/09/25 10:00 | @OlharDigital | Não é só chip! Nvidia pretende se aventurar em novo mercado | Bwj0RgsBpDw | https://www.youtube.com/watch?v=Bwj0RgsBpDw | 04:27 |  | não | 584
+20/09/25 09:00 | @OlharDigital | Essa e-bike pode te levar bem longe (e a quase 50 km/h!) | 1Jy7cKOG89M | https://www.youtube.com/watch?v=1Jy7cKOG89M | 01:11 |  | não | 717
+19/09/25 22:45 | @OlharDigital | Oferta relâmpago: smartphone Samsung Galaxy A26 5G no precinho! | 37qHWrJvJfA | https://www.youtube.com/watch?v=37qHWrJvJfA | 03:49 |  | não | 562
+19/09/25 22:39 | @OlharDigital | Fim da novela? Trump diz que China aprovou venda do TikTok | 6wO-L-fgIjc | https://www.youtube.com/watch?v=6wO-L-fgIjc | 04:11 |  | não | 61989
+19/09/25 22:30 | @OlharDigital | Falta pouco! Domingo tem eclipse solar - e o Olhar Digital transmite! | SZkv4zHr9No | https://www.youtube.com/watch?v=SZkv4zHr9No | 03:59 |  | não | 3635
+19/09/25 22:15 | @OlharDigital | 12 por 8 agora é pressão alta? Entenda! | WnNFxj1OSSA | https://www.youtube.com/watch?v=WnNFxj1OSSA | 09:25 |  | não | 2131
+19/09/25 18:00 | @OlharDigital | Cuidado com o golpe do CPF irregular! Veja como se proteger | 6doBpkgABds | https://www.youtube.com/watch?v=6doBpkgABds | 03:13 |  | não | 968
+19/09/25 19:43 | @Oracle | Sunnybrook Health moderniza o atendimento: Oracle TV no Oracle Health and Life Sciences Summit | ysPWbXWE8OQ | https://www.youtube.com/watch?v=ysPWbXWE8OQ | 09:53 |  | não | 167
+19/09/25 19:03 | @PaulaBernardes | META Lançou Óculos Que Leem a Sua Mente Ray Ban Meta Gen 2  OpenAI, Google, xAi e Muito Mais! | ibcDFABY0IU | https://www.youtube.com/watch?v=ibcDFABY0IU | 10:00 |  | não | 1330
+21/09/25 05:00 | @ShawhinTalebi | How to Deploy AI Apps with Streamlit, Docker, and Hugging Face | Sx_MwcBQGOg | https://www.youtube.com/watch?v=Sx_MwcBQGOg | 20:38 |  | não | 877
+19/09/25 18:55 | @SuperHumansLife | Estas 7 habilidades de IA bem remuneradas tornam você insubstituível mesmo em demissões (Plano de... | NPcpJunt0YA | https://www.youtube.com/watch?v=NPcpJunt0YA | 31:22 |  | não | 8271
+20/09/25 20:05 | @TechLead | Meu melhor conselho para jovens (como milionário) | Us05R0EjrqE | https://www.youtube.com/watch?v=Us05R0EjrqE | 05:18 |  | não | 37010
+21/09/25 01:54 | @WesRoth | Grok 4 Fast não faz sentido algum | PVhVq9RDxwM | https://www.youtube.com/watch?v=PVhVq9RDxwM | 29:37 |  | não | 35763
+19/09/25 18:23 | @WesRoth | OpenAI just beat Google | ryYamBwdWYQ | https://www.youtube.com/watch?v=ryYamBwdWYQ | 20:08 |  | não | 31109
+20/09/25 19:07 | @airevolutionx | A IA acaba de resolver um mistério científico de 100 anos que custou milhões de dólares | i2uUFpHNsL8 | https://www.youtube.com/watch?v=i2uUFpHNsL8 | 08:09 |  | não | 26993
+19/09/25 19:24 | @airevolutionx | O Google Chrome agora é TOTALMENTE IA! (Finalmente aqui) | Kp0JgCvRRtU | https://www.youtube.com/watch?v=Kp0JgCvRRtU | 10:57 |  | não | 53934
+20/09/25 17:45 | @canalsandeco | O Segredo das Múltiplas Mentes do ChatGPT e do Gemini | p-8UNsVD3AM | https://www.youtube.com/watch?v=p-8UNsVD3AM | 11:30 |  | não | 899
+21/09/25 14:35 | @intheworldofai | Agente Neo: O Primeiro Agente Infinito! Um agente com IA incrivelmente poderosa que pode automati... | wueOVMn1VEs | https://www.youtube.com/watch?v=wueOVMn1VEs | 11:24 |  | não | 1749
+20/09/25 18:09 | @intheworldofai | Zed Editor: NOVA IDE de IA Agentic - Alternativa para Cursor + Windsurf! TOTALMENTE GRÁTIS! (Códi... | LFXZJZZ_enw | https://www.youtube.com/watch?v=LFXZJZZ_enw | 09:22 |  | não | 8595
+19/09/25 23:08 | @intheworldofai | Claude 4.5 Soneto? O NOVO Modelo Furtivo de Codificação Agentic é MUITO RÁPIDO e Poderoso! (Total... | MvUCXs0rHSw | https://www.youtube.com/watch?v=MvUCXs0rHSw | 08:45 |  | não | 17812
+20/09/25 00:41 | @krishnaik06 | 4-Construindo RAG com Typesense - Pesquisa rápida e de código aberto | MMS04bku3FE | https://www.youtube.com/watch?v=MMS04bku3FE | 23:07 |  | não | 6060
+19/09/25 18:01 | @leoandradenet | Transforme a IA em uma EQUIPE que trabalha 24H para o SEU NEGÓCIO | zrDuWT30MOQ | https://www.youtube.com/watch?v=zrDuWT30MOQ | 27:37 |  | não | 685
+20/09/25 10:01 | @ondeeuclico | 💓Transforme Sua Ideia em App Sem Saber Programar | Passo a Passo com o Lovable | l0jb56o09dM | https://www.youtube.com/watch?v=l0jb56o09dM | 08:23 |  | não | 2728
+21/09/25 09:30 | @safesrc | VAZARAM 500 GB de CÓDIGO-FONTE do GRANDE FIREWALL da CHINA e as INFORMAÇÕES são ASSUSTADORAS | lXDJQh_eSYc | https://www.youtube.com/watch?v=lXDJQh_eSYc | 14:47 |  | não | 27199
+
+Total de canais: 107 | Total de vídeos: 54

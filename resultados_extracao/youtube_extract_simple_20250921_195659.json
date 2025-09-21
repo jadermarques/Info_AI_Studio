@@ -1,0 +1,182 @@
+{
+  "executed_at": "2025-09-21T19:56:59.273411",
+  "mode": "simple",
+  "total_channels": 13,
+  "total_videos": 2,
+  "params": {
+    "days": 1,
+    "max_videos": 30,
+    "mode": "simple",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "xml",
+    "translate_results": "pt-br",
+    "resumo_max_palavras": 150,
+    "llm_model": "gpt-5-nano",
+    "ui_extras": {
+      "selected_groups": [
+        "Ideias e Negócios com IA"
+      ],
+      "selected_channel_labels": [],
+      "manual_entries": "",
+      "translate_titles": false
+    }
+  },
+  "channels": [
+    {
+      "channel_id": "@ColeMedin",
+      "name": "@ColeMedin",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@DanGalletta",
+      "name": "@DanGalletta",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@DataCouncil",
+      "name": "@DataCouncil",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@Incomestreamsurfers",
+      "name": "@Incomestreamsurfers",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "PljZOdMYYr0",
+          "title": "Claude Code ESTÁ DE VOLTA? A Anthropic FINALMENTE corrige isso (aparentemente)",
+          "title_pt": "Claude Code ESTÁ DE VOLTA? A Anthropic FINALMENTE corrige isso (aparentemente)",
+          "url": "https://www.youtube.com/watch?v=PljZOdMYYr0",
+          "published": "2025-09-21T12:57:02.184653",
+          "published_relative": "há 10 horas",
+          "duration": "09:35",
+          "date_published": "2025-09-21T05:05:28-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0004658699035644531,
+          "language": "",
+          "view_count": 2944,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@LiamOttley",
+      "name": "@LiamOttley",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@PaulaBernardes",
+      "name": "@PaulaBernardes",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@SaraFinance",
+      "name": "@SaraFinance",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@SuperHumansLife",
+      "name": "@SuperHumansLife",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@brunopicinini",
+      "name": "@brunopicinini",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@eusoukelvincleto",
+      "name": "@eusoukelvincleto",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@krishnaik06",
+      "name": "@krishnaik06",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "MMS04bku3FE",
+          "title": "4-Construindo RAG com Typesense - Pesquisa rápida e de código aberto",
+          "title_pt": "4-Construindo RAG com Typesense - Pesquisa rápida e de código aberto",
+          "url": "https://www.youtube.com/watch?v=MMS04bku3FE",
+          "published": "2025-09-20T22:57:07.166088",
+          "published_relative": "há 1 dia",
+          "duration": "23:07",
+          "date_published": "2025-09-19T20:41:39-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003809928894042969,
+          "language": "",
+          "view_count": 6294,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@matthew_berman",
+      "name": "@matthew_berman",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@nocodemba",
+      "name": "@nocodemba",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    }
+  ]
+}

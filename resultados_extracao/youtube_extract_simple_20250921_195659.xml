@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extracao executed_at="2025-09-21T19:56:59.273411" mode="simple" total_channels="13" total_videos="2">
+  <params>
+    <days>1</days>
+    <max_videos>30</max_videos>
+    <mode>simple</mode>
+    <no_llm>false</no_llm>
+    <asr_provider>faster-whisper</asr_provider>
+    <format>xml</format>
+    <translate_results>pt-br</translate_results>
+    <resumo_max_palavras>150</resumo_max_palavras>
+    <llm_model>gpt-5-nano</llm_model>
+    <ui_extras>{"selected_groups": ["Ideias e Negócios com IA"], "selected_channel_labels": [], "manual_entries": "", "translate_titles": false}</ui_extras>
+  </params>
+  <canais>
+    <canal id="@ColeMedin" nome="@ColeMedin" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos/>
+    </canal>
+    <canal id="@DanGalletta" nome="@DanGalletta" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos/>
+    </canal>
+    <canal id="@DataCouncil" nome="@DataCouncil" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos/>
+    </canal>
+    <canal id="@Incomestreamsurfers" nome="@Incomestreamsurfers" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos>
+        <video id="PljZOdMYYr0" url="https://www.youtube.com/watch?v=PljZOdMYYr0">
+          <titulo>Claude Code ESTÁ DE VOLTA? A Anthropic FINALMENTE corrige isso (aparentemente)</titulo>
+          <titulo_pt>Claude Code ESTÁ DE VOLTA? A Anthropic FINALMENTE corrige isso (aparentemente)</titulo_pt>
+          <publicado>2025-09-21T12:57:02.184653</publicado>
+          <duracao>09:35</duracao>
+          <idioma/>
+          <visualizacoes>2944</visualizacoes>
+          <tem_transcricao>false</tem_transcricao>
+          <fonte_analise>modo_simples</fonte_analise>
+        </video>
+      </videos>
+    </canal>
+    <canal id="@LiamOttley" nome="@LiamOttley" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos/>
+    </canal>
+    <canal id="@PaulaBernardes" nome="@PaulaBernardes" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos/>
+    </canal>
+    <canal id="@SaraFinance" nome="@SaraFinance" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos/>
+    </canal>
+    <canal id="@SuperHumansLife" nome="@SuperHumansLife" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos/>
+    </canal>
+    <canal id="@brunopicinini" nome="@brunopicinini" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos/>
+    </canal>
+    <canal id="@eusoukelvincleto" nome="@eusoukelvincleto" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos/>
+    </canal>
+    <canal id="@krishnaik06" nome="@krishnaik06" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos>
+        <video id="MMS04bku3FE" url="https://www.youtube.com/watch?v=MMS04bku3FE">
+          <titulo>4-Construindo RAG com Typesense - Pesquisa rápida e de código aberto</titulo>
+          <titulo_pt>4-Construindo RAG com Typesense - Pesquisa rápida e de código aberto</titulo_pt>
+          <publicado>2025-09-20T22:57:07.166088</publicado>
+          <duracao>23:07</duracao>
+          <idioma/>
+          <visualizacoes>6294</visualizacoes>
+          <tem_transcricao>false</tem_transcricao>
+          <fonte_analise>modo_simples</fonte_analise>
+        </video>
+      </videos>
+    </canal>
+    <canal id="@matthew_berman" nome="@matthew_berman" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos/>
+    </canal>
+    <canal id="@nocodemba" nome="@nocodemba" status="success">
+      <assinantes/>
+      <descricao/>
+      <quantidade_videos/>
+      <videos/>
+    </canal>
+  </canais>
+</extracao>
