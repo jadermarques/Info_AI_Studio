@@ -44,3 +44,14 @@ CREATE TABLE IF NOT EXISTS youtube_extraction (
 );
 
 CREATE INDEX IF NOT EXISTS idx_youtube_extraction_created_at ON youtube_extraction (ytex_created_at DESC);
+
+-- Configurações padrão para consulta via prompt em Fontes Web
+CREATE TABLE IF NOT EXISTS web_prompt_config (
+    wpc_id INTEGER PRIMARY KEY CHECK (wpc_id = 1),
+    wpc_persona TEXT NOT NULL,
+    wpc_publico_alvo TEXT NOT NULL,
+    wpc_segmentos TEXT NOT NULL,
+    wpc_instrucoes TEXT NOT NULL,
+    wpc_prompt TEXT NOT NULL,
+    wpc_updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

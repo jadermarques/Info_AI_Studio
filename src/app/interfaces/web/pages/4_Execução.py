@@ -47,14 +47,261 @@ submenu = st.sidebar.radio(
     help="Escolha o módulo de execução."
 )
 
-# Submenu: Fontes Web (mantém placeholder atual)
+# Submenu: Fontes Web (com abas e formulário)
 if submenu == "Fontes Web":
     st.subheader("Fontes Web")
-    st.info(
-        "Funcionalidade em desenvolvimento. Aqui serão executadas buscas em sites e blogs registrados."
-    )
-    if st.button("Iniciar placeholder", icon="🛠️"):
-        st.toast("Execução simulada concluída.")
+    tab_prompt, tab_fontes = st.tabs(["Consulta via prompt", "Consulta via fontes"])
+
+    with tab_prompt:
+        from datetime import date as _date
+        from datetime import datetime, timedelta
+        from app.domain.web_prompt_service import get_defaults as web_get_defaults
+        from app.domain.web_prompt_execution import (
+            WebPromptParams,
+            execute_web_prompt,
+            _build_prompt_text,
+        )
+        from app.domain.llm_service import list_llm_models as _list_llm
+
+        defaults = web_get_defaults()
+        st.markdown("Preencha os campos para realizar uma consulta baseada em prompt.")
+        with st.form("web_sources_prompt_form"):
+            col1, col2 = st.columns(2)
+            with col1:
+                dt_inicio = st.date_input(
+                    "Data de início",
+                    value=_date.today() - timedelta(days=1),
+                    help="Data inicial do período (obrigatória, formato dd/mm/aaaa).",
+                    key="web_dt_inicio",
+                    format="DD/MM/YYYY",
+                )
+                persona = st.text_input(
+                    "Persona",
+                    value=defaults.persona,
+                    help="Descreva quem irá analisar/produzir o conteúdo (obrigatório).",
+                    key="web_persona",
+                )
+                publico_alvo = st.text_input(
+                    "Público-alvo",
+                    value=defaults.publico_alvo,
+                    help="Defina para quem o conteúdo se destina (obrigatório).",
+                    key="web_publico_alvo",
+                )
+            with col2:
+                dt_fim = st.date_input(
+                    "Data de término",
+                    value=_date.today(),
+                    help="Data final do período (obrigatória, formato dd/mm/aaaa).",
+                    key="web_dt_fim",
+                    format="DD/MM/YYYY",
+                )
+                formato_saida = st.selectbox(
+                    "Formato de saída",
+                    options=[".txt", ".md", ".pdf", ".json", ".xml"],
+                    index=0,
+                    help="Selecione o formato do relatório (obrigatório).",
+                    key="web_formato_saida",
+                )
+                segmentos = st.text_input(
+                    "Segmentos",
+                    value=defaults.segmentos,
+                    help="Liste os segmentos a considerar (obrigatório).",
+                    key="web_segmentos",
+                )
+            # Usar instruções padrão (sem campo na interface)
+            instrucoes = defaults.instrucoes
+            # Botão para preencher o campo de prompt com os valores atuais
+            atualizar_clicked = st.form_submit_button(
+                "Atualizar prompt de consulta",
+                use_container_width=True,
+            )
+            if atualizar_clicked:
+                try:
+                    settings = get_settings()
+                    base_prompt = (
+                        st.session_state.get("web_prompt_consulta")
+                        or (defaults.prompt or "")
+                    )
+                    preview_params = WebPromptParams(
+                        data_inicio=dt_inicio,
+                        data_fim=dt_fim,
+                        persona=persona.strip(),
+                        publico_alvo=publico_alvo.strip(),
+                        segmentos=segmentos.strip(),
+                        instrucoes=(instrucoes or "").strip(),
+                        prompt_base=base_prompt,
+                        formato_saida=formato_saida,
+                        llm_provedor="",
+                        llm_modelo="",
+                        api_key="",
+                        outdir=settings.resultados_dir,
+                    )
+                    final_prompt_text = _build_prompt_text(preview_params)
+                    st.session_state["web_prompt_consulta"] = final_prompt_text
+                    st.success("Prompt atualizado com os valores preenchidos.")
+                    st.rerun()
+                except Exception as exc:
+                    st.error(f"Não foi possível atualizar o prompt: {exc}")
+            prompt_consulta = st.text_area(
+                "Prompt da consulta",
+                value=(defaults.prompt or ""),
+                help="Texto que será enviado ao LLM (obrigatório para execução).",
+                key="web_prompt_consulta",
+                height=240,
+            )
+            # Seleção de modelo LLM (obrigatório)
+            llm_models = [m for m in _list_llm() if m.get("status")]
+            llm_options = {f"{m['provedor']} - {m['modelo']}": m for m in llm_models}
+            llm_label = st.selectbox(
+                "Modelo LLM",
+                options=list(llm_options.keys()) or ["—"],
+                index=0 if llm_options else 0,
+                disabled=not llm_options,
+                help="Selecione o modelo LLM cadastrado para executar o prompt.",
+            )
+
+            # Aviso de dependência para PDF (padrão reaproveitado)
+            try:
+                import fpdf  # type: ignore  # noqa: F401
+                _pdf_ok_web = True
+            except Exception:
+                _pdf_ok_web = False
+            if formato_saida == ".pdf" and not _pdf_ok_web:
+                st.warning("Para gerar PDF, instale a biblioteca 'fpdf2' (pip install fpdf2).", icon="ℹ️")
+
+            submitted = st.form_submit_button("Executar prompt", use_container_width=True, disabled=not llm_options)
+
+        if submitted:
+            erros: list[str] = []
+            if not dt_inicio:
+                erros.append("Informe a data de início.")
+            if not dt_fim:
+                erros.append("Informe a data de término.")
+            try:
+                if dt_inicio and dt_fim and dt_inicio > dt_fim:
+                    erros.append("A data de término deve ser maior ou igual à data de início.")
+            except Exception:
+                pass
+            if not persona.strip():
+                erros.append("Informe a persona.")
+            if not publico_alvo.strip():
+                erros.append("Informe o público-alvo.")
+            if not segmentos.strip():
+                erros.append("Informe os segmentos.")
+            if not prompt_consulta.strip():
+                erros.append("Informe o prompt da consulta.")
+            selected_model = llm_options.get(llm_label) if llm_options else None
+            if not selected_model:
+                erros.append("Selecione um modelo LLM válido.")
+            elif not selected_model.get("api_key"):
+                erros.append("O modelo LLM selecionado não possui uma chave de API válida.")
+            if erros:
+                for e in erros:
+                    st.error(e)
+                st.stop()
+
+            # Execução do prompt com progresso
+            progress = st.progress(0)
+            status = st.empty()
+            status.write("Preparando execução...")
+            progress.progress(5)
+
+            try:
+                settings = get_settings()
+                params = WebPromptParams(
+                    data_inicio=dt_inicio,
+                    data_fim=dt_fim,
+                    persona=persona,
+                    publico_alvo=publico_alvo,
+                    segmentos=segmentos,
+                    instrucoes=instrucoes,
+                    prompt_base=prompt_consulta,
+                    formato_saida=formato_saida,
+                    llm_provedor=selected_model.get("provedor"),
+                    llm_modelo=selected_model.get("modelo"),
+                    api_key=selected_model.get("api_key"),
+                    outdir=settings.resultados_dir,
+                )
+                status.write("Chamando o provedor LLM...")
+                progress.progress(25)
+                result = execute_web_prompt(params)
+                progress.progress(90)
+            except Exception as exc:
+                st.error(f"Falha ao executar o prompt: {exc}")
+            else:
+                progress.progress(100)
+                st.success("Execução concluída.")
+                col_a, col_b = st.columns(2)
+                with col_a:
+                    st.write(f"Data/hora início execução: {result.started_at.strftime('%d/%m/%Y %H:%M:%S')}")
+                    st.write(f"Data/hora término execução: {result.ended_at.strftime('%d/%m/%Y %H:%M:%S')}")
+                    st.write(f"Tempo total da execução: {result.elapsed_seconds:.2f} s")
+                    st.write(f"Modelo LLM utilizado: {result.model_used}")
+                    st.write(f"Total de tokens enviados: {result.prompt_tokens}")
+                with col_b:
+                    st.write(f"Total de tokens recebidos: {result.completion_tokens}")
+                    st.write(f"Custo estimado da consulta: R$ {result.cost_estimated:.4f}")
+                    if result.report_path:
+                        rp = Path(result.report_path)
+                        if rp.exists():
+                            st.write(f"Relatório gerado: {rp}")
+                            mime_map = {
+                                ".xml": "application/xml",
+                                ".json": "application/json",
+                                ".txt": "text/plain; charset=utf-8",
+                                ".md": "text/markdown; charset=utf-8",
+                                ".html": "text/html; charset=utf-8",
+                                ".pdf": "application/pdf",
+                            }
+                            ext = rp.suffix.lower()
+                            mime = mime_map.get(ext, "application/octet-stream")
+                            try:
+                                data = rp.read_bytes()
+                                st.download_button(
+                                    label=f"Baixar saída ({ext[1:]})",
+                                    data=data,
+                                    file_name=rp.name,
+                                    mime=mime,
+                                )
+                            except Exception:
+                                pass
+                with st.expander("Prompt executado", expanded=False):
+                    st.code(result.prompt_executed, language="markdown")
+                with st.expander("Resultado do prompt", expanded=True):
+                    # Renderização simples conforme formato selecionado
+                    if formato_saida in (".md", "md"):
+                        st.markdown(result.result_text)
+                    elif formato_saida in (".json", "json"):
+                        try:
+                            obj = __import__("json").loads(result.result_text)
+                            st.code(__import__("json").dumps(obj, ensure_ascii=False, indent=2), language="json")
+                        except Exception:
+                            st.text(result.result_text)
+                    elif formato_saida in (".xml", "xml"):
+                        st.code(result.result_text, language="xml")
+                    else:
+                        st.text(result.result_text)
+                if result.log_path:
+                    lp = Path(result.log_path)
+                    if lp.exists():
+                        try:
+                            st.markdown(f"[🔗 Abrir log]({lp.resolve().as_uri()})")
+                        except Exception:
+                            # Fallback: oferecer download direto
+                            try:
+                                st.download_button(
+                                    label="Baixar log (.log)",
+                                    data=lp.read_bytes(),
+                                    file_name=lp.name,
+                                    mime="text/plain; charset=utf-8",
+                                )
+                            except Exception:
+                                st.write(f"Log disponível em: {lp}")
+
+    with tab_fontes:
+        st.info("Consulta via fontes: especificação será definida posteriormente. Aba criada como placeholder.")
+        st.caption("Quando definido, esta aba permitirá selecionar fontes específicas (sites/blogs) para consulta.")
+
     st.stop()
 
 st.subheader("Pesquisa YouTube")

@@ -1,0 +1,18 @@
+2025-09-22 08:06:18,640 - INFO - app.youtube.run.20250922_080618 - Iniciando extração em lote de 107 canais
+2025-09-22 08:06:18,640 - INFO - app.youtube.run.20250922_080618 - Iniciando extração em lote de 107 canais
+2025-09-22 08:06:18,670 - INFO - app.youtube.run.20250922_080618 - Processando canal 1/107: @AIAnytime
+2025-09-22 08:06:18,670 - INFO - app.youtube.run.20250922_080618 - Processando canal 1/107: @AIAnytime
+2025-09-22 08:06:21,082 - INFO - youtube_extractor - Extraindo vídeos do canal @AIAnytime (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-22 08:06:25,809 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-22 08:06:25,809 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-22 08:06:25,810 - INFO - app.youtube.run.20250922_080618 - Canal @AIAnytime extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-22 08:06:25,810 - INFO - app.youtube.run.20250922_080618 - Canal @AIAnytime extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-22 08:06:25,810 - INFO - app.youtube.run.20250922_080618 - Processando canal 2/107: @AIDailyBrief
+2025-09-22 08:06:25,810 - INFO - app.youtube.run.20250922_080618 - Processando canal 2/107: @AIDailyBrief
+2025-09-22 08:06:34,831 - INFO - youtube_extractor - Extraindo vídeos do canal @AIDailyBrief (max_age_days=1, videos_tab_only=True, max_videos=30)
+2025-09-22 08:06:39,683 - INFO - youtube_extractor - Aba /videos: analisados=3, válidos=2, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-22 08:06:39,683 - INFO - youtube_extractor - Aba /videos: 2 vídeos válidos (≤ 1 dias)
+2025-09-22 08:06:39,683 - INFO - app.youtube.run.20250922_080618 - Canal @AIDailyBrief extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-22 08:06:39,683 - INFO - app.youtube.run.20250922_080618 - Canal @AIDailyBrief extraído com sucesso. Vídeos dentro do critério: 2
+2025-09-22 08:06:46,878 - INFO - app.youtube.run.20250922_080618 - Vídeo DPFNiLW_yqg executado no modo simple (transcrição não aplicada).
+2025-09-22 08:06:46,878 - INFO - app.youtube.run.20250922_080618 - Vídeo DPFNiLW_yqg executado no modo simple (transcrição não aplicada).

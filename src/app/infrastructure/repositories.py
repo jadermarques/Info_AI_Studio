@@ -221,3 +221,58 @@ def list_youtube_extractions(limit: int = 20) -> list[dict[str, Any]]:
         (limit,),
     )
     return [dict(row) for row in rows]
+
+
+# ------------------ Web Prompt Config ------------------
+def upsert_web_prompt_config(
+    persona: str,
+    publico_alvo: str,
+    segmentos: str,
+    instrucoes: str,
+    prompt: str,
+) -> None:
+    """Insere ou atualiza (linha única) as configurações padrão da consulta via prompt."""
+    # Garante existência da tabela (idempotente)
+    db.execute(
+        "CREATE TABLE IF NOT EXISTS web_prompt_config (\n"
+        "    wpc_id INTEGER PRIMARY KEY CHECK (wpc_id = 1),\n"
+        "    wpc_persona TEXT NOT NULL,\n"
+        "    wpc_publico_alvo TEXT NOT NULL,\n"
+        "    wpc_segmentos TEXT NOT NULL,\n"
+        "    wpc_instrucoes TEXT NOT NULL,\n"
+        "    wpc_prompt TEXT NOT NULL,\n"
+        "    wpc_updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP\n"
+        ")"
+    )
+    # Garante linha única com id=1
+    existing = db.fetch_one("SELECT wpc_id FROM web_prompt_config WHERE wpc_id = 1")
+    if existing is None:
+        db.execute(
+            "INSERT INTO web_prompt_config (wpc_id, wpc_persona, wpc_publico_alvo, wpc_segmentos, wpc_instrucoes, wpc_prompt)"
+            " VALUES (1, ?, ?, ?, ?, ?)",
+            (persona.strip(), publico_alvo.strip(), segmentos.strip(), instrucoes.strip(), prompt.strip()),
+        )
+    else:
+        db.execute(
+            "UPDATE web_prompt_config SET wpc_persona=?, wpc_publico_alvo=?, wpc_segmentos=?, wpc_instrucoes=?, wpc_prompt=?, wpc_updated_at=CURRENT_TIMESTAMP WHERE wpc_id=1",
+            (persona.strip(), publico_alvo.strip(), segmentos.strip(), instrucoes.strip(), prompt.strip()),
+        )
+
+
+def get_web_prompt_config() -> dict[str, Any] | None:
+    # Garante existência da tabela antes de consultar
+    db.execute(
+        "CREATE TABLE IF NOT EXISTS web_prompt_config (\n"
+        "    wpc_id INTEGER PRIMARY KEY CHECK (wpc_id = 1),\n"
+        "    wpc_persona TEXT NOT NULL,\n"
+        "    wpc_publico_alvo TEXT NOT NULL,\n"
+        "    wpc_segmentos TEXT NOT NULL,\n"
+        "    wpc_instrucoes TEXT NOT NULL,\n"
+        "    wpc_prompt TEXT NOT NULL,\n"
+        "    wpc_updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP\n"
+        ")"
+    )
+    row = db.fetch_one(
+        "SELECT wpc_persona, wpc_publico_alvo, wpc_segmentos, wpc_instrucoes, wpc_prompt FROM web_prompt_config WHERE wpc_id = 1"
+    )
+    return dict(row) if row else None

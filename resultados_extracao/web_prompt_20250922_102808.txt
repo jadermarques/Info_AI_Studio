@@ -1,0 +1,91 @@
+Ótimo. Posso fornecer o briefing semanal exatamente no formato desejado, mas ainda preciso de alguns dados para preencher o conteúdo de forma correta. Por favor, me confirme ou apresente os valores abaixo:
+
+- PERSONA (persona a atuar): 
+- DATA_INICIAL e DATA_FINAL (período da semana): 
+- PUBLICO_ALVO (quem é o público destinatário do briefing): 
+- FORMATO_SAIDA (PDF, Markdown, Google Docs, etc.): 
+- SEGMENTOS (lista de segmentos para a análise; ex.: TI/A IA Generativa, Marketing, Operações, Vendas, etc.)
+
+Observações rápidas:
+- Se preferir, eu começo com um modelo preenchido usando placeholders e você pode substituir depois pelos valores reais.
+- Não tenho navegação em tempo real neste chat para testar links. Posso: (a) usar apenas links que você fornecer ou (b) gerar o texto com links sugeridos de alta credibilidade e você confirmar a disponibilidade. Caso queira, eu posso listar fontes recomendadas para cada item e você validar as URLs.
+
+Abaixo está um modelo estruturado pronto para ser preenchido. Substitua os placeholders entre chaves com os seus dados reais.
+
+Modelo pronto (preencherá exatamente na estrutura solicitada)
+
+Briefing Semanal de IA e IA Generativa
+
+Período: {DATA_INICIAL} a {DATA_FINAL}
+
+1. Resumo Executivo
+- Destaque 1: {Resumo do fato mais importante da semana} {LINK}
+- Destaque 2: {Resumo do segundo fato mais importante} {LINK}
+- Destaque 3: {Resumo do terceiro fato mais importante} {LINK}
+- Destaque 4: {Resumo do quarto fato mais importante} {LINK}
+- Destaque 5: {Resumo do quinto fato mais importante} {LINK}
+
+2. Notícias e Anúncios de Destaque
+- Big Techs:
+  - {Nome da Empresa}: {Resumo da notícia} - {LINK}
+- Startups e Investimentos:
+  - {Nome da Startup}: {Resumo da notícia sobre investimento ou aquisição} - {LINK}
+- Regulamentação e Ética:
+  - {Tópico ou Região}: {Resumo da notícia} - {LINK}
+
+3. Inovações em Modelos
+- Novos Lançamentos:
+  - {Nome do Modelo} por {Empresa/Organização}: {Descrição das capacidades} - {LINK}
+- Atualizações Relevantes:
+  - {Nome do Modelo Existente}: {Descrição da atualização} - {LINK}
+- Destaques Open Source:
+  - {Nome do Modelo Open Source}: {Descrição e motivo do destaque} - {LINK}
+
+4. Novas Ferramentas e Aplicações
+- Para Desenvolvedores:
+  - {Nome da Ferramenta/Biblioteca}: {Descrição da sua função} - {LINK}
+- Para Usuários Finais:
+  - {Nome do Aplicativo}: {Descrição da sua função} - {LINK}
+- Caso de Uso de Impacto:
+  - {Empresa/Setor}: {Descrição de como a IA foi aplicada e o resultado} - {LINK}
+
+5. Análises de Mercado e Insights Estratégicos
+- Insights de Consultorias:
+  - {Nome da Consultoria (ex: Gartner)}: {Principal insight do relatório/artigo} - {LINK}
+- Tendência Emergente:
+  - {Nome da Tendência}: {Breve explicação sobre o que é e por que é importante} - {LINK}
+- Análise de Influenciador:
+  - {Nome do Influenciador}: {Resumo da sua análise ou opinião} - {LINK}
+
+Análise IA por Segmento
+Faca a análise, conforme estrutura abaixo, para cada um dos segmentos em {SEGMENTOS}.
+
+Segmento {SEGMENTOS}
+
+1) Análises de Mercado e Insights Estratégicos
+- Insights de Consultorias:
+  - {Nome da Consultoria (ex: Gartner)}: {Principal insight do relatório/artigo} - {LINK}
+- Tendência Emergente:
+  - {Nome da Tendência}: {Breve explicação sobre o que é e por que é importante} - {LINK}
+- Análise de Influenciador:
+  - {Nome do Influenciador}: {Resumo da sua análise ou opinião} - {LINK}
+
+2) Inovação em Ferramentas de IA Generativa (Grandes Empresas)
+- Cases de inovação com implantação de IA Generativa:
+  - {Nome da Empresa}: {Breve descrição do processo de implantação da IA Generativa na empresa, benefícios/resultados} - {LINK}
+- Notícias sobre automatização de tarefas/rotinas:
+  - {Nome da Empresa}: {Breve descrição do processo/tarefa/rotina automatizada} - {LINK}
+
+3) Inovação em Ferramentas de IA Generativa (Pequenas e Médias Empresas)
+- Cases de inovação com implantação de IA Generativa:
+  - {Nome da Empresa}: {Breve descrição do processo de implantação da IA Generativa na empresa, benefícios/resultados} - {LINK}
+- Notícias sobre automatização de tarefas/rotinas:
+  - {Nome da Empresa}: {Breve descrição do processo/tarefa/rotina automatizada} - {LINK}
+
+Instruções sobre links
+- Verifique a disponibilidade do LINK antes de incluir. Se o link não estiver disponível, procure outra fonte correspondente que esteja acessível e relacione-se com o conteúdo da notícia. (Se puder, indique o motivo de indisponibilidade ao usar um link não acessível.)
+
+Observação final
+Assim que você enviar os valores para as variáveis acima (ou me autorizar a usar um conjunto de valores padrão), eu monto o briefing completo com textos curtos (1-2 frases por item) e links verificados ou apropriados, seguindo o formato e priorizando fontes de alta credibilidade (The Verge, TechCrunch, blogs oficiais, artigos de pesquisa, relatórios de consultorias, etc.).
+
+Se preferir, diga apenas: “Use valores padrão” e eu devolvo uma versão de exemplo com dados fictícios apenas para demonstrar o formato. Depois você substitui pelos fatos reais.

@@ -11,6 +11,12 @@ from app.config import get_settings, reload_settings
 from app.infrastructure.backup import create_backup
 from app.infrastructure.db import initialize_database, is_database_initialized
 from app.infrastructure.env_manager import update_env_values
+from app.domain.web_prompt_execution import WebPromptParams, _build_prompt_text
+from app.domain.web_prompt_service import (
+    get_defaults as web_get_defaults,
+    save_defaults as web_save_defaults,
+    WebPromptDefaults,
+)
 
 _domain_update_parameters: Optional[Callable[[Mapping[str, str]], object]]
 _domain_import_error: Optional[Exception]
@@ -101,3 +107,85 @@ if st.button("Gerar backup", icon="💾"):
         st.error(str(exc))
     else:
         st.success(f"Backup gerado em {backup_path}")
+
+st.divider()
+
+st.subheader("Configurações da consulta Info Web (campos via prompt)")
+web_defaults = web_get_defaults()
+# Mensagem de sucesso pós-salvamento (sobrevive ao rerun)
+if st.session_state.get("web_prompt_saved"):
+    st.success("Configurações salvas com sucesso.")
+    del st.session_state["web_prompt_saved"]
+with st.form("web_prompt_defaults_form"):
+    col1, col2 = st.columns(2)
+    with col1:
+        persona = st.text_input(
+            "Persona (padrão)",
+            value=web_defaults.persona,
+            help="Valor padrão exibido na aba Execução > Fontes Web > Consulta via prompt.",
+        )
+        publico = st.text_input(
+            "Público-alvo (padrão)",
+            value=web_defaults.publico_alvo,
+        )
+    with col2:
+        segmentos = st.text_input(
+            "Segmentos (padrão)",
+            value=web_defaults.segmentos,
+            help="Ex.: {saúde, educação,indústria}",
+        )
+    prompt_padrao = st.text_area(
+        "Prompt da consulta (padrão)",
+        value=web_defaults.prompt,
+        height=280,
+        help="Texto base do prompt exibido por padrão na execução (o usuário pode alterar somente para aquela execução).",
+    )
+    if st.form_submit_button("Salvar configurações de consulta web", use_container_width=True):
+        web_save_defaults(
+            WebPromptDefaults(
+                persona=persona.strip(),
+                publico_alvo=publico.strip(),
+                segmentos=segmentos.strip(),
+                instrucoes=(web_defaults.instrucoes or "").strip(),
+                prompt=prompt_padrao,
+            )
+        )
+        st.session_state["web_prompt_saved"] = True
+        st.rerun()
+
+        # Prévia do prompt final (com variáveis aplicadas)
+        st.markdown("Prévia do prompt final (com variáveis preenchidas)")
+        from datetime import date as _date, timedelta
+        prev_col1, prev_col2, prev_col3 = st.columns([1,1,1])
+        with prev_col1:
+            prev_dt_inicio = st.date_input("Data de início (prévia)", value=_date.today(), format="DD/MM/YYYY", key="web_prev_dt_inicio")
+        with prev_col2:
+            prev_dt_fim = st.date_input("Data de término (prévia)", value=_date.today() + timedelta(days=7), format="DD/MM/YYYY", key="web_prev_dt_fim")
+        with prev_col3:
+            prev_formato = st.selectbox(
+                "Formato (texto)",
+                options=["Markdown", "Texto", "JSON", "XML", "PDF"],
+                index=0,
+                help="Somente para visualização da prévia.",
+                key="web_prev_formato_texto",
+            )
+
+        # Usa sempre os valores atualmente carregados (padrões salvos)
+        _defaults = web_get_defaults()
+        _params = WebPromptParams(
+            data_inicio=prev_dt_inicio,
+            data_fim=prev_dt_fim,
+            persona=_defaults.persona,
+            publico_alvo=_defaults.publico_alvo,
+            segmentos=_defaults.segmentos,
+            instrucoes=_defaults.instrucoes,
+            prompt_base=_defaults.prompt,
+            formato_saida=prev_formato,
+            llm_provedor="OPENAI",
+            llm_modelo="gpt-4o-mini",
+            api_key="",
+            outdir=settings.resultados_dir,
+        )
+        _preview_text = _build_prompt_text(_params)
+        with st.expander("Ver prévia do prompt", expanded=True):
+            st.code(_preview_text, language="markdown")
