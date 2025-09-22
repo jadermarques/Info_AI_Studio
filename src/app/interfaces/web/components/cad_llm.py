@@ -2,7 +2,13 @@ from __future__ import annotations
 
 import streamlit as st
 from app.domain.entities import LLMModel
-from app.domain.llm_service import list_llm_models, register_llm_model, delete_llm_model
+from app.domain.llm_service import (
+    list_llm_models,
+    register_llm_model,
+    delete_llm_model,
+    test_llm_connection,
+    LLMConnectionError,
+)
 from .ui_helpers import status_badge, paginate, render_pagination_controls
 
 
@@ -88,24 +94,47 @@ def render() -> None:
     render_pagination_controls("page_llm", page, end, len(registros), "llm_prev", "llm_next", size_key="page_llm_size")
 
     if paginated:
-        header = st.columns([2, 2, 3, 1, 2, 1, 1])
+        header = st.columns([2, 2, 3, 1, 2, 1, 1, 1])
         header[0].markdown("**Provedor**")
         header[1].markdown("**Modelo**")
         header[2].markdown("**API Key**")
         header[3].markdown("**Status**")
         header[4].markdown("**Data de criação**")
-        header[5].markdown("**Editar**")
-        header[6].markdown("**Excluir**")
+        header[5].markdown("**Testar**")
+        header[6].markdown("**Editar**")
+        header[7].markdown("**Excluir**")
         for row in paginated:
-            cols = st.columns([2, 2, 3, 1, 2, 1, 1])
+            cols = st.columns([2, 2, 3, 1, 2, 1, 1, 1])
             cols[0].markdown(row["provedor"])
             cols[1].markdown(row["modelo"])
             cols[2].markdown(f"`{row['api_key']}`")
             cols[3].markdown(status_badge(row["status"]), unsafe_allow_html=True)
             cols[4].markdown(row["created_at"])
-            if cols[5].button("✏️", key=f"llm_edit_{row['id']}", help="Editar modelo"):
+            disabled_test = (not row["status"]) or (not str(row["api_key"]).strip())
+            if cols[5].button("🧪", key=f"llm_test_{row['id']}", help="Testar conexão", disabled=disabled_test):
+                with st.spinner("Testando conexão com o provedor..."):
+                    try:
+                        resultado = test_llm_connection(
+                            LLMModel(
+                                provedor=row["provedor"],
+                                modelo=row["modelo"],
+                                api_key=row["api_key"],
+                                status=row["status"],
+                                model_id=row["id"],
+                            )
+                        )
+                    except LLMConnectionError as exc:
+                        st.error(f"Falha no teste: {exc.message} (env: {exc.env_var})")
+                    except Exception as exc:
+                        st.error(f"Erro inesperado ao testar: {exc}")
+                    else:
+                        if resultado.sucesso:
+                            st.success(resultado.mensagem)
+                        else:
+                            st.warning(resultado.mensagem)
+            if cols[6].button("✏️", key=f"llm_edit_{row['id']}", help="Editar modelo"):
                 st.session_state.llm_edit_confirm = row['id']
-            if cols[6].button("🗑️", key=f"llm_delete_{row['id']}", help="Excluir modelo"):
+            if cols[7].button("🗑️", key=f"llm_delete_{row['id']}", help="Excluir modelo"):
                 st.session_state.llm_delete_confirm = row['id']
 
     if st.session_state.get("llm_edit_confirm") is not None:

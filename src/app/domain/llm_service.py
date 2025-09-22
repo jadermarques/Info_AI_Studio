@@ -123,6 +123,10 @@ def _traduzir_erro(mensagem: str) -> str:
     if not texto:
         return "Erro desconhecido ao validar o modelo."
     texto_lower = texto.lower()
+    if "401" in texto_lower or "unauthorized" in texto_lower:
+        return "Chave de API inválida ou não autorizada."
+    if "404" in texto_lower:
+        return "Modelo informado não existe ou endpoint não suportado pelo provedor."
     if "api key" in texto_lower and ("invalid" in texto_lower or "incorrect" in texto_lower):
         return "Chave de API inválida ou não autorizada."
     if "not found" in texto_lower or "does not exist" in texto_lower:
@@ -157,6 +161,39 @@ def test_llm_connection(model: LLMModel) -> LLMConnectionResult:
                     f"Conexão com {provedor_normalizado} bem-sucedida."
                     f" Variável {env_var} válida."
                 ),
+                variavel_ambiente=env_var,
+            )
+        except Exception as exc:  # pragma: no cover - depende da API externa
+            raw = str(exc)
+            mensagem = _traduzir_erro(raw)
+            low = raw.lower()
+            if "404" in low or "not found" in low or "does not exist" in low:
+                mensagem = (
+                    f"Modelo '{model.modelo}' não encontrado na Perplexity. "
+                    "Verifique o nome do modelo."
+                )
+            if "401" in low or "unauthorized" in low:
+                mensagem = "Chave de API inválida ou não autorizada."
+            raise LLMConnectionError(mensagem, env_var) from exc
+    if provedor_normalizado == "PERPLEXITY":
+        if OpenAI is None:
+            raise LLMConnectionError(
+                "Biblioteca OpenAI não instalada no ambiente.", env_var
+            )
+        try:
+            # API compatível com OpenAI, usando base_url da Perplexity
+            cliente = OpenAI(api_key=model.api_key, base_url="https://api.perplexity.ai")
+            # Alguns provedores não expõem /models; faz uma chamada mínima de chat para validar credencial/modelo
+            cliente.chat.completions.create(
+                model=model.modelo,
+                messages=[{"role": "user", "content": "ping"}],
+                max_tokens=1,
+                temperature=0,
+            )
+            return LLMConnectionResult(
+                sucesso=True,
+                mensagem=(f"Conexão com {provedor_normalizado} bem-sucedida. "
+                          f"Variável {env_var} válida. Uma chamada mínima foi realizada para validação."),
                 variavel_ambiente=env_var,
             )
         except Exception as exc:  # pragma: no cover - depende da API externa
