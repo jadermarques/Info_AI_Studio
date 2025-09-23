@@ -257,10 +257,16 @@ if submenu == "Fontes Web":
                             mime = mime_map.get(ext, "application/octet-stream")
                             try:
                                 data = rp.read_bytes()
+                                # Nome com run_id e timestamp (Brasília)
+                                try:
+                                    from datetime import datetime, timezone, timedelta
+                                    ts = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y%m%d_%H%M%S")
+                                except Exception:
+                                    ts = ""
                                 st.download_button(
                                     label=f"Baixar saída ({ext[1:]})",
                                     data=data,
-                                    file_name=rp.name,
+                                    file_name=f"{getattr(result, 'run_id', 'exec')}_{ts}{rp.suffix}",
                                     mime=mime,
                                 )
                             except Exception:
@@ -289,10 +295,16 @@ if submenu == "Fontes Web":
                         except Exception:
                             # Fallback: oferecer download direto
                             try:
+                                # Nome com run_id e timestamp (Brasília)
+                                try:
+                                    from datetime import datetime, timezone, timedelta
+                                    ts = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y%m%d_%H%M%S")
+                                except Exception:
+                                    ts = ""
                                 st.download_button(
                                     label="Baixar log (.log)",
                                     data=lp.read_bytes(),
-                                    file_name=lp.name,
+                                    file_name=f"{getattr(result, 'run_id', 'exec')}_{ts}.log",
                                     mime="text/plain; charset=utf-8",
                                 )
                             except Exception:
@@ -645,6 +657,21 @@ else:
                 st.success(result.message)
                 st.write(f"Canais processados: {result.total_channels}")
                 st.write(f"Vídeos extraídos: {result.total_videos}")
+                # Logs detalhados da execução (colapsável)
+                if progress_messages:
+                    try:
+                        progress_placeholder.empty()
+                    except Exception:
+                        pass
+                    logs_txt = "\n".join(progress_messages)
+                    with st.expander("Detalhes da execução (logs)", expanded=False):
+                        line_count = max(10, min(600, len(logs_txt.splitlines()) * 1))
+                        st.text_area(
+                            "Logs da execução",
+                            logs_txt,
+                            height=min(600, max(240, line_count * 16)),
+                            disabled=True,
+                        )
                 # Linha JSON: caminho à esquerda, links à direita
                 json_col_left, json_col_right = st.columns([3, 2])
                 with json_col_left:
@@ -697,10 +724,16 @@ else:
                                 mime = mime_map.get(ext, "application/octet-stream")
                                 try:
                                     data = rp.read_bytes()
+                                    # Nome com run_id e timestamp (Brasília)
+                                    try:
+                                        from datetime import datetime, timezone, timedelta
+                                        ts = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y%m%d_%H%M%S")
+                                    except Exception:
+                                        ts = ""
                                     st.download_button(
                                         label=f"Baixar relatório ({ext[1:]})",
                                         data=data,
-                                        file_name=rp.name,
+                                        file_name=f"{getattr(result, 'run_id', 'exec')}_{ts}{rp.suffix}",
                                         mime=mime,
                                     )
                                 except Exception:
@@ -805,29 +838,23 @@ else:
                     except Exception:
                         pass
                 if result.channels_data:
-                    st.subheader("Origem da análise por vídeo")
-                    for channel_info in result.channels_data:
-                        channel_name = channel_info.get("name") or channel_info.get(
-                            "channel_id"
-                        )
-                        videos = channel_info.get("videos", [])
-                        expander_label = f"{channel_name} — {len(videos)} vídeo(s)"
-                        with st.expander(expander_label):
-                            if not videos:
-                                st.write("Nenhum vídeo analisado para este canal.")
-                            else:
-                                for video in videos:
-                                    video_title = video.get("title") or "Vídeo sem título"
-                                    video_url = video.get("url")
-                                    method_label = _analysis_method_label(
-                                        video.get("analysis_source")
-                                    )
-                                    if video_url:
-                                        st.markdown(
-                                            f"- [{video_title}]({video_url}) — {method_label}"
-                                        )
-                                    else:
-                                        st.markdown(f"- {video_title} — {method_label}")
+                    # Exibir apenas canais com vídeos encontrados, e agrupar tudo em um único expander
+                    channels_with_videos = [c for c in result.channels_data if c.get("videos")]
+                    if channels_with_videos:
+                        with st.expander("Origem da análise por vídeo", expanded=False):
+                            for channel_info in channels_with_videos:
+                                channel_name = channel_info.get("name") or channel_info.get("channel_id")
+                                videos = channel_info.get("videos", [])
+                                expander_label = f"{channel_name} — {len(videos)} vídeo(s)"
+                                with st.expander(expander_label, expanded=False):
+                                    for video in videos:
+                                        video_title = video.get("title") or "Vídeo sem título"
+                                        video_url = video.get("url")
+                                        method_label = _analysis_method_label(video.get("analysis_source"))
+                                        if video_url:
+                                            st.markdown(f"- [{video_title}]({video_url}) — {method_label}")
+                                        else:
+                                            st.markdown(f"- {video_title} — {method_label}")
                 if result.token_details:
                     st.subheader("Tokens por vídeo")
                     # Adiciona coluna de data do vídeo e origem do conteúdo
@@ -966,10 +993,16 @@ else:
                         writer.writeheader()
                         for r in rows_resumo:
                             writer.writerow(r)
+                        # Timestamp Brasília para nome de arquivo
+                        try:
+                            from datetime import datetime, timezone, timedelta
+                            ts = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y%m%d_%H%M%S")
+                        except Exception:
+                            ts = ""
                         st.download_button(
                             label="Exportar CSV",
                             data=csv_buffer.getvalue().encode("utf-8"),
-                            file_name="resumo_extracao.csv",
+                            file_name=f"{getattr(result, 'run_id', 'exec')}_{ts}_resumo_extracao.csv",
                             mime="text/csv",
                         )
                 # Modo simple: montar tabela de vídeos encontrados com campos solicitados
@@ -981,8 +1014,8 @@ else:
                         canal_nome = channel.get("name") or channel.get("channel_id")
                         for v in channel.get("videos", []):
                             # data do vídeo: converter para Brasília
-                            data_raw = v.get("date_published") or v.get("published")
-                            dt_fmt = None
+                            data_raw = v.get("date_published") or v.get("published") or v.get("published_relative")
+                            data_fmt = str(data_raw or "")
                             dt_obj = None
                             if data_raw:
                                 try:
@@ -998,57 +1031,321 @@ else:
                                 if dt_obj.tzinfo is None:
                                     dt_obj = dt_obj.replace(tzinfo=timezone.utc)
                                 dt_brasilia = dt_obj.astimezone(timezone(timedelta(hours=-3)))
-                                data_fmt = dt_brasilia.strftime("%d/%m/%y %H:%M")
+                                data_fmt = dt_brasilia.strftime("%d/%m/%Y %H:%M")
+                            # origem e tradução (não aplicável no simples)
+                            analysis_source = v.get("analysis_source", "") or ""
+                            if analysis_source == "transcricao_youtube":
+                                origem_conteudo = "transcrição"
+                            elif str(analysis_source).startswith("asr_"):
+                                origem_conteudo = "áudio"
                             else:
-                                data_fmt = str(data_raw or "")
+                                origem_conteudo = "-"
+                            titulo_original = v.get("title", "")
+                            titulo_pt = titulo_original
+                            titulo_traduzido = "não"
+                            try:
+                                modelo_llm = selected_model.get("modelo") if selected_model else ""
+                            except Exception:
+                                modelo_llm = ""
                             rows.append({
-                                "data video": data_fmt,
-                                "nome canal": canal_nome,
-                                "titulo do video": v.get("title",""),
+                                # ordem e nomes iguais ao 'Resumo Extração' quando aplicável
+                                "data hora postagem video": data_fmt,
+                                "nome do canal": canal_nome,
+                                "titulo do video (lingua original)": titulo_original,
+                                "titulo do video (em portugues)": titulo_pt,
+                                "titulo foi traduzido": titulo_traduzido,
+                                "modelo LLM usado": modelo_llm,
+                                "resumo do video (1 frase)": "",
+                                "resumo": "",
+                                "palavras-chave": "",
+                                "resumo em tópicos": "",
+                                "duracao do video": v.get("duration",""),
+                                "origem do conteudo": origem_conteudo,
+                                "possui transcricao": "sim" if v.get("has_transcript") else "não",
+                                "url do video": v.get("url",""),
+                                "tempo total de analise do video em minutos": "",
+                                "tokens enviados": 0,
+                                "tokens recebidos": 0,
+                                # extras
                                 "id do video": v.get("id",""),
-                                "link do video (url)": v.get("url",""),
-                                "tamanho do video": v.get("duration",""),
                                 "idioma original": v.get("language",""),
-                                "tem transcricao": "sim" if v.get("has_transcript") else "não",
                                 "visualizacoes": v.get("view_count", 0),
                             })
                     if rows:
-                        st.dataframe(rows, hide_index=True)
-                # Tokens
-                total_prompt = result.total_prompt_tokens
-                total_completion = result.total_completion_tokens
-                total_tokens = total_prompt + total_completion
-                st.metric(
-                    "Total geral de tokens",
-                    value=f"{total_tokens}",
-                    delta=f"Entrada: {total_prompt} · Saída: {total_completion}",
-                )
-
-                # Exibe tempos de análise por vídeo e total
-                if hasattr(result, "channels_data"):
-                    tempos_videos = []
-                    tempo_total = None
-                    for channel in result.channels_data:
-                        for video in channel.get("videos", []):
-                            tempo = video.get("analysis_time")
-                            if tempo:
-                                tempos_videos.append((video.get("title", ""), tempo))
-                    if hasattr(result, "started_at") and hasattr(result, "run_id"):
-                        from datetime import datetime
-                        # Tenta buscar tempo final pelo log_path
-                        import os
+                        # Ordem fixa de exibição semelhante ao 'Resumo Extração' (com extras no final)
+                        ordered_cols = [
+                            "data hora postagem video",
+                            "nome do canal",
+                            "titulo do video (lingua original)",
+                            "titulo do video (em portugues)",
+                            "titulo foi traduzido",
+                            "modelo LLM usado",
+                            "resumo do video (1 frase)",
+                            "resumo",
+                            "palavras-chave",
+                            "resumo em tópicos",
+                            "duracao do video",
+                            "origem do conteudo",
+                            "possui transcricao",
+                            "url do video",
+                            "tempo total de analise do video em minutos",
+                            "tokens enviados",
+                            "tokens recebidos",
+                            "id do video",
+                            "idioma original",
+                            "visualizacoes",
+                        ]
+                        # Controles de busca e seleção de colunas (persistentes por sessão)
+                        default_search = st.session_state.get("search_simple", "")
+                        search_q_simple = st.text_input("Buscar", value=default_search, key="search_simple")
+                        default_cols = st.session_state.get("simple_table_cols", ordered_cols)
+                        # Sanitiza default para conter apenas colunas válidas
+                        default_cols = [c for c in default_cols if c in ordered_cols] or ordered_cols
+                        cols_sel_simple = st.multiselect(
+                            "Colunas a exibir",
+                            options=ordered_cols,
+                            default=default_cols,
+                            key="cols_simple",
+                        )
+                        filtered_rows = rows
+                        if search_q_simple:
+                            q = str(search_q_simple).strip().lower()
+                            def _match_simple(row: dict) -> bool:
+                                for v in row.values():
+                                    try:
+                                        if q in str(v).lower():
+                                            return True
+                                    except Exception:
+                                        continue
+                                return False
+                            filtered_rows = [r for r in rows if _match_simple(r)]
+                        rows_display = [{k: r.get(k) for k in (cols_sel_simple or ordered_cols)} for r in filtered_rows]
+                        # Persiste seleção atual nas próximas interações da sessão
+                        st.session_state["simple_table_cols"] = cols_sel_simple or ordered_cols
+                        st.caption("Dica: use o ícone de tela cheia da tabela para maximizar a visualização.")
+                        st.dataframe(rows_display, hide_index=True, use_container_width=True)
+                        # Exportar CSV
+                        csv_buffer = io.StringIO()
+                        fieldnames = cols_sel_simple or ordered_cols
+                        writer = csv.DictWriter(csv_buffer, fieldnames=fieldnames)
+                        writer.writeheader()
+                        for r in rows_display:
+                            writer.writerow(r)
+                        # Timestamp Brasília para nome de arquivo (simples)
                         try:
-                            if result.log_path and os.path.exists(result.log_path):
-                                import time
-                                tempo_final = os.path.getmtime(result.log_path)
-                                tempo_total = tempo_final - result.started_at.timestamp()
+                            from datetime import datetime, timezone, timedelta
+                            ts_simple = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y%m%d_%H%M%S")
                         except Exception:
-                            tempo_total = None
+                            ts_simple = ""
+                        st.download_button(
+                            label="Exportar CSV (vídeos encontrados)",
+                            data=csv_buffer.getvalue().encode("utf-8"),
+                            file_name=f"{getattr(result, 'run_id', 'exec')}_{ts_simple}_videos_encontrados.csv",
+                            mime="text/csv",
+                        )
+                # Exibe tempos de análise por vídeo em tabela e resumo final ao rodapé
+                tempo_total = None
+                if hasattr(result, "channels_data") and result.channels_data:
+                    import io, csv, os
+                    from datetime import datetime, timezone, timedelta
+                    # Calcular tempo total baseado no mtime do log
+                    try:
+                        if result.log_path and os.path.exists(result.log_path):
+                            tempo_final = os.path.getmtime(result.log_path)
+                            tempo_total = tempo_final - result.started_at.timestamp()
+                    except Exception:
+                        tempo_total = None
+
+                    # Monta linhas com tempos por vídeo
+                    rows_tempos: list[dict] = []
+                    for channel in result.channels_data:
+                        canal_nome = channel.get("name") or channel.get("channel_id")
+                        for v in channel.get("videos", []):
+                            analise_seg = v.get("analysis_time") or 0.0
+                            try:
+                                analise_min = round(float(analise_seg) / 60.0, 2)
+                            except Exception:
+                                analise_min = 0.0
+                            # Data/hora do vídeo em horário de Brasília
+                            data_raw = v.get("date_published") or v.get("published") or v.get("published_relative") or ""
+                            data_fmt = str(data_raw)
+                            try:
+                                if data_raw:
+                                    from datetime import datetime, timezone, timedelta
+                                    try:
+                                        dt_obj = datetime.fromisoformat(str(data_raw))
+                                    except Exception:
+                                        dt_obj = None
+                                        for fmt in ["%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d/%m/%Y %H:%M", "%d/%m/%Y"]:
+                                            try:
+                                                dt_obj = datetime.strptime(str(data_raw), fmt)
+                                                break
+                                            except Exception:
+                                                continue
+                                    if dt_obj:
+                                        if dt_obj.tzinfo is None:
+                                            dt_obj = dt_obj.replace(tzinfo=timezone.utc)
+                                        dt_brasilia = dt_obj.astimezone(timezone(timedelta(hours=-3)))
+                                        data_fmt = dt_brasilia.strftime("%d/%m/%Y %H:%M")
+                            except Exception:
+                                data_fmt = str(data_raw)
+                            # Origem do conteúdo
+                            analysis_source = v.get("analysis_source", "") or ""
+                            if analysis_source == "transcricao_youtube":
+                                origem_conteudo = "transcrição"
+                            elif str(analysis_source).startswith("asr_"):
+                                origem_conteudo = "áudio"
+                            else:
+                                origem_conteudo = "-"
+                            # Campos de resumo/LLM, mantendo nomenclatura idêntica ao 'Resumo Extração'
+                            summary = v.get("summary") or {}
+                            palavras_chave = summary.get("palavras_chave") or []
+                            if isinstance(palavras_chave, str):
+                                palavras_chave = [p.strip() for p in palavras_chave.split(",") if p.strip()]
+                            resumo_topicos = (summary.get("resumo_em_topicos") or "").strip()
+                            titulo_original = v.get("title", "")
+                            titulo_pt = v.get("title_pt") or titulo_original
+                            titulo_traduzido = "sim" if (titulo_pt and titulo_pt != titulo_original) else "não"
+                            try:
+                                modelo_llm = summary.get("model") or (selected_model.get("modelo") if 'selected_model' in locals() and selected_model else "")
+                            except Exception:
+                                modelo_llm = ""
+                            rows_tempos.append({
+                                # Colunas idênticas ao 'Resumo Extração'
+                                "data hora postagem video": data_fmt,
+                                "nome do canal": canal_nome,
+                                "titulo do video (lingua original)": titulo_original,
+                                "titulo do video (em portugues)": titulo_pt,
+                                "titulo foi traduzido": titulo_traduzido,
+                                "modelo LLM usado": modelo_llm,
+                                "resumo do video (1 frase)": summary.get("resumo_uma_frase", ""),
+                                "resumo": summary.get("resumo", ""),
+                                "palavras-chave": ", ".join(palavras_chave),
+                                "resumo em tópicos": resumo_topicos,
+                                "duracao do video": v.get("duration", ""),
+                                "origem do conteudo": origem_conteudo,
+                                "possui transcricao": "sim" if v.get("has_transcript") else "não",
+                                "url do video": v.get("url", ""),
+                                "tempo total de analise do video em minutos": analise_min,
+                                "tokens enviados": summary.get("prompt_tokens", 0) or 0,
+                                "tokens recebidos": summary.get("completion_tokens", 0) or 0,
+                                # Colunas extras específicas desta tabela (após as idênticas)
+                                "id do video": v.get("id", ""),
+                                "idioma original": v.get("language", ""),
+                                "visualizacoes": v.get("view_count", 0),
+                                "tempo de analise (s)": round(float(analise_seg), 2) if analise_seg else 0.0,
+                            })
+
                     st.subheader("Tempo de análise por vídeo")
-                    for titulo, tempo in tempos_videos:
-                        st.write(f"{titulo}: {tempo:.2f} segundos")
-                    if tempo_total:
+                    # Controles de busca e colunas (ordem base idêntica ao 'Resumo Extração')
+                    # Busca persistente por sessão
+                    default_search_time = st.session_state.get("search_time", "")
+                    search_q = st.text_input("Buscar", value=default_search_time, key="search_time")
+                    ordered_cols_tempos = [
+                        "data hora postagem video",
+                        "nome do canal",
+                        "titulo do video (lingua original)",
+                        "titulo do video (em portugues)",
+                        "titulo foi traduzido",
+                        "modelo LLM usado",
+                        "resumo do video (1 frase)",
+                        "resumo",
+                        "palavras-chave",
+                        "resumo em tópicos",
+                        "duracao do video",
+                        "origem do conteudo",
+                        "possui transcricao",
+                        "url do video",
+                        "tempo total de analise do video em minutos",
+                        "tokens enviados",
+                        "tokens recebidos",
+                        # Extras desta tabela
+                        "id do video",
+                        "idioma original",
+                        "visualizacoes",
+                        "tempo de analise (s)",
+                    ]
+                    display_cols = ordered_cols_tempos if rows_tempos else []
+                    # Seleção de colunas persistente por sessão
+                    default_cols_time = st.session_state.get("time_table_cols", display_cols)
+                    default_cols_time = [c for c in default_cols_time if c in display_cols] or display_cols
+                    cols_sel = st.multiselect(
+                        "Colunas a exibir",
+                        options=display_cols,
+                        default=default_cols_time,
+                        key="cols_time",
+                    )
+                    filtered = rows_tempos
+                    if search_q:
+                        q = str(search_q).strip().lower()
+                        def _match(row: dict) -> bool:
+                            for v in row.values():
+                                try:
+                                    if q in str(v).lower():
+                                        return True
+                                except Exception:
+                                    continue
+                            return False
+                        filtered = [r for r in rows_tempos if _match(r)]
+                    if cols_sel:
+                        filtered = [{k: r.get(k) for k in cols_sel} for r in filtered]
+                    # Persiste seleção atual para a sessão e usa largura total
+                    st.session_state["time_table_cols"] = cols_sel or display_cols
+                    st.caption("Dica: use o ícone de tela cheia da tabela para maximizar a visualização.")
+                    st.dataframe(filtered, hide_index=True, use_container_width=True)
+                    # Download CSV
+                    if rows_tempos:
+                        csv_buffer = io.StringIO()
+                        fieldnames = cols_sel or list(rows_tempos[0].keys())
+                        writer = csv.DictWriter(csv_buffer, fieldnames=fieldnames)
+                        writer.writeheader()
+                        for r in (filtered or []):
+                            writer.writerow(r)
+                        # Timestamp Brasília para nome de arquivo (tempos)
+                        try:
+                            from datetime import datetime, timezone, timedelta
+                            ts_tempos = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y%m%d_%H%M%S")
+                        except Exception:
+                            ts_tempos = ""
+                        st.download_button(
+                            label="Exportar CSV (tempos)",
+                            data=csv_buffer.getvalue().encode("utf-8"),
+                            file_name=f"{getattr(result, 'run_id', 'exec')}_{ts_tempos}_tempos_analise_videos.csv",
+                            mime="text/csv",
+                        )
+
+                # Resumo final (rodapé): tokens, custo, modelo, tempo total da execução
+                try:
+                    total_prompt = int(getattr(result, "total_prompt_tokens", 0))
+                    total_completion = int(getattr(result, "total_completion_tokens", 0))
+                    total_tokens = total_prompt + total_completion
+                    modelo_usado = ""
+                    try:
+                        modelo_usado = selected_model.get("modelo") if selected_model else ""
+                    except Exception:
+                        modelo_usado = ""
+                    # Estimativa de custo se tabela de preços estiver disponível
+                    custo_txt = "—"
+                    try:
+                        from app.domain.llm_client import _MODEL_PRICES as MODEL_PRICES  # type: ignore
+                        if modelo_usado and MODEL_PRICES.get(modelo_usado.lower()):
+                            prices = MODEL_PRICES[modelo_usado.lower()]
+                            cost = (total_prompt / 1000.0) * float(prices.get("input", 0.0))
+                            cost += (total_completion / 1000.0) * float(prices.get("output", 0.0))
+                            custo_txt = f"R$ {cost:.4f}"
+                    except Exception:
+                        custo_txt = "—"
+
+                    st.subheader("Resumo da execução")
+                    st.write(f"Modelo LLM utilizado: {modelo_usado or '—'}")
+                    st.write(f"Tokens de entrada: {total_prompt}")
+                    st.write(f"Tokens de saída: {total_completion}")
+                    st.write(f"Total geral de tokens: {total_tokens}")
+                    st.write(f"Custo estimado: {custo_txt}")
+                    if tempo_total is not None:
                         st.write(f"Tempo total de execução: {tempo_total:.2f} segundos")
+                except Exception:
+                    pass
                 # Atualiza barra de progresso para 100% ao final (somente tela)
                 try:
                     progress_bar.progress(100)

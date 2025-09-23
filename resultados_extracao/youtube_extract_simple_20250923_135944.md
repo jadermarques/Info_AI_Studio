@@ -1,0 +1,34 @@
+```
+=======================================================================
+Iniciando execução modo SIMPLE
+Valores selecionados
+Grupos de canais selecionados: Ideias e Negócios com IA
+Canais cadastrados: 0
+Canais adicionais: —
+Dias para filtrar: 1
+Limite de vídeos por canal: 30
+Prefixo dos arquivos: youtube_extract_simple
+Formato do relatório: md
+Fornecedor de ASR: faster-whisper
+Desativar ASR (sim ou não): não
+Modelo LLM: gpt-5-nano
+
+Canais
+Canais selecionados para análise: 13
+
+VÍDEOS ENCONTRADOS
+data video | nome canal | titulo do video | id do video | link do video (url) | tamanho do video | idioma original | tem transcricao | visualizacoes
+------------------------------------------------------------------------------------------------------------------------
+23/09/25 11:07 | @ColeMedin | Knowledge Graphs in n8n are FINALLY Here! | NQ3vJ8iZPaQ | https://www.youtube.com/watch?v=NQ3vJ8iZPaQ | 18:55 |  | não | 1379
+23/09/25 07:58 | @Incomestreamsurfers | Claude Code Opus 4.1 ESTÁ DE VOLTA (FINALMENTE) | vGAbJS5bqgk | https://www.youtube.com/watch?v=vGAbJS5bqgk | 08:11 |  | não | 1252
+22/09/25 15:45 | @Incomestreamsurfers | QWEN CONTINUA A SER COZINHADO: Qwen3-Coder-Plus acaba de ser lançado | Dk7ZRUwsJdk | https://www.youtube.com/watch?v=Dk7ZRUwsJdk | 08:14 |  | não | 2036
+22/09/25 09:41 | @Incomestreamsurfers | Este novo modelo Stealth NÃO é o Soneto 4.5 (A Verdade) | mg7W1cF5Lxs | https://www.youtube.com/watch?v=mg7W1cF5Lxs | 12:07 |  | não | 1880
+22/09/25 05:39 | @LiamOttley | 3 AI Agent Use Cases Every Business Will Pay For ($100K Playbook) | jhVg-Zbz0V8 | https://www.youtube.com/watch?v=jhVg-Zbz0V8 | 49:30 |  | não | 16756
+23/09/25 13:23 | @PaulaBernardes | Elon Musk Lança IA TÃO Barata que Parece Mentira! OpenAI, Anthropic, Mistral, Meta e Muito Mais! | u2I7B2b9kV0 | https://www.youtube.com/watch?v=u2I7B2b9kV0 | 16:19 |  | não | 1
+22/09/25 19:03 | @PaulaBernardes | Google Integra Gemini no Chrome: O Navegador Nunca Mais Será o Mesmo! Meta, Anthropic, Notion e Mais | srpsxS2GykE | https://www.youtube.com/watch?v=srpsxS2GykE | 10:31 |  | não | 3981
+22/09/25 13:03 | @PaulaBernardes | O que a IA ainda Não Consegue Entender Sobre a Gente | k8VEy8SGwTY | https://www.youtube.com/watch?v=k8VEy8SGwTY | 09:10 |  | não | 777
+22/09/25 16:01 | @SuperHumansLife | 6 automações Zapier lucrativas que até iniciantes podem aprender hoje | LOktCypa7Yc | https://www.youtube.com/watch?v=LOktCypa7Yc | 15:41 |  | não | 2744
+22/09/25 11:31 | @nocodemba | Este NOVO AGENTE de IA é insano! (pode substituir o Zapier) | xtQEqO2pqYI | https://www.youtube.com/watch?v=xtQEqO2pqYI | 04:56 |  | não | 328
+
+Total de canais: 13 | Total de vídeos: 10
+```

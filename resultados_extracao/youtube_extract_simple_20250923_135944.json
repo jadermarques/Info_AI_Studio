@@ -1,0 +1,330 @@
+{
+  "executed_at": "2025-09-23T13:59:44.754519",
+  "mode": "simple",
+  "total_channels": 13,
+  "total_videos": 10,
+  "params": {
+    "days": 1,
+    "max_videos": 30,
+    "mode": "simple",
+    "no_llm": false,
+    "asr_provider": "faster-whisper",
+    "format": "md",
+    "translate_results": "pt-br",
+    "resumo_max_palavras": 150,
+    "llm_model": "gpt-5-nano",
+    "ui_extras": {
+      "selected_groups": [
+        "Ideias e Negócios com IA"
+      ],
+      "selected_channel_labels": [],
+      "manual_entries": "",
+      "translate_titles": false
+    }
+  },
+  "channels": [
+    {
+      "channel_id": "@ColeMedin",
+      "name": "@ColeMedin",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "NQ3vJ8iZPaQ",
+          "title": "Knowledge Graphs in n8n are FINALLY Here!",
+          "title_pt": "Knowledge Graphs in n8n are FINALLY Here!",
+          "url": "https://www.youtube.com/watch?v=NQ3vJ8iZPaQ",
+          "published": "2025-09-23T14:59:45.884920",
+          "published_relative": "há 2 horas",
+          "duration": "18:55",
+          "date_published": "2025-09-23T07:07:56-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0004849433898925781,
+          "language": "",
+          "view_count": 1379,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@DanGalletta",
+      "name": "@DanGalletta",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@DataCouncil",
+      "name": "@DataCouncil",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@Incomestreamsurfers",
+      "name": "@Incomestreamsurfers",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "vGAbJS5bqgk",
+          "title": "Claude Code Opus 4.1 ESTÁ DE VOLTA (FINALMENTE)",
+          "title_pt": "Claude Code Opus 4.1 ESTÁ DE VOLTA (FINALMENTE)",
+          "url": "https://www.youtube.com/watch?v=vGAbJS5bqgk",
+          "published": "2025-09-23T10:59:56.632589",
+          "published_relative": "há 6 horas",
+          "duration": "08:11",
+          "date_published": "2025-09-23T03:58:42-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003349781036376953,
+          "language": "",
+          "view_count": 1252,
+          "has_transcript": false
+        },
+        {
+          "id": "Dk7ZRUwsJdk",
+          "title": "QWEN CONTINUA A SER COZINHADO: Qwen3-Coder-Plus acaba de ser lançado",
+          "title_pt": "QWEN CONTINUA A SER COZINHADO: Qwen3-Coder-Plus acaba de ser lançado",
+          "url": "https://www.youtube.com/watch?v=Dk7ZRUwsJdk",
+          "published": "2025-09-22T18:59:56.632624",
+          "published_relative": "há 22 horas",
+          "duration": "08:14",
+          "date_published": "2025-09-22T11:45:35-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00028896331787109375,
+          "language": "",
+          "view_count": 2036,
+          "has_transcript": false
+        },
+        {
+          "id": "mg7W1cF5Lxs",
+          "title": "Este novo modelo Stealth NÃO é o Soneto 4.5 (A Verdade)",
+          "title_pt": "Este novo modelo Stealth NÃO é o Soneto 4.5 (A Verdade)",
+          "url": "https://www.youtube.com/watch?v=mg7W1cF5Lxs",
+          "published": "2025-09-22T16:59:56.632637",
+          "published_relative": "há 1 dia",
+          "duration": "12:07",
+          "date_published": "2025-09-22T05:41:56-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00034689903259277344,
+          "language": "",
+          "view_count": 1880,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@LiamOttley",
+      "name": "@LiamOttley",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "jhVg-Zbz0V8",
+          "title": "3 AI Agent Use Cases Every Business Will Pay For ($100K Playbook)",
+          "title_pt": "3 AI Agent Use Cases Every Business Will Pay For ($100K Playbook)",
+          "url": "https://www.youtube.com/watch?v=jhVg-Zbz0V8",
+          "published": "2025-09-22T16:59:59.766967",
+          "published_relative": "há 1 dia",
+          "duration": "49:30",
+          "date_published": "2025-09-22T01:39:47-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003840923309326172,
+          "language": "",
+          "view_count": 16756,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@PaulaBernardes",
+      "name": "@PaulaBernardes",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "u2I7B2b9kV0",
+          "title": "Elon Musk Lança IA TÃO Barata que Parece Mentira! OpenAI, Anthropic, Mistral, Meta e Muito Mais!",
+          "title_pt": "Elon Musk Lança IA TÃO Barata que Parece Mentira! OpenAI, Anthropic, Mistral, Meta e Muito Mais!",
+          "url": "https://www.youtube.com/watch?v=u2I7B2b9kV0",
+          "published": "2025-09-23T16:42:01.452312",
+          "published_relative": "há 18 minutos",
+          "duration": "16:19",
+          "date_published": "2025-09-23T09:23:54-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0002760887145996094,
+          "language": "",
+          "view_count": 1,
+          "has_transcript": false
+        },
+        {
+          "id": "srpsxS2GykE",
+          "title": "Google Integra Gemini no Chrome: O Navegador Nunca Mais Será o Mesmo! Meta, Anthropic, Notion e Mais",
+          "title_pt": "Google Integra Gemini no Chrome: O Navegador Nunca Mais Será o Mesmo! Meta, Anthropic, Notion e Mais",
+          "url": "https://www.youtube.com/watch?v=srpsxS2GykE",
+          "published": "2025-09-22T23:00:01.452382",
+          "published_relative": "há 18 horas",
+          "duration": "10:31",
+          "date_published": "2025-09-22T15:03:00-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0001690387725830078,
+          "language": "",
+          "view_count": 3981,
+          "has_transcript": false
+        },
+        {
+          "id": "k8VEy8SGwTY",
+          "title": "O que a IA ainda Não Consegue Entender Sobre a Gente",
+          "title_pt": "O que a IA ainda Não Consegue Entender Sobre a Gente",
+          "url": "https://www.youtube.com/watch?v=k8VEy8SGwTY",
+          "published": "2025-09-22T17:00:01.452403",
+          "published_relative": "há 1 dia",
+          "duration": "09:10",
+          "date_published": "2025-09-22T09:03:00-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0001900196075439453,
+          "language": "",
+          "view_count": 777,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@SaraFinance",
+      "name": "@SaraFinance",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@SuperHumansLife",
+      "name": "@SuperHumansLife",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "LOktCypa7Yc",
+          "title": "6 automações Zapier lucrativas que até iniciantes podem aprender hoje",
+          "title_pt": "6 automações Zapier lucrativas que até iniciantes podem aprender hoje",
+          "url": "https://www.youtube.com/watch?v=LOktCypa7Yc",
+          "published": "2025-09-22T20:00:07.489801",
+          "published_relative": "há 21 horas",
+          "duration": "15:41",
+          "date_published": "2025-09-22T12:01:52-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.00030994415283203125,
+          "language": "",
+          "view_count": 2744,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "channel_id": "@brunopicinini",
+      "name": "@brunopicinini",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@eusoukelvincleto",
+      "name": "@eusoukelvincleto",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@krishnaik06",
+      "name": "@krishnaik06",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@matthew_berman",
+      "name": "@matthew_berman",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [],
+      "status": "success"
+    },
+    {
+      "channel_id": "@nocodemba",
+      "name": "@nocodemba",
+      "subscriber_count": "",
+      "description": "",
+      "video_count": "",
+      "videos": [
+        {
+          "id": "xtQEqO2pqYI",
+          "title": "Este NOVO AGENTE de IA é insano! (pode substituir o Zapier)",
+          "title_pt": "Este NOVO AGENTE de IA é insano! (pode substituir o Zapier)",
+          "url": "https://www.youtube.com/watch?v=xtQEqO2pqYI",
+          "published": "2025-09-22T17:00:14.477392",
+          "published_relative": "há 1 dia",
+          "duration": "04:56",
+          "date_published": "2025-09-22T07:31:03-07:00",
+          "transcript_available": false,
+          "transcript": "",
+          "analysis_source": "modo_simples",
+          "summary": null,
+          "analysis_time": 0.0003859996795654297,
+          "language": "",
+          "view_count": 328,
+          "has_transcript": false
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}
