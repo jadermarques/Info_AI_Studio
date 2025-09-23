@@ -9,8 +9,11 @@ src/app/domain/llm_client.py
 src/app/domain/llm_service.py
 src/app/domain/parameters_service.py
 src/app/domain/validators.py
+src/app/domain/web_prompt_execution.py
+src/app/domain/web_prompt_service.py
 src/app/domain/youtube/__init__.py
 src/app/domain/youtube/extractor_plus.py
+src/app/domain/youtube/groups.py
 src/app/domain/youtube/service.py
 src/app/infrastructure/__init__.py
 src/app/infrastructure/backup.py
@@ -24,6 +27,10 @@ src/app/interfaces/cli/main.py
 src/app/interfaces/cli/commands/__init__.py
 src/app/interfaces/web/__init__.py
 src/app/interfaces/web/main.py
+src/app/interfaces/web/components/cad_llm.py
+src/app/interfaces/web/components/cad_web.py
+src/app/interfaces/web/components/cad_youtube.py
+src/app/interfaces/web/components/ui_helpers.py
 src/app/interfaces/web/pages/1_Dashboard.py
 src/app/interfaces/web/pages/2_Cadastros.py
 src/app/interfaces/web/pages/3_Configurações.py
@@ -37,4 +44,11 @@ src/info_ai_studio.egg-info/dependency_links.txt
 src/info_ai_studio.egg-info/entry_points.txt
 src/info_ai_studio.egg-info/requires.txt
 src/info_ai_studio.egg-info/top_level.txt
+tests/test_llm_service.py
+tests/test_parameters_service.py
+tests/test_services.py
 tests/test_smoke.py
+tests/test_ui_helpers.py
+tests/test_validators.py
+tests/test_web_service.py
+tests/test_youtube_service.py

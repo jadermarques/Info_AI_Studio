@@ -402,8 +402,21 @@ else:
                 help="Escolha apenas um formato. 'md' gera Markdown.",
                 key=f"report_format_{key_prefix}",
             )
-            asr_provider = st.selectbox("Fornecedor de ASR", options=["faster-whisper", "openai"], key=f"asr_provider_{key_prefix}")
-            no_asr = st.checkbox("Desativar ASR", value=False, key=f"no_asr_{key_prefix}")
+            if key_prefix != "simple":
+                asr_provider = st.selectbox(
+                    "Fornecedor de ASR",
+                    options=["faster-whisper", "openai"],
+                    key=f"asr_provider_{key_prefix}",
+                )
+                no_asr = st.checkbox(
+                    "Desativar ASR",
+                    value=False,
+                    key=f"no_asr_{key_prefix}",
+                )
+            else:
+                # Modo simples: ocultar controles de ASR e usar padrões
+                asr_provider = "faster-whisper"
+                no_asr = False
             llm_label = st.selectbox(
                 "Modelo LLM",
                 options=list(llm_options.keys()),
@@ -480,7 +493,7 @@ else:
         report_format_v = "txt"
         asr_provider_v = "faster-whisper"
         no_asr_v = False
-        llm_label_v = next(iter(llm_options.keys()), "") if llm_options else ""
+        llm_label_v = ""
     progress_container = st.container()
     results_container = st.container()
     if run_simple or run_full:
@@ -613,8 +626,10 @@ else:
                 st.write(f"Limite de vídeos por canal: {max_videos_v}")
                 st.write(f"Prefixo dos arquivos: {prefix_v}")
                 st.write(f"Formato do relatório: {report_format_v}")
-                st.write(f"Fornecedor de ASR: {asr_provider_v}")
-                st.write(f"Desativar ASR (sim ou não): {'sim' if no_asr_v else 'não'}")
+                # Exibe ASR apenas quando não for modo simples
+                if prefix_v != "youtube_extract_simple":
+                    st.write(f"Fornecedor de ASR: {asr_provider_v}")
+                    st.write(f"Desativar ASR (sim ou não): {'sim' if no_asr_v else 'não'}")
                 st.write(f"Modelo LLM: {llm_label_v}")
                 st.divider()
                 st.markdown("**Canais**")
