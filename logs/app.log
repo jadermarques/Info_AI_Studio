@@ -1,0 +1,880 @@
+2025-09-23 15:44:19,009 - INFO - app.youtube.run.20250923_154419 - Iniciando extração em lote de 13 canais
+2025-09-23 15:44:19,009 - INFO - app.youtube.run.20250923_154419 - Iniciando extração em lote de 13 canais
+2025-09-23 15:44:19,009 - INFO - app.youtube.run.20250923_154419 - Iniciando extração em lote de 13 canais
+2025-09-23 15:44:19,047 - INFO - app.youtube.run.20250923_154419 - Processando canal 1/13: @ColeMedin
+2025-09-23 15:44:19,047 - INFO - app.youtube.run.20250923_154419 - Processando canal 1/13: @ColeMedin
+2025-09-23 15:44:19,047 - INFO - app.youtube.run.20250923_154419 - Processando canal 1/13: @ColeMedin
+2025-09-23 15:44:20,165 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:20,165 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:20,165 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:20,820 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:20,820 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:20,820 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:20,821 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:20,821 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:20,821 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:20,821 - INFO - app.youtube.run.20250923_154419 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:20,821 - INFO - app.youtube.run.20250923_154419 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:20,821 - INFO - app.youtube.run.20250923_154419 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:21,490 - INFO - app.youtube.run.20250923_154419 - Vídeo NQ3vJ8iZPaQ executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:21,490 - INFO - app.youtube.run.20250923_154419 - Vídeo NQ3vJ8iZPaQ executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:21,490 - INFO - app.youtube.run.20250923_154419 - Vídeo NQ3vJ8iZPaQ executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:21,491 - INFO - app.youtube.run.20250923_154419 - Processando canal 2/13: @DanGalletta
+2025-09-23 15:44:21,491 - INFO - app.youtube.run.20250923_154419 - Processando canal 2/13: @DanGalletta
+2025-09-23 15:44:21,491 - INFO - app.youtube.run.20250923_154419 - Processando canal 2/13: @DanGalletta
+2025-09-23 15:44:22,395 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:22,395 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:22,395 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:22,874 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:22,874 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:22,874 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:22,875 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:22,875 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:22,875 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:22,875 - INFO - app.youtube.run.20250923_154419 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:22,875 - INFO - app.youtube.run.20250923_154419 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:22,875 - INFO - app.youtube.run.20250923_154419 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:22,876 - INFO - app.youtube.run.20250923_154419 - Processando canal 3/13: @DataCouncil
+2025-09-23 15:44:22,876 - INFO - app.youtube.run.20250923_154419 - Processando canal 3/13: @DataCouncil
+2025-09-23 15:44:22,876 - INFO - app.youtube.run.20250923_154419 - Processando canal 3/13: @DataCouncil
+2025-09-23 15:44:23,393 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:23,393 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:23,393 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:23,724 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:23,724 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:23,724 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:23,725 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:23,725 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:23,725 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:23,726 - INFO - app.youtube.run.20250923_154419 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:23,726 - INFO - app.youtube.run.20250923_154419 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:23,726 - INFO - app.youtube.run.20250923_154419 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:23,727 - INFO - app.youtube.run.20250923_154419 - Processando canal 4/13: @Incomestreamsurfers
+2025-09-23 15:44:23,727 - INFO - app.youtube.run.20250923_154419 - Processando canal 4/13: @Incomestreamsurfers
+2025-09-23 15:44:23,727 - INFO - app.youtube.run.20250923_154419 - Processando canal 4/13: @Incomestreamsurfers
+2025-09-23 15:44:24,193 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:24,193 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:24,193 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:24,558 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:24,558 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:24,558 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:24,558 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:24,558 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:24,558 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:24,559 - INFO - app.youtube.run.20250923_154419 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:24,559 - INFO - app.youtube.run.20250923_154419 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:24,559 - INFO - app.youtube.run.20250923_154419 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:25,064 - INFO - app.youtube.run.20250923_154419 - Vídeo vGAbJS5bqgk executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:25,064 - INFO - app.youtube.run.20250923_154419 - Vídeo vGAbJS5bqgk executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:25,064 - INFO - app.youtube.run.20250923_154419 - Vídeo vGAbJS5bqgk executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:25,064 - INFO - app.youtube.run.20250923_154419 - Processando canal 5/13: @LiamOttley
+2025-09-23 15:44:25,064 - INFO - app.youtube.run.20250923_154419 - Processando canal 5/13: @LiamOttley
+2025-09-23 15:44:25,064 - INFO - app.youtube.run.20250923_154419 - Processando canal 5/13: @LiamOttley
+2025-09-23 15:44:25,460 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:25,460 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:25,460 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:25,836 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:25,836 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:25,836 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:25,836 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:25,836 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:25,836 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:25,837 - INFO - app.youtube.run.20250923_154419 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:25,837 - INFO - app.youtube.run.20250923_154419 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:25,837 - INFO - app.youtube.run.20250923_154419 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:26,557 - INFO - app.youtube.run.20250923_154419 - Vídeo jhVg-Zbz0V8 executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:26,557 - INFO - app.youtube.run.20250923_154419 - Vídeo jhVg-Zbz0V8 executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:26,557 - INFO - app.youtube.run.20250923_154419 - Vídeo jhVg-Zbz0V8 executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:26,557 - INFO - app.youtube.run.20250923_154419 - Processando canal 6/13: @PaulaBernardes
+2025-09-23 15:44:26,557 - INFO - app.youtube.run.20250923_154419 - Processando canal 6/13: @PaulaBernardes
+2025-09-23 15:44:26,557 - INFO - app.youtube.run.20250923_154419 - Processando canal 6/13: @PaulaBernardes
+2025-09-23 15:44:26,933 - INFO - youtube_extractor - Extraindo vídeos do canal @PaulaBernardes (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:26,933 - INFO - youtube_extractor - Extraindo vídeos do canal @PaulaBernardes (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:26,933 - INFO - youtube_extractor - Extraindo vídeos do canal @PaulaBernardes (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:27,287 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:27,287 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:27,287 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:27,288 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:27,288 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:27,288 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:27,288 - INFO - app.youtube.run.20250923_154419 - Canal @PaulaBernardes extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:27,288 - INFO - app.youtube.run.20250923_154419 - Canal @PaulaBernardes extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:27,288 - INFO - app.youtube.run.20250923_154419 - Canal @PaulaBernardes extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:27,845 - INFO - app.youtube.run.20250923_154419 - Vídeo znsEHtGB4-g executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:27,845 - INFO - app.youtube.run.20250923_154419 - Vídeo znsEHtGB4-g executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:27,845 - INFO - app.youtube.run.20250923_154419 - Vídeo znsEHtGB4-g executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:27,845 - INFO - app.youtube.run.20250923_154419 - Processando canal 7/13: @SaraFinance
+2025-09-23 15:44:27,845 - INFO - app.youtube.run.20250923_154419 - Processando canal 7/13: @SaraFinance
+2025-09-23 15:44:27,845 - INFO - app.youtube.run.20250923_154419 - Processando canal 7/13: @SaraFinance
+2025-09-23 15:44:28,166 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:28,166 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:28,166 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:28,498 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:28,498 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:28,498 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:28,499 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:28,499 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:28,499 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:28,499 - INFO - app.youtube.run.20250923_154419 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:28,499 - INFO - app.youtube.run.20250923_154419 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:28,499 - INFO - app.youtube.run.20250923_154419 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:28,501 - INFO - app.youtube.run.20250923_154419 - Processando canal 8/13: @SuperHumansLife
+2025-09-23 15:44:28,501 - INFO - app.youtube.run.20250923_154419 - Processando canal 8/13: @SuperHumansLife
+2025-09-23 15:44:28,501 - INFO - app.youtube.run.20250923_154419 - Processando canal 8/13: @SuperHumansLife
+2025-09-23 15:44:29,058 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:29,058 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:29,058 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:29,340 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:29,340 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:29,340 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:29,340 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:29,340 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:29,340 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:29,341 - INFO - app.youtube.run.20250923_154419 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:29,341 - INFO - app.youtube.run.20250923_154419 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:29,341 - INFO - app.youtube.run.20250923_154419 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:30,066 - INFO - app.youtube.run.20250923_154419 - Vídeo LOktCypa7Yc executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:30,066 - INFO - app.youtube.run.20250923_154419 - Vídeo LOktCypa7Yc executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:30,066 - INFO - app.youtube.run.20250923_154419 - Vídeo LOktCypa7Yc executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:30,066 - INFO - app.youtube.run.20250923_154419 - Processando canal 9/13: @brunopicinini
+2025-09-23 15:44:30,066 - INFO - app.youtube.run.20250923_154419 - Processando canal 9/13: @brunopicinini
+2025-09-23 15:44:30,066 - INFO - app.youtube.run.20250923_154419 - Processando canal 9/13: @brunopicinini
+2025-09-23 15:44:30,534 - INFO - youtube_extractor - Extraindo vídeos do canal @brunopicinini (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:30,534 - INFO - youtube_extractor - Extraindo vídeos do canal @brunopicinini (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:30,534 - INFO - youtube_extractor - Extraindo vídeos do canal @brunopicinini (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:30,892 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:30,892 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:30,892 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:30,893 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:30,893 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:30,893 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:30,893 - INFO - app.youtube.run.20250923_154419 - Canal @brunopicinini extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:30,893 - INFO - app.youtube.run.20250923_154419 - Canal @brunopicinini extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:30,893 - INFO - app.youtube.run.20250923_154419 - Canal @brunopicinini extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:30,894 - INFO - app.youtube.run.20250923_154419 - Processando canal 10/13: @eusoukelvincleto
+2025-09-23 15:44:30,894 - INFO - app.youtube.run.20250923_154419 - Processando canal 10/13: @eusoukelvincleto
+2025-09-23 15:44:30,894 - INFO - app.youtube.run.20250923_154419 - Processando canal 10/13: @eusoukelvincleto
+2025-09-23 15:44:31,573 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:31,573 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:31,573 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:32,143 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:32,143 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:32,143 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:32,143 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:32,143 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:32,143 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:32,144 - INFO - app.youtube.run.20250923_154419 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:32,144 - INFO - app.youtube.run.20250923_154419 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:32,144 - INFO - app.youtube.run.20250923_154419 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:32,144 - INFO - app.youtube.run.20250923_154419 - Processando canal 11/13: @krishnaik06
+2025-09-23 15:44:32,144 - INFO - app.youtube.run.20250923_154419 - Processando canal 11/13: @krishnaik06
+2025-09-23 15:44:32,144 - INFO - app.youtube.run.20250923_154419 - Processando canal 11/13: @krishnaik06
+2025-09-23 15:44:32,868 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:32,868 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:32,868 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:33,552 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:33,552 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:33,552 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:33,552 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:33,552 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:33,552 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:33,553 - INFO - app.youtube.run.20250923_154419 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:33,553 - INFO - app.youtube.run.20250923_154419 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:33,553 - INFO - app.youtube.run.20250923_154419 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:33,554 - INFO - app.youtube.run.20250923_154419 - Processando canal 12/13: @matthew_berman
+2025-09-23 15:44:33,554 - INFO - app.youtube.run.20250923_154419 - Processando canal 12/13: @matthew_berman
+2025-09-23 15:44:33,554 - INFO - app.youtube.run.20250923_154419 - Processando canal 12/13: @matthew_berman
+2025-09-23 15:44:34,084 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:34,084 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:34,084 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:34,504 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:34,504 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:34,504 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:44:34,504 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:34,504 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:34,504 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:34,505 - INFO - app.youtube.run.20250923_154419 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:34,505 - INFO - app.youtube.run.20250923_154419 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:34,505 - INFO - app.youtube.run.20250923_154419 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:44:34,507 - INFO - app.youtube.run.20250923_154419 - Processando canal 13/13: @nocodemba
+2025-09-23 15:44:34,507 - INFO - app.youtube.run.20250923_154419 - Processando canal 13/13: @nocodemba
+2025-09-23 15:44:34,507 - INFO - app.youtube.run.20250923_154419 - Processando canal 13/13: @nocodemba
+2025-09-23 15:44:34,830 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:34,830 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:34,830 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:44:35,222 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:35,222 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:35,222 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:44:35,222 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:35,222 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:35,222 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:44:35,223 - INFO - app.youtube.run.20250923_154419 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:35,223 - INFO - app.youtube.run.20250923_154419 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:35,223 - INFO - app.youtube.run.20250923_154419 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:44:36,110 - INFO - app.youtube.run.20250923_154419 - Vídeo xtQEqO2pqYI executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:36,110 - INFO - app.youtube.run.20250923_154419 - Vídeo xtQEqO2pqYI executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:36,110 - INFO - app.youtube.run.20250923_154419 - Vídeo xtQEqO2pqYI executado no modo simple (transcrição não aplicada).
+2025-09-23 15:44:36,112 - ERROR - app.ui - ERRO_EXECUCAO_YOUTUBE
+Traceback (most recent call last):
+  File "/Users/jader/Info_AI_Studio/src/app/interfaces/web/pages/4_Execução.py", line 727, in <module>
+    result = service.run(progress_callback=update_progress)
+  File "/Users/jader/Info_AI_Studio/src/app/domain/youtube/service.py", line 271, in run
+    logger.removeHandler(file_handler)
+                         ^^^^^^^^^^^^
+NameError: name 'file_handler' is not defined
+2025-09-23 15:44:36,112 - ERROR - app.ui - ERRO_EXECUCAO_YOUTUBE
+Traceback (most recent call last):
+  File "/Users/jader/Info_AI_Studio/src/app/interfaces/web/pages/4_Execução.py", line 727, in <module>
+    result = service.run(progress_callback=update_progress)
+  File "/Users/jader/Info_AI_Studio/src/app/domain/youtube/service.py", line 271, in run
+    logger.removeHandler(file_handler)
+                         ^^^^^^^^^^^^
+NameError: name 'file_handler' is not defined
+2025-09-23 15:44:36,112 - ERROR - app.ui - ERRO_EXECUCAO_YOUTUBE
+Traceback (most recent call last):
+  File "/Users/jader/Info_AI_Studio/src/app/interfaces/web/pages/4_Execução.py", line 727, in <module>
+    result = service.run(progress_callback=update_progress)
+  File "/Users/jader/Info_AI_Studio/src/app/domain/youtube/service.py", line 271, in run
+    logger.removeHandler(file_handler)
+                         ^^^^^^^^^^^^
+NameError: name 'file_handler' is not defined
+2025-09-23 15:44:36,112 - ERROR - app.ui - ERRO_EXECUCAO_YOUTUBE
+Traceback (most recent call last):
+  File "/Users/jader/Info_AI_Studio/src/app/interfaces/web/pages/4_Execução.py", line 727, in <module>
+    result = service.run(progress_callback=update_progress)
+  File "/Users/jader/Info_AI_Studio/src/app/domain/youtube/service.py", line 271, in run
+    logger.removeHandler(file_handler)
+                         ^^^^^^^^^^^^
+NameError: name 'file_handler' is not defined
+2025-09-23 15:45:32,600 - INFO - app.youtube.run.20250923_154532 - Iniciando extração em lote de 13 canais
+2025-09-23 15:45:32,600 - INFO - app.youtube.run.20250923_154532 - Iniciando extração em lote de 13 canais
+2025-09-23 15:45:32,600 - INFO - app.youtube.run.20250923_154532 - Iniciando extração em lote de 13 canais
+2025-09-23 15:45:32,600 - INFO - app.youtube.run.20250923_154532 - Iniciando extração em lote de 13 canais
+2025-09-23 15:45:32,600 - INFO - app.youtube.run.20250923_154532 - Iniciando extração em lote de 13 canais
+2025-09-23 15:45:32,600 - INFO - app.youtube.run.20250923_154532 - Iniciando extração em lote de 13 canais
+2025-09-23 15:45:32,611 - INFO - app.youtube.run.20250923_154532 - Processando canal 1/13: @ColeMedin
+2025-09-23 15:45:32,611 - INFO - app.youtube.run.20250923_154532 - Processando canal 1/13: @ColeMedin
+2025-09-23 15:45:32,611 - INFO - app.youtube.run.20250923_154532 - Processando canal 1/13: @ColeMedin
+2025-09-23 15:45:32,611 - INFO - app.youtube.run.20250923_154532 - Processando canal 1/13: @ColeMedin
+2025-09-23 15:45:32,611 - INFO - app.youtube.run.20250923_154532 - Processando canal 1/13: @ColeMedin
+2025-09-23 15:45:32,611 - INFO - app.youtube.run.20250923_154532 - Processando canal 1/13: @ColeMedin
+2025-09-23 15:45:39,129 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:39,129 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:39,129 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:39,129 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:39,129 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:39,129 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:50,143 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:50,144 - INFO - app.youtube.run.20250923_154532 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:50,144 - INFO - app.youtube.run.20250923_154532 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:50,144 - INFO - app.youtube.run.20250923_154532 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:50,144 - INFO - app.youtube.run.20250923_154532 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:50,144 - INFO - app.youtube.run.20250923_154532 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:50,144 - INFO - app.youtube.run.20250923_154532 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:54,202 - INFO - app.youtube.run.20250923_154532 - Vídeo NQ3vJ8iZPaQ executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:54,202 - INFO - app.youtube.run.20250923_154532 - Vídeo NQ3vJ8iZPaQ executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:54,202 - INFO - app.youtube.run.20250923_154532 - Vídeo NQ3vJ8iZPaQ executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:54,202 - INFO - app.youtube.run.20250923_154532 - Vídeo NQ3vJ8iZPaQ executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:54,202 - INFO - app.youtube.run.20250923_154532 - Vídeo NQ3vJ8iZPaQ executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:54,202 - INFO - app.youtube.run.20250923_154532 - Vídeo NQ3vJ8iZPaQ executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:54,203 - INFO - app.youtube.run.20250923_154532 - Processando canal 2/13: @DanGalletta
+2025-09-23 15:45:54,203 - INFO - app.youtube.run.20250923_154532 - Processando canal 2/13: @DanGalletta
+2025-09-23 15:45:54,203 - INFO - app.youtube.run.20250923_154532 - Processando canal 2/13: @DanGalletta
+2025-09-23 15:45:54,203 - INFO - app.youtube.run.20250923_154532 - Processando canal 2/13: @DanGalletta
+2025-09-23 15:45:54,203 - INFO - app.youtube.run.20250923_154532 - Processando canal 2/13: @DanGalletta
+2025-09-23 15:45:54,203 - INFO - app.youtube.run.20250923_154532 - Processando canal 2/13: @DanGalletta
+2025-09-23 15:45:54,896 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:54,896 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:54,896 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:54,896 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:54,896 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:54,896 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:55,438 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:55,438 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:55,438 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:55,438 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:55,438 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:55,438 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:55,439 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:55,439 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:55,439 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:55,439 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:55,439 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:55,439 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:55,441 - INFO - app.youtube.run.20250923_154532 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:55,441 - INFO - app.youtube.run.20250923_154532 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:55,441 - INFO - app.youtube.run.20250923_154532 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:55,441 - INFO - app.youtube.run.20250923_154532 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:55,441 - INFO - app.youtube.run.20250923_154532 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:55,441 - INFO - app.youtube.run.20250923_154532 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:55,442 - INFO - app.youtube.run.20250923_154532 - Processando canal 3/13: @DataCouncil
+2025-09-23 15:45:55,442 - INFO - app.youtube.run.20250923_154532 - Processando canal 3/13: @DataCouncil
+2025-09-23 15:45:55,442 - INFO - app.youtube.run.20250923_154532 - Processando canal 3/13: @DataCouncil
+2025-09-23 15:45:55,442 - INFO - app.youtube.run.20250923_154532 - Processando canal 3/13: @DataCouncil
+2025-09-23 15:45:55,442 - INFO - app.youtube.run.20250923_154532 - Processando canal 3/13: @DataCouncil
+2025-09-23 15:45:55,442 - INFO - app.youtube.run.20250923_154532 - Processando canal 3/13: @DataCouncil
+2025-09-23 15:45:56,072 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:56,072 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:56,072 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:56,072 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:56,072 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:56,072 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:56,944 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:56,944 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:56,944 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:56,944 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:56,944 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:56,944 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:45:56,945 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:56,945 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:56,945 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:56,945 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:56,945 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:56,945 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:56,945 - INFO - app.youtube.run.20250923_154532 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:56,945 - INFO - app.youtube.run.20250923_154532 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:56,945 - INFO - app.youtube.run.20250923_154532 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:56,945 - INFO - app.youtube.run.20250923_154532 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:56,945 - INFO - app.youtube.run.20250923_154532 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:56,945 - INFO - app.youtube.run.20250923_154532 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:45:56,946 - INFO - app.youtube.run.20250923_154532 - Processando canal 4/13: @Incomestreamsurfers
+2025-09-23 15:45:56,946 - INFO - app.youtube.run.20250923_154532 - Processando canal 4/13: @Incomestreamsurfers
+2025-09-23 15:45:56,946 - INFO - app.youtube.run.20250923_154532 - Processando canal 4/13: @Incomestreamsurfers
+2025-09-23 15:45:56,946 - INFO - app.youtube.run.20250923_154532 - Processando canal 4/13: @Incomestreamsurfers
+2025-09-23 15:45:56,946 - INFO - app.youtube.run.20250923_154532 - Processando canal 4/13: @Incomestreamsurfers
+2025-09-23 15:45:56,946 - INFO - app.youtube.run.20250923_154532 - Processando canal 4/13: @Incomestreamsurfers
+2025-09-23 15:45:57,484 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:57,484 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:57,484 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:57,484 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:57,484 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:57,484 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:57,937 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:57,939 - INFO - app.youtube.run.20250923_154532 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:57,939 - INFO - app.youtube.run.20250923_154532 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:57,939 - INFO - app.youtube.run.20250923_154532 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:57,939 - INFO - app.youtube.run.20250923_154532 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:57,939 - INFO - app.youtube.run.20250923_154532 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:57,939 - INFO - app.youtube.run.20250923_154532 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Vídeo vGAbJS5bqgk executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Vídeo vGAbJS5bqgk executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Vídeo vGAbJS5bqgk executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Vídeo vGAbJS5bqgk executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Vídeo vGAbJS5bqgk executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Vídeo vGAbJS5bqgk executado no modo simple (transcrição não aplicada).
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Processando canal 5/13: @LiamOttley
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Processando canal 5/13: @LiamOttley
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Processando canal 5/13: @LiamOttley
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Processando canal 5/13: @LiamOttley
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Processando canal 5/13: @LiamOttley
+2025-09-23 15:45:58,653 - INFO - app.youtube.run.20250923_154532 - Processando canal 5/13: @LiamOttley
+2025-09-23 15:45:59,073 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:59,073 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:59,073 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:59,073 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:59,073 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:59,073 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:59,356 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:45:59,358 - INFO - app.youtube.run.20250923_154532 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:59,358 - INFO - app.youtube.run.20250923_154532 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:59,358 - INFO - app.youtube.run.20250923_154532 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:59,358 - INFO - app.youtube.run.20250923_154532 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:59,358 - INFO - app.youtube.run.20250923_154532 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:45:59,358 - INFO - app.youtube.run.20250923_154532 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:00,097 - INFO - app.youtube.run.20250923_154532 - Vídeo jhVg-Zbz0V8 executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:00,097 - INFO - app.youtube.run.20250923_154532 - Vídeo jhVg-Zbz0V8 executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:00,097 - INFO - app.youtube.run.20250923_154532 - Vídeo jhVg-Zbz0V8 executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:00,097 - INFO - app.youtube.run.20250923_154532 - Vídeo jhVg-Zbz0V8 executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:00,097 - INFO - app.youtube.run.20250923_154532 - Vídeo jhVg-Zbz0V8 executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:00,097 - INFO - app.youtube.run.20250923_154532 - Vídeo jhVg-Zbz0V8 executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:00,098 - INFO - app.youtube.run.20250923_154532 - Processando canal 6/13: @PaulaBernardes
+2025-09-23 15:46:00,098 - INFO - app.youtube.run.20250923_154532 - Processando canal 6/13: @PaulaBernardes
+2025-09-23 15:46:00,098 - INFO - app.youtube.run.20250923_154532 - Processando canal 6/13: @PaulaBernardes
+2025-09-23 15:46:00,098 - INFO - app.youtube.run.20250923_154532 - Processando canal 6/13: @PaulaBernardes
+2025-09-23 15:46:00,098 - INFO - app.youtube.run.20250923_154532 - Processando canal 6/13: @PaulaBernardes
+2025-09-23 15:46:00,098 - INFO - app.youtube.run.20250923_154532 - Processando canal 6/13: @PaulaBernardes
+2025-09-23 15:46:00,514 - INFO - youtube_extractor - Extraindo vídeos do canal @PaulaBernardes (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:00,514 - INFO - youtube_extractor - Extraindo vídeos do canal @PaulaBernardes (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:00,514 - INFO - youtube_extractor - Extraindo vídeos do canal @PaulaBernardes (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:00,514 - INFO - youtube_extractor - Extraindo vídeos do canal @PaulaBernardes (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:00,514 - INFO - youtube_extractor - Extraindo vídeos do canal @PaulaBernardes (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:00,514 - INFO - youtube_extractor - Extraindo vídeos do canal @PaulaBernardes (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:00,917 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:00,918 - INFO - app.youtube.run.20250923_154532 - Canal @PaulaBernardes extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:00,918 - INFO - app.youtube.run.20250923_154532 - Canal @PaulaBernardes extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:00,918 - INFO - app.youtube.run.20250923_154532 - Canal @PaulaBernardes extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:00,918 - INFO - app.youtube.run.20250923_154532 - Canal @PaulaBernardes extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:00,918 - INFO - app.youtube.run.20250923_154532 - Canal @PaulaBernardes extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:00,918 - INFO - app.youtube.run.20250923_154532 - Canal @PaulaBernardes extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Vídeo znsEHtGB4-g executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Vídeo znsEHtGB4-g executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Vídeo znsEHtGB4-g executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Vídeo znsEHtGB4-g executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Vídeo znsEHtGB4-g executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Vídeo znsEHtGB4-g executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Processando canal 7/13: @SaraFinance
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Processando canal 7/13: @SaraFinance
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Processando canal 7/13: @SaraFinance
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Processando canal 7/13: @SaraFinance
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Processando canal 7/13: @SaraFinance
+2025-09-23 15:46:01,519 - INFO - app.youtube.run.20250923_154532 - Processando canal 7/13: @SaraFinance
+2025-09-23 15:46:02,488 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:02,488 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:02,488 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:02,488 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:02,488 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:02,488 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:03,076 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:03,076 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:03,076 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:03,076 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:03,076 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:03,076 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:03,077 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:03,077 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:03,077 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:03,077 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:03,077 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:03,077 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:03,077 - INFO - app.youtube.run.20250923_154532 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:03,077 - INFO - app.youtube.run.20250923_154532 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:03,077 - INFO - app.youtube.run.20250923_154532 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:03,077 - INFO - app.youtube.run.20250923_154532 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:03,077 - INFO - app.youtube.run.20250923_154532 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:03,077 - INFO - app.youtube.run.20250923_154532 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:03,078 - INFO - app.youtube.run.20250923_154532 - Processando canal 8/13: @SuperHumansLife
+2025-09-23 15:46:03,078 - INFO - app.youtube.run.20250923_154532 - Processando canal 8/13: @SuperHumansLife
+2025-09-23 15:46:03,078 - INFO - app.youtube.run.20250923_154532 - Processando canal 8/13: @SuperHumansLife
+2025-09-23 15:46:03,078 - INFO - app.youtube.run.20250923_154532 - Processando canal 8/13: @SuperHumansLife
+2025-09-23 15:46:03,078 - INFO - app.youtube.run.20250923_154532 - Processando canal 8/13: @SuperHumansLife
+2025-09-23 15:46:03,078 - INFO - app.youtube.run.20250923_154532 - Processando canal 8/13: @SuperHumansLife
+2025-09-23 15:46:04,153 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:04,153 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:04,153 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:04,153 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:04,153 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:04,153 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:06,832 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:06,833 - INFO - app.youtube.run.20250923_154532 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:06,833 - INFO - app.youtube.run.20250923_154532 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:06,833 - INFO - app.youtube.run.20250923_154532 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:06,833 - INFO - app.youtube.run.20250923_154532 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:06,833 - INFO - app.youtube.run.20250923_154532 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:06,833 - INFO - app.youtube.run.20250923_154532 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Vídeo LOktCypa7Yc executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Vídeo LOktCypa7Yc executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Vídeo LOktCypa7Yc executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Vídeo LOktCypa7Yc executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Vídeo LOktCypa7Yc executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Vídeo LOktCypa7Yc executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Processando canal 9/13: @brunopicinini
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Processando canal 9/13: @brunopicinini
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Processando canal 9/13: @brunopicinini
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Processando canal 9/13: @brunopicinini
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Processando canal 9/13: @brunopicinini
+2025-09-23 15:46:07,839 - INFO - app.youtube.run.20250923_154532 - Processando canal 9/13: @brunopicinini
+2025-09-23 15:46:08,190 - INFO - youtube_extractor - Extraindo vídeos do canal @brunopicinini (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:08,190 - INFO - youtube_extractor - Extraindo vídeos do canal @brunopicinini (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:08,190 - INFO - youtube_extractor - Extraindo vídeos do canal @brunopicinini (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:08,190 - INFO - youtube_extractor - Extraindo vídeos do canal @brunopicinini (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:08,190 - INFO - youtube_extractor - Extraindo vídeos do canal @brunopicinini (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:08,190 - INFO - youtube_extractor - Extraindo vídeos do canal @brunopicinini (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:08,548 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:08,549 - INFO - app.youtube.run.20250923_154532 - Canal @brunopicinini extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:08,549 - INFO - app.youtube.run.20250923_154532 - Canal @brunopicinini extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:08,549 - INFO - app.youtube.run.20250923_154532 - Canal @brunopicinini extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:08,549 - INFO - app.youtube.run.20250923_154532 - Canal @brunopicinini extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:08,549 - INFO - app.youtube.run.20250923_154532 - Canal @brunopicinini extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:08,549 - INFO - app.youtube.run.20250923_154532 - Canal @brunopicinini extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:08,550 - INFO - app.youtube.run.20250923_154532 - Processando canal 10/13: @eusoukelvincleto
+2025-09-23 15:46:08,550 - INFO - app.youtube.run.20250923_154532 - Processando canal 10/13: @eusoukelvincleto
+2025-09-23 15:46:08,550 - INFO - app.youtube.run.20250923_154532 - Processando canal 10/13: @eusoukelvincleto
+2025-09-23 15:46:08,550 - INFO - app.youtube.run.20250923_154532 - Processando canal 10/13: @eusoukelvincleto
+2025-09-23 15:46:08,550 - INFO - app.youtube.run.20250923_154532 - Processando canal 10/13: @eusoukelvincleto
+2025-09-23 15:46:08,550 - INFO - app.youtube.run.20250923_154532 - Processando canal 10/13: @eusoukelvincleto
+2025-09-23 15:46:08,941 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:08,941 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:08,941 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:08,941 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:08,941 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:08,941 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:09,379 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:09,380 - INFO - app.youtube.run.20250923_154532 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:09,380 - INFO - app.youtube.run.20250923_154532 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:09,380 - INFO - app.youtube.run.20250923_154532 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:09,380 - INFO - app.youtube.run.20250923_154532 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:09,380 - INFO - app.youtube.run.20250923_154532 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:09,380 - INFO - app.youtube.run.20250923_154532 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:09,381 - INFO - app.youtube.run.20250923_154532 - Processando canal 11/13: @krishnaik06
+2025-09-23 15:46:09,381 - INFO - app.youtube.run.20250923_154532 - Processando canal 11/13: @krishnaik06
+2025-09-23 15:46:09,381 - INFO - app.youtube.run.20250923_154532 - Processando canal 11/13: @krishnaik06
+2025-09-23 15:46:09,381 - INFO - app.youtube.run.20250923_154532 - Processando canal 11/13: @krishnaik06
+2025-09-23 15:46:09,381 - INFO - app.youtube.run.20250923_154532 - Processando canal 11/13: @krishnaik06
+2025-09-23 15:46:09,381 - INFO - app.youtube.run.20250923_154532 - Processando canal 11/13: @krishnaik06
+2025-09-23 15:46:09,750 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:09,750 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:09,750 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:09,750 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:09,750 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:09,750 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:10,124 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:10,124 - INFO - app.youtube.run.20250923_154532 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:10,124 - INFO - app.youtube.run.20250923_154532 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:10,124 - INFO - app.youtube.run.20250923_154532 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:10,124 - INFO - app.youtube.run.20250923_154532 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:10,124 - INFO - app.youtube.run.20250923_154532 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:10,124 - INFO - app.youtube.run.20250923_154532 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:10,125 - INFO - app.youtube.run.20250923_154532 - Processando canal 12/13: @matthew_berman
+2025-09-23 15:46:10,125 - INFO - app.youtube.run.20250923_154532 - Processando canal 12/13: @matthew_berman
+2025-09-23 15:46:10,125 - INFO - app.youtube.run.20250923_154532 - Processando canal 12/13: @matthew_berman
+2025-09-23 15:46:10,125 - INFO - app.youtube.run.20250923_154532 - Processando canal 12/13: @matthew_berman
+2025-09-23 15:46:10,125 - INFO - app.youtube.run.20250923_154532 - Processando canal 12/13: @matthew_berman
+2025-09-23 15:46:10,125 - INFO - app.youtube.run.20250923_154532 - Processando canal 12/13: @matthew_berman
+2025-09-23 15:46:11,024 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:11,024 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:11,024 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:11,024 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:11,024 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:11,024 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:12,535 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:12,536 - INFO - app.youtube.run.20250923_154532 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:12,536 - INFO - app.youtube.run.20250923_154532 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:12,536 - INFO - app.youtube.run.20250923_154532 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:12,536 - INFO - app.youtube.run.20250923_154532 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:12,536 - INFO - app.youtube.run.20250923_154532 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:12,536 - INFO - app.youtube.run.20250923_154532 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:46:12,537 - INFO - app.youtube.run.20250923_154532 - Processando canal 13/13: @nocodemba
+2025-09-23 15:46:12,537 - INFO - app.youtube.run.20250923_154532 - Processando canal 13/13: @nocodemba
+2025-09-23 15:46:12,537 - INFO - app.youtube.run.20250923_154532 - Processando canal 13/13: @nocodemba
+2025-09-23 15:46:12,537 - INFO - app.youtube.run.20250923_154532 - Processando canal 13/13: @nocodemba
+2025-09-23 15:46:12,537 - INFO - app.youtube.run.20250923_154532 - Processando canal 13/13: @nocodemba
+2025-09-23 15:46:12,537 - INFO - app.youtube.run.20250923_154532 - Processando canal 13/13: @nocodemba
+2025-09-23 15:46:14,193 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:14,193 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:14,193 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:14,193 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:14,193 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:14,193 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:15,560 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:46:15,562 - INFO - app.youtube.run.20250923_154532 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:15,562 - INFO - app.youtube.run.20250923_154532 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:15,562 - INFO - app.youtube.run.20250923_154532 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:15,562 - INFO - app.youtube.run.20250923_154532 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:15,562 - INFO - app.youtube.run.20250923_154532 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:15,562 - INFO - app.youtube.run.20250923_154532 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:46:16,132 - INFO - app.youtube.run.20250923_154532 - Vídeo xtQEqO2pqYI executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:16,132 - INFO - app.youtube.run.20250923_154532 - Vídeo xtQEqO2pqYI executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:16,132 - INFO - app.youtube.run.20250923_154532 - Vídeo xtQEqO2pqYI executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:16,132 - INFO - app.youtube.run.20250923_154532 - Vídeo xtQEqO2pqYI executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:16,132 - INFO - app.youtube.run.20250923_154532 - Vídeo xtQEqO2pqYI executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:16,132 - INFO - app.youtube.run.20250923_154532 - Vídeo xtQEqO2pqYI executado no modo simple (transcrição não aplicada).
+2025-09-23 15:46:16,135 - ERROR - app.ui - ERRO_EXECUCAO_YOUTUBE
+Traceback (most recent call last):
+  File "/Users/jader/Info_AI_Studio/src/app/interfaces/web/pages/4_Execução.py", line 727, in <module>
+    result = service.run(progress_callback=update_progress)
+  File "/Users/jader/Info_AI_Studio/src/app/domain/youtube/service.py", line 271, in run
+    logger.removeHandler(file_handler)
+                         ^^^^^^^^^^^^
+NameError: name 'file_handler' is not defined
+2025-09-23 15:46:16,135 - ERROR - app.ui - ERRO_EXECUCAO_YOUTUBE
+Traceback (most recent call last):
+  File "/Users/jader/Info_AI_Studio/src/app/interfaces/web/pages/4_Execução.py", line 727, in <module>
+    result = service.run(progress_callback=update_progress)
+  File "/Users/jader/Info_AI_Studio/src/app/domain/youtube/service.py", line 271, in run
+    logger.removeHandler(file_handler)
+                         ^^^^^^^^^^^^
+NameError: name 'file_handler' is not defined
+2025-09-23 15:46:16,135 - ERROR - app.ui - ERRO_EXECUCAO_YOUTUBE
+Traceback (most recent call last):
+  File "/Users/jader/Info_AI_Studio/src/app/interfaces/web/pages/4_Execução.py", line 727, in <module>
+    result = service.run(progress_callback=update_progress)
+  File "/Users/jader/Info_AI_Studio/src/app/domain/youtube/service.py", line 271, in run
+    logger.removeHandler(file_handler)
+                         ^^^^^^^^^^^^
+NameError: name 'file_handler' is not defined
+2025-09-23 15:46:16,135 - ERROR - app.ui - ERRO_EXECUCAO_YOUTUBE
+Traceback (most recent call last):
+  File "/Users/jader/Info_AI_Studio/src/app/interfaces/web/pages/4_Execução.py", line 727, in <module>
+    result = service.run(progress_callback=update_progress)
+  File "/Users/jader/Info_AI_Studio/src/app/domain/youtube/service.py", line 271, in run
+    logger.removeHandler(file_handler)
+                         ^^^^^^^^^^^^
+NameError: name 'file_handler' is not defined
+2025-09-23 15:46:16,135 - ERROR - app.ui - ERRO_EXECUCAO_YOUTUBE
+Traceback (most recent call last):
+  File "/Users/jader/Info_AI_Studio/src/app/interfaces/web/pages/4_Execução.py", line 727, in <module>
+    result = service.run(progress_callback=update_progress)
+  File "/Users/jader/Info_AI_Studio/src/app/domain/youtube/service.py", line 271, in run
+    logger.removeHandler(file_handler)
+                         ^^^^^^^^^^^^
+NameError: name 'file_handler' is not defined
+2025-09-23 15:46:16,135 - ERROR - app.ui - ERRO_EXECUCAO_YOUTUBE
+Traceback (most recent call last):
+  File "/Users/jader/Info_AI_Studio/src/app/interfaces/web/pages/4_Execução.py", line 727, in <module>
+    result = service.run(progress_callback=update_progress)
+  File "/Users/jader/Info_AI_Studio/src/app/domain/youtube/service.py", line 271, in run
+    logger.removeHandler(file_handler)
+                         ^^^^^^^^^^^^
+NameError: name 'file_handler' is not defined
+2025-09-23 15:46:16,135 - ERROR - app.ui - ERRO_EXECUCAO_YOUTUBE
+Traceback (most recent call last):
+  File "/Users/jader/Info_AI_Studio/src/app/interfaces/web/pages/4_Execução.py", line 727, in <module>
+    result = service.run(progress_callback=update_progress)
+  File "/Users/jader/Info_AI_Studio/src/app/domain/youtube/service.py", line 271, in run
+    logger.removeHandler(file_handler)
+                         ^^^^^^^^^^^^
+NameError: name 'file_handler' is not defined
+2025-09-23 15:49:15,205 - INFO - app.youtube.run.20250923_154915 - Iniciando extração em lote de 13 canais
+2025-09-23 15:49:15,205 - INFO - app.youtube.run.20250923_154915 - Iniciando extração em lote de 13 canais
+2025-09-23 15:49:15,244 - INFO - app.youtube.run.20250923_154915 - Processando canal 1/13: @ColeMedin
+2025-09-23 15:49:15,244 - INFO - app.youtube.run.20250923_154915 - Processando canal 1/13: @ColeMedin
+2025-09-23 15:49:16,000 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:16,000 - INFO - youtube_extractor - Extraindo vídeos do canal @ColeMedin (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:16,685 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:16,685 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:16,685 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:16,685 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:16,686 - INFO - app.youtube.run.20250923_154915 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:16,686 - INFO - app.youtube.run.20250923_154915 - Canal @ColeMedin extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:17,829 - INFO - app.youtube.run.20250923_154915 - Vídeo NQ3vJ8iZPaQ executado no modo simple (transcrição não aplicada).
+2025-09-23 15:49:17,829 - INFO - app.youtube.run.20250923_154915 - Vídeo NQ3vJ8iZPaQ executado no modo simple (transcrição não aplicada).
+2025-09-23 15:49:17,829 - INFO - app.youtube.run.20250923_154915 - Processando canal 2/13: @DanGalletta
+2025-09-23 15:49:17,829 - INFO - app.youtube.run.20250923_154915 - Processando canal 2/13: @DanGalletta
+2025-09-23 15:49:18,710 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:18,710 - INFO - youtube_extractor - Extraindo vídeos do canal @DanGalletta (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:18,971 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:18,971 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:18,971 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:18,971 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:18,971 - INFO - app.youtube.run.20250923_154915 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:18,971 - INFO - app.youtube.run.20250923_154915 - Canal @DanGalletta extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:18,972 - INFO - app.youtube.run.20250923_154915 - Processando canal 3/13: @DataCouncil
+2025-09-23 15:49:18,972 - INFO - app.youtube.run.20250923_154915 - Processando canal 3/13: @DataCouncil
+2025-09-23 15:49:19,435 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:19,435 - INFO - youtube_extractor - Extraindo vídeos do canal @DataCouncil (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:20,164 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:20,164 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:20,165 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:20,165 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:20,166 - INFO - app.youtube.run.20250923_154915 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:20,166 - INFO - app.youtube.run.20250923_154915 - Canal @DataCouncil extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:20,167 - INFO - app.youtube.run.20250923_154915 - Processando canal 4/13: @Incomestreamsurfers
+2025-09-23 15:49:20,167 - INFO - app.youtube.run.20250923_154915 - Processando canal 4/13: @Incomestreamsurfers
+2025-09-23 15:49:20,558 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:20,558 - INFO - youtube_extractor - Extraindo vídeos do canal @Incomestreamsurfers (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:20,934 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:20,934 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:20,935 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:20,935 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:20,936 - INFO - app.youtube.run.20250923_154915 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:20,936 - INFO - app.youtube.run.20250923_154915 - Canal @Incomestreamsurfers extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:22,268 - INFO - app.youtube.run.20250923_154915 - Vídeo vGAbJS5bqgk executado no modo simple (transcrição não aplicada).
+2025-09-23 15:49:22,268 - INFO - app.youtube.run.20250923_154915 - Vídeo vGAbJS5bqgk executado no modo simple (transcrição não aplicada).
+2025-09-23 15:49:22,268 - INFO - app.youtube.run.20250923_154915 - Processando canal 5/13: @LiamOttley
+2025-09-23 15:49:22,268 - INFO - app.youtube.run.20250923_154915 - Processando canal 5/13: @LiamOttley
+2025-09-23 15:49:22,620 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:22,620 - INFO - youtube_extractor - Extraindo vídeos do canal @LiamOttley (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:23,022 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:23,022 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:23,022 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:23,022 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:23,023 - INFO - app.youtube.run.20250923_154915 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:23,023 - INFO - app.youtube.run.20250923_154915 - Canal @LiamOttley extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:24,405 - INFO - app.youtube.run.20250923_154915 - Vídeo jhVg-Zbz0V8 executado no modo simple (transcrição não aplicada).
+2025-09-23 15:49:24,405 - INFO - app.youtube.run.20250923_154915 - Vídeo jhVg-Zbz0V8 executado no modo simple (transcrição não aplicada).
+2025-09-23 15:49:24,406 - INFO - app.youtube.run.20250923_154915 - Processando canal 6/13: @PaulaBernardes
+2025-09-23 15:49:24,406 - INFO - app.youtube.run.20250923_154915 - Processando canal 6/13: @PaulaBernardes
+2025-09-23 15:49:24,986 - INFO - youtube_extractor - Extraindo vídeos do canal @PaulaBernardes (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:24,986 - INFO - youtube_extractor - Extraindo vídeos do canal @PaulaBernardes (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:25,378 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:25,378 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:25,378 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:25,378 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:25,380 - INFO - app.youtube.run.20250923_154915 - Canal @PaulaBernardes extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:25,380 - INFO - app.youtube.run.20250923_154915 - Canal @PaulaBernardes extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:26,508 - INFO - app.youtube.run.20250923_154915 - Vídeo znsEHtGB4-g executado no modo simple (transcrição não aplicada).
+2025-09-23 15:49:26,508 - INFO - app.youtube.run.20250923_154915 - Vídeo znsEHtGB4-g executado no modo simple (transcrição não aplicada).
+2025-09-23 15:49:26,508 - INFO - app.youtube.run.20250923_154915 - Processando canal 7/13: @SaraFinance
+2025-09-23 15:49:26,508 - INFO - app.youtube.run.20250923_154915 - Processando canal 7/13: @SaraFinance
+2025-09-23 15:49:26,915 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:26,915 - INFO - youtube_extractor - Extraindo vídeos do canal @SaraFinance (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:27,948 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:27,948 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:27,948 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:27,948 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:27,949 - INFO - app.youtube.run.20250923_154915 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:27,949 - INFO - app.youtube.run.20250923_154915 - Canal @SaraFinance extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:27,950 - INFO - app.youtube.run.20250923_154915 - Processando canal 8/13: @SuperHumansLife
+2025-09-23 15:49:27,950 - INFO - app.youtube.run.20250923_154915 - Processando canal 8/13: @SuperHumansLife
+2025-09-23 15:49:31,911 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:31,911 - INFO - youtube_extractor - Extraindo vídeos do canal @SuperHumansLife (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:40,244 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:40,244 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:40,244 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:40,244 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:40,244 - INFO - app.youtube.run.20250923_154915 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:40,244 - INFO - app.youtube.run.20250923_154915 - Canal @SuperHumansLife extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:48,731 - INFO - app.youtube.run.20250923_154915 - Vídeo LOktCypa7Yc executado no modo simple (transcrição não aplicada).
+2025-09-23 15:49:48,731 - INFO - app.youtube.run.20250923_154915 - Vídeo LOktCypa7Yc executado no modo simple (transcrição não aplicada).
+2025-09-23 15:49:48,731 - INFO - app.youtube.run.20250923_154915 - Processando canal 9/13: @brunopicinini
+2025-09-23 15:49:48,731 - INFO - app.youtube.run.20250923_154915 - Processando canal 9/13: @brunopicinini
+2025-09-23 15:49:52,579 - INFO - youtube_extractor - Extraindo vídeos do canal @brunopicinini (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:52,579 - INFO - youtube_extractor - Extraindo vídeos do canal @brunopicinini (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:53,427 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:53,427 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:53,427 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:53,427 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:53,429 - INFO - app.youtube.run.20250923_154915 - Canal @brunopicinini extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:53,429 - INFO - app.youtube.run.20250923_154915 - Canal @brunopicinini extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:53,431 - INFO - app.youtube.run.20250923_154915 - Processando canal 10/13: @eusoukelvincleto
+2025-09-23 15:49:53,431 - INFO - app.youtube.run.20250923_154915 - Processando canal 10/13: @eusoukelvincleto
+2025-09-23 15:49:54,025 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:54,025 - INFO - youtube_extractor - Extraindo vídeos do canal @eusoukelvincleto (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:54,472 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:54,472 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:54,472 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:54,472 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:54,473 - INFO - app.youtube.run.20250923_154915 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:54,473 - INFO - app.youtube.run.20250923_154915 - Canal @eusoukelvincleto extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:54,473 - INFO - app.youtube.run.20250923_154915 - Processando canal 11/13: @krishnaik06
+2025-09-23 15:49:54,473 - INFO - app.youtube.run.20250923_154915 - Processando canal 11/13: @krishnaik06
+2025-09-23 15:49:55,150 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:55,150 - INFO - youtube_extractor - Extraindo vídeos do canal @krishnaik06 (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:55,794 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:55,794 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:55,794 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:55,794 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:55,795 - INFO - app.youtube.run.20250923_154915 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:55,795 - INFO - app.youtube.run.20250923_154915 - Canal @krishnaik06 extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:55,797 - INFO - app.youtube.run.20250923_154915 - Processando canal 12/13: @matthew_berman
+2025-09-23 15:49:55,797 - INFO - app.youtube.run.20250923_154915 - Processando canal 12/13: @matthew_berman
+2025-09-23 15:49:56,313 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:56,313 - INFO - youtube_extractor - Extraindo vídeos do canal @matthew_berman (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:56,993 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:56,993 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=0, ignorados: live=0, upcoming=0, sem_data=0, antigos=1, shelves=0
+2025-09-23 15:49:56,993 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:56,993 - INFO - youtube_extractor - Aba /videos: 0 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:56,994 - INFO - app.youtube.run.20250923_154915 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:56,994 - INFO - app.youtube.run.20250923_154915 - Canal @matthew_berman extraído com sucesso. Vídeos dentro do critério: 0
+2025-09-23 15:49:56,995 - INFO - app.youtube.run.20250923_154915 - Processando canal 13/13: @nocodemba
+2025-09-23 15:49:56,995 - INFO - app.youtube.run.20250923_154915 - Processando canal 13/13: @nocodemba
+2025-09-23 15:49:57,264 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:57,264 - INFO - youtube_extractor - Extraindo vídeos do canal @nocodemba (max_age_days=1, videos_tab_only=True, max_videos=1)
+2025-09-23 15:49:57,659 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:57,659 - INFO - youtube_extractor - Aba /videos: analisados=1, válidos=1, ignorados: live=0, upcoming=0, sem_data=0, antigos=0, shelves=0
+2025-09-23 15:49:57,660 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:57,660 - INFO - youtube_extractor - Aba /videos: 1 vídeos válidos (≤ 1 dias)
+2025-09-23 15:49:57,660 - INFO - app.youtube.run.20250923_154915 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:57,660 - INFO - app.youtube.run.20250923_154915 - Canal @nocodemba extraído com sucesso. Vídeos dentro do critério: 1
+2025-09-23 15:49:59,467 - INFO - app.youtube.run.20250923_154915 - Vídeo xtQEqO2pqYI executado no modo simple (transcrição não aplicada).
+2025-09-23 15:49:59,467 - INFO - app.youtube.run.20250923_154915 - Vídeo xtQEqO2pqYI executado no modo simple (transcrição não aplicada).

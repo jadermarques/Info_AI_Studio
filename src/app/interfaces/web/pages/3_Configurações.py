@@ -92,7 +92,7 @@ col_a, col_b = st.columns(2)
 with col_a:
     st.metric("Status", "Conectado" if is_database_initialized() else "Não inicializado")
 with col_b:
-    if st.button("Inicializar banco", use_container_width=True):
+    if st.button("Inicializar banco", width='stretch'):
         initialize_database()
         st.success("Banco inicializado com sucesso.")
         st.rerun()
@@ -140,7 +140,7 @@ with st.form("web_prompt_defaults_form"):
         height=280,
         help="Texto base do prompt exibido por padrão na execução (o usuário pode alterar somente para aquela execução).",
     )
-    if st.form_submit_button("Salvar configurações de consulta web", use_container_width=True):
+    if st.form_submit_button("Salvar configurações de consulta web", width='stretch'):
         web_save_defaults(
             WebPromptDefaults(
                 persona=persona.strip(),

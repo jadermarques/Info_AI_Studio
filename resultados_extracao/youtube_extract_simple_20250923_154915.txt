@@ -1,0 +1,28 @@
+=======================================================================
+Iniciando execução modo SIMPLE
+Valores selecionados
+Grupos de canais selecionados: Ideias e Negócios com IA
+Canais cadastrados: 0
+Canais adicionais: —
+Dias para filtrar: 1
+Limite de vídeos por canal: 1
+Prefixo dos arquivos: youtube_extract_simple
+Formato do relatório: txt
+Fornecedor de ASR: faster-whisper
+Desativar ASR (sim ou não): não
+Modelo LLM: gpt-5-nano
+
+Canais
+Canais selecionados para análise: 13
+
+VÍDEOS ENCONTRADOS
+data video | nome canal | titulo do video | id do video | link do video (url) | tamanho do video | idioma original | tem transcricao | visualizacoes
+------------------------------------------------------------------------------------------------------------------------
+23/09/25 11:07 | @ColeMedin | Knowledge Graphs in n8n are FINALLY Here! | NQ3vJ8iZPaQ | https://www.youtube.com/watch?v=NQ3vJ8iZPaQ | 18:55 |  | não | 2428
+23/09/25 07:58 | @Incomestreamsurfers | Claude Code Opus 4.1 ESTÁ DE VOLTA (FINALMENTE) | vGAbJS5bqgk | https://www.youtube.com/watch?v=vGAbJS5bqgk | 08:11 |  | não | 1768
+22/09/25 05:39 | @LiamOttley | 3 AI Agent Use Cases Every Business Will Pay For ($100K Playbook) | jhVg-Zbz0V8 | https://www.youtube.com/watch?v=jhVg-Zbz0V8 | 49:30 |  | não | 17226
+23/09/25 14:03 | @PaulaBernardes | Testei o Grok 4 Fast: Rápido, Barato e Inteligente! | znsEHtGB4-g | https://www.youtube.com/watch?v=znsEHtGB4-g | 15:40 |  | não | 341
+22/09/25 16:01 | @SuperHumansLife | 6 automações Zapier lucrativas que até iniciantes podem aprender hoje | LOktCypa7Yc | https://www.youtube.com/watch?v=LOktCypa7Yc | 15:41 |  | não | 2883
+22/09/25 11:31 | @nocodemba | Este NOVO AGENTE de IA é insano! (pode substituir o Zapier) | xtQEqO2pqYI | https://www.youtube.com/watch?v=xtQEqO2pqYI | 04:56 |  | não | 395
+
+Total de canais: 13 | Total de vídeos: 6

@@ -83,17 +83,32 @@ class YouTubeExecutionService:
         self._notify(progress_callback, f"{len(channels)} canais selecionados para análise.")
         timestamp = datetime.now()
         run_id = timestamp.strftime("%Y%m%d_%H%M%S")
-        log_path = get_log_file_path(f"youtube_extraction_{run_id}.log")
-        setup_logging(log_file=log_path)
+        log_path = get_log_file_path("app.log")
+        # Configura logger central com rotação, nível vindo de Settings
+        setup_logging(level=self.settings.log_level, log_file=log_path)
         logger = logging.getLogger(f"app.youtube.run.{run_id}")
         logger.setLevel(logging.INFO)
         logger.propagate = True
-        file_handler = logging.FileHandler(log_path, encoding="utf-8")
-        file_handler.setLevel(logging.INFO)
-        file_handler.setFormatter(
-            logging.Formatter("%(asctime)s - %(levelname)s - %(name)s - %(message)s")
-        )
-        logger.addHandler(file_handler)
+
+        # Evento de início (FULL)
+        try:
+            logger.full(
+                "YOUTUBE_START "
+                + json.dumps(
+                    {
+                        "run_id": run_id,
+                        "channels": self.config.channels,
+                        "days": self.config.days,
+                        "max_videos": self.config.max_videos,
+                        "mode": self.config.mode,
+                        "translate_results": bool(self.config.translate_results),
+                        "no_llm": bool(self.config.no_llm),
+                    },
+                    ensure_ascii=False,
+                )
+            )
+        except Exception:
+            pass
 
         logger.info("Iniciando extração em lote de %s canais", len(channels))
         self._notify(
@@ -119,8 +134,7 @@ class YouTubeExecutionService:
         total_completion_tokens = 0
 
         import time
-        try:
-            for index, channel in enumerate(channels, start=1):
+        for index, channel in enumerate(channels, start=1):
                 logger.info("Processando canal %s/%s: %s", index, len(channels), channel)
                 self._notify(
                     progress_callback,
@@ -272,9 +286,6 @@ class YouTubeExecutionService:
                 )
                 total_prompt_tokens += prompt_tokens_channel
                 total_completion_tokens += completion_tokens_channel
-        finally:
-            logger.removeHandler(file_handler)
-            file_handler.close()
 
         params = self._build_params()
         metadata = self._build_metadata(channel_payload, total_videos, timestamp, params)
@@ -283,6 +294,27 @@ class YouTubeExecutionService:
             progress_callback,
             "Extração finalizada. Resultados disponíveis para consulta.",
         )
+        # Evento de fim (FULL)
+        try:
+            logger.full(
+                "YOUTUBE_END "
+                + json.dumps(
+                    {
+                        "run_id": run_id,
+                        "total_videos": total_videos,
+                        "total_channels": len(channel_payload),
+                        "success_channels": sum(1 for item in channel_payload if item.get("status") == "success"),
+                        "failed_channels": sum(1 for item in channel_payload if item.get("status") != "success"),
+                        "total_requests": request_counter["count"],
+                        "json_path": str(json_path) if json_path else None,
+                        "report_path": str(report_path) if report_path else None,
+                        "log_path": str(log_path),
+                    },
+                    ensure_ascii=False,
+                )
+            )
+        except Exception:
+            pass
         repositories.record_youtube_extraction(
             channel_label=", ".join(channels[:3]) + ("..." if len(channels) > 3 else ""),
             mode=self.config.mode,

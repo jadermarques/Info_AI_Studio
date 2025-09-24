@@ -10,6 +10,7 @@ import os
 import re
 
 from app.config import get_settings
+from app.infrastructure.logging_setup import setup_logging, get_log_file_path
 
 try:  # optional at runtime
     from openai import OpenAI
@@ -44,6 +45,7 @@ class WebPromptResult:
     started_at: datetime
     ended_at: datetime
     elapsed_seconds: float
+    run_id: str
     model_used: str
     prompt_tokens: int
     completion_tokens: int
@@ -261,20 +263,11 @@ def _ensure_outdir(path: Path) -> None:
 
 
 def _save_outputs(prefix: str, outdir: Path, formato: str, prompt_text: str, result_text: str, meta: dict) -> tuple[Optional[str], Optional[str]]:
-    """Salva relatório no formato indicado e um arquivo de log básico."""
+    """Salva relatório no formato indicado. Logs são centralizados em app.log."""
     _ensure_outdir(outdir)
     report_path: Optional[str] = None
-    log_path = str(outdir / f"{prefix}.log")
-    # Log
-    try:
-        with open(log_path, "w", encoding="utf-8") as logf:
-            logf.write(json.dumps(meta, ensure_ascii=False, indent=2))
-            logf.write("\n\n=== PROMPT EXECUTADO ===\n")
-            logf.write(prompt_text)
-            logf.write("\n\n=== RESULTADO ===\n")
-            logf.write(result_text)
-    except Exception:
-        log_path = None
+    # Centraliza o caminho do log no arquivo rotativo principal
+    log_path = str(get_log_file_path("app.log"))
 
     ext = formato.lower()
     if ext == ".txt" or ext == "txt":
@@ -495,6 +488,8 @@ def execute_web_prompt(params: WebPromptParams) -> WebPromptResult:
     prov = params.llm_provedor.strip().upper()
     if prov == "PERPLEXITY":
         base_url = "https://api.perplexity.ai"
+    # Define um run_id para correlação em logs e arquivos
+    run_id = f"web_prompt_{started.strftime('%Y%m%d_%H%M%S')}"
     # OPENAI e outros compatíveis usam base padrão
     client = OpenAI(api_key=params.api_key, base_url=base_url) if base_url else OpenAI(api_key=params.api_key)
 
@@ -521,12 +516,33 @@ def execute_web_prompt(params: WebPromptParams) -> WebPromptResult:
     cost = _estimate_cost(params.llm_modelo, prompt_tokens, completion_tokens)
 
     settings = get_settings()
-    prefix = f"web_prompt_{started.strftime('%Y%m%d_%H%M%S')}"
+    # Garante configuração do logger central e registra evento de início
+    logger = setup_logging(level=settings.log_level, log_file=get_log_file_path("app.log"))
+    try:
+        logger.full(
+            "WEB_PROMPT_START "
+            + json.dumps(
+                {
+                    "persona": params.persona,
+                    "publico_alvo": params.publico_alvo,
+                    "segmentos": params.segmentos,
+                    "formato": fmt,
+                    "run_id": run_id,
+                    "modelo": params.llm_modelo,
+                    "provedor": params.llm_provedor,
+                    "outdir": str(params.outdir),
+                },
+                ensure_ascii=False,
+            )
+        )
+    except Exception:
+        pass
+    prefix = run_id
     meta = {
         "data_inicio": _format_br(params.data_inicio),
         "data_fim": _format_br(params.data_fim),
-        "persona": params.persona,
         "publico_alvo": params.publico_alvo,
+        "run_id": run_id,
         "segmentos": params.segmentos,
         "formato": fmt,
         "modelo": params.llm_modelo,
@@ -538,6 +554,24 @@ def execute_web_prompt(params: WebPromptParams) -> WebPromptResult:
     }
     report_path, log_path = _save_outputs(prefix, params.outdir, fmt, final_prompt, content, meta)
 
+    # Evento de término com estatísticas principais
+    try:
+        logger.full(
+            "WEB_PROMPT_END "
+            + json.dumps(
+                {
+                    "prompt_tokens": prompt_tokens,
+                    "completion_tokens": completion_tokens,
+                    "custo_estimado": cost,
+                    "report_path": report_path,
+                    "run_id": run_id,
+                },
+                ensure_ascii=False,
+            )
+        )
+    except Exception:
+        pass
+
     ended = datetime.now()
     return WebPromptResult(
         started_at=started,
@@ -547,6 +581,7 @@ def execute_web_prompt(params: WebPromptParams) -> WebPromptResult:
         prompt_tokens=prompt_tokens,
         completion_tokens=completion_tokens,
         cost_estimated=cost,
+        run_id=run_id,
         prompt_executed=final_prompt,
         result_text=content,
         report_path=report_path,

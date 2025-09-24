@@ -165,12 +165,12 @@ index 48b93bee61bb63631d81ad36483beaf20eeef9b3..5d378340a6f824b7957cbde639f7871c
              user_agent = st.text_input("User-Agent", value=DEFAULT_USER_AGENT)
          col_run1, col_run2 = st.columns(2)
          disabled_buttons = not llm_options
-         run_simple = col_run1.form_submit_button(
-             "Executar modo simple", use_container_width=True, disabled=disabled_buttons
-         )
-         run_full = col_run2.form_submit_button(
-             "Executar modo full", use_container_width=True, disabled=disabled_buttons
-         )
+        run_simple = col_run1.form_submit_button(
+            "Executar modo simple", width='stretch', disabled=disabled_buttons
+        )
+        run_full = col_run2.form_submit_button(
+            "Executar modo full", width='stretch', disabled=disabled_buttons
+        )
 +    selected_labels = list(st.session_state.youtube_selected_channels)
      progress_container = st.container()
      results_container = st.container()

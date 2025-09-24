@@ -65,7 +65,7 @@ def render_pagination_controls(
                 label_visibility="collapsed",
             )
         with c3:
-            if st.button("→", key=f"{page_key}_go", use_container_width=True):
+            if st.button("→", key=f"{page_key}_go", width='stretch'):
                 st.session_state[page_key] = int(target) - 1
                 st.rerun()
         with c4:

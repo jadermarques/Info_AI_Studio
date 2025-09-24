@@ -32,6 +32,11 @@ class Settings:
     cookies_path: Optional[Path]
     translate_results: str
     user_agent: str
+    # Logging
+    log_level: str
+    log_rotate_max_mb: int
+    log_backup_count: int
+    log_types: str
 
 
 def _load_env() -> None:
@@ -71,6 +76,16 @@ def get_settings() -> Settings:
         "(KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
     )
     user_agent = os.getenv("USER_AGENT", default_ua).strip()
+    # Logging configs
+    log_level = os.getenv("LOG_LEVEL", "INFO").strip().upper()
+    try:
+        log_rotate_max_mb = int(os.getenv("LOG_ROTATE_MAX_MB", "10") or 10)
+    except Exception:
+        log_rotate_max_mb = 10
+    try:
+        log_backup_count = int(os.getenv("LOG_BACKUP_COUNT", "5") or 5)
+    except Exception:
+        log_backup_count = 5
     return Settings(
         db_path=db_path,
         max_palavras_resumo=max_palavras,
@@ -84,6 +99,10 @@ def get_settings() -> Settings:
         cookies_path=cookies_path,
         translate_results=translate_results,
         user_agent=user_agent,
+        log_level=log_level,
+        log_rotate_max_mb=log_rotate_max_mb,
+        log_backup_count=log_backup_count,
+        log_types=os.getenv("LOG_TYPES", "error,warning,info").strip().lower(),
     )
 
 

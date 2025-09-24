@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 from pathlib import Path
+import io
+import csv
+import time
 
 import streamlit as st
 
@@ -16,6 +19,7 @@ from app.domain.youtube.groups import (
     YOUTUBE_CHANNEL_GROUP_OPTIONS,
     split_channel_groups,
 )
+from app.infrastructure.logging_setup import ui_event, setup_logging, get_log_file_path
 
 DEFAULT_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -36,7 +40,17 @@ def _analysis_method_label(source: str | None) -> str:
     return mapping.get(source, source)
 
 
-st.title("Execução")
+title_left, title_right = st.columns([6, 1])
+with title_left:
+    st.title("Execução")
+with title_right:
+    if st.session_state.get("exec_auto_refresh", False):
+        st.markdown(
+            """
+            <div style="display:inline-block; padding:4px 8px; background:#16a34a; color:#fff; border-radius:12px; font-weight:600; font-size:0.85rem;">AO VIVO</div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 # Submenus da execução na barra lateral
 submenu = st.sidebar.radio(
@@ -46,6 +60,26 @@ submenu = st.sidebar.radio(
     key="exec_submenu",
     help="Escolha o módulo de execução."
 )
+
+# Controles globais de autoatualização (não reexecuta formulários)
+col_ar1, col_ar2 = st.columns([1, 1])
+with col_ar1:
+    exec_auto_refresh = st.checkbox(
+        "Autoatualizar",
+        value=st.session_state.get("exec_auto_refresh", False),
+        help="Atualiza automaticamente as seções de resultados desta página.",
+    )
+    st.session_state["exec_auto_refresh"] = exec_auto_refresh
+with col_ar2:
+    exec_refresh_interval = st.number_input(
+        "Intervalo (s)",
+        min_value=2,
+        max_value=120,
+        step=1,
+        value=st.session_state.get("exec_refresh_interval", 10),
+    )
+    st.session_state["exec_refresh_interval"] = exec_refresh_interval
+st.divider()
 
 # Submenu: Fontes Web (com abas e formulário)
 if submenu == "Fontes Web":
@@ -113,9 +147,14 @@ if submenu == "Fontes Web":
             # Botão para preencher o campo de prompt com os valores atuais
             atualizar_clicked = st.form_submit_button(
                 "Atualizar prompt de consulta",
-                use_container_width=True,
+                width='stretch',
             )
             if atualizar_clicked:
+                try:
+                    setup_logging(log_file=get_log_file_path("app.log"))
+                    ui_event(None, "click", button="Atualizar prompt", page="Execução/Fontes Web")
+                except Exception:
+                    pass
                 try:
                     settings = get_settings()
                     base_prompt = (
@@ -169,9 +208,14 @@ if submenu == "Fontes Web":
             if formato_saida == ".pdf" and not _pdf_ok_web:
                 st.warning("Para gerar PDF, instale a biblioteca 'fpdf2' (pip install fpdf2).", icon="ℹ️")
 
-            submitted = st.form_submit_button("Executar prompt", use_container_width=True, disabled=not llm_options)
+            submitted = st.form_submit_button("Executar prompt", width='stretch', disabled=not llm_options)
 
         if submitted:
+            try:
+                setup_logging(log_file=get_log_file_path("app.log"))
+                ui_event(None, "click", button="Executar prompt", page="Execução/Fontes Web")
+            except Exception:
+                pass
             erros: list[str] = []
             if not dt_inicio:
                 erros.append("Informe a data de início.")
@@ -227,10 +271,38 @@ if submenu == "Fontes Web":
                 result = execute_web_prompt(params)
                 progress.progress(90)
             except Exception as exc:
-                st.error(f"Falha ao executar o prompt: {exc}")
+                try:
+                    rid = result.run_id if 'result' in locals() and getattr(result, 'run_id', None) else None
+                except Exception:
+                    rid = None
+                if rid:
+                    st.error(f"Falha ao executar o prompt (run_id {rid}): {exc}")
+                else:
+                    st.error(f"Falha ao executar o prompt: {exc}")
+                try:
+                    from app.infrastructure.logging_setup import setup_logging, get_log_file_path, ui_event
+                    import logging
+                    setup_logging(log_file=get_log_file_path("app.log"))
+                    ui_event(None, "error", area="Fontes Web", action="Executar prompt")
+                    logging.getLogger("app.ui").exception(
+                        "ERRO_EXECUCAO_WEB_PROMPT",
+                        extra={
+                            "persona": persona,
+                            "publico_alvo": publico_alvo,
+                            "segmentos": segmentos,
+                            "formato_saida": formato_saida,
+                            "modelo": selected_model.get("modelo") if selected_model else "",
+                        },
+                    )
+                except Exception:
+                    pass
             else:
                 progress.progress(100)
                 st.success("Execução concluída.")
+                try:
+                    st.subheader(f"Resultado da execução • run_id: {getattr(result, 'run_id', '')}")
+                except Exception:
+                    pass
                 col_a, col_b = st.columns(2)
                 with col_a:
                     st.write(f"Data/hora início execução: {result.started_at.strftime('%d/%m/%Y %H:%M:%S')}")
@@ -239,12 +311,17 @@ if submenu == "Fontes Web":
                     st.write(f"Modelo LLM utilizado: {result.model_used}")
                     st.write(f"Total de tokens enviados: {result.prompt_tokens}")
                 with col_b:
+                    st.write(f"run_id: {getattr(result, 'run_id', '')}")
+                    try:
+                        st.text_input("Copiar run_id", value=getattr(result, 'run_id', ''), key=f"copy_run_id_{getattr(result, 'run_id', 'exec')}")
+                    except Exception:
+                        pass
                     st.write(f"Total de tokens recebidos: {result.completion_tokens}")
                     st.write(f"Custo estimado da consulta: R$ {result.cost_estimated:.4f}")
                     if result.report_path:
                         rp = Path(result.report_path)
                         if rp.exists():
-                            st.write(f"Relatório gerado: {rp}")
+                            st.write(f"Relatório gerado (run_id {getattr(result, 'run_id', '')}): {rp}")
                             mime_map = {
                                 ".xml": "application/xml",
                                 ".json": "application/json",
@@ -271,9 +348,9 @@ if submenu == "Fontes Web":
                                 )
                             except Exception:
                                 pass
-                with st.expander("Prompt executado", expanded=False):
+                with st.expander(f"Prompt executado • run_id: {getattr(result, 'run_id', '')}", expanded=False):
                     st.code(result.prompt_executed, language="markdown")
-                with st.expander("Resultado do prompt", expanded=True):
+                with st.expander(f"Resultado do prompt • run_id: {getattr(result, 'run_id', '')}", expanded=True):
                     # Renderização simples conforme formato selecionado
                     if formato_saida in (".md", "md"):
                         st.markdown(result.result_text)
@@ -437,7 +514,7 @@ else:
             )
             # legenda removida conforme solicitado
             run_btn = st.form_submit_button(
-                f"Executar {mode_label}", use_container_width=True, disabled=not llm_options
+                f"Executar {mode_label}", width='stretch', disabled=not llm_options
             )
         return run_btn, prefix, report_format, asr_provider, no_asr, llm_label
 
@@ -475,6 +552,11 @@ else:
     # Decide qual guia acionou
     triggered = None
     if run_simple:
+        try:
+            setup_logging(log_file=get_log_file_path("app.log"))
+            ui_event(None, "click", button="Executar modo simples", page="Execução/YouTube")
+        except Exception:
+            pass
         triggered = "simple"
         selected_labels = list(selected_widget)
         manual_entries_v = st.session_state.get("youtube_manual_entries", "")
@@ -486,6 +568,11 @@ else:
         no_asr_v = no_asr
         llm_label_v = llm_label
     elif run_full:
+        try:
+            setup_logging(log_file=get_log_file_path("app.log"))
+            ui_event(None, "click", button="Executar modo completo", page="Execução/YouTube")
+        except Exception:
+            pass
         triggered = "full"
         selected_labels = list(selected_widget)
         manual_entries_v = st.session_state.get("youtube_manual_entries", "")
@@ -651,10 +738,44 @@ else:
             # Executa serviço
             result = service.run(progress_callback=update_progress)
         except Exception as exc:
-            st.error(f"Falha na execução: {exc}")
+            try:
+                # Se result não existe, não temos run_id; apenas mostra erro
+                rid = result.run_id if 'result' in locals() and getattr(result, 'run_id', None) else None
+            except Exception:
+                rid = None
+            if rid:
+                st.error(f"Falha na execução (run_id {rid}): {exc}")
+            else:
+                st.error(f"Falha na execução: {exc}")
+            try:
+                from app.infrastructure.logging_setup import setup_logging, get_log_file_path
+                import logging
+                setup_logging(log_file=get_log_file_path("app.log"))
+                logging.getLogger("app.ui").exception(
+                    "ERRO_EXECUCAO_YOUTUBE",
+                    extra={
+                        "mode": mode,
+                        "selected_groups": list(st.session_state.get("youtube_group_filter", [])),
+                        "selected_channel_labels": list(selected_labels),
+                        "days": days_v,
+                        "max_videos": max_videos_v,
+                        "prefix": prefix_v,
+                        "report_format": report_format_v,
+                    },
+                )
+            except Exception:
+                pass
         else:
             with results_container:
-                st.success(result.message)
+                st.success(f"{result.message} • run_id: {getattr(result, 'run_id', '')}")
+                try:
+                    st.subheader(f"Resultado da execução (YouTube) • run_id: {getattr(result, 'run_id', '')}")
+                except Exception:
+                    pass
+                try:
+                    st.text_input("Copiar run_id", value=getattr(result, 'run_id', ''), key=f"copy_run_id_yt_{getattr(result, 'run_id', 'exec')}")
+                except Exception:
+                    pass
                 st.write(f"Canais processados: {result.total_channels}")
                 st.write(f"Vídeos extraídos: {result.total_videos}")
                 # Logs detalhados da execução (colapsável)
@@ -664,7 +785,7 @@ else:
                     except Exception:
                         pass
                     logs_txt = "\n".join(progress_messages)
-                    with st.expander("Detalhes da execução (logs)", expanded=False):
+                    with st.expander(f"Detalhes da execução (logs) • run_id: {getattr(result, 'run_id', '')}", expanded=False):
                         line_count = max(10, min(600, len(logs_txt.splitlines()) * 1))
                         st.text_area(
                             "Logs da execução",
@@ -675,7 +796,7 @@ else:
                 # Linha JSON: caminho à esquerda, links à direita
                 json_col_left, json_col_right = st.columns([3, 2])
                 with json_col_left:
-                    st.write(f"JSON: {result.json_path}")
+                    st.write(f"JSON (run_id {getattr(result, 'run_id', '')}): {result.json_path}")
                 with json_col_right:
                     try:
                         if result.json_path:
@@ -684,6 +805,22 @@ else:
                                 st.markdown(
                                     f"[🔗 Abrir arquivo]({jp.as_uri()}) · [📁 Abrir pasta]({jp.parent.as_uri()})"
                                 )
+                                # Botão de download JSON com run_id e timestamp
+                                try:
+                                    data = jp.read_bytes()
+                                    try:
+                                        from datetime import datetime, timezone, timedelta
+                                        ts = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y%m%d_%H%M%S")
+                                    except Exception:
+                                        ts = ""
+                                    st.download_button(
+                                        label="Baixar JSON",
+                                        data=data,
+                                        file_name=f"{getattr(result, 'run_id', 'exec')}_{ts}.json",
+                                        mime="application/json",
+                                    )
+                                except Exception:
+                                    pass
                     except Exception:
                         pass
                 if result.report_path:
@@ -702,7 +839,7 @@ else:
                                     size /= 1024.0
                         except Exception:
                             pass
-                        st.write(f"Relatório: {result.report_path}{size_txt}")
+                        st.write(f"Relatório (run_id {getattr(result, 'run_id', '')}): {result.report_path}{size_txt}")
                     with rep_col_right:
                         try:
                             if rp.exists():
@@ -750,10 +887,10 @@ else:
                         try:
                             report_text = report_path.read_text(encoding="utf-8")
                         except Exception as exc:
-                            st.warning(f"Não foi possível carregar o relatório TXT: {exc}")
+                            st.warning(f"Não foi possível carregar o relatório TXT (run_id {getattr(result, 'run_id', '')}): {exc}")
                         else:
                             if report_text.strip():
-                                with st.expander("Conteúdo do relatório (TXT)", expanded=False):
+                                with st.expander(f"Conteúdo do relatório (TXT) • run_id: {getattr(result, 'run_id', '')}", expanded=False):
                                     line_count = len(report_text.splitlines()) or 1
                                     dynamic_height = min(600, max(240, line_count * 18))
                                     st.text_area(
@@ -774,7 +911,7 @@ else:
                             st.warning(f"Não foi possível carregar o relatório MD: {exc}")
                         else:
                             if md_text.strip():
-                                with st.expander("Conteúdo do relatório (Markdown)", expanded=False):
+                                with st.expander(f"Conteúdo do relatório (Markdown) • run_id: {getattr(result, 'run_id', '')}", expanded=False):
                                     st.markdown(md_text)
                             else:
                                 st.info("Relatório vazio (Markdown)")
@@ -788,13 +925,32 @@ else:
                             obj = _json.loads(raw)
                             pretty = _json.dumps(obj, ensure_ascii=False, indent=2)
                         except Exception as exc:
-                            st.warning(f"Não foi possível carregar o relatório JSON: {exc}")
+                            st.warning(f"Não foi possível carregar o relatório JSON (run_id {getattr(result, 'run_id', '')}): {exc}")
                         else:
                             if pretty.strip():
-                                with st.expander("Conteúdo do relatório (JSON)", expanded=False):
+                                with st.expander(f"Conteúdo do relatório (JSON) • run_id: {getattr(result, 'run_id', '')}", expanded=False):
                                     st.code(pretty, language="json")
                             else:
                                 st.info("Relatório vazio (JSON)")
+                # Link e download do log central com run_id
+                if result.log_path:
+                    try:
+                        lp = Path(result.log_path)
+                        if lp.exists():
+                            st.markdown(f"[🔗 Abrir log]({lp.resolve().as_uri()})")
+                            try:
+                                from datetime import datetime, timezone, timedelta
+                                ts = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y%m%d_%H%M%S")
+                            except Exception:
+                                ts = ""
+                            st.download_button(
+                                label="Baixar log (.log)",
+                                data=lp.read_bytes(),
+                                file_name=f"{getattr(result, 'run_id', 'exec')}_{ts}.log",
+                                mime="text/plain; charset=utf-8",
+                            )
+                    except Exception:
+                        pass
                 # Prévia de relatório HTML quando gerado
                 if result.report_path and Path(result.report_path).suffix.lower() == ".html":
                     report_path = Path(result.report_path)
@@ -856,7 +1012,7 @@ else:
                                         else:
                                             st.markdown(f"- {video_title} — {method_label}")
                 if result.token_details:
-                    st.subheader("Tokens por vídeo")
+                    st.subheader(f"Tokens por vídeo • run_id: {getattr(result, 'run_id', '')}")
                     # Adiciona coluna de data do vídeo e origem do conteúdo
                     from datetime import datetime, timezone, timedelta
                     token_details = []
@@ -909,7 +1065,7 @@ else:
                     st.dataframe(ordered, hide_index=True)
                 # Resumo Extração (somente Modo completo)
                 if mode == "full" and result.channels_data:
-                    st.subheader("Resumo Extração")
+                    st.subheader(f"Resumo Extração • run_id: {getattr(result, 'run_id', '')}")
                     from datetime import datetime, timezone, timedelta
                     import io, csv
                     rows_resumo: list[dict] = []
@@ -1007,7 +1163,7 @@ else:
                         )
                 # Modo simple: montar tabela de vídeos encontrados com campos solicitados
                 if mode == "simple" and result.channels_data:
-                    st.subheader("Vídeos encontrados")
+                    st.subheader(f"Vídeos encontrados • run_id: {getattr(result, 'run_id', '')}")
                     rows = []
                     from datetime import datetime, timezone, timedelta
                     for channel in result.channels_data:
@@ -1123,7 +1279,7 @@ else:
                         # Persiste seleção atual nas próximas interações da sessão
                         st.session_state["simple_table_cols"] = cols_sel_simple or ordered_cols
                         st.caption("Dica: use o ícone de tela cheia da tabela para maximizar a visualização.")
-                        st.dataframe(rows_display, hide_index=True, use_container_width=True)
+                        st.dataframe(rows_display, hide_index=True, width='stretch')
                         # Exportar CSV
                         csv_buffer = io.StringIO()
                         fieldnames = cols_sel_simple or ordered_cols
@@ -1236,7 +1392,7 @@ else:
                                 "tempo de analise (s)": round(float(analise_seg), 2) if analise_seg else 0.0,
                             })
 
-                    st.subheader("Tempo de análise por vídeo")
+                    st.subheader(f"Tempo de análise por vídeo • run_id: {getattr(result, 'run_id', '')}")
                     # Controles de busca e colunas (ordem base idêntica ao 'Resumo Extração')
                     # Busca persistente por sessão
                     default_search_time = st.session_state.get("search_time", "")
@@ -1292,7 +1448,7 @@ else:
                     # Persiste seleção atual para a sessão e usa largura total
                     st.session_state["time_table_cols"] = cols_sel or display_cols
                     st.caption("Dica: use o ícone de tela cheia da tabela para maximizar a visualização.")
-                    st.dataframe(filtered, hide_index=True, use_container_width=True)
+                    st.dataframe(filtered, hide_index=True, width='stretch')
                     # Download CSV
                     if rows_tempos:
                         csv_buffer = io.StringIO()
@@ -1351,3 +1507,8 @@ else:
                     progress_bar.progress(100)
                 except Exception:
                     pass
+
+# Loop de auto-refresh controlado ao final do render
+if st.session_state.get("exec_auto_refresh", False):
+    time.sleep(st.session_state.get("exec_refresh_interval", 10))
+    st.rerun()
